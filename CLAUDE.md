@@ -126,6 +126,10 @@ vendedor leigo. Gabriel gosta de entender o porquê das decisões.
   Gabriel revisa, aprova e faz o merge; depois do merge, conferir a Action
   "Publicar site" e mandar o link da etapa publicada.
 
+**04/11/2026 — Etapa 2 aprovada**
+- Gabriel aprovou a Etapa 2 sem correções ("se pegarmos algum erro
+  posteriormente, alteramos"). Ele faz o merge do PR; liberou a Etapa 3.
+
 **Vídeos (ideia de Gabriel, ainda NÃO é pedido):** ele pensa em gravar vídeos e
 colocar em cada etapa uma escolha que expande para baixo: "Ler o conteúdo" ou
 "Assistir ao vídeo". Proposta já apresentada a ele: dois painéis expansíveis,
@@ -139,12 +143,12 @@ Oferecido também: preparar slides e roteiro de cada vídeo a partir do texto.
 | Etapa | Arquivo | Estado |
 |---:|---|---|
 | 1 A HI Tecnologia | `Assets/hi_tecnologia.html` | **Aprovada** por Gabriel em 04/11/2026 (reteste depois da correção da GTI5/SmartManagerPro). |
-| 2 Fundamentos da Automação | `Assets/fundamentos.html` | **Pronta, aguardando a revisão de Gabriel.** Produzida em 04/11/2026 na nuvem, na branch `etapa-2-fundamentos` (vai ao `main` por pull request que ele revisa e aprova). |
+| 2 Fundamentos da Automação | `Assets/fundamentos.html` | **Aprovada** por Gabriel em 04/11/2026 (PR #1, branch `etapa-2-fundamentos`; ele faz o merge). Erros achados depois serão corrigidos depois. |
 | 3 a 10 | `Assets/*.html` | Páginas "em produção": selo, objetivos, tempo, caixa "Conteúdo em produção" e fontes previstas. |
 
-**Próximo passo:** esperar a revisão da Etapa 2, aplicar as correções e, com a
-aprovação, produzir a Etapa 3 (Comunicação Industrial); depois uma por vez até
-a 10, e então a Fase 4.
+**Próximo passo:** produzir a Etapa 3 (Comunicação Industrial) numa branch
+nova a partir de `etapa-2-fundamentos`; depois uma por vez até a 10, e então a
+Fase 4.
 
 **Etapa 2, o que foi feito (para não refazer):** 8 seções (automação e
 processo; sensor, CLP e atuador com THT863/HPS850 e IHM × supervisório; os três
