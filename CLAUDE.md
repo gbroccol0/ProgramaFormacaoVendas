@@ -294,7 +294,15 @@ Se o ambiente tiver `pypdf`/`pdftotext`, podem ser usados também; o catálogo
 tem fontes com kerning e trechos sem mapa de caracteres (p. 4–5 ilegíveis em
 qualquer extrator testado aqui).
 
-## 8. Fluxo com Gabriel
+## 8. Repositório
+
+`gbroccol0/ProgramaFormacaoVendas`, **privado** por decisão de Gabriel
+(04/11/2026): `fontes/` tem material interno da HI (Treinamento de Produto,
+Exercícios). **Nunca copiar `fontes/`, `ferramentas/` nem este arquivo para um
+repositório público.** A publicação do site (GitHub Pages) será feita num
+repositório público separado, só com o site; ver `README.md`, seção 4.
+
+## 9. Fluxo com Gabriel
 
 - Ele revisa cada etapa no navegador e devolve correções por texto (às vezes
   com print). Aplicar, testar, explicar o que mudou e por quê, e **esperar a

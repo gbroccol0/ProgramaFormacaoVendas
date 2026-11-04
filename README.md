@@ -83,11 +83,13 @@ Uma etapa é produzida por vez e só segue depois da revisão da anterior.
 1. **Rodar o SQL.** No mesmo projeto Supabase do suporte: SQL Editor → colar
    `supabase/configuracao.sql` → Run. Enquanto ele não rodar, o login funciona,
    mas o progresso não chega à conta (fica pendente no navegador).
-2. **Repositório:** `gbroccol0/ProgramaForma-oVendas` (criado em 04/11/2026).
-   Para publicar, ativar o GitHub Pages na branch `main`, pasta raiz. O GitHub
-   Pages diferencia maiúsculas de minúsculas: use os nomes de arquivo
-   exatamente como estão. As pastas `fontes/` e `ferramentas/` também ficam
-   acessíveis pelo endereço publicado.
+2. **Repositório:** `gbroccol0/ProgramaFormacaoVendas`, **privado** (criado em
+   04/11/2026), porque guarda material interno da HI em `fontes/`. GitHub Pages
+   em repositório privado exige plano pago; para publicar, o caminho previsto
+   é um segundo repositório **público só com o site** (sem `fontes/`,
+   `ferramentas/` e `CLAUDE.md`), com o Pages na branch `main`, pasta raiz. O
+   GitHub Pages diferencia maiúsculas de minúsculas: use os nomes de arquivo
+   exatamente como estão.
 3. **Testar localmente com servidor**, não com duplo clique: aberta como
    `file://`, a busca no conteúdo das etapas não funciona. Na pasta do site:
    `python -m http.server 8000` e abrir `http://localhost:8000`.
