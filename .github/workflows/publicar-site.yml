@@ -1,13 +1,12 @@
-# Publica o site no repositório PÚBLICO gbroccol0/formacao-vendas-hi
-# (GitHub Pages: https://gbroccol0.github.io/formacao-vendas-hi/).
+# Publica o site no GitHub Pages deste repositório:
+# https://gbroccol0.github.io/ProgramaFormacaoVendas/
 #
-# Este repositório é privado porque guarda material interno da HI em fontes/.
-# Só vai para o público o que o navegador precisa: index.html e Assets/.
-# fontes/, ferramentas/, supabase/, CLAUDE.md e README.md NUNCA saem daqui.
+# Só vai para o endereço do site o que o navegador precisa: index.html e
+# Assets/. fontes/, ferramentas/, supabase/, CLAUDE.md e README.md ficam
+# visíveis no GitHub (repositório público), mas não são servidos pelo site.
 #
-# Requer o secret SITE_DEPLOY_TOKEN neste repositório: token fine-grained com
-# acesso só ao formacao-vendas-hi, permissão "Contents: Read and write".
-# Sem o secret, o workflow avisa e termina sem erro.
+# Requer, uma vez: Settings → Pages → Build and deployment → Source:
+# "GitHub Actions".
 
 name: Publicar site
 
@@ -20,52 +19,35 @@ on:
       - ".github/workflows/publicar-site.yml"
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 concurrency:
-  group: publicar-site
+  group: pages
   cancel-in-progress: false
 
 jobs:
   publicar:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
-      - name: Copiar o site para o repositório público
-        env:
-          TOKEN: ${{ secrets.SITE_DEPLOY_TOKEN }}
-          DESTINO: gbroccol0/formacao-vendas-hi
+      - name: Separar só o site
         run: |
-          if [ -z "$TOKEN" ]; then
-            echo "::warning::Secret SITE_DEPLOY_TOKEN não configurado; site não publicado."
-            exit 0
-          fi
+          mkdir _site
+          cp -r index.html Assets _site/
+          touch _site/.nojekyll
 
-          git clone --depth 1 "https://x-access-token:${TOKEN}@github.com/${DESTINO}.git" publico \
-            || { mkdir publico && git -C publico init -b main \
-                 && git -C publico remote add origin "https://x-access-token:${TOKEN}@github.com/${DESTINO}.git"; }
+      - uses: actions/configure-pages@v5
 
-          # Espelha só o site; --delete remove do público o que saiu daqui.
-          rsync -a --delete --exclude ".git" \
-            --include "/index.html" --include "/Assets/***" --exclude "*" \
-            ./ publico/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
 
-          touch publico/.nojekyll
-          cat > publico/README.md <<'EOF'
-          # Formação Comercial — HI Tecnologia
-
-          Site publicado em https://gbroccol0.github.io/formacao-vendas-hi/
-
-          **Não edite este repositório.** Ele é gerado automaticamente a partir do
-          repositório de trabalho (privado) a cada alteração do site.
-          EOF
-
-          cd publico
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          if git diff --cached --quiet; then
-            echo "Nada mudou no site."
-            exit 0
-          fi
-          git commit -m "Site atualizado a partir de ${GITHUB_SHA::7}"
-          git push origin HEAD:main
+      - id: deploy
+        uses: actions/deploy-pages@v4

@@ -84,18 +84,16 @@ Uma etapa é produzida por vez e só segue depois da revisão da anterior.
 1. **Rodar o SQL.** No mesmo projeto Supabase do suporte: SQL Editor → colar
    `supabase/configuracao.sql` → Run. Enquanto ele não rodar, o login funciona,
    mas o progresso não chega à conta (fica pendente no navegador).
-2. **Repositórios:**
-   - `gbroccol0/ProgramaFormacaoVendas` — **privado**, onde se trabalha. Guarda
-     material interno da HI em `fontes/`.
-   - `gbroccol0/formacao-vendas-hi` — **público**, só com o site, publicado em
-     **https://gbroccol0.github.io/formacao-vendas-hi/**. Não se edita à mão.
-   - A Action `.github/workflows/publicar-site.yml` copia `index.html` e
-     `Assets/` do privado para o público **a cada push no `main`** que mexa
-     nessas pastas (e pode ser rodada à mão em Actions → Publicar site → Run
-     workflow). Usa o secret `SITE_DEPLOY_TOKEN` (token fine-grained só do
-     repositório público, "Contents: Read and write"). `fontes/`,
-     `ferramentas/`, `supabase/`, `CLAUDE.md` e `README.md` nunca vão para o
-     público.
+2. **Repositório e publicação:**
+   - `gbroccol0/ProgramaFormacaoVendas`, **público** (decisão da equipe em
+     04/11/2026, ciente de que `fontes/` e o histórico ficam visíveis).
+   - Site em **https://gbroccol0.github.io/ProgramaFormacaoVendas/**.
+   - A Action `.github/workflows/publicar-site.yml` publica no GitHub Pages
+     **a cada push no `main`** que mexa em `index.html` ou `Assets/` (e pode
+     ser rodada à mão em Actions → Publicar site → Run workflow). Só
+     `index.html` e `Assets/` vão para o endereço do site.
+   - Configuração única: Settings → Pages → Build and deployment → Source:
+     **GitHub Actions**.
    - O GitHub Pages diferencia maiúsculas de minúsculas: use os nomes de
      arquivo exatamente como estão.
    - Login: o cadastro pelo site não define endereço de retorno; se o Supabase

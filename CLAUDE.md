@@ -296,20 +296,21 @@ qualquer extrator testado aqui).
 
 ## 8. Repositório
 
-`gbroccol0/ProgramaFormacaoVendas`, **privado** por decisão de Gabriel
-(04/11/2026): `fontes/` tem material interno da HI (Treinamento de Produto,
-Exercícios). **Nunca copiar `fontes/`, `ferramentas/` nem este arquivo para um
-repositório público.**
+`gbroccol0/ProgramaFormacaoVendas`, **público** (04/11/2026). Gabriel e a
+equipe decidiram hospedar o site neste mesmo repositório, cientes de que
+`fontes/` (Treinamento de Produto, Exercícios, Catálogo), este arquivo e o
+histórico ficam visíveis para qualquer pessoa. Mesmo assim, **não acrescentar
+dado sensível novo** (preço, contato pessoal, dado de cliente que não esteja
+nas fontes) sem Gabriel pedir.
 
-**Publicação (decidida em 04/11/2026):** o site vai ao ar em
-https://gbroccol0.github.io/formacao-vendas-hi/, a partir do repositório
-público `gbroccol0/formacao-vendas-hi`, que só recebe `index.html` e
-`Assets/`. Quem copia é a Action `.github/workflows/publicar-site.yml`, a cada
-push no `main` (secret `SITE_DEPLOY_TOKEN`). Consequências:
+**Publicação:** o site vai ao ar em
+https://gbroccol0.github.io/ProgramaFormacaoVendas/ pelo GitHub Pages deste
+repositório (Source: GitHub Actions). A Action
+`.github/workflows/publicar-site.yml` publica só `index.html` e `Assets/`, a
+cada push no `main` que mexa neles. Consequências:
 - **Push no `main` publica.** Etapa ainda não aprovada por Gabriel vai ao ar
   assim que for para o `main`; para trabalho em andamento, usar outra branch
   e só levar ao `main` com a aprovação dele (ou quando ele pedir).
-- Nunca editar o repositório público direto; a próxima publicação apaga.
 - Depois de publicar, conferir em Actions que o "Publicar site" passou e dar
   a Gabriel o link da etapa no site publicado.
 
