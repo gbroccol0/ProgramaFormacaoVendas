@@ -299,8 +299,19 @@ qualquer extrator testado aqui).
 `gbroccol0/ProgramaFormacaoVendas`, **privado** por decisão de Gabriel
 (04/11/2026): `fontes/` tem material interno da HI (Treinamento de Produto,
 Exercícios). **Nunca copiar `fontes/`, `ferramentas/` nem este arquivo para um
-repositório público.** A publicação do site (GitHub Pages) será feita num
-repositório público separado, só com o site; ver `README.md`, seção 4.
+repositório público.**
+
+**Publicação (decidida em 04/11/2026):** o site vai ao ar em
+https://gbroccol0.github.io/formacao-vendas-hi/, a partir do repositório
+público `gbroccol0/formacao-vendas-hi`, que só recebe `index.html` e
+`Assets/`. Quem copia é a Action `.github/workflows/publicar-site.yml`, a cada
+push no `main` (secret `SITE_DEPLOY_TOKEN`). Consequências:
+- **Push no `main` publica.** Etapa ainda não aprovada por Gabriel vai ao ar
+  assim que for para o `main`; para trabalho em andamento, usar outra branch
+  e só levar ao `main` com a aprovação dele (ou quando ele pedir).
+- Nunca editar o repositório público direto; a próxima publicação apaga.
+- Depois de publicar, conferir em Actions que o "Publicar site" passou e dar
+  a Gabriel o link da etapa no site publicado.
 
 ## 9. Fluxo com Gabriel
 

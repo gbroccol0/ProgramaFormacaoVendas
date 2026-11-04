@@ -20,6 +20,7 @@ Formacao-Vendas-HI/
 ├── CLAUDE.md                 ← contexto, decisões e pendências para o Claude Code continuar
 ├── fontes/                   ← material de origem (originais só leitura + texto extraído); ver fontes/README.md
 ├── ferramentas/              ← extrator de PDF, gerador das páginas "em produção", testes de navegador
+├── .github/workflows/        ← publicar-site.yml: copia o site para o repositório público (GitHub Pages)
 ├── supabase/
 │   └── configuracao.sql      ← tabela progresso_vendas (rodar uma vez no Supabase)
 └── Assets/
@@ -83,13 +84,24 @@ Uma etapa é produzida por vez e só segue depois da revisão da anterior.
 1. **Rodar o SQL.** No mesmo projeto Supabase do suporte: SQL Editor → colar
    `supabase/configuracao.sql` → Run. Enquanto ele não rodar, o login funciona,
    mas o progresso não chega à conta (fica pendente no navegador).
-2. **Repositório:** `gbroccol0/ProgramaFormacaoVendas`, **privado** (criado em
-   04/11/2026), porque guarda material interno da HI em `fontes/`. GitHub Pages
-   em repositório privado exige plano pago; para publicar, o caminho previsto
-   é um segundo repositório **público só com o site** (sem `fontes/`,
-   `ferramentas/` e `CLAUDE.md`), com o Pages na branch `main`, pasta raiz. O
-   GitHub Pages diferencia maiúsculas de minúsculas: use os nomes de arquivo
-   exatamente como estão.
+2. **Repositórios:**
+   - `gbroccol0/ProgramaFormacaoVendas` — **privado**, onde se trabalha. Guarda
+     material interno da HI em `fontes/`.
+   - `gbroccol0/formacao-vendas-hi` — **público**, só com o site, publicado em
+     **https://gbroccol0.github.io/formacao-vendas-hi/**. Não se edita à mão.
+   - A Action `.github/workflows/publicar-site.yml` copia `index.html` e
+     `Assets/` do privado para o público **a cada push no `main`** que mexa
+     nessas pastas (e pode ser rodada à mão em Actions → Publicar site → Run
+     workflow). Usa o secret `SITE_DEPLOY_TOKEN` (token fine-grained só do
+     repositório público, "Contents: Read and write"). `fontes/`,
+     `ferramentas/`, `supabase/`, `CLAUDE.md` e `README.md` nunca vão para o
+     público.
+   - O GitHub Pages diferencia maiúsculas de minúsculas: use os nomes de
+     arquivo exatamente como estão.
+   - Login: o cadastro pelo site não define endereço de retorno; se o Supabase
+     exigir confirmação por e-mail, o link do e-mail leva ao endereço
+     configurado no Supabase (o do suporte). Depois de confirmar, o login no
+     site de vendas funciona normalmente.
 3. **Testar localmente com servidor**, não com duplo clique: aberta como
    `file://`, a busca no conteúdo das etapas não funciona. Na pasta do site:
    `python -m http.server 8000` e abrir `http://localhost:8000`.
