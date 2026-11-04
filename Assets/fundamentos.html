@@ -21,6 +21,59 @@
             <span class="etapa-badge">Etapa 2 de 10</span>
             <h1>Fundamentos da automação para quem vende</h1>
             <p><strong>O mínimo de técnica para entender o cliente industrial e não prometer o que não existe.</strong></p>
+            <p>Nesta etapa você aprende como uma máquina ou um processo "funciona sozinho": quem mede,
+            quem decide e quem age. Depois vê as duas perguntas que aparecem em toda venda de CLP
+            (<strong>como vai ser alimentado</strong> e <strong>que sinais vai ler e comandar</strong>) e
+            termina situando cada produto HI na <strong>pirâmide da automação</strong>, do campo à nuvem.</p>
+        </div>
+        <div class="hero-image">
+            <svg class="diagrama" viewBox="0 0 540 430" role="img"
+                 aria-labelledby="cicloTitulo cicloDesc">
+                <title id="cicloTitulo">O ciclo da automação: medir, decidir, agir</title>
+                <desc id="cicloDesc">Ciclo em quatro caixas ligadas por setas. O sensor mede o processo
+                (exemplos: boia de nível, transmissor de temperatura THT863, sensor HPS850) e manda o sinal
+                ao CLP. O CLP decide, seguindo o programa (exemplos: RION5, NEON5, P7C). O atuador age
+                (exemplos: bomba, motor, válvula, sinaleiro). A ação muda o processo, e o sensor mede de novo.</desc>
+                <defs>
+                    <marker id="cicloPonta" viewBox="0 0 10 10" refX="5" refY="5"
+                            markerWidth="5" markerHeight="5" orient="auto">
+                        <path class="d-ponta" d="M0,0 L10,5 L0,10 z"/>
+                    </marker>
+                </defs>
+
+                <text class="d-titulo" x="270" y="24" text-anchor="middle">O ciclo da automação</text>
+
+                <!-- CLP (topo) -->
+                <rect class="d-caixa" x="170" y="44" width="200" height="86" rx="10"/>
+                <text class="d-rotulo" x="270" y="72" text-anchor="middle">2. CLP decide</text>
+                <text class="d-itens" x="270" y="94" text-anchor="middle">segue o programa</text>
+                <text class="d-itens" x="270" y="114" text-anchor="middle">RION5 · NEON5 · P7C</text>
+
+                <!-- Sensor (esquerda) -->
+                <rect class="d-caixa" x="10" y="170" width="200" height="86" rx="10"/>
+                <text class="d-rotulo" x="110" y="198" text-anchor="middle">1. Sensor mede</text>
+                <text class="d-itens" x="110" y="220" text-anchor="middle">boia · temperatura</text>
+                <text class="d-itens" x="110" y="240" text-anchor="middle">THT863 · HPS850</text>
+
+                <!-- Atuador (direita) -->
+                <rect class="d-caixa" x="330" y="170" width="200" height="86" rx="10"/>
+                <text class="d-rotulo" x="430" y="198" text-anchor="middle">3. Atuador age</text>
+                <text class="d-itens" x="430" y="220" text-anchor="middle">bomba · motor</text>
+                <text class="d-itens" x="430" y="240" text-anchor="middle">válvula · sinaleiro</text>
+
+                <!-- Processo (base) -->
+                <rect class="d-caixa" x="150" y="300" width="240" height="86" rx="10"/>
+                <text class="d-rotulo" x="270" y="328" text-anchor="middle">Processo</text>
+                <text class="d-itens" x="270" y="350" text-anchor="middle">o que se quer controlar:</text>
+                <text class="d-itens" x="270" y="370" text-anchor="middle">nível, temperatura, produção</text>
+
+                <path class="d-seta" d="M110,170 L110,100 L162,100" marker-end="url(#cicloPonta)"/>
+                <path class="d-seta" d="M370,100 L430,100 L430,162" marker-end="url(#cicloPonta)"/>
+                <path class="d-seta" d="M430,256 L430,343 L398,343" marker-end="url(#cicloPonta)"/>
+                <path class="d-seta" d="M150,343 L110,343 L110,264" marker-end="url(#cicloPonta)"/>
+
+                <text class="d-nota" x="270" y="414" text-anchor="middle">A ação muda o processo, e o sensor mede de novo.</text>
+            </svg>
         </div>
     </section>
 
@@ -38,15 +91,809 @@
                     <li>explicar sinais digitais (liga/desliga) e analógicos (0 a 100% de uma medida);</li>
                     <li>situar cada produto HI na pirâmide da automação: campo, controle, supervisão e nuvem.</li>
                 </ul>
-                <p class="tempo">Tempo estimado: 2h30.</p>
+                <p class="tempo">Tempo estimado: 2h30 (leitura, quiz e preparo dos exercícios do encontro).</p>
             </div>
 
-            <div class="em-producao">
-                <strong>Conteúdo em produção</strong>
-                Esta etapa está sendo escrita e entra no ar depois da revisão da etapa anterior.
+            <ul class="sumario" aria-label="Nesta etapa">
+                <li><a href="#automacao">Automação e processo</a></li>
+                <li><a href="#personagens">Sensor, CLP e atuador</a></li>
+                <li><a href="#composicao">Do que um CLP é feito</a></li>
+                <li><a href="#alimentacao">AC × DC</a></li>
+                <li><a href="#sinais">Digital × analógico</a></li>
+                <li><a href="#piramide">Pirâmide da automação</a></li>
+                <li><a href="#na-venda">Na venda</a></li>
+                <li><a href="#glossario">Glossário</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="automacao">
+                <h3>1. O que é automação e o que é um processo</h3>
+
+                <p>Um <strong>processo</strong> é qualquer coisa que a indústria quer manter sob controle:
+                o nível de água de um reservatório, a temperatura de um forno, a quantidade de caixas que passa
+                numa esteira, a pressão de uma tubulação, o funcionamento de um poço de petróleo.</p>
+
+                <p><strong>Automação</strong> é fazer esse processo funcionar sozinho, com equipamentos que medem,
+                decidem e agem no lugar de uma pessoa. A indústria automatiza para trocar operações manuais e
+                repetitivas por um controle que tem <strong>precisão</strong>, <strong>segurança</strong> e
+                <strong>funcionamento contínuo</strong>, de dia e de noite.</p>
+
+                <div class="analogia">
+                    <p>Pense na caixa-d'água de casa. A boia percebe que o nível baixou, abre a entrada de água
+                    e fecha quando enche. Ninguém precisa ficar olhando. A automação industrial faz o mesmo, só
+                    que com equipamentos eletrônicos, muitas medições ao mesmo tempo e a possibilidade de avisar,
+                    registrar e acompanhar tudo à distância.</p>
+                </div>
+
+                <div class="na-venda">
+                    <p>O cliente raramente diz "quero um CLP". Ele diz "a bomba queima porque roda seca",
+                    "preciso saber o nível do reservatório sem mandar alguém lá" ou "quero contar quantos ciclos
+                    a máquina fez". Seu trabalho é ouvir o <strong>problema do processo</strong> e traduzir em
+                    equipamentos. O resto desta etapa dá as palavras para essa tradução.</p>
+                </div>
+
+                <p class="fonte">Fontes: conceitos gerais de automação; apresentação de CLPs, slide 1 (por que a indústria usa CLP).</p>
             </div>
 
-            <p class="fonte">Fontes previstas: Treinamento de Produto, p. 3 a 5; apresentação de CLPs (slides 1 e 2).</p>
+
+            <!-- ===================================================== -->
+            <div class="step" id="personagens">
+                <h3>2. Os personagens: sensor, CLP e atuador</h3>
+
+                <p>Toda automação, da mais simples à mais complexa, repete o mesmo ciclo do diagrama no topo
+                da página: <strong>medir → decidir → agir</strong>.</p>
+
+                <div class="cartoes">
+                    <div class="cartao">
+                        <h4>Sensor: os sentidos</h4>
+                        <p>Mede ou percebe alguma coisa do processo e manda um sinal elétrico ao CLP. Pode só
+                        avisar "aconteceu / não aconteceu" (um botão apertado, uma peça que passou) ou dizer
+                        "quanto" (temperatura, nível, pressão).</p>
+                        <p><span class="rotulo">Na linha HI</span><br><strong>THT863</strong> (mede temperatura
+                        ou umidade) e <strong>HPS850</strong> (percebe quando a máquina passou por uma posição).</p>
+                    </div>
+                    <div class="cartao">
+                        <h4>CLP: o cérebro</h4>
+                        <p>O Controlador Lógico Programável recebe os sinais, executa o <strong>programa</strong>
+                        carregado nele (as instruções para cada situação prevista) e decide o que fazer.</p>
+                        <p><span class="rotulo">Na linha HI</span><br><strong>RION5</strong>,
+                        <strong>NEON5</strong> e <strong>P7C</strong> (Etapa 4).</p>
+                    </div>
+                    <div class="cartao">
+                        <h4>Atuador: os músculos</h4>
+                        <p>Recebe o comando do CLP e age sobre o processo: liga um motor ou uma bomba, abre uma
+                        válvula, acende um sinaleiro, aciona um relé.</p>
+                        <p><span class="rotulo">Na linha HI</span><br>Motores, bombas e válvulas não estão no
+                        catálogo da HI: o CLP HI é quem os comanda.</p>
+                    </div>
+                </div>
+
+                <h4>Dois exemplos com produtos HI</h4>
+                <ul>
+                    <li><strong>Bombeio mecânico de petróleo:</strong> o sensor <strong>HPS850</strong> é um sensor
+                    magnético. Cada vez que a máquina passa por uma posição, ele manda um sinal e o CLP
+                    <strong>conta uma volta</strong>. É assim que se contam os ciclos do "cavalinho" que sobe e desce.</li>
+                    <li><strong>Temperatura e umidade de um ambiente:</strong> o <strong>THT863</strong> é um
+                    transmissor que mede a temperatura ambiente (de -20 a 80 °C) ou a umidade relativa do ar
+                    (0 a 100%) e manda o valor ao CLP por um sinal de 4 a 20 mA. Você entende o que é isso no item 5.</li>
+                </ul>
+
+                <h4>E a tela? Onde entram a IHM e o supervisório</h4>
+                <p>O ciclo funciona sem ninguém olhando. Mas o operador quer <strong>ver</strong> o que está
+                acontecendo e às vezes <strong>dar um comando</strong>. Para isso existem duas "janelas" para o
+                processo, que leem os dados do CLP:</p>
+                <ul>
+                    <li><strong>IHM</strong> (Interface Homem-Máquina): uma <strong>tela física</strong> instalada
+                    junto da máquina ou no painel, com botões, valores e históricos. Na HI, a <strong>GTI5</strong>.</li>
+                    <li><strong>Supervisório</strong> (SCADA): um <strong>software</strong> que roda em computadores
+                    da rede local da empresa, com vários computadores acessando as mesmas telas. Na HI, o
+                    <strong>HIscada Pro</strong>. Existe também a versão "na nuvem", o
+                    <strong>Portal de Telemetria</strong>, acessado pela internet.</li>
+                </ul>
+
+                <div class="analogia">
+                    <p>Pense num carro. Os sensores são os medidores (velocidade, combustível, temperatura do motor);
+                    a central eletrônica é o CLP; injeção, freio e ventoinha são os atuadores. O painel na frente do
+                    motorista é a IHM. E o aplicativo da montadora, que mostra no celular onde o carro está e se
+                    há algum alerta, faz o papel do supervisório na nuvem.</p>
+                </div>
+
+                <p class="fonte">Fontes: Treinamento de Produto, p. 3, 5, 10, 17, 19 e 23; apresentação de CLPs, slide 1;
+                Catálogo Geral, p. 24.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="composicao">
+                <h3>3. Do que um CLP é feito (do ponto de vista de quem vende)</h3>
+
+                <p>Para o vendedor, todo CLP se apoia em <strong>três pilares</strong>. São eles que você precisa
+                descobrir na conversa para que a venda siga adiante:</p>
+
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Pilar</th>
+                                <th>Para que serve</th>
+                                <th>Pergunta ao cliente</th>
+                                <th>Onde aprofundar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Alimentação (AC ou DC)</td>
+                                <td>A energia que liga o CLP.</td>
+                                <td>"Como o equipamento vai ser ligado: direto na tomada ou num painel com fonte?"</td>
+                                <td>Item 4 desta etapa</td>
+                            </tr>
+                            <tr>
+                                <td>Módulos de I/O (entradas e saídas)</td>
+                                <td>Onde se ligam os sensores (entradas) e os atuadores (saídas).</td>
+                                <td>"Quantos sinais o CLP vai ler e quantos vai comandar? De que tipo?"</td>
+                                <td>Item 5 desta etapa e Etapa 4</td>
+                            </tr>
+                            <tr>
+                                <td>Interfaces de comunicação</td>
+                                <td>Portas (Ethernet, serial, rádio, celular) para trocar dados com outros equipamentos, telas e computadores.</td>
+                                <td>"Com o que o CLP precisa conversar e onde você quer ver os dados?"</td>
+                                <td>Item 6 desta etapa e Etapa 3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="analogia">
+                    <p>Pense num computador: ele precisa de tomada (alimentação), de teclado, mouse e monitor
+                    (entradas e saídas) e de internet ou cabo de rede (comunicação). Se faltar um dos três, não
+                    adianta o processador ser bom. No CLP é igual.</p>
+                </div>
+
+                <p>"I/O" vem do inglês <em>Input/Output</em>: entrada e saída. Cada sinal ligado ao CLP ocupa um
+                <strong>ponto de I/O</strong>. Por isso o cliente técnico fala em "quantos pontos" o CLP tem.</p>
+
+                <div class="na-venda">
+                    <p>Saia da primeira conversa com os três pilares anotados. Com eles, o suporte e você conseguem
+                    indicar o modelo de CLP e os módulos certos (é o assunto da Etapa 4). Sem eles, qualquer
+                    indicação é chute.</p>
+                </div>
+
+                <p class="fonte">Fontes: Treinamento de Produto, p. 4 e 5; apresentação de CLPs, slide 1.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="alimentacao">
+                <h3>4. Alimentação AC × DC: como o equipamento é ligado</h3>
+
+                <p>CLPs, IHMs e os outros equipamentos precisam de energia elétrica, que pode chegar de dois
+                jeitos:</p>
+
+                <svg class="diagrama diagrama-corpo" viewBox="0 0 420 270" role="img"
+                     aria-labelledby="acdcTitulo acdcDesc">
+                    <title id="acdcTitulo">Alimentação AC e DC</title>
+                    <desc id="acdcDesc">Duas linhas. Em AC, a tomada de 110/127 ou 220 V AC liga direto no
+                    equipamento AC, sem fonte. Em DC, a tomada liga numa fonte de alimentação, que entrega 12 ou
+                    24 V DC ao equipamento DC e aos sensores.</desc>
+                    <defs>
+                        <marker id="acdcPonta" viewBox="0 0 10 10" refX="5" refY="5"
+                                markerWidth="5" markerHeight="5" orient="auto">
+                            <path class="d-ponta" d="M0,0 L10,5 L0,10 z"/>
+                        </marker>
+                    </defs>
+
+                    <text class="d-rotulo" x="10" y="26">AC: direto na tomada</text>
+                    <rect class="d-caixa" x="10" y="40" width="110" height="64" rx="10"/>
+                    <text class="d-rotulo" x="65" y="66" text-anchor="middle">Tomada</text>
+                    <text class="d-itens" x="65" y="88" text-anchor="middle">110/220 V AC</text>
+                    <line class="d-seta" x1="120" y1="72" x2="292" y2="72" marker-end="url(#acdcPonta)"/>
+                    <text class="d-nota" x="206" y="64" text-anchor="middle">sem fonte</text>
+                    <rect class="d-caixa" x="300" y="40" width="110" height="64" rx="10"/>
+                    <text class="d-rotulo" x="355" y="66" text-anchor="middle">CLP AC</text>
+                    <text class="d-itens" x="355" y="88" text-anchor="middle">85 a 265 V AC</text>
+
+                    <text class="d-rotulo" x="10" y="146">DC: com fonte de alimentação</text>
+                    <rect class="d-caixa" x="10" y="160" width="110" height="64" rx="10"/>
+                    <text class="d-rotulo" x="65" y="186" text-anchor="middle">Tomada</text>
+                    <text class="d-itens" x="65" y="208" text-anchor="middle">110/220 V AC</text>
+                    <line class="d-seta" x1="120" y1="192" x2="147" y2="192" marker-end="url(#acdcPonta)"/>
+                    <rect class="d-caixa" x="155" y="160" width="110" height="64" rx="10"/>
+                    <text class="d-rotulo" x="210" y="186" text-anchor="middle">Fonte</text>
+                    <text class="d-itens" x="210" y="208" text-anchor="middle">AC → DC</text>
+                    <line class="d-seta" x1="265" y1="192" x2="292" y2="192" marker-end="url(#acdcPonta)"/>
+                    <rect class="d-caixa" x="300" y="160" width="110" height="64" rx="10"/>
+                    <text class="d-rotulo" x="355" y="186" text-anchor="middle">CLP DC</text>
+                    <text class="d-itens" x="355" y="208" text-anchor="middle">12 ou 24 V DC</text>
+                    <text class="d-nota" x="210" y="252" text-anchor="middle">A mesma fonte pode alimentar os sensores do painel.</text>
+                </svg>
+
+                <div class="cartoes">
+                    <div class="cartao">
+                        <h4>AC (corrente alternada)</h4>
+                        <p>É a energia da tomada. O equipamento com alimentação AC liga <strong>direto na
+                        tomada</strong>, sem fonte adicional. No Brasil, as tensões comuns são 110/127 V AC e
+                        220 V AC; os CLPs HI com opção AC aceitam a faixa de <strong>85 a 265 V AC</strong>,
+                        que cobre as duas.</p>
+                        <p><span class="rotulo">Quando o cliente escolhe</span><br>Quando quer praticidade:
+                        ligar o CLP onde há tomada, sem precisar de fonte.</p>
+                    </div>
+                    <div class="cartao">
+                        <h4>DC (corrente contínua)</h4>
+                        <p>É uma tensão mais baixa e constante. O equipamento DC precisa de uma <strong>fonte de
+                        alimentação</strong>, que converte a energia da tomada em corrente contínua e reduz a
+                        tensão. Em automação, os valores mais comuns são <strong>12 V DC</strong> e
+                        <strong>24 V DC</strong>.</p>
+                        <p><span class="rotulo">Quando o cliente escolhe</span><br>Em painéis industriais, para
+                        trabalhar em baixa tensão e aproveitar a mesma fonte que alimenta os sensores.</p>
+                    </div>
+                </div>
+
+                <div class="analogia">
+                    <p>Pense no celular e no carregador. O celular funciona com uma tensão baixa e contínua (DC);
+                    o carregador é a "fonte" que converte a energia da tomada (AC) para o que ele aceita. Um
+                    equipamento AC é como um liquidificador: vai direto na tomada.</p>
+                </div>
+
+                <h4>Como isso aparece na linha HI</h4>
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>Produto</th><th>Alimentação</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>CLP P7C</td><td>AC (85 a 265 V AC) ou DC (10 a 36 V DC), conforme o modelo</td></tr>
+                            <tr><td>CLP NEON5</td><td>AC (85 a 265 V AC) ou DC (10 a 30 V DC), conforme o modelo</td></tr>
+                            <tr><td>CLP RION5</td><td>Só DC (10 a 30 V DC)</td></tr>
+                            <tr><td>Sensor THT863</td><td>DC (12 a 30 V DC)</td></tr>
+                            <tr><td>Fontes Mean Well (revenda)</td><td>Entram na tomada (90 a 264 V AC) e entregam 24 V DC</td></tr>
+                            <tr><td>SBC513 (fabricação HI)</td><td>Controlador de carga com bateria de 12 V incorporada; alimentado por 18 a 26 V DC ou painel fotovoltaico. Mantém o equipamento ligado onde a rede elétrica falha ou não existe</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="na-venda">
+                    <p>Se o cliente escolher um equipamento DC e não tiver fonte no painel, a fonte entra no pedido.
+                    Se o local não tiver rede elétrica (um poço, uma estação isolada), lembre do
+                    <strong>SBC513</strong>, que trabalha com bateria e painel fotovoltaico. Você aprofunda fontes na Etapa 6.</p>
+                </div>
+
+                <div class="atencao">
+                    <p><strong>Não decida a alimentação pelo cliente.</strong> Se ele não disser se quer AC ou DC,
+                    pergunte como é o local (tem tomada? qual tensão? já existe painel com fonte de 24 V DC?). Se
+                    ele não souber, anote e confirme com o suporte antes de fechar a configuração. E lembre: o
+                    RION5 não tem opção AC.</p>
+                </div>
+
+                <p class="fonte">Fontes: Treinamento de Produto, p. 3 e 18; apresentação de CLPs, slide 2;
+                Catálogo Geral, p. 7, 8, 9, 24 e 26.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="sinais">
+                <h3>5. Sinais digitais × analógicos: como o CLP "enxerga" o processo</h3>
+
+                <p>O CLP só entende sinais elétricos. Eles chegam (ou saem) de dois tipos, e saber qual é qual
+                é o que permite contar os pontos de I/O com o cliente.</p>
+
+                <h4>Sinal digital: liga ou desliga</h4>
+                <p>Tem só <strong>dois estados</strong>: 0 ou 1, desligado ou ligado. Serve quando basta saber
+                "sim ou não": a botoeira foi apertada? A peça passou pelo sensor? E para comandar "liga ou
+                desliga": acender um sinaleiro, acionar um relé que liga um motor.</p>
+
+                <h4>Sinal analógico: quanto, de 0 a 100%</h4>
+                <p>Varia continuamente, como o ponteiro de um medidor. Os padrões da automação são
+                <strong>0 a 10 V</strong> (tensão) e <strong>4 a 20 mA</strong> (corrente). O segredo é este:
+                <strong>o sinal representa de 0 a 100% da grandeza medida ou comandada</strong>. O CLP não sabe
+                o que é "litro" nem "psi": ele lê ou envia uma porcentagem.</p>
+
+                <svg class="diagrama diagrama-corpo" viewBox="0 0 420 250" role="img"
+                     aria-labelledby="escalaTitulo escalaDesc">
+                    <title id="escalaTitulo">O sinal analógico é uma porcentagem</title>
+                    <desc id="escalaDesc">Régua de 0 a 100% com quatro escalas alinhadas. 0% corresponde a
+                    4 mA, 0 V e 0 litros; 50% corresponde a 12 mA, 5 V e 250 litros; 100% corresponde a 20 mA,
+                    10 V e 500 litros, num tanque de 0 a 500 litros.</desc>
+
+                    <text class="d-titulo" x="210" y="22" text-anchor="middle">Tanque de 0 a 500 litros</text>
+
+                    <rect class="d-caixa" x="140" y="40" width="260" height="26" rx="6"/>
+                    <rect class="d-cheio" x="140" y="40" width="130" height="26" rx="6"/>
+                    <line class="d-linha" x1="140" y1="70" x2="140" y2="206"/>
+                    <line class="d-linha" x1="270" y1="70" x2="270" y2="206"/>
+                    <line class="d-linha" x1="400" y1="70" x2="400" y2="206"/>
+
+                    <text class="d-rotulo" x="10" y="98">Porcentagem</text>
+                    <text class="d-itens" x="146" y="98">0%</text>
+                    <text class="d-itens" x="276" y="98">50%</text>
+                    <text class="d-itens" x="394" y="98" text-anchor="end">100%</text>
+
+                    <text class="d-rotulo" x="10" y="134">4 a 20 mA</text>
+                    <text class="d-itens" x="146" y="134">4 mA</text>
+                    <text class="d-itens" x="276" y="134">12 mA</text>
+                    <text class="d-itens" x="394" y="134" text-anchor="end">20 mA</text>
+
+                    <text class="d-rotulo" x="10" y="170">0 a 10 V</text>
+                    <text class="d-itens" x="146" y="170">0 V</text>
+                    <text class="d-itens" x="276" y="170">5 V</text>
+                    <text class="d-itens" x="394" y="170" text-anchor="end">10 V</text>
+
+                    <text class="d-rotulo" x="10" y="206">Litros</text>
+                    <text class="d-itens" x="146" y="206">0 L</text>
+                    <text class="d-itens" x="276" y="206">250 L</text>
+                    <text class="d-itens" x="394" y="206" text-anchor="end">500 L</text>
+
+                    <text class="d-nota" x="210" y="238" text-anchor="middle">O CLP lê "50%"; o programa transforma em 250 litros.</text>
+                </svg>
+
+                <div class="analogia">
+                    <p>Pense no marcador de combustível do carro. Ele não mostra litros: mostra "meio tanque".
+                    Quem sabe que o tanque tem 50 litros conclui que há 25. O CLP é igual: lê "50%" de um tanque
+                    de 0 a 500 litros, e o programa (ou a tela) converte em 250 litros. No caminho de volta,
+                    para abrir 30% uma válvula que trabalha de 3 a 15 psi, o CLP não precisa saber o que é psi:
+                    ele envia 30% do sinal de 4 a 20 mA.</p>
+                </div>
+
+                <p>Por que a escala de corrente começa em 4 mA, e não em 0? Porque assim o "zero" da medida
+                ainda tem corrente passando. Se o fio romper, o sinal cai para 0 mA, e o sistema percebe que
+                há uma falha, em vez de achar que o tanque esvaziou. Dentro do CLP, conversores (A/D e D/A)
+                fazem a passagem entre o sinal elétrico e o número que o programa usa.</p>
+
+                <h4>Entrada ou saída?</h4>
+                <p>A direção do sinal importa tanto quanto o tipo: <strong>entrada</strong> é o que o CLP
+                <strong>recebe</strong> (vem de um sensor); <strong>saída</strong> é o que o CLP
+                <strong>envia</strong> (vai para um atuador). Combinando os dois, há quatro tipos de ponto:</p>
+
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>Tipo de ponto</th><th>O CLP…</th><th>Exemplos</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Entrada digital</td>
+                                <td>recebe um "sim ou não"</td>
+                                <td>Sensor de presença, botoeira, chave, sensor HPS850 contando os ciclos da máquina.</td>
+                            </tr>
+                            <tr>
+                                <td>Saída digital</td>
+                                <td>comanda "liga ou desliga"</td>
+                                <td>Sinaleiro, LED, relé que liga um motor ou uma bomba.</td>
+                            </tr>
+                            <tr>
+                                <td>Entrada analógica</td>
+                                <td>recebe "quanto" (0 a 100%)</td>
+                                <td>Transmissor de nível, de pressão ou de temperatura (como o THT863, em 4 a 20 mA).</td>
+                            </tr>
+                            <tr>
+                                <td>Saída analógica</td>
+                                <td>comanda "quanto" (0 a 100%)</td>
+                                <td>Abertura de uma válvula proporcional; referência de velocidade de um motor.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4>Sinais "especiais": anote e confirme</h4>
+                <p>Alguns sensores não usam liga/desliga, 0 a 10 V nem 4 a 20 mA e precisam de uma entrada própria
+                no módulo de I/O. Os módulos da HI trazem, por exemplo, entradas para <strong>PT100</strong>
+                (sensor de temperatura), para <strong>célula de carga</strong> (pesagem) e canais de
+                <strong>contador rápido</strong> e <strong>encoder</strong> (pulsos muito rápidos, como os de um
+                medidor de vazão a pulso).</p>
+
+                <div class="atencao">
+                    <p>Se o cliente citar um sinal desses (ou qualquer um que você não reconheça), <strong>anote o
+                    tipo, o modelo do sensor e, no caso de pulso, a frequência</strong>, e confirme com o suporte
+                    qual módulo atende. Não diga "o nosso CLP lê qualquer sensor".</p>
+                </div>
+
+                <div class="na-venda">
+                    <p>A regra de bolso desta etapa é sair da conversa com a <strong>lista de sinais</strong>:
+                    quantas entradas digitais, saídas digitais, entradas analógicas e saídas analógicas, e qual o
+                    tipo de cada sinal analógico (4 a 20 mA ou 0 a 10 V). Exemplo: "8 entradas digitais, 8 saídas
+                    digitais, 2 entradas 4 a 20 mA e 1 saída 4 a 20 mA" são 19 pontos de I/O. Com essa lista, a
+                    escolha do CLP e dos módulos fica simples (Etapa 4).</p>
+                </div>
+
+                <p class="fonte">Fontes: Treinamento de Produto, p. 3, 4 e 17; apresentação de CLPs, slide 2;
+                Catálogo Geral, p. 10 e 24. O "zero vivo" de 4 mA é conceito geral de automação.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="piramide">
+                <h3>6. A pirâmide da automação: onde cada produto HI entra</h3>
+
+                <p>A pirâmide organiza a automação em níveis, de baixo para cima. Embaixo ficam muitos
+                equipamentos simples, perto do processo; em cima, poucos sistemas que juntam a informação de
+                tudo. Os dados <strong>sobem</strong> do campo até a nuvem, e os comandos <strong>descem</strong>.</p>
+
+                <svg class="diagrama diagrama-corpo" viewBox="0 0 420 330" role="img"
+                     aria-labelledby="piramideTitulo piramideDesc">
+                    <title id="piramideTitulo">Pirâmide da automação com os produtos HI</title>
+                    <desc id="piramideDesc">Pirâmide de quatro níveis. Nível 1, campo: sensores THT863 e HPS850,
+                    fontes e caixas GEM100. Nível 2, controle: CLPs RION5, NEON5 e P7C, IHM GTI5 e o software
+                    HIstudio. Nível 3, supervisão local: HIscada Pro e MPL Server. Nível 4, nuvem: Portal de
+                    Telemetria e plano HI Connect. Ao lado, uma faixa vertical indica a comunicação que liga
+                    os níveis: GTON-C, GTON-P, GTON-M, rádio R9X307 e USB721.</desc>
+
+                    <polygon class="d-caixa" points="140,12 260,12 285,74 115,74"/>
+                    <text class="d-rotulo" x="200" y="38" text-anchor="middle">4. Nuvem</text>
+                    <text class="d-itens" x="200" y="60" text-anchor="middle">Portal · HI Connect</text>
+
+                    <polygon class="d-caixa" points="112,82 288,82 313,144 87,144"/>
+                    <text class="d-rotulo" x="200" y="108" text-anchor="middle">3. Supervisão local</text>
+                    <text class="d-itens" x="200" y="130" text-anchor="middle">HIscada Pro · MPL Server</text>
+
+                    <polygon class="d-caixa" points="84,152 316,152 341,214 59,214"/>
+                    <text class="d-rotulo" x="200" y="178" text-anchor="middle">2. Controle</text>
+                    <text class="d-itens" x="200" y="200" text-anchor="middle">RION5 · NEON5 · P7C · GTI5 · HIstudio</text>
+
+                    <polygon class="d-caixa" points="56,222 344,222 369,284 31,284"/>
+                    <text class="d-rotulo" x="200" y="248" text-anchor="middle">1. Campo</text>
+                    <text class="d-itens" x="200" y="270" text-anchor="middle">THT863 · HPS850 · fontes · GEM100</text>
+
+                    <rect class="d-cheio" x="384" y="12" width="26" height="272" rx="8"/>
+                    <text class="d-texto-claro" x="397" y="148" text-anchor="middle"
+                          transform="rotate(-90 397 148)">Comunicação</text>
+
+                    <text class="d-nota" x="200" y="306" text-anchor="middle">Comunicação liga os níveis: GTON-C · GTON-P · GTON-M</text>
+                    <text class="d-nota" x="200" y="322" text-anchor="middle">rádio R9X307 · USB721</text>
+                </svg>
+
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>Nível</th><th>O que acontece ali</th><th>Produtos HI</th><th>Etapa</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1. Campo</td>
+                                <td>Onde está o processo: sensores medem, atuadores agem. Fontes e caixas mantêm a eletrônica ligada e protegida.</td>
+                                <td>Sensores THT863 e HPS850; fonte SBC513 e fontes Mean Well (revenda); caixas GEM100</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>2. Controle</td>
+                                <td>O CLP lê o campo e decide; a IHM mostra e comanda junto da máquina.</td>
+                                <td>CLPs RION5, NEON5 e P7C; IHM GTI5; HIstudio (software de programação)</td>
+                                <td>4 e 6</td>
+                            </tr>
+                            <tr>
+                                <td>3. Supervisão local</td>
+                                <td>Telas, alarmes, gráficos e histórico em computadores da rede local da empresa.</td>
+                                <td>HIscada Pro (supervisório) e MPL Server (servidor de comunicação)</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>4. Nuvem</td>
+                                <td>Acesso pela internet, de qualquer lugar, em computador, tablet ou celular, sem servidor próprio.</td>
+                                <td>Portal de Telemetria; plano de dados HI Connect</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>Comunicação (entre os níveis)</td>
+                                <td>Leva os dados de um nível ao outro e faz equipamentos diferentes conversarem.</td>
+                                <td>Gateways GTON-C e GTON-P; modem GTON-M; rádio R9X307; conversor USB721</td>
+                                <td>3 e 5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>No mapa da Etapa 1, a comunicação aparecia como uma camada. Aqui ela é mostrada como o
+                "elevador" que liga os andares: não é um nível do processo, é o caminho por onde os dados sobem
+                e os comandos descem. Em livros de automação, você também pode encontrar a pirâmide com mais
+                níveis no topo (gestão da produção e da empresa); nesta formação usamos os quatro níveis em que
+                a linha HI se organiza.</p>
+
+                <div class="analogia">
+                    <p>Pense num prédio. No térreo (campo) está quem faz o trabalho; no 1º andar (controle), o
+                    encarregado que decide na hora; no 2º (supervisão local), a sala de controle que vê o prédio
+                    inteiro; no último (nuvem), o diretor que acompanha tudo de longe, pelo celular. O elevador
+                    é a comunicação.</p>
+                </div>
+
+                <div class="na-venda">
+                    <p>Use a pirâmide para descobrir <strong>até onde o cliente quer chegar</strong>. "Só quero que
+                    a bomba ligue sozinha" para no nível 2. "Quero ver tudo num computador da sala de controle"
+                    chega ao nível 3. "Quero acompanhar pelo celular, de qualquer lugar" chega ao nível 4. Cada
+                    andar a mais é mais solução HI na proposta, e pede um caminho de comunicação para os dados
+                    subirem (Etapas 3 e 5).</p>
+                </div>
+
+                <div class="atencao">
+                    <p>IHM e supervisório não são a mesma coisa: a IHM é uma tela física ao lado da máquina
+                    (nível 2); o supervisório é um software em computadores da rede (nível 3) ou na internet
+                    (nível 4). Pergunte ao cliente onde ele quer ver os dados antes de indicar um ou outro.</p>
+                </div>
+
+                <p class="fonte">Fontes: Catálogo Geral, sumário e p. 7 a 33 e 38; Treinamento de Produto, p. 2, 10,
+                17 a 19, 21 a 23. A pirâmide em si é conceito geral de automação.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="na-venda">
+                <h3>7. Como isso aparece na venda</h3>
+
+                <h4>As perguntas que você faz (regra de bolso)</h4>
+                <p>Com estas cinco perguntas você sai da primeira conversa com o que o suporte precisa para
+                indicar a solução. Não precisa entender cada resposta a fundo: precisa <strong>anotar</strong>.</p>
+                <ol>
+                    <li><strong>Alimentação:</strong> "Onde o equipamento vai ser instalado? Tem tomada, qual a
+                    tensão? Já existe painel com fonte de 24 V DC? Tem rede elétrica no local?"</li>
+                    <li><strong>Sinais liga/desliga:</strong> "Quantos botões, chaves e sensores o CLP vai ler? Quantos
+                    motores, bombas, relés e sinaleiros vai comandar?"</li>
+                    <li><strong>Medições e comandos proporcionais:</strong> "Quantas medições (nível, pressão,
+                    temperatura, vazão) e em que sinal: 4 a 20 mA ou 0 a 10 V? Alguma válvula ou motor que precise
+                    de comando de 0 a 100%?"</li>
+                    <li><strong>Sinais especiais:</strong> "Algum sensor diferente, como PT100, célula de carga ou
+                    medidor a pulso? Qual o modelo?"</li>
+                    <li><strong>Até onde quer chegar:</strong> "Onde quer ver os dados: numa tela no painel, num
+                    computador da planta ou no celular, de qualquer lugar?"</li>
+                </ol>
+
+                <h4>Perguntas que o cliente costuma fazer</h4>
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>O cliente pergunta</th><th>Como responder</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>"Vocês têm CLP que liga direto na tomada?"</td>
+                                <td>Sim: o P7C e o NEON5 têm opção de alimentação AC (85 a 265 V AC). O RION5 é só DC.
+                                Confirme a tensão do local e anote.</td>
+                            </tr>
+                            <tr>
+                                <td>"Vou precisar de fonte?"</td>
+                                <td>Se o equipamento for DC e o painel não tiver fonte, sim: a fonte converte a energia
+                                da tomada em 12 ou 24 V DC. A HI fornece fontes (Mean Well, revenda) e, onde a rede
+                                falta, o SBC513. Inclua no pedido de orçamento.</td>
+                            </tr>
+                            <tr>
+                                <td>"O CLP de vocês lê o meu transmissor de 4 a 20 mA?"</td>
+                                <td>4 a 20 mA e 0 a 10 V são os sinais analógicos padrão que os CLPs leem por módulos
+                                analógicos. Anote quantos são; o módulo certo é escolhido na configuração (Etapa 4).
+                                Se for outro tipo de sinal, confirme com o suporte.</td>
+                            </tr>
+                            <tr>
+                                <td>"De quantos pontos eu preciso?"</td>
+                                <td>Quem sabe o que vai ser ligado é o cliente. Conte com ele os sinais de cada tipo
+                                (a lista de sinais) e, se possível, pergunte se ele quer pontos de reserva.</td>
+                            </tr>
+                            <tr>
+                                <td>"O CLP mostra o nível em litros?"</td>
+                                <td>O CLP recebe a medida como porcentagem (0 a 100%); o programa converte para litros,
+                                metros ou graus, que é o que aparece na tela.</td>
+                            </tr>
+                            <tr>
+                                <td>"Dá para acompanhar pelo celular?"</td>
+                                <td>Sim, no nível da nuvem, com o Portal de Telemetria (Etapa 7). Para isso o equipamento
+                                precisa chegar à internet; os caminhos você vê nas Etapas 3 e 5.</td>
+                            </tr>
+                            <tr>
+                                <td>"Quanto custa?"</td>
+                                <td>Registre a lista de sinais, a alimentação e onde ele quer ver os dados, e siga o
+                                processo de orçamento do setor de vendas. Não existe "valor de cabeça".</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4>Erros comuns a evitar</h4>
+                <div class="atencao">
+                    <ul>
+                        <li>Escolher AC ou DC pelo cliente, sem perguntar como é o local.</li>
+                        <li>Esquecer a fonte quando o equipamento é DC e o cliente não tem com o que ligar.</li>
+                        <li>Contar os sinais sem separar entrada de saída e digital de analógico.</li>
+                        <li>Prometer que o CLP lê "qualquer sensor": PT100, célula de carga e pulsos rápidos precisam de entrada própria; confirme com o suporte.</li>
+                        <li>Confundir IHM (tela no painel) com supervisório (software em computador ou na nuvem).</li>
+                        <li>Tentar explicar ao cliente o que é A/D, mA e psi: o cliente quer saber se o problema dele vai ser resolvido.</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="glossario">
+                <h3>8. Glossário da etapa</h3>
+
+                <dl class="glossario">
+                    <dt>Processo</dt>
+                    <dd>Aquilo que a indústria quer manter sob controle: nível, temperatura, pressão, produção, o
+                    funcionamento de uma máquina.</dd>
+
+                    <dt>Sensor / transmissor</dt>
+                    <dd>Equipamento que mede ou percebe algo do processo e manda um sinal elétrico ao CLP.
+                    "Transmissor" costuma ser o sensor que manda uma medida (por exemplo, 4 a 20 mA).</dd>
+
+                    <dt>Atuador</dt>
+                    <dd>Equipamento que age sobre o processo quando o CLP manda: motor, bomba, válvula, relé, sinaleiro.</dd>
+
+                    <dt>CLP</dt>
+                    <dd>Controlador Lógico Programável. O "cérebro": recebe os sinais, executa o programa e comanda os atuadores.</dd>
+
+                    <dt>I/O (entradas e saídas)</dt>
+                    <dd>Do inglês <em>Input/Output</em>. Entrada é o sinal que o CLP recebe; saída, o que ele envia.
+                    Cada sinal ligado ocupa um <strong>ponto de I/O</strong>.</dd>
+
+                    <dt>Módulo de I/O</dt>
+                    <dd>A parte do CLP onde se ligam os fios dos sensores e atuadores. Há módulos digitais, analógicos e especiais.</dd>
+
+                    <dt>AC (corrente alternada)</dt>
+                    <dd>A energia da tomada (no Brasil, 110/127 V ou 220 V). Equipamento AC liga direto, sem fonte.</dd>
+
+                    <dt>DC (corrente contínua)</dt>
+                    <dd>Tensão baixa e constante, normalmente 12 ou 24 V DC em automação. Precisa de uma fonte de alimentação.</dd>
+
+                    <dt>Fonte de alimentação</dt>
+                    <dd>Equipamento que converte a energia da tomada (AC) em corrente contínua (DC) para o CLP, os módulos e os sensores.</dd>
+
+                    <dt>Sinal digital</dt>
+                    <dd>Sinal de dois estados: 0 ou 1, ligado ou desligado.</dd>
+
+                    <dt>Sinal analógico</dt>
+                    <dd>Sinal que varia continuamente e representa de 0 a 100% de uma grandeza. Padrões: 0 a 10 V e 4 a 20 mA.</dd>
+
+                    <dt>4 a 20 mA</dt>
+                    <dd>Sinal analógico por corrente: 4 mA = 0%, 20 mA = 100%. Começar em 4 mA permite perceber um fio rompido.</dd>
+
+                    <dt>PT100</dt>
+                    <dd>Tipo de sensor de temperatura que precisa de entrada própria no módulo de I/O.</dd>
+
+                    <dt>Célula de carga</dt>
+                    <dd>Sensor usado em pesagem (balanças, silos). Também precisa de entrada própria.</dd>
+
+                    <dt>Contador rápido / encoder</dt>
+                    <dd>Entradas para pulsos muito rápidos, como os de medidores de vazão a pulso ou de encoders (que medem posição e giro).</dd>
+
+                    <dt>Pirâmide da automação</dt>
+                    <dd>Forma de organizar a automação em níveis: campo, controle, supervisão local e nuvem.</dd>
+
+                    <dt>IHM</dt>
+                    <dd>Interface Homem-Máquina: tela física junto da máquina ou no painel. Na HI, a GTI5.</dd>
+
+                    <dt>Supervisório (SCADA)</dt>
+                    <dd>Software com telas, alarmes, gráficos e histórico do processo. Local: HIscada Pro. Na nuvem: Portal de Telemetria.</dd>
+                </dl>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="quiz-bloco" id="quiz">
+                <h3>Quiz da etapa</h3>
+                <p>Confira o que ficou. A correção é na hora, com a explicação de cada resposta.
+                Acerte pelo menos 80% antes de marcar a etapa como concluída.</p>
+
+                <form class="quiz">
+                    <fieldset class="quiz-q" data-certa="b">
+                        <legend>1. Num reservatório, uma boia avisa que o nível baixou, o controlador decide e a bomba liga. Quem faz o papel de sensor, de CLP e de atuador?</legend>
+                        <label><input type="radio" name="q1" value="a"> Sensor: a bomba. CLP: a boia. Atuador: o controlador.</label>
+                        <label><input type="radio" name="q1" value="b"> Sensor: a boia. CLP: o controlador. Atuador: a bomba.</label>
+                        <label><input type="radio" name="q1" value="c"> Sensor: o controlador. CLP: a bomba. Atuador: a boia.</label>
+                        <label><input type="radio" name="q1" value="d"> Os três são o mesmo equipamento.</label>
+                        <p class="quiz-explica" hidden>É o ciclo medir → decidir → agir: a boia mede (sensor), o controlador decide seguindo o programa (CLP) e a bomba age sobre o processo (atuador).</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="c">
+                        <legend>2. O cliente quer ligar o CLP direto na tomada de 220 V, sem nenhuma fonte adicional. Que tipo de alimentação ele procura?</legend>
+                        <label><input type="radio" name="q2" value="a"> DC de 24 V.</label>
+                        <label><input type="radio" name="q2" value="b"> DC de 12 V.</label>
+                        <label><input type="radio" name="q2" value="c"> AC: na linha HI, P7C e NEON5 têm opção de 85 a 265 V AC.</label>
+                        <label><input type="radio" name="q2" value="d"> Qualquer uma: todo CLP liga direto na tomada.</label>
+                        <p class="quiz-explica" hidden>Equipamento AC liga direto na tomada, sem fonte. A faixa de 85 a 265 V AC cobre 110/127 V e 220 V. DC sempre precisa de fonte, e o RION5, por exemplo, é só DC.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="a">
+                        <legend>3. A cliente vai usar um CLP alimentado em 24 V DC e diz que não tem nada no painel para ligar o CLP e a IHM. O que você inclui na conversa?</legend>
+                        <label><input type="radio" name="q3" value="a"> Uma fonte de alimentação, que converte a energia da tomada em 24 V DC; ela entra no pedido de orçamento.</label>
+                        <label><input type="radio" name="q3" value="b"> Nada: o CLP DC pode ir direto na tomada.</label>
+                        <label><input type="radio" name="q3" value="c"> Um segundo CLP para alimentar o primeiro.</label>
+                        <label><input type="radio" name="q3" value="d"> Um sensor THT863.</label>
+                        <p class="quiz-explica" hidden>Equipamento DC precisa de fonte. Se a cliente não tem, a fonte entra no pedido (a HI fornece fontes Mean Well, de revenda, que entram na tomada e entregam 24 V DC).</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="d">
+                        <legend>4. O cliente pediu um CLP, mas não disse se quer alimentação AC ou DC. O que fazer?</legend>
+                        <label><input type="radio" name="q4" value="a"> Escolher AC, porque é sempre a melhor opção.</label>
+                        <label><input type="radio" name="q4" value="b"> Escolher DC sem perguntar, porque é o padrão dos painéis.</label>
+                        <label><input type="radio" name="q4" value="c"> Dizer que tanto faz e seguir.</label>
+                        <label><input type="radio" name="q4" value="d"> Perguntar como é o local (tomada, tensão, se já existe painel com fonte de 24 V DC) e, se ele não souber, anotar e confirmar com o suporte.</label>
+                        <p class="quiz-explica" hidden>Não existe opção "sempre melhor": a escolha depende do local. Quem sabe como é a instalação é o cliente; na dúvida técnica, o suporte confirma antes de fechar a configuração.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="b">
+                        <legend>5. Uma botoeira de emergência ligada ao CLP é que tipo de ponto de I/O?</legend>
+                        <label><input type="radio" name="q5" value="a"> Saída digital.</label>
+                        <label><input type="radio" name="q5" value="b"> Entrada digital.</label>
+                        <label><input type="radio" name="q5" value="c"> Entrada analógica.</label>
+                        <label><input type="radio" name="q5" value="d"> Saída analógica.</label>
+                        <p class="quiz-explica" hidden>A botoeira só tem dois estados (apertada ou não): é digital. E o CLP recebe essa informação: é entrada. Sinaleiros e relés seriam saídas digitais.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="c">
+                        <legend>6. Um transmissor 4 a 20 mA mede o nível de um tanque de 0 a 500 litros. O CLP está lendo 50% do sinal. Quanto há no tanque?</legend>
+                        <label><input type="radio" name="q6" value="a"> 50 litros.</label>
+                        <label><input type="radio" name="q6" value="b"> 12 litros.</label>
+                        <label><input type="radio" name="q6" value="c"> 250 litros.</label>
+                        <label><input type="radio" name="q6" value="d"> Não dá para saber: o CLP só lê sinais digitais.</label>
+                        <p class="quiz-explica" hidden>O sinal analógico representa de 0 a 100% da grandeza. 50% de 0 a 500 litros são 250 litros (no fio, 12 mA). O CLP não sabe o que é litro: o programa faz a conversão.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="a">
+                        <legend>7. Qual destes é uma saída analógica do CLP?</legend>
+                        <label><input type="radio" name="q7" value="a"> O comando de abertura de 0 a 100% de uma válvula proporcional, em 4 a 20 mA.</label>
+                        <label><input type="radio" name="q7" value="b"> Acender um sinaleiro.</label>
+                        <label><input type="radio" name="q7" value="c"> Ler um transmissor de temperatura 0 a 10 V.</label>
+                        <label><input type="radio" name="q7" value="d"> Ler o sensor HPS850.</label>
+                        <p class="quiz-explica" hidden>Saída porque o CLP envia; analógica porque é "quanto" (0 a 100%). O sinaleiro é saída digital; o transmissor de temperatura é entrada analógica; o HPS850 manda um sinal a cada volta da máquina, uma entrada digital.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="d">
+                        <legend>8. O cliente diz que tem dois medidores de vazão com saída a pulso, de até 3 kHz, e pergunta se o CLP lê esse sinal. O que fazer?</legend>
+                        <label><input type="radio" name="q8" value="a"> Dizer que sim, porque o CLP lê qualquer sensor.</label>
+                        <label><input type="radio" name="q8" value="b"> Dizer que não, porque pulso não é sinal de automação.</label>
+                        <label><input type="radio" name="q8" value="c"> Tratar como duas entradas digitais comuns e seguir sem confirmar.</label>
+                        <label><input type="radio" name="q8" value="d"> Anotar o tipo de sinal, o modelo e a frequência e confirmar com o suporte qual entrada atende (pulsos rápidos usam canais especiais, como contador rápido).</label>
+                        <p class="quiz-explica" hidden>Pulsos rápidos precisam de entradas próprias (contador rápido, encoder). Não prometa nem negue: anote os dados e confirme com o suporte. É a regra de ouro "na dúvida técnica, chame o suporte".</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="c">
+                        <legend>9. O cliente quer acompanhar o nível dos reservatórios pelo celular, de qualquer lugar. Que nível da pirâmide é esse e que produto HI está nele?</legend>
+                        <label><input type="radio" name="q9" value="a"> Campo: sensor THT863.</label>
+                        <label><input type="radio" name="q9" value="b"> Controle: CLP RION5.</label>
+                        <label><input type="radio" name="q9" value="c"> Nuvem: Portal de Telemetria.</label>
+                        <label><input type="radio" name="q9" value="d"> Supervisão local: HIscada Pro, que fica só na rede da empresa.</label>
+                        <p class="quiz-explica" hidden>Acesso de qualquer lugar, pela internet, em computador, tablet ou celular, é o nível da nuvem: o Portal de Telemetria. O HIscada Pro roda em computadores da rede local da empresa.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="b">
+                        <legend>10. Para a venda de um CLP seguir adiante, que três informações você precisa levantar com o cliente?</legend>
+                        <label><input type="radio" name="q10" value="a"> Cor do painel, marca dos motores e data de entrega.</label>
+                        <label><input type="radio" name="q10" value="b"> Como vai ser alimentado (AC ou DC), quantos e quais sinais vai ler e comandar (I/O) e com o que precisa se comunicar.</label>
+                        <label><input type="radio" name="q10" value="c"> Só o preço que ele quer pagar.</label>
+                        <label><input type="radio" name="q10" value="d"> Só o nome do modelo que ele já usa.</label>
+                        <p class="quiz-explica" hidden>São os três pilares de um CLP: alimentação, módulos de I/O e interfaces de comunicação. Com eles, o modelo e os módulos podem ser indicados (Etapa 4) e o orçamento pode ser feito.</p>
+                    </fieldset>
+
+                    <div class="quiz-acoes">
+                        <button type="submit" class="btn">Corrigir</button>
+                        <button type="button" class="btn btn-secondary quiz-refazer" hidden>Refazer</button>
+                    </div>
+                    <p class="quiz-resultado" aria-live="polite"></p>
+                </form>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="caso">
+                <h3>Para o encontro com o instrutor</h3>
+                <p>Traga preparado (os produtos você escolhe na Etapa 4; aqui o objetivo é <strong>traduzir a
+                necessidade em lista de sinais</strong>):</p>
+                <ol>
+                    <li><strong>Os quatro tipos de ponto.</strong> Cite dois exemplos de entrada digital, saída
+                    digital, entrada analógica e saída analógica, de preferência numa instalação de um segmento da
+                    HI (uma estação elevatória de saneamento, um pivô de irrigação, um poço de petróleo).</li>
+                    <li><strong>A lista de sinais.</strong> Um cliente precisa de um equipamento que receba 8 sinais
+                    digitais, envie 8 sinais digitais, leia 2 transmissores 4 a 20 mA e envie 1 sinal 4 a 20 mA para
+                    uma válvula. Ele vai alimentar o equipamento com fonte DC, ligar uma IHM touch screen por cabo
+                    serial e usar a Ethernet para programação. Monte a lista: quantos pontos de cada tipo, total de
+                    pontos, alimentação e o que fica anotado sobre comunicação. Guarde a lista: ela volta na Etapa 4.</li>
+                    <li><strong>O que perguntar quando falta informação.</strong> Uma cliente precisa ler 2
+                    transmissores de temperatura 0 a 10 V, enviar 1 sinal digital quando uma temperatura for
+                    atingida e mostrar a temperatura numa IHM. Ela não tem com o que ligar o CLP e a IHM, não
+                    disse se quer AC ou DC e pediu uma IHM "econômica". Que perguntas você faz, o que entra no
+                    pedido e como você trata o pedido de "econômica" <strong>sem falar de preço</strong>?</li>
+                    <li><strong>Sinal especial e pirâmide.</strong> Um cliente quer um CLP alimentado em tensão
+                    alternada para ler 2 transmissores de vazão com saída a pulso (até 3 kHz) e mostrar os valores
+                    num computador da rede local. Classifique os sinais, diga em que níveis da pirâmide está a
+                    solução e o que você precisa confirmar com o suporte antes de prometer.</li>
+                </ol>
+                <p class="fonte">Casos 1 a 4 adaptados dos exercícios 1, 10, 11, 12 e 20 do Treinamento de Produto.</p>
+            </div>
         </div>
     </section>
 
@@ -66,5 +913,6 @@
     <script src="progresso.js"></script>
     <script src="config-conta.js"></script>
     <script src="conta.js"></script>
+    <script src="quiz.js"></script>
 </body>
 </html>
