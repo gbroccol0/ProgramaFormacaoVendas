@@ -1,0 +1,784 @@
+/* =========================================================
+   PÁGINAS DE ETAPA — FORMAÇÃO COMERCIAL HI
+   No site do suporte cada etapa traz o CSS no próprio <style>,
+   porque o conteúdo fica no OneDrive e a página é só uma lista
+   de links. Aqui o material de estudo está DENTRO da página,
+   então o visual é único e centralizado neste arquivo.
+   Ordem no <head>: etapa.css → responsive.css → tema.js
+   (o responsive.css precisa vir depois, como no suporte).
+========================================================= */
+
+:root {
+    --azul-hi: #004A8F;
+    --azul-hi-escuro: #00366b;
+    --laranja-hi: #F26522;
+    --cinza-claro: #F5F7FA;
+    --texto-escuro: #333333;
+    --texto-cinza: #5b6573;
+    --borda: #E0E0E0;
+
+    --venda-fundo: #FFF4EC;
+    --venda-borda: #F26522;
+    --dica-fundo: #EAF3FC;
+    --dica-borda: #004A8F;
+    --alerta-fundo: #FDECEC;
+    --alerta-borda: #C62828;
+    --confirmar-fundo: #FFF3C4;
+    --confirmar-texto: #6B5200;
+    --certa: #2E7D32;
+    --certa-fundo: #E8F5E9;
+    --errada: #C62828;
+    --errada-fundo: #FDECEC;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--texto-escuro);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--azul-hi);
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 5%;
+    background-color: var(--cinza-claro);
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 640px;
+}
+
+.hero-content h1 {
+    color: var(--azul-hi);
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img,
+.hero-image svg {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hero-image img {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    padding: 50px 5%;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--azul-hi);
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.training-container {
+    max-width: 980px;
+    margin: 20px auto 0;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    border-left: 8px solid var(--azul-hi);
+}
+
+.training-container > h2 {
+    color: var(--azul-hi);
+    margin-top: 0;
+}
+
+.step {
+    margin-bottom: 34px;
+    padding-bottom: 26px;
+    border-bottom: 1px solid var(--borda);
+    scroll-margin-top: 20px;
+}
+
+.step:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.step h3 {
+    color: var(--azul-hi);
+    margin-top: 0;
+    font-size: 1.35rem;
+}
+
+.step h4 {
+    color: var(--azul-hi);
+    margin: 22px 0 8px;
+    font-size: 1.08rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--azul-hi);
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background-color: var(--azul-hi-escuro);
+}
+
+.btn-secondary {
+    background-color: #5b6573;
+}
+
+.btn-secondary:hover {
+    background-color: #434b56;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+
+/* ---------------------------------------------------------
+   OBJETIVOS E SUMÁRIO DA ETAPA
+--------------------------------------------------------- */
+
+.objetivos {
+    background: var(--dica-fundo);
+    border-radius: 8px;
+    padding: 18px 24px;
+    margin-bottom: 30px;
+}
+
+.objetivos h3 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+    color: var(--azul-hi);
+}
+
+.objetivos ul {
+    margin: 0;
+    padding-left: 22px;
+}
+
+.objetivos .tempo {
+    margin: 10px 0 0;
+    font-size: 0.92rem;
+    color: var(--texto-cinza);
+}
+
+.sumario {
+    margin: 0 0 34px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.sumario a {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--azul-hi);
+    text-decoration: none;
+}
+
+.sumario a:hover {
+    border-color: var(--azul-hi);
+}
+
+
+/* ---------------------------------------------------------
+   CAIXAS DE DESTAQUE
+   .analogia  → "Pense assim" (explicação do dia a dia)
+   .na-venda  → como o assunto aparece na conversa comercial
+   .atencao   → o que não prometer / erro comum
+--------------------------------------------------------- */
+
+.analogia,
+.na-venda,
+.atencao {
+    border-left: 5px solid;
+    border-radius: 6px;
+    padding: 14px 20px;
+    margin: 18px 0;
+}
+
+.analogia p:first-child,
+.na-venda p:first-child,
+.atencao p:first-child {
+    margin-top: 0;
+}
+
+.analogia p:last-child,
+.na-venda p:last-child,
+.atencao p:last-child,
+.analogia ul:last-child,
+.na-venda ul:last-child,
+.atencao ul:last-child {
+    margin-bottom: 0;
+}
+
+.analogia::before,
+.na-venda::before,
+.atencao::before {
+    display: block;
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.analogia {
+    background: var(--dica-fundo);
+    border-color: var(--dica-borda);
+}
+
+.analogia::before {
+    content: "Pense assim";
+    color: var(--azul-hi);
+}
+
+.na-venda {
+    background: var(--venda-fundo);
+    border-color: var(--venda-borda);
+}
+
+.na-venda::before {
+    content: "Na venda";
+    color: #B4460E;
+}
+
+.atencao {
+    background: var(--alerta-fundo);
+    border-color: var(--alerta-borda);
+}
+
+.atencao::before {
+    content: "Atenção";
+    color: var(--alerta-borda);
+}
+
+/* Marca de informação que a equipe ainda precisa confirmar.
+   Some do material quando o dado for confirmado. */
+.confirmar {
+    display: inline-block;
+    background: var(--confirmar-fundo);
+    color: var(--confirmar-texto);
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 1px 7px;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+.fonte {
+    font-size: 0.85rem;
+    color: var(--texto-cinza);
+    margin-top: 8px;
+}
+
+
+/* ---------------------------------------------------------
+   TABELAS
+--------------------------------------------------------- */
+
+.tabela {
+    overflow-x: auto;
+    margin: 16px 0;
+}
+
+.tabela table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.tabela th,
+.tabela td {
+    border: 1px solid var(--borda);
+    padding: 9px 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.tabela th {
+    background: var(--azul-hi);
+    color: white;
+    font-weight: 600;
+}
+
+.tabela tbody tr:nth-child(even) td {
+    background: var(--cinza-claro);
+}
+
+
+/* ---------------------------------------------------------
+   CARTÕES (segmentos, perfis de cliente, programas)
+--------------------------------------------------------- */
+
+.cartoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin: 16px 0;
+}
+
+.cartao {
+    border: 1px solid var(--borda);
+    border-top: 4px solid var(--azul-hi);
+    border-radius: 8px;
+    padding: 16px 18px;
+    background: white;
+}
+
+.cartao h4 {
+    margin: 0 0 6px;
+    color: var(--azul-hi);
+    font-size: 1.05rem;
+}
+
+.cartao p {
+    margin: 0 0 8px;
+    font-size: 0.95rem;
+}
+
+.cartao p:last-child {
+    margin-bottom: 0;
+}
+
+.cartao .rotulo {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--texto-cinza);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+
+/* ---------------------------------------------------------
+   LINHA DO TEMPO
+--------------------------------------------------------- */
+
+.linha-tempo {
+    list-style: none;
+    margin: 16px 0;
+    padding: 0 0 0 26px;
+    border-left: 3px solid var(--azul-hi);
+}
+
+.linha-tempo li {
+    position: relative;
+    margin-bottom: 14px;
+}
+
+.linha-tempo li::before {
+    content: "";
+    position: absolute;
+    left: -34px;
+    top: 6px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid var(--azul-hi);
+}
+
+.linha-tempo strong {
+    display: inline-block;
+    min-width: 52px;
+    color: var(--azul-hi);
+}
+
+
+/* ---------------------------------------------------------
+   GLOSSÁRIO
+--------------------------------------------------------- */
+
+.glossario {
+    display: grid;
+    grid-template-columns: minmax(150px, 220px) 1fr;
+    gap: 10px 20px;
+    margin: 16px 0 0;
+}
+
+.glossario dt {
+    font-weight: 700;
+    color: var(--azul-hi);
+}
+
+.glossario dd {
+    margin: 0;
+}
+
+
+/* ---------------------------------------------------------
+   QUIZ (Assets/quiz.js)
+--------------------------------------------------------- */
+
+.quiz-bloco {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 3px solid var(--azul-hi);
+}
+
+.quiz-bloco > h3 {
+    color: var(--azul-hi);
+    margin-top: 0;
+    font-size: 1.35rem;
+}
+
+.quiz-q {
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 0 0 16px;
+}
+
+.quiz-q legend {
+    font-weight: 700;
+    padding: 0 6px;
+}
+
+.quiz-q label {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 7px 10px;
+    margin: 4px 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.quiz-q label:hover {
+    background: var(--cinza-claro);
+}
+
+.quiz-q input {
+    margin-top: 5px;
+    flex-shrink: 0;
+}
+
+.quiz-q.certa {
+    border-color: var(--certa);
+}
+
+.quiz-q.errada,
+.quiz-q.sem-resposta {
+    border-color: var(--errada);
+}
+
+.quiz-q label.gabarito {
+    background: var(--certa-fundo);
+    font-weight: 600;
+}
+
+.quiz-q label.marcada-errada {
+    background: var(--errada-fundo);
+}
+
+.quiz-tag {
+    margin-left: auto;
+    padding-left: 12px;
+    flex-shrink: 0;
+    max-width: 10em;
+    text-align: right;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.quiz-tag-certa {
+    color: var(--certa);
+}
+
+.quiz-tag-errada {
+    color: var(--errada);
+}
+
+.quiz-explica {
+    margin: 10px 0 0;
+    padding: 10px 14px;
+    border-radius: 6px;
+    background: var(--cinza-claro);
+    font-size: 0.95rem;
+}
+
+.quiz-explica[hidden] {
+    display: none;
+}
+
+.quiz-acoes .btn {
+    margin-right: 8px;
+}
+
+.quiz-resultado {
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin: 16px 0 0;
+}
+
+.quiz-resultado.aprovado {
+    color: var(--certa);
+}
+
+.quiz-resultado.revisar {
+    color: var(--errada);
+}
+
+
+/* ---------------------------------------------------------
+   ENCONTRO COM O INSTRUTOR (estudo de caso)
+--------------------------------------------------------- */
+
+.caso {
+    margin-top: 40px;
+    padding: 24px 28px;
+    border-radius: 10px;
+    border: 2px dashed var(--laranja-hi);
+    background: var(--venda-fundo);
+}
+
+.caso h3 {
+    margin-top: 0;
+    color: #B4460E;
+}
+
+.caso ol:last-child,
+.caso p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ---------------------------------------------------------
+   ETAPA EM PRODUÇÃO
+--------------------------------------------------------- */
+
+.em-producao {
+    text-align: center;
+    padding: 30px 20px;
+    border: 2px dashed var(--borda);
+    border-radius: 10px;
+    color: var(--texto-cinza);
+}
+
+.em-producao strong {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--azul-hi);
+    margin-bottom: 6px;
+}
+
+
+/* ---------------------------------------------------------
+   CELULAR
+--------------------------------------------------------- */
+
+@media (max-width: 700px) {
+    .hero {
+        flex-direction: column;
+        padding: 40px 16px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.9rem;
+    }
+
+    .section {
+        padding: 36px 16px;
+    }
+
+    .training-container {
+        padding: 24px 18px;
+        border-left-width: 5px;
+    }
+
+    .glossario {
+        grid-template-columns: 1fr;
+        gap: 2px;
+    }
+
+    .glossario dd {
+        margin-bottom: 12px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   MODO ESCURO (tokens --esc-* definidos no responsive.css)
+--------------------------------------------------------- */
+
+html[data-theme="dark"] {
+    --venda-fundo: #33241a;
+    --dica-fundo: var(--esc-azul-fundo);
+    --dica-borda: var(--esc-azul-texto);
+    --alerta-fundo: #3a1d1d;
+    --alerta-borda: #ef7a7a;
+    --confirmar-fundo: #4a3f12;
+    --confirmar-texto: #ffe08a;
+    --certa: #6fcf76;
+    --certa-fundo: #1d3a22;
+    --errada: #ef7a7a;
+    --errada-fundo: #3a1d1d;
+}
+
+html[data-theme="dark"] .objetivos h3,
+html[data-theme="dark"] .training-container > h2,
+html[data-theme="dark"] .step h4,
+html[data-theme="dark"] .cartao h4,
+html[data-theme="dark"] .linha-tempo strong,
+html[data-theme="dark"] .glossario dt,
+html[data-theme="dark"] .quiz-bloco > h3,
+html[data-theme="dark"] .em-producao strong,
+html[data-theme="dark"] .analogia::before,
+html[data-theme="dark"] .sumario a {
+    color: var(--esc-azul-texto);
+}
+
+html[data-theme="dark"] .na-venda::before,
+html[data-theme="dark"] .caso h3 {
+    color: #ffab76;
+}
+
+html[data-theme="dark"] .cartao,
+html[data-theme="dark"] .linha-tempo li::before {
+    background: var(--esc-superficie);
+}
+
+html[data-theme="dark"] .cartao,
+html[data-theme="dark"] .quiz-q,
+html[data-theme="dark"] .sumario a,
+html[data-theme="dark"] .tabela th,
+html[data-theme="dark"] .tabela td,
+html[data-theme="dark"] .em-producao {
+    border-color: var(--esc-borda);
+}
+
+html[data-theme="dark"] .cartao {
+    border-top-color: var(--esc-azul-texto);
+}
+
+html[data-theme="dark"] .tabela th {
+    background: var(--esc-azul-fundo);
+    color: var(--esc-texto);
+}
+
+html[data-theme="dark"] .tabela tbody tr:nth-child(even) td,
+html[data-theme="dark"] .quiz-q label:hover,
+html[data-theme="dark"] .quiz-explica {
+    background: var(--esc-superficie-2);
+}
+
+html[data-theme="dark"] .linha-tempo,
+html[data-theme="dark"] .linha-tempo li::before,
+html[data-theme="dark"] .quiz-bloco {
+    border-color: var(--esc-azul-texto);
+}
+
+html[data-theme="dark"] .fonte,
+html[data-theme="dark"] .objetivos .tempo,
+html[data-theme="dark"] .cartao .rotulo,
+html[data-theme="dark"] .em-producao {
+    color: var(--esc-texto-2);
+}
+
+
+/* ---------------------------------------------------------
+   DIAGRAMAS EM SVG (inline nas páginas)
+   As cores vêm das variáveis, então o modo escuro vale
+   também dentro do desenho.
+--------------------------------------------------------- */
+
+.diagrama {
+    width: 100%;
+    max-width: 540px;
+    height: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.diagrama .d-titulo {
+    fill: var(--azul-hi);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.diagrama .d-caixa {
+    fill: var(--dica-fundo);
+    stroke: var(--azul-hi);
+    stroke-width: 2;
+}
+
+.diagrama .d-rotulo {
+    fill: var(--azul-hi);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.diagrama .d-itens {
+    fill: var(--texto-escuro);
+    font-size: 13px;
+}
+
+.diagrama .d-seta {
+    stroke: var(--laranja-hi);
+    stroke-width: 3;
+    fill: none;
+}
+
+.diagrama .d-ponta {
+    fill: var(--laranja-hi);
+}
+
+.diagrama .d-nota {
+    fill: var(--texto-cinza);
+    font-size: 12px;
+    font-style: italic;
+}
+
+html[data-theme="dark"] .diagrama .d-titulo,
+html[data-theme="dark"] .diagrama .d-rotulo {
+    fill: var(--esc-azul-texto);
+}
+
+html[data-theme="dark"] .diagrama .d-caixa {
+    stroke: var(--esc-azul-texto);
+}
+
+html[data-theme="dark"] .diagrama .d-nota {
+    fill: var(--esc-texto-2);
+}

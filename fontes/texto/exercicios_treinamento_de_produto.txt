@@ -1,0 +1,101 @@
+Exercícios para Reforço dos Conceitos do Treinamento de Produto [Hardware]
+
+1. Sinais de Entrada e Saída
+Cite exemplos de sinais para:
+- Entradas Digitais
+- Saídas Digitais
+- Entradas Analógicas
+- Saídas Analógicas
+
+2. Composição de um CLP
+Qual é a composição de um CLP a nível comercial? O que é necessário saber para prosseguir com a venda?
+
+3. Características dos CLPs
+Quais características diferenciam os CLPs P7C, NEON e RION?
+
+4. Protocolos de Comunicação
+- O que é um protocolo de comunicação?
+- Quais protocolos os equipamentos da HI Tecnologia possuem integração?
+
+5. Gateways e Conversores
+- O que são Gateways?
+- Cite 4 modelos de conversores e gateways da HI Tecnologia e descreva brevemente suas funções.
+
+6. Tipos de IHMs
+Quais são os tipos de IHMs comercializados pela HI Tecnologia e quais as diferenças entre eles?
+
+7. Software de Programação
+Um cliente deseja desenvolver um projeto em um CLP da HI Tecnologia. Qual é o custo para utilizar o software de programação do CLP?
+
+8. Redes Seriais
+Qual é a diferença entre a rede serial RS232 e a rede serial RS485?
+
+9. Consulta de Informações
+Onde é possível consultar informações técnicas e comerciais sobre os produtos da HI Tecnologia para estudo e compartilhamento com o cliente?
+
+
+10. Solução para Sinais e Integração
+    Um cliente precisa de um equipamento capaz de:
+    - Receber 8 sinais digitais
+    - Enviar 8 sinais digitais
+    - Ler sinais de 2 transmissores 4-20mA
+    - Enviar 1 sinal 4-20mA para uma válvula
+    Ele também precisa alimentar o equipamento com uma fonte DC, interligar o equipamento a uma IHM Touch Screen via cabo serial e utilizar a Ethernet para programação. Quais produtos devem ser oferecidos?
+
+11. Setup Inicial para Monitoramento
+    Um cliente precisa de um equipamento para:
+    - Receber 8 sinais digitais
+    - Enviar 8 sinais digitais
+    - Monitorar as informações em uma tela via Ethernet
+    Ele não especificou se o CLP deve ser AC ou DC e deseja uma IHM de baixo custo. Qual setup inicial ofertar?
+
+12. Leitura de Transmissores de Vazão
+    Um cliente precisa de um CLP alimentado por tensão alternada para:
+    - Ler sinais de 2 transmissores de vazão com saída a pulso (frequência até 3 kHz)
+    - Demonstrar os sinais lidos em um computador dedicado em uma rede local
+    Quais itens ofertar inicialmente?
+
+13. Solução para Sensores e Monitoramento Local
+    Uma cliente precisa de um sistema para:
+    - Ler sinais de 32 sensores digitais
+    - Enviar 16 sinais digitais para acionamento de máquinas
+    - Ler 8 sinais analógicos 4-20mA
+    - Enviar 4 sinais 4-20mA para válvulas
+    Ela também deseja monitorar as informações em uma tela local de pelo menos 10 polegadas, interligada ao CLP via RS232, e precisa de uma fonte de alimentação DC. Quais itens ofertar?
+
+14. Integração Modbus RTU e TCP
+    Um cliente possui uma rede RS485 com 25 equipamentos que utilizam o protocolo Modbus RTU e deseja buscar essas informações via Ethernet utilizando o software Elipse E3 (protocolo Modbus TCP). Quais itens ofertar?
+
+15. Envio de Dados via Rede Celular
+    Um cliente possui 6 transmissores de nível que medem sinais 4-20mA e deseja enviar esses dados via rede celular 4G para sua plataforma na nuvem utilizando o protocolo MQTT. Qual item oferecer?
+
+16. Automação de Processo com Receitas
+    Um cliente está automatizando um processo de fabricação de café e precisa de:
+    - Armazenamento de informações de receitas para carregamento posterior no controlador
+    - Comandos realizados por uma IHM de 7 polegadas
+    - Comunicação via Ethernet
+    - Envio de 10 sinais digitais pelo CLP
+    Quais itens ofertar?
+
+17. Conexão Serial RS232 para Ethernet
+    Uma cliente possui uma impressora antiga com conexão RS232 e deseja enviar informações para ela via Ethernet, de forma transparente ao protocolo. Qual equipamento oferecer?
+
+18. Integração RS232 e RS485
+    Um cliente possui uma rede RS485 com 20 equipamentos Modbus RTU e um CLP Schneider com RS232. Ele precisa de um equipamento que permita ao CLP buscar dados dos escravos Modbus da rede RS485. Qual solução oferecer?
+
+19. Conexão Alternativa ao Portal de Telemetria
+    Um cliente utiliza o Portal de Telemetria da HI Tecnologia com um CLP NEON via Ethernet, mas deseja evitar o uso da rede Ethernet do cliente final. Qual equipamento e acessórios podem ser ofertados para conexão ao portal sem utilizar a rede do cliente?
+
+20. Solução para Temperatura e IHM Econômica
+    Uma cliente precisa de um sistema para:
+    - Ler sinais de 2 transmissores de temperatura (0-10V)
+    - Enviar 1 sinal digital quando uma temperatura X for atingida
+    - Utilizar uma IHM econômica para exibir a temperatura
+    Ela não possui equipamentos para ligar o CLP e a IHM. O que ofertar?
+
+21. Leitura e Envio de Dados para a Nuvem
+    Um cliente deseja:
+    - Ler dados de escravos Modbus TCP via Ethernet
+    - Armazenar e tratar os dados com cálculos
+    - Enviar os dados para a plataforma TagoIO via rede celular utilizando o protocolo MQTT
+    Quais itens ofertar?

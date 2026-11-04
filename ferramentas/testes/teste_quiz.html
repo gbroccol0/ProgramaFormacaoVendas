@@ -1,0 +1,30 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"></head><body style="margin:0;font:14px Segoe UI">
+<pre id="log" style="background:#ffd;margin:0;padding:8px"></pre>
+<iframe id="f" src="../../Assets/hi_tecnologia.html#quiz" style="width:1300px;height:2400px;border:0"></iframe>
+<script>
+var log = document.getElementById('log');
+function tags(q) {
+  return Array.prototype.map.call(q.querySelectorAll('.quiz-tag'), function (t) {
+    return t.parentNode.querySelector('input').value + '=' + t.textContent;
+  }).join(', ');
+}
+document.getElementById('f').onload = function () {
+  var d = this.contentDocument;
+  var qs = d.querySelectorAll('.quiz-q');
+  qs.forEach(function (q, i) {
+    if (i === 4) return;                       // q5 sem resposta
+    var v = q.getAttribute('data-certa');
+    if (i === 6) v = 'b';                      // q7 errada (preço de cabeça)
+    q.querySelector('input[value="' + v + '"]').checked = true;
+  });
+  d.querySelector('form.quiz button[type=submit]').click();
+  log.textContent = 'resultado: ' + d.querySelector('.quiz-resultado').textContent +
+    '\nq6 certa=' + qs[5].getAttribute('data-certa') + ' tags: ' + tags(qs[5]) +
+    '\nq7 tags: ' + tags(qs[6]) +
+    '\nq5 (sem resposta) tags: ' + tags(qs[4]) +
+    '\ntotal tags=' + d.querySelectorAll('.quiz-tag').length;
+  d.querySelector('.quiz-refazer').click();
+  log.textContent += '\napos refazer: tags=' + d.querySelectorAll('.quiz-tag').length +
+    ' marcadas=' + d.querySelectorAll('.quiz-q input:checked').length;
+};
+</script></body></html>

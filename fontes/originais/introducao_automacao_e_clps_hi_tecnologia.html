@@ -1,0 +1,910 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Treinamento Comercial - CLPs HI Tecnologia</title>
+<style>
+  :root {
+    --hi-blue-dark: #093b66;
+    --hi-blue-mid: #386fa4;
+    --hi-blue-light: #6ea4d8;
+    --hi-red: #d32f2f;
+    --text-dark: #333333;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+  body { background: #12181f; color: #fff; display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+
+  /* Top Controls Bar */
+  .top-bar {
+    background: #1e2732; padding: 8px 20px; display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 1px solid #334155; font-size: 13px; flex-wrap: wrap; gap: 10px;
+  }
+  .top-bar-left { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .top-bar select, .top-bar button, .top-bar label {
+    background: #2b3847; color: #fff; border: 1px solid #475569; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-size: 12px;
+  }
+  .top-bar button:hover, .top-bar label:hover { background: #3b4d61; }
+
+  /* Video Stage */
+  .stage-container {
+    flex: 1; display: flex; justify-content: center; align-items: center; padding: 12px 18px; position: relative; overflow: hidden;
+  }
+  .slide-frame {
+    width: 100%; max-width: 1160px; aspect-ratio: 16 / 9; background: #ffffff; color: var(--text-dark);
+    border-radius: 6px; box-shadow: 0 20px 50px rgba(0,0,0,0.6); display: flex; flex-direction: column;
+    position: relative; overflow: hidden;
+  }
+
+  /* HI Tecnologia Slide Template Header */
+  .hi-top-bars { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; padding: 6px 10px 4px 10px; background: #fff; }
+  .bar-1 { height: 8px; background: var(--hi-blue-dark); }
+  .bar-2 { height: 8px; background: var(--hi-blue-mid); }
+  .bar-3 { height: 8px; background: var(--hi-blue-light); }
+  
+  .hi-header {
+    background: var(--hi-blue-dark); color: #fff; padding: 14px 26px; display: flex;
+    justify-content: space-between; align-items: center;
+  }
+  .hi-header h1 { font-size: 24px; font-weight: 600; letter-spacing: 0.3px; }
+  .hi-logo-box { display: flex; align-items: center; gap: 8px; }
+  .hi-logo-text { background: #fff; color: var(--hi-blue-dark); padding: 3px 10px; font-weight: 700; font-size: 15px; border-radius: 2px; }
+  .hi-logo-sub { font-size: 11px; color: #cbd5e1; text-align: right; margin-top: 2px; }
+
+  /* Slide Content Area (Espaço inferior reservado para a legenda não cobrir imagens) */
+  .slide-body {
+    flex: 1; padding: 16px 28px 68px 28px; display: flex; flex-direction: column;
+    justify-content: space-between; position: relative; overflow-y: auto;
+  }
+  .slide-p { font-size: 15.5px; line-height: 1.48; color: #333; margin-bottom: 8px; }
+  .slide-h2 { font-size: 18.5px; color: var(--hi-blue-dark); font-weight: 700; margin: 4px 0 6px 0; }
+  .slide-ul { list-style: none; margin-bottom: 6px; }
+  .slide-ul li { font-size: 14.2px; line-height: 1.44; color: #333; margin-bottom: 5px; padding-left: 14px; position: relative; }
+  .slide-ul li::before { content: "-"; position: absolute; left: 0; font-weight: bold; color: var(--hi-blue-dark); }
+
+  /* Layout de 2 Colunas para Slides com Painel Visual Dinâmico */
+  .split-layout {
+    display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 20px; align-items: center; flex: 1;
+  }
+
+  /* Painel Visual Dinâmico (Exibe equipamentos e diagramas de rede sincronizados) */
+  .dynamic-showcase {
+    background: #f8fafc; border: 2px solid #cbd5e1; border-radius: 8px; padding: 10px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    height: 100%; max-height: 325px; position: relative; box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  .dynamic-showcase.active-pulse {
+    border-color: #0284c7; box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.22);
+  }
+  .showcase-badge {
+    background: var(--hi-blue-dark); color: #fff; font-size: 12px; font-weight: 700;
+    padding: 4px 12px; border-radius: 12px; margin-bottom: 8px; text-align: center;
+  }
+  .showcase-img-wrap {
+    flex: 1; width: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden; cursor: zoom-in;
+  }
+  .showcase-img {
+    max-width: 100%; max-height: 215px; object-fit: contain; transition: transform 0.3s ease;
+  }
+  .showcase-img:hover { transform: scale(1.03); }
+  .showcase-tabs {
+    display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; margin-top: 8px;
+  }
+  .showcase-tab {
+    background: #e2e8f0; color: #1e293b; border: 1px solid #cbd5e1; border-radius: 4px;
+    padding: 3px 8px; font-size: 11px; font-weight: 600; cursor: pointer;
+  }
+  .showcase-tab.active, .showcase-tab:hover {
+    background: #0284c7; color: #fff; border-color: #0284c7;
+  }
+
+  /* Product Cards & Spec Box */
+  .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin: 8px 0; align-items: stretch; }
+  .plc-card {
+    background: #ffffff; border: 2px solid #cbd5e1; border-radius: 8px; padding: 10px;
+    text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.05); display: flex; flex-direction: column;
+    justify-content: space-between; transition: all 0.3s ease;
+  }
+  .plc-card.highlight-focus {
+    border-color: #0284c7; background: #f0f9ff; transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(2, 132, 199, 0.25);
+  }
+  .plc-img-box {
+    height: 115px; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; padding: 4px;
+  }
+  .plc-img-box img {
+    max-width: 100%; max-height: 100%; object-fit: contain; cursor: zoom-in;
+  }
+  .plc-title { font-weight: 700; font-size: 14px; color: #093b66; }
+  .plc-sub { font-size: 11.5px; color: #475569; margin-top: 3px; }
+
+  .bottom-row { display: flex; justify-content: space-between; align-items: center; margin-top: auto; gap: 18px; }
+  .bottom-showcase {
+    display: flex; align-items: center; gap: 14px; background: #f8fafc; border: 1.5px solid #cbd5e1;
+    border-radius: 8px; padding: 8px 14px; flex: 1;
+  }
+  .bottom-showcase img {
+    height: 95px; width: 135px; object-fit: contain; cursor: zoom-in; background: #fff; border-radius: 4px; padding: 4px;
+  }
+  .spec-box {
+    border: 2.5px solid var(--hi-red); padding: 10px 16px; min-width: 310px; background: #fff;
+    font-size: 13.5px; line-height: 1.48; color: #222; font-weight: 600; border-radius: 4px;
+  }
+
+  /* Custom Image Mode */
+  .custom-slide-img { width: 100%; height: 100%; object-fit: contain; display: none; background: #fff; }
+
+  /* Subtitle Overlay */
+  .subtitle-bar {
+    position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%);
+    width: 92%; max-width: 1100px; background: rgba(10, 18, 28, 0.93); color: #f8fafc; padding: 10px 20px;
+    border-radius: 8px; font-size: 16px; line-height: 1.4; text-align: center;
+    border-left: 4px solid #38bdf8; box-shadow: 0 8px 20px rgba(0,0,0,0.45); z-index: 10;
+  }
+
+  /* Player Controls Footer */
+  .player-controls {
+    background: #1e2732; padding: 10px 24px; display: flex; align-items: center; gap: 16px;
+    border-top: 1px solid #334155;
+  }
+  .play-btn {
+    background: #0284c7; color: #fff; border: none; padding: 10px 20px; border-radius: 6px;
+    font-weight: 700; font-size: 14px; cursor: pointer; display: flex; align-items: center; gap: 6px;
+  }
+  .play-btn:hover { background: #0369a1; }
+  .nav-btn {
+    background: #334155; color: #fff; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; font-size: 13px;
+  }
+  .nav-btn:hover { background: #475569; }
+  .progress-wrap { flex: 1; display: flex; flex-direction: column; gap: 5px; }
+  .progress-info { display: flex; justify-content: space-between; font-size: 12px; color: #94a3b8; }
+  .progress-bar-bg { width: 100%; height: 8px; background: #334155; border-radius: 4px; overflow: hidden; }
+  .progress-bar-fill { height: 100%; background: #38bdf8; width: 0%; transition: width 0.25s; }
+
+  /* Modal Dicionário Fonético & Zoom de Imagem */
+  .modal-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.82); display: none;
+    justify-content: center; align-items: center; z-index: 100;
+  }
+  .modal-box {
+    background: #1e293b; border: 1px solid #475569; border-radius: 8px; width: 90%; max-width: 650px;
+    padding: 20px; color: #fff; max-height: 85vh; display: flex; flex-direction: column; gap: 12px;
+  }
+  .modal-box textarea {
+    width: 100%; height: 260px; background: #0f172a; color: #38bdf8; border: 1px solid #334155;
+    border-radius: 6px; padding: 12px; font-family: monospace; font-size: 13px; line-height: 1.5;
+  }
+  .modal-actions { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+  .zoom-img-box {
+    background: #fff; padding: 16px; border-radius: 8px; max-width: 90vw; max-height: 88vh;
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+  }
+  .zoom-img-box img { max-width: 85vw; max-height: 75vh; object-fit: contain; }
+</style>
+</head>
+<body>
+
+  <!-- Barra de Configuração Superior -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <strong>🎓 Treinamento Comercial HI Tecnologia</strong>
+      <label for="imgUpload" title="Opcional: selecione as 7 imagens originais do seu computador">
+        📂 Carregar os 7 slides em imagem (Opcional)
+      </label>
+      <input type="file" id="imgUpload" multiple accept="image/*" style="display:none">
+      <button onclick="openPhoneticModal()">🗣️ Dicionário de Pronúncia</button>
+    </div>
+    <div class="top-bar-left">
+      <span>Voz:</span>
+      <select id="voiceSelect"></select>
+      <span>Velocidade:</span>
+      <select id="rateSelect">
+        <option value="1">1.0x (Normal)</option>
+        <option value="1.08" selected>1.08x (Fluida)</option>
+        <option value="1.15">1.15x (Dinâmica)</option>
+      </select>
+      <button onclick="toggleFullScreen()">⛶ Tela Cheia</button>
+    </div>
+  </div>
+
+  <!-- Área do Slide / Vídeo -->
+  <div class="stage-container" id="stageContainer">
+    <div class="slide-frame" id="slideFrame">
+      <img id="customSlideImg" class="custom-slide-img" alt="Slide">
+
+      <div id="nativeSlideContent" style="display:flex; flex-direction:column; height:100%;">
+        <div class="hi-top-bars">
+          <div class="bar-1"></div><div class="bar-2"></div><div class="bar-3"></div>
+        </div>
+        <div class="hi-header">
+          <h1 id="slideHeaderTitle">Controladores HI Tecnologia</h1>
+          <div class="hi-logo-box">
+            <div>
+              <div class="hi-logo-text">HI tecnologia</div>
+              <div class="hi-logo-sub">Automação Industrial</div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-body" id="slideBody"></div>
+      </div>
+    </div>
+
+    <!-- Legenda Sincronizada -->
+    <div class="subtitle-bar" id="subtitleBox">
+      Clique em <strong>"▶ Iniciar Vídeo Narrado"</strong> abaixo para começar o treinamento com imagens dinâmicas e narração.
+    </div>
+  </div>
+
+  <!-- Controles do Player -->
+  <div class="player-controls">
+    <button class="play-btn" id="playPauseBtn" onclick="togglePlay()">▶ Iniciar Vídeo Narrado</button>
+    <button class="nav-btn" onclick="prevSlide()">⏮ Slide Anterior</button>
+    <button class="nav-btn" onclick="nextSlide()">⏭ Próximo Slide</button>
+    <div class="progress-wrap">
+      <div class="progress-info">
+        <span id="slideIndicator">Slide 1 de 7</span>
+        <span id="statusIndicator">Pronto para reproduzir</span>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progressBar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Ajuste de Pronúncia -->
+  <div class="modal-overlay" id="phoneticModal">
+    <div class="modal-box">
+      <h3>🗣️ Dicionário de Pronúncia Técnica</h3>
+      <p style="font-size:13px; color:#cbd5e1;">
+        Abaixo estão as regras que convertem as siglas técnicas na hora de falar (mantendo a legenda escrita normalmente). Você pode editar ou adicionar termos no formato <code>TERMO = PRONÚNCIA</code>:
+      </p>
+      <textarea id="phoneticRulesInput"></textarea>
+      <div class="modal-actions">
+        <button class="nav-btn" onclick="testSampleSpeech()">🔊 Testar Frase com Siglas</button>
+        <div style="display:flex; gap:8px;">
+          <button class="nav-btn" onclick="closePhoneticModal()">Cancelar</button>
+          <button class="play-btn" onclick="savePhoneticRules()">💾 Salvar Pronúncias</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Zoom de Imagem -->
+  <div class="modal-overlay" id="zoomModal" onclick="closeZoomModal()">
+    <div class="zoom-img-box" onclick="event.stopPropagation()">
+      <strong id="zoomCaption" style="color:#093b66; font-size:16px;">Visualização Ampliada</strong>
+      <img id="zoomImgEl" src="" alt="Ampliada">
+      <button class="play-btn" onclick="closeZoomModal()">Fechar Visualização</button>
+    </div>
+  </div>
+
+<script>
+// Infográfico SVG gerado nativamente para ilustrar a equivalência 0 a 100% (Litros e psi)
+const ANALOG_SVG = `data:image/svg+xml;utf8,` + encodeURIComponent(`
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="420" viewBox="0 0 680 420">
+  <rect width="680" height="420" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="3"/>
+  <rect x="16" y="14" width="648" height="42" rx="6" fill="#093b66"/>
+  <text x="340" y="41" fill="#ffffff" font-family="Segoe UI, Arial" font-size="19" font-weight="bold" text-anchor="middle">Sinal Analógico (0–10 V / 4–20 mA) = 0 a 100% da Grandeza Física</text>
+
+  <!-- Bloco 1: Leitura (Entrada Analógica) -->
+  <rect x="20" y="70" width="640" height="155" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+  <text x="36" y="96" fill="#093b66" font-family="Segoe UI, Arial" font-size="16" font-weight="bold">1. Exemplo de LEITURA (Entrada Analógica): Nível de Tanque</text>
+  
+  <rect x="36" y="110" width="175" height="96" rx="6" fill="#e0f2fe" stroke="#0284c7"/>
+  <text x="123" y="136" fill="#0369a1" font-family="Segoe UI, Arial" font-size="15" font-weight="bold" text-anchor="middle">Grandeza Física</text>
+  <text x="123" y="162" fill="#0f172a" font-family="Segoe UI, Arial" font-size="18" font-weight="bold" text-anchor="middle">0 a 500 Litros</text>
+  <text x="123" y="186" fill="#475569" font-family="Segoe UI, Arial" font-size="12" text-anchor="middle">(CLP não sabe o que é litro)</text>
+
+  <text x="230" y="163" fill="#0284c7" font-family="Segoe UI, Arial" font-size="24" font-weight="bold" text-anchor="middle">➔</text>
+
+  <rect x="250" y="110" width="180" height="96" rx="6" fill="#fef3c7" stroke="#d97706"/>
+  <text x="340" y="136" fill="#b45309" font-family="Segoe UI, Arial" font-size="15" font-weight="bold" text-anchor="middle">Sinal Elétrico</text>
+  <text x="340" y="162" fill="#0f172a" font-family="Segoe UI, Arial" font-size="17" font-weight="bold" text-anchor="middle">4 a 20 mA / 0 a 10 V</text>
+  <text x="340" y="186" fill="#475569" font-family="Segoe UI, Arial" font-size="12" text-anchor="middle">(Enviado pelo sensor)</text>
+
+  <text x="450" y="163" fill="#0284c7" font-family="Segoe UI, Arial" font-size="24" font-weight="bold" text-anchor="middle">➔</text>
+
+  <rect x="470" y="110" width="174" height="96" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="557" y="136" fill="#15803d" font-family="Segoe UI, Arial" font-size="15" font-weight="bold" text-anchor="middle">Leitura no CLP</text>
+  <text x="557" y="162" fill="#0f172a" font-family="Segoe UI, Arial" font-size="18" font-weight="bold" text-anchor="middle">0 a 100% do Nível</text>
+  <text x="557" y="186" fill="#475569" font-family="Segoe UI, Arial" font-size="12" text-anchor="middle">(50% do sinal = 250 L)</text>
+
+  <!-- Bloco 2: Controle (Saída Analógica) -->
+  <rect x="20" y="242" width="640" height="158" rx="8" fill="#ffffff" stroke="#d32f2f" stroke-width="2"/>
+  <text x="36" y="268" fill="#991b1b" font-family="Segoe UI, Arial" font-size="16" font-weight="bold">2. Exemplo de CONTROLE (Saída Analógica): Abertura de Válvula</text>
+
+  <rect x="36" y="282" width="175" height="98" rx="6" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="123" y="308" fill="#15803d" font-family="Segoe UI, Arial" font-size="15" font-weight="bold" text-anchor="middle">Comando do CLP</text>
+  <text x="123" y="334" fill="#0f172a" font-family="Segoe UI, Arial" font-size="18" font-weight="bold" text-anchor="middle">0 a 100% Abertura</text>
+  <text x="123" y="358" fill="#475569" font-family="Segoe UI, Arial" font-size="12" text-anchor="middle">(Calculado pelo programa)</text>
+
+  <text x="230" y="336" fill="#d32f2f" font-family="Segoe UI, Arial" font-size="24" font-weight="bold" text-anchor="middle">➔</text>
+
+  <rect x="250" y="282" width="180" height="98" rx="6" fill="#fef3c7" stroke="#d97706"/>
+  <text x="340" y="308" fill="#b45309" font-family="Segoe UI, Arial" font-size="15" font-weight="bold" text-anchor="middle">Sinal Elétrico</text>
+  <text x="340" y="334" fill="#0f172a" font-family="Segoe UI, Arial" font-size="17" font-weight="bold" text-anchor="middle">4 a 20 mA Equivalente</text>
+  <text x="340" y="358" fill="#475569" font-family="Segoe UI, Arial" font-size="12" text-anchor="middle">(Enviado pela saída do CLP)</text>
+
+  <text x="450" y="336" fill="#d32f2f" font-family="Segoe UI, Arial" font-size="24" font-weight="bold" text-anchor="middle">➔</text>
+
+  <rect x="470" y="282" width="174" height="98" rx="6" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="557" y="308" fill="#b91c1c" font-family="Segoe UI, Arial" font-size="15" font-weight="bold" text-anchor="middle">Atuação na Válvula</text>
+  <text x="557" y="334" fill="#0f172a" font-family="Segoe UI, Arial" font-size="18" font-weight="bold" text-anchor="middle">3 a 15 psi (Pressão)</text>
+  <text x="557" y="358" fill="#475569" font-family="Segoe UI, Arial" font-size="12" text-anchor="middle">(CLP não sabe o que é psi)</text>
+</svg>`);
+
+// Links oficiais de imagens fornecidos para equipamentos e diagramas de redes
+const IMG_LINKS = {
+  NEON5: "https://www.hitecnologia.com.br/wp-content/uploads/2024/07/RS232_RS485-Modem-4G.webp",
+  P7C: "https://www.hitecnologia.com.br/wp-content/uploads/2022/05/p7c_mr6.png",
+  RION5: "https://www.hitecnologia.com.br/wp-content/uploads/2023/09/RION_SER_ETH-3-600x914.png",
+  RS232: "https://www.hitecnologia.com.br/wp-content/uploads/elementor/thumbs/Slide1-1-qmt3muh3lx83cwlsi8nqk6nnu8t7rioygyf722zygk.png",
+  RS485: "https://www.hitecnologia.com.br/wp-content/uploads/2024/07/Slide1.png",
+  ETHERNET: "https://www.hitecnologia.com.br/wp-content/uploads/elementor/thumbs/Slide3-1-qmt3n3vhi9kyl084zcq094a9s3ivwhq9u8y1uum0qc.png",
+  RADIO: "https://www.hitecnologia.com.br/wp-content/uploads/elementor/thumbs/Slide5-qmt3nd9velxtt3uhggs9y1wvpy8k1grl7jgwnm8304.png",
+  ANALOG_SCALE: ANALOG_SVG
+};
+
+// Regras fonéticas incluindo psi ("pê éssi i"), Wi-Fi ("Uai Fai") e 2.4 GHz ("dois ponto quatro GigaHertz")
+let phoneticRulesText = `I/O's = ai ôus
+I/Os = ai ôus
+I/O = ai ôu
+CLPs = cê éle pês
+CLP = cê éle pê
+IHMs = i agá êmes
+IHM = i agá ême
+P7C 302 = Pê sete Cê trezentos e dois
+P7C = Pê sete Cê
+NEON5 = Néon cinco
+RION5 = Ríon cinco
+SCP-HI = Éssi Cê Pê, Agá I
+HI Tecnologia = Agá I Tecnologia
+RS232/RS485 = Érre Éssi dois três dois e Érre Éssi quatro oito cinco
+RS232-C = Érre Éssi dois três dois Cê
+RS232 = Érre Éssi dois três dois
+RS485 = Érre Éssi quatro oito cinco
+Wi-Fi = Uái Fái
+WiFi = Uái Fái
+2.4 GHz = dois ponto quatro Giga-hertz
+2,4 GHz = dois vírgula quatro Giga-hertz
+GHz = Giga-hertz
+MHz = Mega-hertz
+SD Card = Éssi Dê Cárd
+cartão SD = cartão Éssi Dê
+Cartão SD = Cartão Éssi Dê
+PT100 = Pê Tê cem
+A/D = A Dê
+D/A = Dê A
+psi = pê S i
+PSI = pê S i
+4 a 20 mA = quatro a vinte miliamperes
+4–20 mA = quatro a vinte miliamperes
+0–10 V = zero a dez Volts
+0 a 10 V = zero a dez Volts
+ASCII = Áski
+MQTT = Ême Quê Tê Tê
+Modbus RTU = Mód-bâs Érre Tê U
+Modbus TCP = Mód-bâs Tê Cê Pê
+Modbus = Mód-bâs
+IIoT = Ai Ai Ou Ti
+CPU = Cê Pê U
+VDC = Volts Dê Cê
+VAC = Volts A Cê
+AC = A Cê
+DC = Dê Cê
+4G = quatro Gê`;
+
+function applyPhonetics(text) {
+  let spoken = text;
+  const lines = phoneticRulesText.split('\n');
+  for (let rawLine of lines) {
+    const line = rawLine.trim();
+    if (!line || !line.includes('=')) continue;
+    const [term, pron] = line.split('=').map(s => s.trim());
+    if (!term) continue;
+    const escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`(^|[^a-zA-ZÀ-ÿ0-9])(${escapedTerm})(?=[^a-zA-ZÀ-ÿ0-9]|$)`, 'g');
+    spoken = spoken.replace(regex, `$1${pron}`);
+  }
+  return spoken;
+}
+
+const slidesData = [
+  {
+    header: "Controladores HI Tecnologia",
+    html: `
+      <p class="slide-p">Equipamento responsável por receber e enviar informações para o processo, seja por meio de entradas e saídas analógicas/digitais ou via protocolos de comunicação. Este dispositivo atua como o <strong>"cérebro" do processo</strong>, pois nele é carregada a programação que define todas as instruções de operação para as diferentes situações previstas. Ele é composto por alimentação AC ou DC, interfaces de comunicação (como Ethernet, Wi-Fi e Serial) e módulos de I/O (entradas e saídas analógicas e digitais).</p>
+      <div class="cards-grid" style="max-width:860px; margin: 6px auto;">
+        <div class="plc-card" id="card-p7c">
+          <div class="plc-img-box"><img src="${IMG_LINKS.P7C}" alt="CLP P7C 302" onclick="zoomImage('${IMG_LINKS.P7C}', 'CLP P7C 302')"></div>
+          <div><div class="plc-title">CLP P7C 302</div><div class="plc-sub">Modular e Expansível</div></div>
+        </div>
+        <div class="plc-card" id="card-neon5">
+          <div class="plc-img-box"><img src="${IMG_LINKS.NEON5}" alt="CLP NEON5" onclick="zoomImage('${IMG_LINKS.NEON5}', 'CLP NEON5')"></div>
+          <div><div class="plc-title">CLP NEON5</div><div class="plc-sub">Alta Performance e Conectividade</div></div>
+        </div>
+        <div class="plc-card" id="card-rion5">
+          <div class="plc-img-box"><img src="${IMG_LINKS.RION5}" alt="CLP RION5" onclick="zoomImage('${IMG_LINKS.RION5}', 'CLP RION5')"></div>
+          <div><div class="plc-title">CLP RION5</div><div class="plc-sub">Compacto e I/O Remoto</div></div>
+        </div>
+      </div>
+      <p class="slide-p" style="margin-top:4px; text-align:center;"><strong>Atualmente trabalhamos com 3 modelos de controladores:</strong> P7C 302, NEON5 e RION5. <em>(Clique nas imagens para ampliar)</em></p>
+    `,
+    narration: [
+      { text: "Olá! Seja muito bem-vindo à equipe comercial da HI Tecnologia!" },
+      { text: "Neste treinamento, você vai conhecer a nossa linha de CLPs, Controladores Lógicos Programáveis, e entender por que cada recurso deles é utilizado na indústria." },
+      { text: "Na prática, a indústria utiliza o CLP para substituir operações manuais repetitivas por automação inteligente, garantindo precisão, segurança e funcionamento contínuo." },
+      { text: "O CLP atua como o verdadeiro cérebro do processo: nele fica carregada a programação que lê as informações dos sensores do campo e toma decisões instantâneas para comandar máquinas, válvulas e motores." },
+      { text: "Para funcionar, todo CLP se apoia em três pilares: a alimentação elétrica AC ou DC, os módulos de I/O para conectar sensores e atuadores, e as portas e protocolos de comunicação para trocar dados." },
+      { text: "Atualmente, atendemos o mercado com três modelos de controladores: o robusto P7C 302...", highlightCard: "card-p7c" },
+      { text: "...o versátil e poderoso CLP NEON5...", highlightCard: "card-neon5" },
+      { text: "...e o compacto e econômico CLP RION5.", highlightCard: "card-rion5" }
+    ]
+  },
+  {
+    header: "Conceitos Fundamentais dos CLPs",
+    html: `
+      <div class="split-layout">
+        <div>
+          <h2 class="slide-h2">Alimentação:</h2>
+          <ul class="slide-ul">
+            <li><strong>Alimentação AC (Corrente Alternada):</strong> Liga direto na tomada (110/127V ou 220V AC, faixa de 85 a 265V AC), sem precisar de fonte adicional.</li>
+            <li><strong>Alimentação DC (Corrente Contínua):</strong> Requer fonte externa para converter AC em DC e reduzir a tensão (12 VDC e 24 VDC).</li>
+          </ul>
+          <h2 class="slide-h2">Sinais Digitais e Analógicos (0 a 100%):</h2>
+          <ul class="slide-ul">
+            <li><strong>Sinais digitais:</strong> 0 ou 1 (sensores de presença, botoeiras, chaves, sinaleiros, relés).</li>
+            <li><strong>Sinais analógicos (0–10 V ou 4–20 mA):</strong> Representam de <strong>0 a 100%</strong> da grandeza física lida ou controlada pelo CLP:</li>
+            <li><strong>Exemplo de Leitura:</strong> Nível de um tanque de <strong>0 a 500 litros</strong> (o CLP não sabe o que é litros, mas lê o sinal elétrico equivalente de 0 a 100%).</li>
+            <li><strong>Exemplo de Controle:</strong> Abertura de 0 a 100% de uma válvula de <strong>3 a 15 psi</strong> (o CLP não sabe o que é psi, mas envia o percentual 4 a 20 mA equivalente).</li>
+          </ul>
+        </div>
+        <div class="dynamic-showcase" id="showcaseBox">
+          <div class="showcase-badge" id="showcaseCaption">Equipamentos HI Tecnologia (AC e DC)</div>
+          <div class="showcase-img-wrap">
+            <img id="showcaseImg" class="showcase-img" src="${IMG_LINKS.NEON5}" alt="Visualização" onclick="zoomCurrentShowcase()">
+          </div>
+          <div class="showcase-tabs">
+            <button class="showcase-tab" onclick="setShowcase('${IMG_LINKS.ANALOG_SCALE}', 'Equivalência Analógica: 0 a 100% (Litros e psi)')">📊 Escala 0 a 100%</button>
+            <button class="showcase-tab" onclick="setShowcase('${IMG_LINKS.P7C}', 'CLP P7C 302 (Opções AC ou DC)')">P7C 302</button>
+            <button class="showcase-tab" onclick="setShowcase('${IMG_LINKS.NEON5}', 'CLP NEON5 (Opções AC ou DC)')">NEON5</button>
+            <button class="showcase-tab" onclick="setShowcase('${IMG_LINKS.RION5}', 'CLP RION5 (Alimentação DC)')">RION5</button>
+          </div>
+        </div>
+      </div>
+    `,
+    narration: [
+      { text: "Para especificar o equipamento correto para o cliente, precisamos entender por que existem duas opções de alimentação elétrica e dois tipos de sinais.", img: IMG_LINKS.P7C, caption: "Linha de CLPs HI Tecnologia" },
+      { text: "A Alimentação AC, de 85 a 265 Volts AC, é utilizada quando o cliente quer praticidade e economia, ligando o CLP direto na tomada 110 ou 220 Volts sem precisar de fonte externa, disponível no P7C e no NEON5.", img: IMG_LINKS.NEON5, caption: "P7C e NEON5: Disponíveis com Alimentação AC ou DC" },
+      { text: "Já a Alimentação DC, em 12 VDC ou 24 VDC, é usada em painéis industriais para operar em baixa tensão segura, aproveitando a mesma fonte dos sensores. É o padrão do RION5 e também opcional no NEON5 e P7C.", img: IMG_LINKS.RION5, caption: "CLP RION5: Alimentação exclusivamente em DC (12/24 VDC)" },
+      { text: "E como o CLP enxerga e controla o processo? Através dos Sinais Digitais e Sinais Analógicos conectados aos seus módulos de I/O.", img: IMG_LINKS.P7C, caption: "Módulos de Entrada e Saída (Digitais e Analógicos)" },
+      { text: "Os Sinais Digitais são utilizados quando precisamos detectar apenas dois estados, zero ou um, ligado ou desligado: como saber se uma botoeira foi apertada ou acionar um relé para ligar um motor.", img: IMG_LINKS.NEON5, caption: "Sinais Digitais: Estados 0 ou 1 (Botoeiras, Sensores, Relés)" },
+      { text: "Já os Sinais Analógicos de 0 a 10 Volts e 4 a 20 mA são utilizados porque representam de 0 a 100% da grandeza física que está sendo lida ou controlada.", img: IMG_LINKS.ANALOG_SCALE, caption: "Sinais Analógicos: 0–10 V e 4–20 mA = 0 a 100% do Processo" },
+      { text: "Por exemplo, na leitura de 0 a 100% do nível de um tanque que vai de 0 a 500 litros: o CLP não sabe o que é litros, mas ele sabe exatamente o sinal elétrico equivalente de 0 a 100% daquela medição.", img: IMG_LINKS.ANALOG_SCALE, caption: "Leitura: 0 a 500 Litros ➔ Sinal Elétrico de 0 a 100%" },
+      { text: "E na parte de controle, para abrir de 0 a 100% uma válvula que recebe de 3 a 15 psi para abrir, onde psi é uma unidade de medida de pressão, o CLP não sabe o que é psi, mas sabe o percentual do sinal elétrico 4 a 20 mA equivalente que deve enviar.", img: IMG_LINKS.ANALOG_SCALE, caption: "Controle: CLP envia 0 a 100% (4 a 20 mA) ➔ Válvula 3 a 15 psi" },
+      { text: "Internamente, conversores A/D e D/A fazem essa conversão entre o sinal elétrico proporcional e os valores digitais dentro do CLP.", img: IMG_LINKS.ANALOG_SCALE, caption: "Conversão Interna entre Sinal Elétrico e Valor Digital" }
+    ]
+  },
+  {
+    header: "Conceitos Fundamentais: Conectividade, Redes e Protocolos",
+    html: `
+      <div class="split-layout">
+        <div>
+          <h2 class="slide-h2">Módulos de I/O:</h2>
+          <ul class="slide-ul">
+            <li>Módulos digitais e analógicos: P7C suporta até <strong>368 pontos de I/O</strong> e NEON5 expande com remotos (sensores, motores, células de carga, PT100).</li>
+          </ul>
+          <h2 class="slide-h2">Interfaces de Conectividade e Redes:</h2>
+          <p class="slide-p" style="margin-bottom:6px;">Portas: <strong>RS232, RS485, Ethernet, Wi-Fi 2.4 GHz, Rádio 900 MHz e Celular 4G.</strong></p>
+          <ul class="slide-ul">
+            <li><strong>Modbus RTU e Modbus TCP:</strong> "Idioma" universal mais utilizado no mercado (inversores, CLPs, IHMs).</li>
+            <li><strong>SCP-HI:</strong> Protocolo proprietário da HI Tecnologia.</li>
+            <li><strong>ASCII:</strong> Protocolo textual usado em scanners, impressoras e balanças.</li>
+            <li><strong>MQTT:</strong> Protocolo padrão de IIoT para enviar dados a plataformas em nuvem.</li>
+          </ul>
+        </div>
+        <div class="dynamic-showcase" id="showcaseBox">
+          <div class="showcase-badge" id="showcaseCaption">Diagrama de Rede RS232</div>
+          <div class="showcase-img-wrap">
+            <img id="showcaseImg" class="showcase-img" src="${IMG_LINKS.RS232}" alt="Diagrama de Rede" onclick="zoomCurrentShowcase()">
+          </div>
+          <div class="showcase-tabs">
+            <button class="showcase-tab" onclick="setShowcase('${IMG_LINKS.RS232}', 'Rede Serial RS232 (Ponto a Ponto)')">RS232</button>
+            <button class="showcase-tab" onclick="setShowcase('${IMG_LINKS.RS485}', 'Rede Serial RS485 (Mestre / Múltiplos Equipamentos)')">RS485</button>
+            <button class="showcase-tab" onclick="setShowcase('${IMG_LINKS.ETHERNET}', 'Rede Ethernet Local / Wi-Fi 2.4 GHz')">Ethernet / Wi-Fi</button>
+            <button class="showcase-tab" onclick="setShowcase('${IMG_LINKS.RADIO}', 'Rede Rádio 900 MHz (Longa Distância Sem Fio)')">Rádio 900MHz</button>
+            <button class="showcase-tab" onclick="setShowcase('${IMG_LINKS.NEON5}', 'Telemetria Celular 4G e Wi-Fi 2.4 GHz')">4G / Nuvem</button>
+          </div>
+        </div>
+      </div>
+    `,
+    narration: [
+      { text: "Os Módulos de I/O são a ponte física entre o CLP e a fábrica: neles conectamos botões, motores, células de carga e sensores PT100, chegando a 368 pontos no P7C ou expandindo via módulos remotos no NEON5.", img: IMG_LINKS.P7C, caption: "P7C: Até 368 pontos de I/O para Sensores e Atuadores" },
+      { text: "Além de ler sensores, o CLP precisa trocar dados com outros equipamentos. Veja no quadro ao lado o diagrama de cada rede conforme explicamos:", img: IMG_LINKS.RS232, caption: "Interfaces de Conectividade HI Tecnologia" },
+      { text: "A porta serial RS232 é utilizada para interligar dois equipamentos ponto a ponto via cabo serial, permitindo que o CLP troque dados diretamente com um único equipamento próximo.", img: IMG_LINKS.RS232, caption: "Rede RS232: Interligação Serial Ponto a Ponto (1 para 1)" },
+      { text: "Já a porta serial RS485 é utilizada para interligar um equipamento mestre, como o nosso CLP, para controlar e buscar dados de múltiplos equipamentos conectados na mesma rede RS485.", img: IMG_LINKS.RS485, caption: "Rede RS485: Mestre controlando Múltiplos Equipamentos" },
+      { text: "A porta Ethernet é utilizada para conectar o CLP via cabo em redes locais de alta velocidade, comunicando com computadores, supervisórios e sistemas da empresa.", img: IMG_LINKS.ETHERNET, caption: "Rede Ethernet: Alta Velocidade em Rede Local" },
+      { text: "Também possuímos interface de conectividade Wi-Fi de 2.4 GHz, utilizada para que os equipamentos troquem dados entre si sem fio ou mandem dados diretamente para a internet através de um roteador.", img: IMG_LINKS.ETHERNET, caption: "Conectividade Wi-Fi 2.4 GHz: Troca de Dados e Acesso à Internet" },
+      { text: "O Rádio 900 MHz é utilizado para comunicar dados sem fio a longas distâncias em campo aberto entre CLPs, eliminando gastos com cabeamento e sem mensalidades.", img: IMG_LINKS.RADIO, caption: "Rede Rádio 900 MHz: Longa Distância Sem Fio" },
+      { text: "E o Modem Celular 4G é utilizado para que o CLP acesse a internet via chip de operadora de qualquer lugar, enviando dados direto para plataformas em nuvem.", img: IMG_LINKS.NEON5, caption: "Modem Celular 4G: Acesso Direto à Internet e Nuvem" },
+      { text: "Mas lembre-se: para que os equipamentos conectados nessas redes se entendam, eles precisam falar o mesmo Protocolo, que funciona exatamente como um idioma em comum.", img: IMG_LINKS.RS485, caption: "Protocolos Industriais: Os 'Idiomas' da Automação" },
+      { text: "O Modbus RTU e o Modbus TCP são o idioma universal da indústria; o SCP-HI é o idioma nativo da HI Tecnologia; o ASCII é o idioma textual para balanças e scanners; e o MQTT é o idioma de IIoT para plataformas em nuvem.", img: IMG_LINKS.ETHERNET, caption: "Protocolos: Modbus RTU/TCP, SCP-HI, ASCII e MQTT" }
+    ]
+  },
+  {
+    header: "Controladores HI Tecnologia - Comparativo da Linha",
+    html: `
+      <p class="slide-p">As principais diferenças entre os CLPs <strong>P7C, NEON5 e RION5</strong> estão relacionadas à quantidade de módulos de I/O que cada um pode suportar. Além disso, o suporte para <strong>SD Card</strong> está disponível apenas nos modelos NEON5 e P7C, enquanto o RION5 não oferece essa funcionalidade. Uma característica exclusiva do RION5 é que ele não possui opção de alimentação AC, sendo alimentado apenas por DC. Por outro lado, os modelos P7C e NEON5 podem ser adquiridos com alimentação AC ou DC.</p>
+      <div class="cards-grid" style="margin-top:10px;">
+        <div class="plc-card" id="comp-p7c">
+          <div class="plc-img-box"><img src="${IMG_LINKS.P7C}" alt="P7C 302" onclick="zoomImage('${IMG_LINKS.P7C}', 'CLP P7C 302')"></div>
+          <div class="plc-title">P7C 302</div>
+          <div class="plc-sub">Até 23 Módulos I/O | AC ou DC | Com SD Card</div>
+        </div>
+        <div class="plc-card" id="comp-neon5">
+          <div class="plc-img-box"><img src="${IMG_LINKS.NEON5}" alt="NEON5" onclick="zoomImage('${IMG_LINKS.NEON5}', 'CLP NEON5')"></div>
+          <div class="plc-title">NEON5</div>
+          <div class="plc-sub">1 ou 2 Módulos I/O | AC ou DC | Com SD Card</div>
+        </div>
+        <div class="plc-card" id="comp-rion5">
+          <div class="plc-img-box"><img src="${IMG_LINKS.RION5}" alt="RION5" onclick="zoomImage('${IMG_LINKS.RION5}', 'CLP RION5')"></div>
+          <div class="plc-title">RION5</div>
+          <div class="plc-sub">1 Módulo I/O | Somente DC | Sem SD Card</div>
+        </div>
+      </div>
+    `,
+    narration: [
+      { text: "Agora que você compreende como cada rede e protocolo funciona, veja como escolher rapidamente entre os CLPs P7C, NEON5 e RION5." },
+      { text: "A primeira diferença está no porte da aplicação: o P7C 302 atende grandes painéis com múltiplos módulos, o NEON5 comporta 1 ou 2 módulos locais e o RION5 comporta 1 módulo de I/O.", highlightCard: "comp-p7c" },
+      { text: "A segunda diferença é o suporte para SD Card, presente no NEON5 e no P7C, utilizado para gravar históricos de dados, chamados de logs, e armazenar receitas de produção.", highlightCard: "comp-neon5" },
+      { text: "A terceira diferença está na alimentação: o RION5 é alimentado exclusivamente em DC, enquanto o P7C e o NEON5 oferecem opções com alimentação AC ou DC.", highlightCard: "comp-rion5" }
+    ]
+  },
+  {
+    header: "Controladores HI Tecnologia [ P7C 302 ]",
+    html: `
+      <p class="slide-p">O CLP P7C possui uma opção chamada de <strong>P7C 302</strong> que é a versão expansível: permite ao cliente comprar, além do <strong>"Bastidor Principal"</strong> (CPU + 3 módulos), até mais <strong>5 "Bastidores de Expansão"</strong>, incluindo mais 4 módulos de I/O em cada expansão (totalizando até 23 módulos / 368 pontos de I/O).</p>
+      <div class="cards-grid" style="grid-template-columns: repeat(6, 1fr); gap:8px;">
+        <div class="plc-card"><div class="plc-img-box" style="height:68px;"><img src="${IMG_LINKS.P7C}" alt="P7C"></div><div class="plc-title" style="font-size:12px;">Principal</div><div class="plc-sub">CPU + 3 Mód.</div></div>
+        <div class="plc-card"><div class="plc-img-box" style="height:68px;"><img src="${IMG_LINKS.P7C}" alt="Exp 1"></div><div class="plc-title" style="font-size:12px;">Expansão 01</div><div class="plc-sub">+4 Módulos</div></div>
+        <div class="plc-card"><div class="plc-img-box" style="height:68px;"><img src="${IMG_LINKS.P7C}" alt="Exp 2"></div><div class="plc-title" style="font-size:12px;">Expansão 02</div><div class="plc-sub">+4 Módulos</div></div>
+        <div class="plc-card"><div class="plc-img-box" style="height:68px;"><img src="${IMG_LINKS.P7C}" alt="Exp 3"></div><div class="plc-title" style="font-size:12px;">Expansão 03</div><div class="plc-sub">+4 Módulos</div></div>
+        <div class="plc-card"><div class="plc-img-box" style="height:68px;"><img src="${IMG_LINKS.P7C}" alt="Exp 4"></div><div class="plc-title" style="font-size:12px;">Expansão 04</div><div class="plc-sub">+4 Módulos</div></div>
+        <div class="plc-card"><div class="plc-img-box" style="height:68px;"><img src="${IMG_LINKS.P7C}" alt="Exp 5"></div><div class="plc-title" style="font-size:12px;">Expansão 05</div><div class="plc-sub">+4 Módulos</div></div>
+      </div>
+      <div class="bottom-row">
+        <div class="bottom-showcase">
+          <img id="p7cDynamicImg" src="${IMG_LINKS.P7C}" alt="P7C 302" onclick="zoomImage(this.src, 'CLP P7C 302')">
+          <div>
+            <div style="font-weight:700; color:#093b66; font-size:14.5px;" id="p7cDynamicTitle">CLP P7C 302 - Alta Densidade de I/O</div>
+            <div style="font-size:13px; color:#334155; margin-top:3px;">Ideal para grandes máquinas e processos industriais expansíveis.</div>
+          </div>
+        </div>
+        <div class="spec-box">
+          Alimentação: AC ou DC.<br>
+          Conectividade: Ethernet, RS485 e RS232.<br>
+          I/O's: Bastidor Principal: CPU+3 Módulos<br>
+          Expansões: 4 Módulos cada (até 5).<br>
+          Suporta SD Card: Sim
+        </div>
+      </div>
+    `,
+    narration: [
+      { text: "O CLP P7C 302 é utilizado em máquinas de grande porte ou processos complexos que concentram uma grande quantidade de sensores e atuadores no painel." },
+      { text: "Por ser modular e expansível, o cliente começa com o Bastidor Principal contendo a CPU e até 3 módulos de I/O." },
+      { text: "Conforme a planta cresce, ele pode interligar até 5 Bastidores de Expansão, adicionando mais 4 módulos de I/O em cada um, chegando a 23 módulos e 368 pontos controlados por uma única CPU." },
+      { text: "Ele já traz portas Ethernet, RS485 e RS232 integradas, opção de alimentação AC ou DC e suporte para SD Card." }
+    ]
+  },
+  {
+    header: "Controladores HI Tecnologia [ NEON5 ]",
+    html: `
+      <p class="slide-p">O CLP <strong>NEON5</strong> utiliza o mesmo processador do P7C, possuindo a mesma capacidade de processamento para linhas de programação e variáveis. Comercializado com <strong>1 ou 2 módulos de I/O</strong>, oferece múltiplas combinações de conectividade (incluindo <strong>Wi-Fi 2.4 GHz, 4G e Rádio 900 MHz</strong>) e suporte para <strong>SD Card</strong> para registro de dados (log) e receitas.</p>
+      <div class="cards-grid" style="grid-template-columns: repeat(5, 1fr); gap:8px;">
+        <div class="plc-card"><div class="plc-img-box" style="height:64px;"><img src="${IMG_LINKS.NEON5}" alt="NEON5"></div><div class="plc-title" style="font-size:12px;">RS232/RS485<br>Ethernet</div></div>
+        <div class="plc-card"><div class="plc-img-box" style="height:64px;"><img src="${IMG_LINKS.NEON5}" alt="NEON5"></div><div class="plc-title" style="font-size:12px;">RS232/RS485<br>Modem 4G</div></div>
+        <div class="plc-card"><div class="plc-img-box" style="height:64px;"><img src="${IMG_LINKS.NEON5}" alt="NEON5"></div><div class="plc-title" style="font-size:12px;">RS232/RS485<br>Rádio 900 MHz</div></div>
+        <div class="plc-card"><div class="plc-img-box" style="height:64px;"><img src="${IMG_LINKS.NEON5}" alt="NEON5"></div><div class="plc-title" style="font-size:12px;">Ethernet / Wi-Fi<br>Modem 4G</div></div>
+        <div class="plc-card"><div class="plc-img-box" style="height:64px;"><img src="${IMG_LINKS.NEON5}" alt="NEON5"></div><div class="plc-title" style="font-size:12px;">Ethernet / Wi-Fi<br>Rádio 900 MHz</div></div>
+      </div>
+      <div class="bottom-row">
+        <div class="bottom-showcase" id="showcaseBox">
+          <img id="showcaseImg" src="${IMG_LINKS.NEON5}" alt="NEON5" onclick="zoomCurrentShowcase()">
+          <div>
+            <div style="font-weight:700; color:#093b66; font-size:14.5px;" id="showcaseCaption">CLP NEON5 - Mesma CPU do P7C + Telemetria</div>
+            <div style="font-size:12.5px; color:#334155; margin-top:3px;">Clique nas redes para ver exemplos:
+              <button class="showcase-tab" onclick="setShowcase('${IMG_LINKS.NEON5}', 'CLP NEON5')">NEON5</button>
+              <button class="showcase-tab" onclick="setShowcase('${IMG_LINKS.RS485}', 'NEON5 como Mestre em Rede RS485')">Rede RS485</button>
+              <button class="showcase-tab" onclick="setShowcase('${IMG_LINKS.ETHERNET}', 'NEON5 em Rede Ethernet / Wi-Fi 2.4 GHz')">Ethernet/Wi-Fi</button>
+              <button class="showcase-tab" onclick="setShowcase('${IMG_LINKS.RADIO}', 'NEON5 em Rede Rádio 900 MHz')">Rádio 900MHz</button>
+            </div>
+          </div>
+        </div>
+        <div class="spec-box">
+          Alimentação: AC ou DC.<br>
+          Conectividade: RS232, RS485, Ethernet, Wi-Fi 2.4 GHz, Rádio 900 MHz e 4G.<br>
+          I/O's: 1 módulo ou 2 módulos.<br>
+          Suporta SD Card: Sim
+        </div>
+      </div>
+    `,
+    narration: [
+      { text: "O CLP NEON5 é utilizado quando o projeto exige alta capacidade de programação, uso de receitas e gravação de dados em SD Card, mas precisa de apenas 1 ou 2 módulos de I/O locais.", img: IMG_LINKS.NEON5, caption: "CLP NEON5: Alta Capacidade com 1 ou 2 Módulos de I/O" },
+      { text: "Como ele utiliza o mesmo processador do P7C, ele entrega todo o poder de processamento da nossa linha principal em um gabinete compacto com alimentação AC ou DC.", img: IMG_LINKS.NEON5, caption: "CLP NEON5: Mesmo Processador do P7C (AC ou DC)" },
+      { text: "Na prática, o NEON5 é muito utilizado como mestre de redes e telemetria: ele pode usar a porta RS485 ou Ethernet para coletar dados de diversos equipamentos no campo...", img: IMG_LINKS.RS485, caption: "Exemplo: NEON5 atuando como Mestre na Rede RS485" },
+      { text: "...e transmitir essas informações sem fio via Rádio 900 MHz, Wi-Fi de 2.4 GHz ou através do Modem 4G integrado diretamente para plataformas na internet e em nuvem.", img: IMG_LINKS.RADIO, caption: "Exemplo: Conectividade Sem Fio Rádio 900 MHz, Wi-Fi 2.4 GHz e 4G" }
+    ]
+  },
+  {
+    header: "Controladores HI Tecnologia [ RION5 ]",
+    html: `
+      <p class="slide-p">O CLP <strong>RION5</strong> possui um processador mais simples, mas é ideal para diversas aplicações. Muito usado como <strong>I/O Remoto</strong>, funciona como um "módulo de I/O extra" para mestres como o NEON5. Suporta <strong>1 módulo de I/O</strong>, possui memória retentiva com supercapacitor, opções com <strong>Serial, Ethernet, Wi-Fi 2.4 GHz, Rádio 900 MHz ou 4G</strong>, e é o <strong>CLP mais econômico da HI Tecnologia</strong>.</p>
+      <div class="cards-grid" style="grid-template-columns: repeat(5, 1fr); gap:8px;">
+        <div class="plc-card"><div class="plc-img-box" style="height:64px;"><img src="${IMG_LINKS.RION5}" alt="RION5"></div><div class="plc-title" style="font-size:12px;">Serial RS232-C</div></div>
+        <div class="plc-card"><div class="plc-img-box" style="height:64px;"><img src="${IMG_LINKS.RION5}" alt="RION5"></div><div class="plc-title" style="font-size:12px;">Serial RS485</div></div>
+        <div class="plc-card"><div class="plc-img-box" style="height:64px;"><img src="${IMG_LINKS.RION5}" alt="RION5"></div><div class="plc-title" style="font-size:12px;">Ethernet / Wi-Fi</div></div>
+        <div class="plc-card"><div class="plc-img-box" style="height:64px;"><img src="${IMG_LINKS.RION5}" alt="RION5"></div><div class="plc-title" style="font-size:12px;">Rádio 900 MHz</div></div>
+        <div class="plc-card"><div class="plc-img-box" style="height:64px;"><img src="${IMG_LINKS.RION5}" alt="RION5"></div><div class="plc-title" style="font-size:12px;">Modem Celular 4G</div></div>
+      </div>
+      <div class="bottom-row">
+        <div class="bottom-showcase" id="showcaseBox">
+          <img id="showcaseImg" src="${IMG_LINKS.RION5}" alt="RION5" onclick="zoomCurrentShowcase()">
+          <div>
+            <div style="font-weight:700; color:#093b66; font-size:14.5px;" id="showcaseCaption">CLP RION5 - Mais Econômico e I/O Remoto</div>
+            <div style="font-size:12.5px; color:#334155; margin-top:3px;">Veja na rede:
+              <button class="showcase-tab" onclick="setShowcase('${IMG_LINKS.RION5}', 'CLP RION5')">RION5</button>
+              <button class="showcase-tab" onclick="setShowcase('${IMG_LINKS.RS485}', 'RION5 como I/O Remoto via Rede RS485')">Remoto RS485</button>
+              <button class="showcase-tab" onclick="setShowcase('${IMG_LINKS.ETHERNET}', 'RION5 em Rede Ethernet / Wi-Fi 2.4 GHz')">Ethernet/Wi-Fi</button>
+              <button class="showcase-tab" onclick="setShowcase('${IMG_LINKS.RADIO}', 'RION5 como Remoto via Rádio 900 MHz')">Rádio 900MHz</button>
+            </div>
+          </div>
+        </div>
+        <div class="spec-box">
+          Alimentação: DC (12/24 VDC).<br>
+          Conectividade: RS232, RS485, Ethernet, Wi-Fi 2.4 GHz, Rádio 900 MHz e 4G.<br>
+          I/O's: 1 módulo.<br>
+          Suporta SD Card: Não
+        </div>
+      </div>
+    `,
+    narration: [
+      { text: "Por fim, o CLP RION5 é a nossa solução mais compacta e econômica, operando com alimentação DC, 1 módulo de I/O e memória retentiva com supercapacitor, sem uso de SD Card.", img: IMG_LINKS.RION5, caption: "CLP RION5: O Controlador Mais Econômico da HI Tecnologia" },
+      { text: "Na indústria, o RION5 é utilizado primeiro como um CLP autônomo de baixo custo para automatizar máquinas simples, e segundo como I/O Remoto para expandir pontos de mestres como o NEON5.", img: IMG_LINKS.RS485, caption: "RION5 atuando como I/O Remoto para Mestres como o NEON5" },
+      { text: "Imagine que o cliente tem sensores longe do painel principal: em vez de passar dezenas de cabos longos, ele instala o RION5 lá perto dos sensores e interliga tudo ao CLP mestre via RS485, Ethernet ou Wi-Fi de 2.4 GHz...", img: IMG_LINKS.ETHERNET, caption: "Interligação via Rede Ethernet ou Wi-Fi 2.4 GHz" },
+      { text: "...ou ainda a longas distâncias sem fio utilizando Rádio 900 MHz ou Modem Celular 4G para enviar os dados diretamente para a internet.", img: IMG_LINKS.RADIO, caption: "Comunicação Remota Sem Fio via Rádio 900 MHz ou 4G" },
+      { text: "Agora você conhece os nossos CLPs, como funcionam as redes e exatamente por que cada recurso é utilizado pelo nosso cliente. Excelentes vendas na HI Tecnologia!", img: IMG_LINKS.RION5, caption: "Treinamento Comercial Concluído - Boas Vendas!" }
+    ]
+  }
+];
+
+let currentSlide = 0;
+let currentSentence = 0;
+let isPlaying = false;
+let customImages = [];
+const synth = window.speechSynthesis;
+const voiceSelect = document.getElementById('voiceSelect');
+
+function loadVoices() {
+  const voices = synth.getVoices();
+  voiceSelect.innerHTML = '';
+  const ptVoices = voices.filter(v => v.lang.includes('pt') || v.lang.includes('PT'));
+  const list = ptVoices.length ? ptVoices : voices;
+  list.forEach((voice) => {
+    const opt = document.createElement('option');
+    opt.value = voice.name;
+    opt.textContent = `${voice.name} (${voice.lang})`;
+    if (voice.name.includes('Natural') || voice.name.includes('Francisca') || voice.name.includes('Antonio') || voice.name.includes('Google')) {
+      opt.selected = true;
+    }
+    voiceSelect.appendChild(opt);
+  });
+}
+speechSynthesis.onvoiceschanged = loadVoices;
+loadVoices();
+
+function renderSlide(index) {
+  const slide = slidesData[index];
+  document.getElementById('slideHeaderTitle').textContent = slide.header;
+  document.getElementById('slideBody').innerHTML = slide.html;
+  document.getElementById('slideIndicator').textContent = `Slide ${index + 1} de ${slidesData.length}`;
+  
+  const customImgEl = document.getElementById('customSlideImg');
+  const nativeEl = document.getElementById('nativeSlideContent');
+  if (customImages[index]) {
+    customImgEl.src = customImages[index];
+    customImgEl.style.display = 'block';
+    nativeEl.style.display = 'none';
+  } else {
+    customImgEl.style.display = 'none';
+    nativeEl.style.display = 'flex';
+  }
+  updateProgress();
+}
+
+// Atualiza o quadro visual dinâmico quando a narração cita um equipamento, escala analógica ou rede
+function setShowcase(imgUrl, captionText) {
+  const imgEl = document.getElementById('showcaseImg');
+  const capEl = document.getElementById('showcaseCaption');
+  const boxEl = document.getElementById('showcaseBox');
+  if (imgEl && imgUrl) imgEl.src = imgUrl;
+  if (capEl && captionText) capEl.textContent = captionText;
+  if (boxEl) {
+    boxEl.classList.remove('active-pulse');
+    void boxEl.offsetWidth;
+    boxEl.classList.add('active-pulse');
+  }
+}
+
+function highlightCardById(cardId) {
+  document.querySelectorAll('.plc-card').forEach(el => el.classList.remove('highlight-focus'));
+  if (cardId) {
+    const target = document.getElementById(cardId);
+    if (target) target.classList.add('highlight-focus');
+  }
+}
+
+function updateProgress() {
+  const totalSentences = slidesData.reduce((acc, s) => acc + s.narration.length, 0);
+  let completed = 0;
+  for (let i = 0; i < currentSlide; i++) completed += slidesData[i].narration.length;
+  completed += currentSentence;
+  const pct = Math.min(100, Math.round((completed / totalSentences) * 100));
+  document.getElementById('progressBar').style.width = pct + '%';
+}
+
+function speakCurrentSentence() {
+  if (!isPlaying) return;
+  synth.cancel();
+
+  const slide = slidesData[currentSlide];
+  if (currentSentence >= slide.narration.length) {
+    if (currentSlide < slidesData.length - 1) {
+      currentSlide++;
+      currentSentence = 0;
+      renderSlide(currentSlide);
+      setTimeout(speakCurrentSentence, 450);
+    } else {
+      isPlaying = false;
+      document.getElementById('playPauseBtn').textContent = '▶ Reiniciar Vídeo Narrado';
+      document.getElementById('statusIndicator').textContent = 'Treinamento concluído!';
+      document.getElementById('progressBar').style.width = '100%';
+    }
+    return;
+  }
+
+  const item = slide.narration[currentSentence];
+  const displayText = typeof item === 'string' ? item : item.text;
+
+  // Atualiza a imagem de rede/equipamento ou o destaque do card sincronizado com a frase
+  if (typeof item === 'object') {
+    if (item.img) setShowcase(item.img, item.caption || '');
+    highlightCardById(item.highlightCard || null);
+  }
+
+  document.getElementById('subtitleBox').textContent = displayText;
+  document.getElementById('statusIndicator').textContent = 'Narrando...';
+  updateProgress();
+
+  const spokenText = applyPhonetics(displayText);
+  const utter = new SpeechSynthesisUtterance(spokenText);
+  utter.lang = 'pt-BR';
+  utter.rate = parseFloat(document.getElementById('rateSelect').value || '1.08');
+  const selectedVoiceName = voiceSelect.value;
+  const chosenVoice = synth.getVoices().find(v => v.name === selectedVoiceName);
+  if (chosenVoice) utter.voice = chosenVoice;
+
+  utter.onend = () => {
+    if (isPlaying) {
+      currentSentence++;
+      speakCurrentSentence();
+    }
+  };
+  synth.speak(utter);
+}
+
+function togglePlay() {
+  const btn = document.getElementById('playPauseBtn');
+  if (isPlaying) {
+    isPlaying = false;
+    synth.cancel();
+    btn.textContent = '▶ Continuar Narração';
+    document.getElementById('statusIndicator').textContent = 'Pausado';
+  } else {
+    if (currentSlide === slidesData.length - 1 && currentSentence >= slidesData[currentSlide].narration.length) {
+      currentSlide = 0;
+      currentSentence = 0;
+      renderSlide(0);
+    }
+    isPlaying = true;
+    btn.textContent = '⏸ Pausar Narração';
+    speakCurrentSentence();
+  }
+}
+
+function nextSlide() {
+  synth.cancel();
+  if (currentSlide < slidesData.length - 1) {
+    currentSlide++;
+    currentSentence = 0;
+    renderSlide(currentSlide);
+    if (isPlaying) speakCurrentSentence();
+    else {
+      const first = slidesData[currentSlide].narration[0];
+      document.getElementById('subtitleBox').textContent = typeof first === 'string' ? first : first.text;
+    }
+  }
+}
+
+function prevSlide() {
+  synth.cancel();
+  if (currentSlide > 0) {
+    currentSlide--;
+    currentSentence = 0;
+    renderSlide(currentSlide);
+    if (isPlaying) speakCurrentSentence();
+    else {
+      const first = slidesData[currentSlide].narration[0];
+      document.getElementById('subtitleBox').textContent = typeof first === 'string' ? first : first.text;
+    }
+  }
+}
+
+function toggleFullScreen() {
+  const el = document.documentElement;
+  if (!document.fullscreenElement) el.requestFullscreen();
+  else document.exitFullscreen();
+}
+
+// Funções de Zoom de Imagem
+function zoomImage(url, caption) {
+  document.getElementById('zoomImgEl').src = url;
+  document.getElementById('zoomCaption').textContent = caption || 'Visualização Ampliada';
+  document.getElementById('zoomModal').style.display = 'flex';
+}
+function zoomCurrentShowcase() {
+  const imgEl = document.getElementById('showcaseImg');
+  const capEl = document.getElementById('showcaseCaption');
+  if (imgEl) zoomImage(imgEl.src, capEl ? capEl.textContent : '');
+}
+function closeZoomModal() {
+  document.getElementById('zoomModal').style.display = 'none';
+}
+
+// Funções do Modal Fonético
+function openPhoneticModal() {
+  if (isPlaying) togglePlay();
+  document.getElementById('phoneticRulesInput').value = phoneticRulesText;
+  document.getElementById('phoneticModal').style.display = 'flex';
+}
+function closePhoneticModal() {
+  synth.cancel();
+  document.getElementById('phoneticModal').style.display = 'none';
+}
+function savePhoneticRules() {
+  phoneticRulesText = document.getElementById('phoneticRulesInput').value;
+  closePhoneticModal();
+}
+function testSampleSpeech() {
+  synth.cancel();
+  phoneticRulesText = document.getElementById('phoneticRulesInput').value;
+  const sample = "Teste de pronúncia: sinal de 4 a 20 mA equivale a 0 a 100% de uma válvula de 3 a 15 psi nos CLPs P7C 302, NEON5 e RION5.";
+  const utter = new SpeechSynthesisUtterance(applyPhonetics(sample));
+  utter.lang = 'pt-BR';
+  const chosenVoice = synth.getVoices().find(v => v.name === voiceSelect.value);
+  if (chosenVoice) utter.voice = chosenVoice;
+  synth.speak(utter);
+}
+
+document.getElementById('imgUpload').addEventListener('change', (e) => {
+  const files = Array.from(e.target.files);
+  if (!files.length) return;
+  customImages = files.map(f => URL.createObjectURL(f));
+  renderSlide(currentSlide);
+});
+
+renderSlide(0);
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+# CONTEXT.md - Academia de Treinamento Comercial HI Tecnologia
+
+## 1. Visão Geral do Projeto
+Este projeto consiste em uma série de **Apresentações Interativas Narradas em Vídeo (HTML5 + Web Speech API)** desenvolvidas para o **onboarding e capacitação técnica da equipe comercial da HI Tecnologia**.
+
+O objetivo é transformar conceitos densos de engenharia de automação industrial em argumentos de vendas claros, práticos e consultivos, permitindo que um novo vendedor compreenda não apenas *o que é* cada equipamento ou software, mas **por que ele é utilizado na indústria e qual dor do cliente ele resolve**.
+
+---
+
+## 2. Metodologia Didática Obrigatória ("Explicar o Porquê")
+Todo novo módulo criado neste projeto DEVE seguir quatro princípios pedagógicos estabelecidos no Módulo 01:
+
+1. **Traduzir "Tecniquês" em Funcionalidade Prática:**
+   - Nunca citar uma sigla ou recurso isoladamente. Sempre explicar sua função prática rapidamente.
+   - *Exemplos aplicados no Módulo 1:*
+     - **RS232:** Não é apenas uma "porta serial"; é usada para interligar **dois equipamentos** ponto a ponto (1 para 1) para trocarem dados falando o mesmo protocolo.
+     - **RS485:** Usada quando um equipamento **mestre** (ex: CLP ou Gateway) precisa controlar e buscar dados de **múltiplos equipamentos** pendurados na mesma rede.
+     - **Wi-Fi 2.4 GHz e Modem 4G:** Formas sem fio de trocar dados entre equipamentos ou acessar a internet diretamente para enviar dados a plataformas em nuvem.
+     - **Protocolos = Idiomas:** Os meios físicos (RS232, RS485, Ethernet, Wi-Fi, Rádio 900 MHz, 4G) são a "linha telefônica", enquanto os protocolos (Modbus RTU/TCP, SCP-HI, ASCII, MQTT) são os "idiomas" que os equipamentos precisam falar em comum para se entenderem.
+     - **Sinais Analógicos (0–10 V e 4–20 mA) = 0 a 100% da Grandeza Física:** O CLP não sabe fisicamente o que são "Litros" (ex: tanque de 0 a 500 L) ou "psi" (ex: válvula proporcional de 3 a 15 psi), mas lê e envia o sinal elétrico equivalente a **0 a 100%** daquela medição ou atuação.
+
+2. **Foco em Especificação Comercial (Regra de Bolso):**
+   - Cada apresentação deve ensinar ao vendedor quais perguntas fazer ao cliente para escolher o produto certo da linha HI Tecnologia.
+
+3. **Apoio Visual Sincronizado:**
+   - Sempre que a narração citar um equipamento específico, uma arquitetura de rede ou um conceito abstrato (como proporcionalidade ou topologia nuvem), o painel visual do slide deve exibir a foto do equipamento ou o diagrama correspondente em tempo real.
+
+---
+
+## 3. Status do Projeto e Mapa de Módulos (Roadmap)
+
+### ✅ Módulo 01: Linha de CLPs e Conceitos de Automação (CONCLUÍDO)
+- **Arquivo base:** `apresentacao.html`
+- **Conteúdo coberto:** O papel do CLP como "cérebro" do processo; Alimentação AC (85–265V direto na tomada) vs. DC (12/24 VDC via fonte); Sinais Digitais (0 ou 1) vs. Analógicos (0–10 V / 4–20 mA como 0 a 100% da grandeza física, exemplos de litros e psi); Módulos de I/O; Interfaces (RS232, RS485, Ethernet, Wi-Fi 2.4 GHz, Rádio 900 MHz, 4G); Protocolos (Modbus RTU/TCP, SCP-HI, ASCII, MQTT); Comparativo e detalhamento dos CLPs **P7C 302**, **NEON5** e **RION5** (incluindo uso como I/O Remoto).
+
+### ⏳ Módulo 02: Gateways, Conversores, Modens e Rádios (PRÓXIMO)
+- **Objetivo comercial:** Explicar como conectar máquinas existentes (inclusive com CLPs ou equipamentos de terceiros) às redes modernas e à nuvem.
+- **Tópicos e Produtos HI Tecnologia a abordar:**
+  - *Por que usar um Gateway ou Conversor?* (Traduzir meios físicos diferentes ou protocolos diferentes, ou levar dados do chão de fábrica para a nuvem sem trocar o CLP existente).
+  - **Linha GTON:**
+    - **GTON-C:** Conversor (RS232/RS485 para Ethernet) e Bridge (traduz Modbus RTU serial para Modbus TCP em rede Ethernet).
+    - **GTON-P:** Gateway Programável (ST/Ladder) para pré-processamento e integração inteligente.
+    - **GTON-M:** Modem Ethernet 4G industrial.
+  - **Gateways Conectores de Telemetria (ex: ESC717 / Plug Telemetria):** Como funcionam como "Conector" lendo vários "Dispositivos" escravos numa rede RS485 Modbus e enviando tudo para o Portal de Telemetria.
+  - **Rádios Industriais (ex: R9X307 - 900 MHz)** e **Conversores USB/Serial (USB721)**.
+
+### ⏳ Módulo 03: Sistemas Supervisórios (HIscada Pro vs. Portal de Telemetria em Nuvem)
+- **Objetivo comercial:** Ensinar o vendedor a ofertar softwares de supervisão (Nível 3 Local vs. Nível 4 em Nuvem).
+- **Tópicos e Produtos HI Tecnologia a abordar:**
+  - *O que é e por que a indústria usa um Sistema Supervisório (SCADA)?* (Transformar dados brutos dos CLPs em telas sinópticas visuais, gráficos de tendência, banco de dados histórico, relatórios e gestão de alarmes para tomada de decisão).
+  - **HIscada Pro (Supervisório Local - Nível 3):** Instalado em computadores locais na planta, alta performance, integração com banco de dados e sistemas ERP, servidor OPC/Modbus (**MplServer**).
+  - **Portal de Telemetria (Supervisório em Nuvem / IIoT - Nível 4):** Monitoramento e controle remoto via navegador web (celular, tablet, PC) sem custo de servidor local; conceitos de **Conector** (quem envia para a nuvem: ex. NEON5, RION5 ou Gateway) e **Dispositivo** (quem contém os dados); Dashboards customizáveis, Geolocalização (Google Maps), Alarmes (E-mail e Telegram), Relatórios, opção **White Label** (marca do próprio cliente) e **API REST** (integração com BI, ERP, MES).
+
+### ⏳ Módulo 04: IHMs (Interfaces Homem-Máquina) e Sensores
+- **Objetivo comercial:** Explicar a diferença entre operar a máquina localmente no painel (IHM TouchScreen como **GTI5** e linha **Weintek**) versus supervisionar a planta inteira (SCADA/Telemetria).

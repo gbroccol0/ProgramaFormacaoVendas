@@ -1,0 +1,1064 @@
+
+===== PDF p. 1 (impressa 0) =====
+
+===== PDF p. 2 (impressa 1) =====
+SUMÁRIO
+02 EMPRESA 23 Sensores
+24...........................................Sensor TH T863
+24...........................................Sensor HPS850
+03 ÁREAS DE ATUAÇÃO
+25 FONTES DE ALIMENTAÇÃO
+05 LINHA DO TEMPO
+26.......................................................SBC513
+26.......................................Fontes Mean W ell
+06 CLPs
+07.................................................CLP RION 5
+27 CAIXA MECÂNICA
+08...............................................CLP NEON 5
+28...........................Caixa Mecânica GEM100
+09 ......................................................CLP P7C
+10.......................Módulos de I/O disponíveis
+29 SOFTWARES
+11 IHM
+30.........Plataforma IoT: P or tal de T elemetria
+32.........Ambiente de programação: HIstudio
+12.............................................................GTI5
+33...............Supervisório Scada: HIscada Pro
+13 Kit de Treinamento
+34 SOLuÇÕES DEDICADAS
+14. ......................................................R TK 510
+35......DAP5 - P ainel de Aquisição de Dados
+36...................................................Óleo e Gás
+38.....................HI Connect - Plano de Dados
+15 Gateways e Conversores
+39........................................................HI OEM
+16........................................Gateway GT ON-P
+17........................................Gateway GT ON-C
+18......................................Conversor USB721 40 HI University
+19 Modem Celular 41 HI Partner
+20............................Modem Celular GT ON-M
+42 Representantes
+21 Rádio
+22.............................................Rádio R9X307
+42 Clientes
+
+===== PDF p. 3 (impressa 2) =====
+EMPRESA
+A HI Tecnologia foi fundada em 1989 para trazer a
+tran sfo rm a ç ão d ig ita l n a in d ú stria, p o r m eio d o
+desenvolvimento de produtos e soluções capazes de
+aumentar a eﬁciência dos processos fabris.
+Além de fabricar e comercializar nossos produtos,
+nos destacamos, sobretudo, por desenvolver e
+deter toda a tecnologia que utilizamos. Com
+CERTIFICADOS
+uma equipe de proﬁssionais especializados e
+de excelência, também prestamos serviços de
+Em 2003, o Sistem a da G estão da Q ualidade
+engenharia para integração de sistemas,
+(S G Q ) da H I T ecn lo gia fo i certiﬁc ad o seg un d o a
+automação industrial e predial.
+norm a NBR ISO9001. Em 2008, tam bém
+in s titu ím o s o p ro g ra m a in te g ra d o Q M A S S q u e ,
+além da qualidade, estabelece com prom issos
+com a sustentabilidade, respeitando o m eio
+am b ien te e p ro m oven d o u m a m b ien te de tra ba lho
+seg uro e sau d ável p ara n oss os co lab o rad ore s.
+CERTIFIED
+ISO 9001
+02
+
+===== PDF p. 4 (impressa 3) =====
+ÁREAS DE ATUAÇÃO
+ÂÍÂLQÂ SRÂÂ Â Õ ÂÂ ÂTÂSRÂ
+Â TQÂ SÂTRÂ R R ÂTSÂ QÂÂ
+RTÂÂS
+ÂÂÂÂRÂ ÂSSÂRÂ ÂÂ Â ST Â
+Â U RRÂ Â ÂSRÂÂ TÂ RÂTQTÂÂ Â
+R Â TÂTTÂRÂ ÂRÂ TÂRTÂ Â Â
+SÂ TÂ RÂQTRÂÂ SSÂ Â ÂTÂ RÂ
+TÂÂSTÂÂ RÂTQR
+saneamento
+Indústria 4.0
+Na área de saneamento contribuímos
+RÂ TRÂUÂ SQÂÂ
+com equipamentos para aquisição de
+QTÂSÂQ ÂÂQÂ Â
+dados remotos de operação, conexão
+SRÂÂ Â EDÂRÂ
+com um servidor interno da empr esa,
+SQÂRÂÂÂ TÂ
+automação de elevatórias, etc.
+ÂR ÂÂÂ QTRÂ
+Atuamos tanto com saneamento
+SQÂÂ QÂ Â
+público quanto privado,
+Â RÂTÂSQÂ
+principalmente em ETE's e ETA's.
+RÂ ÂQTÂÂÂ SSÂ
+Alguns de nossos principais clientes
+QÂ Â TSÂQSQÂ
+são: Sabesp, Embasa, Copasa,
+ÂLÂ IRÂÂÂ
+Corsan e Cedae.
+HRSÂÂK
+meio ambiente HOSPITALAR
+Â Â RSÂ Â Â ÂÕSQÂÂTRÂÂRÂ
+SPÂ QRÂ Â RÂ Â QÂ
+Â TRÂÂ Â SRÂTÂRÂTRÂ
+QÂ SÂ Â KÂÂ QÂÂTSÂ Â RTÂ
+RSÂ RÂRÂ Â Â TÂTRÂ Â QÂ
+RÂ Â Â RÂ Â ÂTQ ÂQTÂÂÂ
+R ÂÂ QUÂ ÂT Â Â RTÂ SÂÂSTÂ Â
+QTÂÂÂ SSÂQÂ RÂ ÕSQÂ ÂTÂ
+Â ÂKQÂÂÕ QTÂÂ Â SSÂ QÂ
+Â ÂÂTÂQRÂ
+UR ÂTRÂTÂÂQSQ
+
+===== PDF p. 5 (impressa 4) =====
+AGRONEGÓCIOENERGIA
+Para o agronegócio, trabalhamos Â Â Â Â RÂ
+com projetos de automação e TÂ QÂ Â Â
+controle de máquinas de plantio, QQÂ Â T Â QRÂ Â
+controle e supervisão de sistemas de SQÂ RÂ T RÂ Â QÂ
+irrigação/fertirrigação e sistemas RÂ QTÂ S Â
+completos de fabricação de rações Â Â TSR Â
+animais, incluindo software de RÂ HÂ Â Â
+receitas. Alguns de nossos principais Â QTÂ Â Â SSÂ
+clientes são: TM Máquinas, QÂ Â KQ Â KTÂ
+Hidrosense, Pivodrip, COMDEA GRO e QRÂÂÂQ
+COMIGO.
+SERVIÇOS
+Além de termos nossa própria linha de produtos e fazermos algumas
+revendas, oferecemos diversos serviços. P ossuímos uma área dedicada a
+engenharia de aplicação para soluções customizadas, que faz desde
+projetos completos, com desenvolvimento, programação e aplicação, até
+demandas especíﬁcas.
+Conﬁra alguns de nossos principais serviços:
+• Projetos Turnkey
+• Projetos Elétricos
+• A utomação de
+Máquinas e Processos
+• Programação de CLP • Integração de Sistemas
+• Programação de IHM • Desenvolvimento de Aplicação
+para Sistema Supervisório
+• Manutenção de equipamentos
+fabricados pela HI Tecnologia • Desenvolvimento de
+Manuais de Operação
+04
+
+===== PDF p. 6 (impressa 5) =====
+Linha do Tempo
+1989
+Fundação da HI Tecnologia
+1993
+Primeira linha de CLP
+2003
+Certiﬁcação ISO9001
+2007
+Lançamento da linha P7C
+2012
+Supervisório HIscada Pro
+2014
+Lançamento do NEON
+2015
+IoT Portal de Telemetria
+Lançamento do RION
+2019
+Lançamento do HIstudio
+2021
+MQ TT na linha de Hardware
+Lançamento da família GTON
+2023
+Lançamento do RION 5
+2024
+Lançamento do NEON 5
+05
+
+===== PDF p. 7 (impressa 6) =====
+HARDWARE
+CLPS
+ÍNDICE
+RION 5 (até 16 pontos de I/O).......................................................................................................07
+NEON 5 (até 32 pontos de I/O - expansível remotamente até 240 pontos)..............................08
+P7C (até 368 pontos de I/O).........................................................................................................09
+Módulos de I/O disponíveis...........................................................................................................10
+AMBIENTE DE PROGRAMAÇÃO
+Todos os CLPs têm como opção de ambiente
+de programação gratuito o software HIstudio
+(página 35) desenvolvido pela HI Tecnologia,
+aderente à norma IEC 61131-3.
+06
+
+===== PDF p. 8 (impressa 7) =====
+HI TECNOLOGIA
+S
+CLP
+O RION 5 é um controlador altamente ersátil
+com distintas opç es de aplicação Possui
+m u ltic o n e c ti id a d e e m u ltip ro to c o lo e 7
+ariaçes de módulos de IO com diferentes
+cominaçes e recursos
+RION 5 com entrada ethernet
+O equipament o possui suporte para 1 módulo
+de IO e pode ser utilizado como um módulo de
+IO remot o da lina NEON 5 permitindo acesso
+ia com unicação s entradas e s saídas
+do equipam ento sem necessidade de
+programação do mesmo
+Clique
+CARACTERÍSTICAS GERAIS
+Banco de dados em ﬂash................................................................................................................8 kB
+Tempo de instrução lógica..........................................................................................................500 ns
+Alimentação..............................................................................................................DC 10 V a 30 V DC
+Consumo.............................................................................................................................3 Watts máx
+Temperatura de operação........................................................................................................0 a 60 °C
+Temper atura de estocagem.................................................................................................-20 a 70 °C
+Umidade relativa.............................................................................................≤95% sem condensação
+Peso do bastidor.....................................................................................0,450 K g (aproximadamente)
+Caixa..................................................................................................................Alumínio e P oliestireno
+Grau de proteção.............................................................................................................................IP30
+Dimensões.............................................................................................60 (L) x 100 (A) x 106 (P) mm
+INTERFACES DE COMUNICAÇÃO
+Serial RS232-C
+Serial RS485
+Modem Celular 4G
+Rádio 900 Mz
+Eternet
+Wi-Fi
+07 HARDWARE
+
+===== PDF p. 9 (impressa 8) =====
+CATÁLOGO gERAL
+S
+CLP
+O NEON 5 é um CLP compacto para múltiplas
+utilizações e com alto grau de conectividade.
+Conta com 7 variações de módulos de I/O, com
+diversos recursos e combinações.
+NEON 5 com 2 módulos integrados
+P ossui supor te par a SD Car d e par a 2 módulos
+integrados e pode conectar até 14 unidades do
+I/O remot o RION 5, chegando a 240 pont os.
+Clique
+CARACTERÍSTICAS GERAIS
+Memória ﬂash do processador.....................................................................................................1 MB
+Banco de dados em ﬂash.............................................................................................................32 kB
+Tempo de instrução lógica..........................................................................................................350 ns
+Alimentação A C.....................................................................................85 V a 265 V A C (automática)
+Alimentação DC..............................................................................................................10 V a 30 V DC(máximo) A C....................................................................................................................3 W
+Consumo (máximo) DC....................................................................................................................5 W
+Temper atura de operação.......................................................................................................0 a 60 °C
+Temper atura de estocagem.................................................................................................-20 a 80 °C
+Umidade relativa.............................................................................................≤95% sem condensação
+P eso do bastidor com 1 módulo de I/O................................................0,450 Kg (aproximadamente)
+P eso do bastidor com 2 módulos de I/O..............................................0,600 K g (aproximadamente)
+Caixa..................................................................................................................Alumínio e Poliestir eno
+Grau de proteção.............................................................................................................................IP30
+INTERFACES DE COMUNICAÇÃO
+Serial RS232-C
+Serial RS485
+Modem Celular 4G
+Rádio 900 Mhz
+Ethernet
+Wi-Fi
+HARDWARE 08
+
+===== PDF p. 10 (impressa 9) =====
+HI TECNOLOGIA
+S
+CLP
+Os produtos P7C foram desenvolvidos para
+atender aplicações tanto na área de
+processos contínuos (controle de processos),
+quanto na área de manufatura (programação,
+sequenciamento de máquinas). Eles oferecem
+P7C 302 bastidor principal
+toda a versatilidade dos demais controladores
+da HI Tecnologia, contendo também
+características exclusivas.
+Apresentam supor te para SD Card e diferentes
+opções de módulos de I/O, incluindo
+entradas/saídas analógicas e digitais, com
+conﬁgurações distintas e modelos com fonte Clique
+de alimentação AC ou DC.
+CARACTERÍSTICAS GERAIS
+Alimentação A C...........................................................................................................85 V a 265 V A C
+Alimentação DC.............................................................................................................10 V a 36 V DC
+Temper atura de operação.......................................................................................................0 a 60 °C
+Peso do bastidor...........................................................................................1 K g (aproximadamente)
+Caixa...............................................................................................................Alumínio e Aço Carbono
+Grau de proteção............................................................................................................................ IP30
+Dimensões (P7C 302).........................................................................150 (L) x 110 (A) x 115 (P) mm
+Bastidor PrincipalBastidor de expansão 4 slots
+PrincipalExpansão 1Expansão 2Expansão 3Expansão 4Expansão 5
+09 HARDWARE
+
+===== PDF p. 11 (impressa 10) =====
+CATÁLOGO gERAL
+S
+CLP
+MóDULOS DE I/O DISPONÍVEIS
+RION 5 / NEON 5
+Entradas Saídas Entradas Saídas PT100 N TC (*5)Célula deEncoder (*3)Contador PWM (*3)
+DigitaisDigitaisAnalógicasAnalógicas(*1) carga (*2) rápido (*3)
+HIO11584 (TR)3 - - - - 1 1 1
+HIO1205 1 (TR)3(*4)- - - 1 - - -
+HIO13044 (RL)4 - - - - - - -
+HIO14044 (TR)4 2 - - - 1 1 -
+HIO16084 (TR)1 - 1 - - 1 1 1
+HIO16584 (TR)1 - - 2 - - - -
+DIO60588 (TR)- - - - - 1 1 1
+LEGENDA -(TR): saída digital a transistor PNP (RL): saída digital a relé
+OBSERVAÇõES
+(*1) Entrada analógica de temperatura para sensores do tipo (*3) Os canais de encoder, contador rápido e PWM, são
+PT100 a 3 ﬁos, com medições de temperatura de -50 a 250 °C. conﬁgurações dos canais de entradas e saídas digitais
+disponíveis no módulo. (Alguns canais dos módulos
+(*2) Canal de entrada para célula de carga a 4 ﬁos com podem ser mutuamente exclusivos.)
+sensibilidade de 2mV/V e resolução de 15 bits.
+(*4) São 2 canais de instrumentação (0 a 20 mA ou 4 a
+20 mA) e 1 canal de entrada para célula de carga.
+P7C
+Entradas Saídas Entradas Saídas
+DESCRIÇÃO
+DigitaisDigitaisAnalógicasAnalógicas
+DIM40116- - - -
+AIO574--8 2 2 saídas analógicas 12 bits
+AIO577- - 4 - 4 entradas analógicas PT100
+AOM551- - - 8 8 saídas analógicas 12 bits
+FGM721 8 8 - - Gerador de frequência/pulso programável
+DIO47188- - -
+DOM451- 16- - -
+ROM455-8- - 8 saídas digitais a relé
+CDM7118 - - - 2 encoder/contador rápido
+CDM715 6 - - - 2 encoder/contador rápido de alta velocidade
+AIO530- - 7 1 1 saída analógica 12 bits + 1 célula de carga 15 bits
+HARDWARE 10
+
+===== PDF p. 12 (impressa 11) =====
+HARDWARE
+IH M S
+ÍNDICE
+GTI5................................................................................................................................................12
+11
+
+===== PDF p. 13 (impressa 12) =====
+CATÁLOGO gERAL
+IHM
+A série GTI5 oferece soluções completas de
+IHM para automação industrial, com telas TFT
+de alta resolução,m últiplas opções de
+conectividade e design robust o par a ambientes
+industriais exigentes. Modelos de 4,3" a 15,6",
+portas Ethernet,RS-232,RS-485 e USB, GTI5
+proteção frontal IP65 e resistência a vibrações.
+Com o Smar t Manager Pr o, v ocê cria telas com
+alarmes, históricos e tendências em minutos.
+Clique
+CARACTERÍSTICAS GERAIS
+Contraste 500:1
+BacklightLED
+Vida útil Backlight >30.000 horas
+Touch Screen Resistivo de 4 ﬁos
+USB Host 1 porta USB para conexão de dispositivos
+RS232 1 porta serial RS232
+RS485 1 porta serial RS485
+Ethernet 1 porta RJ45 10/100 Mbps
+Tensão de entrada 24V DC
+Temperatura de operação 0ºC ~ 50°C
+Umidade10% ~90% RH (sem condensação)
+Grau de Proteção IP65 (frontal) / IP20 (traseira)
+Material da carcaça Plástico ABS de alta resistência
+Certiﬁcação CE
+Modelos
+Modelo Tela Polegadas Resolução
+GTI5 – 4.3”TFT 4,3 480 x 272
+GTI5 – 7”TFT 7 800 x 480
+GTI5 – 10.1” TFT 10,1 1280 x 800
+GTI5 – 15.6TFT 15,6 1920 x 1080
+HARDWARE 12
+
+===== PDF p. 14 (impressa 13) =====
+HARDWARE
+KIT DE
+TREINAMENTO
+ÍNDICE
+RTK510............................................................................................................................................14
+13
+
+===== PDF p. 15 (impressa 14) =====
+CATÁLOGO gERAL
+Os kits da família R TK510 são ideais para o
+treinam ento de program ação de CLP’s
+baseados na norm a IEC-61131. Esses kits
+incluem uma fonte de alimentação, chaves para
+s im u la ç ã o d e s e n s o re s e s in a is d ig ita is ,
+p o te n c iô m e tro s p a ra s im u la ç ã o d e s in a is
+analó gico s, LE D s p ara indicar o statu s das Kit de treinamento RTK510
+saídas digitais e bornes para interface com
+KIT DE TREINAMENTO
+pr ocessos reais.
+Com esses recursos, os kits proporcionam uma
+e xp e riên c ia p rá tica e co m p leta p a ra o
+aprendizado e desenv olvimento de habilidades
+em programação de CLP’s.
+Clique
+Mecânica
+171mm
+182mm 128,5mm182mm
+Recursos Disponíveis
+HARDWARE 14
+
+===== PDF p. 16 (impressa 15) =====
+HARDWARE
+GATEWAYS e
+CONVERSORES
+ÍNDICE
+Gateway GTON-P (programá vel em Texto Estruturado e Ladder)..............................................16
+Gatewa y GT ON-C (serial <> ethernet e Bridge ModBus R TU <> T CP)........................................17
+Conv ersor USB721 (USB <> serial)...............................................................................................18
+15
+
+===== PDF p. 17 (impressa 16) =====
+CATÁLOGO gERAL
+O GTON -P é um gatew ay com a m esm a
+capacidade de programação de um CLP, por
+meio do software HIstudio (página 35). P ode
+ser conﬁgurado com m últiplas opções de
+interface de comunicação, com a interface A
+s e conversores
+podendo ter canais serialRS232-C,serial GTON-P
+y
+RS485 ou ethernet, enquant o para a interface B
+a
+é possível escolher entre modem 4G, rádio,
+ethernet, serial RS232-C, serial RS485 ou Wi-Fi.
+tew
+Ga
+Clique
+CARACTERÍSTICAS GERAIS
+Alimentação......................................................................................................................10 a 30 V DC
+Dimensões.........................................................................................36 (L) x 99,5 (A) x 100,2 (P) mmau de proteção............................................................................................................................IP30
+Fixação..........................................................................................................................Trilho DIN T S35
+Proteção alimentação.............................................................Contra inversão de polaridade e surto
+Protocolo de comunicação................................................................. ASCII, HTTP, MQTT e ModBus
+Ambiente de Programação
+O G T O N -P te m o s o ftw a re g ra tu ito
+HIstudio (página 35) como ambiente deogramação. Ele é desenvolvido pela
+H I Tecnologia,aderente à norm a
+IEC 61131-3.
+Mestre Inversor de
+IO Remoto
+Frequência
+Medidor de
+Energia
+RS485
+HARDWARE 16
+
+===== PDF p. 18 (impressa 17) =====
+HI TECNOLOGIA
+C on versor Serial/Ethernet e B ridge M odB u s
+RTU/TCP em um único equipam ento. No
+primeiro modo, o GT ON-C opera apenas como
+um conv ersor entre o meio físico serial (RS232
+ou RS485) e ethernet, sendo transparente ao
+s e conversores GTON-C
+conteúdo dos dados. Enquanto no segundo, por
+y
+m e io d a re d e e th e rn e t u tiliz a n d o p ro to c o lo
+a
+Modbus T CP, ele permite acessar dispositivos
+seriais que operam com protocolo Modbus-R TU
+e vice-v ersa.
+tew
+Ga
+Clique
+CARACTERÍSTICAS GERAIS
+Alimentação.......................................................................................................................10 a 30 V DC
+Dimensões..........................................................................................36 (L) x 99,5 (A) x 100,2 (P) mmau de proteção.............................................................................................................................IP30
+Fixação...........................................................................................................................Trilho DIN T S35
+Pr oteção alimentação..............................................................Contra inversão de polaridade e sur to
+Modos de operação...............................................................Gateway ModBus e modo transparente
+Exemplo de Utilização no Modo Bridge
+Escravo 1 Escravo 2 Escravo N
+Mestre
+Ethernet
+10100001
+RS485
+10100001
+Exemplo de Utilização no Modo Transparente
+Ethernet
+RS232-C
+ASCII
+ASCII
+17 HARDWARE
+
+===== PDF p. 19 (impressa 18) =====
+CATÁLOGO gERAL
+O módulo USB721 é um conv ersor de interface
+USB para serial,que perm ite que um
+computador desktop ou notebook, com porta
+USB, acesse dispositivos com interface serial
+USB721
+RS232/RS485,com o: controladores lógico
+s e conversores
+p ro g ra m á ve is , inv erso re s d e fre q u ên c ia ,
+y
+transmissores e sensores sem a necessidade
+a
+de alimentação externa. Suas dimensões são:
+38 (L) x 54,7 (A) x 18,4 (P) mm.
+tew
+Ga
+Clique
+Exemplo de utilização de comunicação entre PC e dispositivo (CLP) via interface RS232
+Cabo USB A -Cabo PC -
+Micro USB B PLC HI
+Computador USB721 Dispositivo Serial
+RS232
+Exemplo de utilização de comunicação entre PC e dispositivo (CLP) via interface RS485
+Cabo USB A -
+Cabo RS485
+Micro USB B
+Computador USB721 Dispositivo Serial
+RS485
+HARDWARE 18
+
+===== PDF p. 20 (impressa 19) =====
+HARDWARE
+Modem
+Celular
+ÍNDICE
+GTON-M (4G <> ethernet) .............................................................................................................20
+19
+
+===== PDF p. 21 (impressa 20) =====
+CATÁLOGO gERAL
+O m ódulo GTON -M é um m odem celular
+industrial, com interface serial RS232/RS485
+ou ethernet, para acesso à internet de forma
+transpar ente, por meio da rede 4G.
+Modem Celular
+GTON-M
+O equipam ento possui disponibilidade para
+Nano SIM Card e seu conector, para utilizar na
+antena, é do tipo SM A.
+Clique
+CARACTERÍSTICAS GERAIS
+Alimentação......................................................................................................................10 a 30 V DC
+Dimensões.........................................................................................36 (L) x 99,5 (A) x 100,2 (P) mm
+Grau de proteção.............................................................................................................................IP30
+Fixação..........................................................................................................................Trilho DIN T S35
+Proteção alimentação.............................................................Contra inversão de polaridade e surto
+Certificado PELA
+Agência Nacional de Telecomunicações
+NEON 5
+GTON-M GTI5
+Ethernet
+Ethernet
+HARDWARE 20
+
+===== PDF p. 22 (impressa 21) =====
+HARDWARE
+Rádio
+ÍNDICE
+R9X307 (alcance de até 60 km)....................................................................................................22
+21
+
+===== PDF p. 23 (impressa 22) =====
+CATÁLOGO gERAL
+Rádio
+O R9X307 é um dispositivo de comunicação
+que integra as conectividades rádio 900MHz e
+serial RS232-C/RS485. Sua interface de rádio
+possui integração com a topologia de rede
+DigiM esh que garante redundância e
+conﬁabilidade na transmissão dos pacotes. R9X307
+Uma vez conﬁgurado, este equipamento opera
+de forma transparente, atuando como um canal
+de comunicação que preserva o conteúdo dos
+dados transmitidos.
+Clique
+CARACTERÍSTICAS GERAIS
+Alimentação.......................................................................................................................10 a 30 V DC
+Dimensões...........................................................................................27 (L) x 99,5 (A) x 98,5 (P) mm
+Grau de proteção.............................................................................................................................IP30
+Fixação..........................................................................................................................Trilho DIN T S35
+Proteção alimentação.............................................................Contra inversão de polaridade e surto
+F requência..............................................................................................................ISM 902 a 928 MHz
+P otência RF.....................................................................................................................100 mW a 1 W
+Alcance (área urbana)..........................................................................18 km (com visada e 10 kbps)
+Alcance (área rural)..............................................................................60 km (com visada e 10 kbps)
+900 MHz
+Até 60 km
+Supervisório HIscada Pro CLP RION 5
+HARDWARE 22
+
+===== PDF p. 24 (impressa 23) =====
+HARDWARE
+Sensores
+ÍNDICE
+Sensor TH T863 (temperatura e umidade)...................................................................................24
+Sensor HPS850 (ef eito Hall).........................................................................................................24
+23
+
+===== PDF p. 25 (impressa 24) =====
+CATÁLOGO gERAL
+Sensores
+O TH T863 é um transmissor analógico à dois
+ﬁos par a medição de temper atura e umidade. O
+módulo possui uma única saída analógica de 4
+a 20mA para indicar o valor da medição da
+variável selecionada: temperatura ambiente ou TH T863
+umidade relativa do ar.
+A seleção de qual variável está sendo medida
+pode ser conﬁgurada através da chave de
+seleção. Assim ,pode operar com o um
+transmissor só de temperatura, só de umidade,
+Clique
+ou ambos, alternando os valores das grandezas
+em sua saída analógica.
+CARACTERÍSTICAS GERAIS
+Alimentação.......................................................................................................................12 a 30 V DC
+Dimensões.........................................................................................38,5 (L) x 66,5 (A) x 56,5 (P) mm
+Grau de proteção.............................................................................................................................IP20
+Proteção de alimentação.....................................................................Inversão de polaridade e surto
+Temper atura de estocagem...............................................................................................-40 a +80 °C
+Umidade relativa.............................................................................................≤95% sem condensação
+Modo operação default.............................................................................................Modo automático
+Faixa de operação da temperatura......................................................................................-20 a 80 °C
+Faixa de operação da umidade.........................................................................................0 a 100% RH
+Precisão da umidade................................................................................................................ ± 5% RH
+O HPS85O é um dispositivo eletrônico utilizado
+HPS850
+para detecção de cam pos m agnéticos.
+U tiliza m u m tra n s is tor d e efeito H a ll c o m o
+element o sensor , o que lhe conf ere um alto grau
+de robustez e uma longa vida útil, uma vez que
+não possui partes mó veis.
+Normalmente, é utilizado em conjunt o com um
+ímã permanente, podendo operar como sensor
+Clique
+de posição, de mo vimento, de contagem de
+objet os, entr e outr os.
+HARDWARE 24
+
+===== PDF p. 26 (impressa 25) =====
+HARDWARE
+Fontes de
+Alimentação
+ÍNDICE
+SBC513...........................................................................................................................................26
+Fontes Mean Well...........................................................................................................................26
+25
+
+===== PDF p. 27 (impressa 26) =====
+CATÁLOGO gERAL
+ação
+O SC513 é um controlador inteligente de carga
+com ateria LiFePO4 de 12 e 5A
+incorporada Alimentado por 12 a 26 dc ou
+painelfotooltaico m antém o equipam ento
+SBC513
+energizado onde a rede fala ou não eiste
+Perm ite ao eq uipam ento desliga r a próp ria
+saída por tempo programado de segundos a
+or as Possui sinalização por LEDs e saída
+Status opto-isolada proteçes na entrada e
+ação em trilo DIN TS35 Fontes de Aliment
+Clique
+CARACTERÍSTICAS GERAIS
+Alimentação18 a 26 dc ou painel foto oltaico 20 W
+ateriaLiF ePO4 12 (4 células) 5A incorporada
+Tensão de m de carga144
+Saída para a cargaT ensão do pac LiFePO4 (12 nominal) comandada
+Desligamento programá el da cargaDe segundos a or as ia entrada Programming
+Cone es10 alimentação 11 ateria 12 carga 13 campo
+SinalizaçãoLEDs P ower atter A e saída Status opto-isolada
+IsolaçãoSinais de campo (13) isolados por opto-acoplador
+ProteçãoIn ersão de polaridade surto e sor etensão na entrada térmica da ateria
+Fiação T rilo DIN T S35 perl de alumínio da plataforma GEM100 ou RION 5 e NEON 5
+As fontes de alimentação comer cializadas pela
+HI Tecnologia com partilham as seguintes
+características: ﬁxação para trilho DIN T S35,
+tensão de entrada full range (90 a 264 V A C ), Fonte Mean Well modelo MDR
+tensão de saída de 24 V DC, fusível de proteção
+na entrada e proteção contra curto circuito e
+contra sobretensão na saída.
+Os modelos disponíveis são: MDR20-24 (20 W e
+1 A), MDR40-24 (40 W e 1,7 A), MDR60-24 (60 W
+e 2,5 A), EDR75-24 (75 W e 3 A), EDR120-24 (120
+W e 5 A) e NDR240-24 (240 W e 10 A). Clique
+HARDWARE 26
+
+===== PDF p. 28 (impressa 27) =====
+HARDWARE
+CAIXA
+MECÂNICA
+ÍNDICE
+Caixa Mecânica GEM100...............................................................................................................28
+27
+
+===== PDF p. 29 (impressa 28) =====
+CATÁLOGO gERAL
+A linha de caixas mecânicas GEM100 é uma
+fam ília de caixas m odu lares desenvo lvidas
+para suportar módulos eletroeletrônicos em
+geral.
+CAIXA MECÂNICA
+GEM100
+Projetada a partir de um perﬁl de alumínio
+extrudado, desenvolvido exclusivamente para
+este produto, permite montagens dos módulos
+e le trôn ico s d e fo rm a ve rtic a l, h o rizo n ta l o u
+atra v és de um backplane.
+Clique
+CARACTERÍSTICAS GERAIS
+GEM100-030GEM100-050GEM100-085GEM100-110
+Dimensões (L×A ×P mm)30 × 89 × 9350 × 89 × 9385 × 89 × 93110 × 89 × 93
+Grau de proteção IP30
+Material Alumínio e poliestireno
+Fixação Trilho DIN TS35/Painel
+HARDWARE 28
+
+===== PDF p. 30 (impressa 29) =====
+Softwares
+ÍNDICE
+Plataforma IoT: Portal de Telemetria...........................................................................................30
+Ambiente de programação CLP: HIstudio (Texto Estruturado e Ladder)..................................32
+Supervisório Scada: HIscada Pro.................................................................................................33
+29
+
+===== PDF p. 31 (impressa 30) =====
+CATÁLOGO gERAL
+A plataforma IoT Portal de Telemetria é uma
+AFORMA IOT
+poderosa ferrame nta 100% em nuvem para
+s u p e rv is ã o , m o n ito ra m e n to e c o n tro le d e
+máquinas e processos industriais, que podem
+ser acessados em tempo real e de qualquer PLAT
+lugar. Pensada para gerenciar a eﬁciência e o
+desem penho de seu processo,você evita
+trabalho manual, presencial e reduz cust os com Clique
+a economia de tempo, deslocament o e ener gia.
+CARACTERÍSTICAS GERAIS
+Histórico de dados: acesso por 1 ano
+Alarmes: gestão e conﬁguração de alarmes ilimitados
+Notiﬁcações via e-mail/Telegram: notiﬁcações dos equipamentos em tempo real
+Google Maps: integração para gerenciar equipamentos pela geolocalização
+API REST: integração com qualquer plataforma web de mercado via API REST
+Gerncia de usuários: total controle e grande personalização para acessos de cada usuário
+Coneão com equipamentos: por meio dos protocolos MODUS (TCP ou RTU) e MQT T
+Eventos de sistema: histórico de conexão, cadastro/atualização de recursos, erros de
+aquisição ou escrita em dados, entre outros
+SOFTWARE 30
+
+===== PDF p. 32 (impressa 31) =====
+HI TECNOLOGIA
+customização de dashboards
+A ﬁm de melhorar a interface com o
+AFORMA IOT
+usuário de acordo com suas
+necessidades, é possível criar e
+custom izar telas de supervisão e
+PLAT
+re la tó rio s , a p a rtir d e d iv e rs o s
+recursos de edição e grande
+ﬂexibilidade de visualização dos
+dados de forma gráﬁca.
+ciberSegurança
+O P ortal é alocado nos servidores da
+Am azon (AW S) com as devidas
+estratégias de segurança e proteção
+aos dados coletados de seus
+usuários/processos, entre elas:
+tráfego de informações criptografado,
+apenas um a conexão de saída
+com a rede,isolam ento da rede e
+autenticação dos equipam entos.
+suporte técnico sob demanda
+Im plem entação e acom panham ento
+té c n ic o ilim ita d o , p e rs o n a liz a d o e
+próxim o ao cliente e engenharia de
+aplicaçã o d e excelência e pronta pra
+desenvolver novas aplicações em
+p a rc e ria .
+white label
+A HITecnologia possibilita que os
+usuários do P ortal tenham acesso à
+plataforma completa no nome da sua
+em presa, com identidade visual
+própria e URL deﬁnida,tornando o
+produt o personalizado par a o usuário,
+melhorando a gestão de seus clientes
+e ger ando valor par a a sua mar ca.
+31 SOFTWARE
+
+===== PDF p. 33 (impressa 32) =====
+CATÁLOGO gERAL
+O H Istu d io é o a m b ie n te d e so ftw a re
+desenvolvido para a conﬁguração,
+programação, depuração e documentação de
+program as dos CLPs da HITecnologia.
+D isp onibiliza a linguag em de prog ram ação
+e m Lad der e T exto E strutu rad o (S T), co m
+b iblio teca s de funçõ es ad erentes à n orm a
+Clique
+IEC 61131-3 e supor te par a criação de funções
+e blocos de funções.
+AMBIENTE DE PROGRAMAÇÃO CLP
+Canal de Mapeamento Data Monitor
+Realize com unicação rem ota de form a Tenha no seu ambiente um simulador para
+simpliﬁcada entre o seu CLP e dispositivos leitura e escrita de dados ModBus e use o
+M odBus ou M QTT,acesse dados de software gratuitam ente para acessar
+equipam entos rem otos e m apeie em seu dispositivos utilizando o protocolo ModBus
+dispositivo. TCP ou ModBus RTU.
+Biblioteca de Funções LINGUAGEM ST E LADDER
+Acesse diversas funções e blocos de funções C rie prog ram as d e su pervisão e con tro le
+por m eio das bibliotecas das norm as IEC utilizando as linguagens LADDER ou ST
+61131-3 ou biblioteca da HI Tecnologia, com (Te x to E s tru tu ra d o ). U tiliz e a b ib lio te c a
+d ocum entação acessível, que fa cilitarão o padrão da norma IEC61131-3 e mais de 250
+desenvolvimento de sua aplicação. funções e blocos de função disponíveis na
+biblioteca HI_STD .
+International
+Electrotechnical
+SOFTWARE 32
+
+===== PDF p. 34 (impressa 33) =====
+HI TECNOLOGIA
+O HIscada Pro é um pacote de softw are
+q u e d is p o n ib iliz a u m a m b ie n te c o m p le to
+p ara dese nvo lvim en to, teste e geraçã o de
+VISÓRIO SCADA
+aplicações de supervisão e controle de plantas,
+processos e máquinas industriais.
+Concebido para operar de forma distribuída e
+SUPERClique
+utilizando interfaces padronizadas, o HIscada
+Pro se comunica com servidores de dados OPC,
+possibilitando o acesso a equipamentos de
+qualquer fabricante.
+PRINCIPAIS RECURSOS
+Relatórios personalizados e históricos Banco de Dados
+Criação de scripts baseados na linguagem LUA Gerência de usuários
+Construção de telas sinópticas Modelos e instâncias de T elas
+Gerência de alarmes CFR 21 - Part 11
+Envio de e-mails Criação de modelos de processo
+33 SOFTWARE
+
+===== PDF p. 35 (impressa 34) =====
+SOLUÇÕES
+Dedicadas
+ÍNDICE
+D AP5 - P ainel de Aquisição de Dados..........................................................................................35
+Óleo e Gás......................................................................................................................................36
+HI Connect - Plano de Dados........................................................................................................38
+HI OEM............................................................................................................................................39
+34
+
+===== PDF p. 36 (impressa 35) =====
+HI TECNOLOGIA
+Os painéis de Aquisição de Dados DAP 5 da HI
+Tecnologia oferecem uma solução compacta e
+ﬂexível para a aquisição de sinais digitais e
+an alóg ico s em pro cesso s in dustriais. C om
+funções básicas de com ando, garantem
+eﬁciência e conﬁabilidade. A supervisão pode
+ser realizada atra vés do P ortal de T elemetria da
+HI Tecnologia ou outros sistem as de Clique
+supervisão compatíveis. Ideal para otimizar a
+gestão e o controle de dados industriais.
+AINEL DE AQUISIÇÃO DE DADOS
+cARACTERÍSTICAS GERAIS
+T ensão de alimentação.............................................................................................................120 Vac
+dap5 - P
+T ensão de comando........................................................................................................24 Vdc / 1,7 A
+Portência.........................................................................................................................................40 W
+Temperatura de operação.......................................................................................................0 a 42 °C
+P eso do painel........................................................................................................6,0 kg (aproximado)
+Classe de proteção da caixa...........................................................................................................IP65
+I/O
+Máquina ou Processo
+4G
+Internet
+35SOLUÇÕES DEDICADAS
+
+===== PDF p. 37 (impressa 36) =====
+CATÁLOGO gERAL
+H á mais de 30 anos desenvolvem os tecnologia ÓLEO E GÁS
+e s o lu ç õ e s p a ra a u to m a tiz a r, c o n tro la r e
+sup ervision ar rem otam ente diversos m étod os
+de elevação artiﬁcial de óleo, com métodos
+mecânicose pnenumáticos.Contamoscom
+diferentes prod utos e aplicaçõe s op erand o em
+todo terri tóri o nac ional , di s tribuídas ent re os
+Clique
+m a iore s p la ye rs d o m e rca d o, c om o a P e trob ra s ,
+e outras em presas privadas, com o: 3R
+P e tro leu m , G rup o C o b ra, O rig em E n erg ia ,
+P etroR e c on c a vo, e n tre out ras .
+Principais métodos de elevação artificial
+Bombeio mecânicoBombas CentrífugasBombas de Cavidades Gas Lift
+Submersas Progressivas
+Principais modelos de painéis de comando e supervisão de poços
+Bombeio MecânicoBombas Centrífugas
+Submersas
+Bombas de Cavidade Gas Lift
+Progressivas
+SOLUÇÕES DEDICADAS36
+
+===== PDF p. 38 (impressa 37) =====
+HI TECNOLOGIA
+Bombeio mecÂnico
+ÓLEO E GÁS
+Som os a única em presa nacionalcom
+tecn o lo g ia re co nh ec id a p ara co ntrole d e
+unidades de bom beio m ecânico, sendo
+responsável pela automação da maioria dos
+poços com esse método na Petrobras, com
+mais de 6 mil painéis fornecidos, e os maior es
+fornecedores de soluções para controle e
+supervisão de métodos de elevação onshore
+no Brasil. Carta dinamométrica de fundo
+pRINCIPAIS rECURSOS
+A q u is iç ã o d e ca rta s d ina m o m é tric as
+C á lc u lo d e c arta d ina m o m é tric a d e fu n d o
+C o n tro le d in â m ic o d e ve lo c id a d e d o
+bom beam ento
+R ec u rs o s p a ra c o m p leta çã o d up la
+Carta dinamométrica de superfície
+C onﬁguração e geração de alarm es
+C o m u n ica ç ão c o m in ve rs o re s d e fre q u ên c ia
+Sistem as de supervisão com H Iscada P ro
+HI OilTools é um aplicativo Windows, freewar e,
+que permite a conﬁguração, operação local e
+diagnóstico de falhas nos painéis de comando
+e supervisão de poços da HI Tecnologia. O
+software disponibiliza tela de supervisão da
+unidade de bombeio, com status de modo de
+operação local/rem oto,status do m odo de
+co ntrole, com ando s p ara ligar e deslig ar a
+unidade de bombeio, CPM atual, pressão da
+lin h a , c é lu la d e c a rg a , d e n tre o u tra s
+informações.
+37SOLUÇÕES DEDICADAS
+
+===== PDF p. 39 (impressa 38) =====
+CATÁLOGO gERAL
+O HI Connect é o serviço de plano de dados
+celular que a HI Tecnologia oferece para
+aplicações IoT. Com ele, além de ter o chip e
+plano de dados sem tempo mínimo de contrato,
+PLANO DE DADOS
+nos responsabilizamos em fazer toda a gestão
+do consumo de dados!
+Desse modo, você concentr a toda a solução IoT Clique
+necessária para sua aplicação: CLP, Modem 4G,
+plataforma IoTem nuvem e plano de dados.
+PLANO CONNECT 1
+Franquia de dados: 100 M B/m ês
+Rede: 4G
+M ensalidade: consulte nosso tim e de vendas
+O p e ra d o ra s d is p o n ív e is : T IM e V iv o
+Te c no lo g ia ch ip m u ltio p e ra d o ra : vo c ê p o d e c o n ﬁ g urar o c h ip p a ra q ue ele e steja s em p re
+conectado ao m elhor sinal da rede das operadoras
+R o a m in g in te rn a c io n a l
+S e rv iç o s a d ic io n a is : S M S
+9 6 ,3 % d e c o b ertura
+In d ivid u a l: fra n q u ia ﬁ xa e o trá fe g o d e d a d o s é b lo q u ea d o a u to m a tica m en te q u a nd o a tin g ir o
+lim ite c o n tra ta d o d o m ê s
+C o m p a rtilh ad o : o s d a d o s p o d erã o s er co m p artilh a d o s s em c u sto e n tre to d o s o s se u s S IM C a rd s
+e s e u m n ã o u tiliz a r to d a a fra n q u ia m e n s a l, u m o u tro S IM c a rd p o d e rá u tiliz á -la
+SOLUÇÕES DEDICADAS38
+
+===== PDF p. 40 (impressa 39) =====
+HI TECNOLOGIA
+OEM
+O H I O EM é um p rogram a em que sua em presa
+pode adquirir produtos de fabricação HI
+T e c n olog ia c om sua id e n tid a d e vis ua l p róp ria e
+c on d iç õe s d ife re n c ia d a s d e forn e c im e n to.
+As sim , você agrega valor à sua m arca, sem se
+p re oc up a r c om o d e s en v olvim e n to d o p rod uto!
+Clique
+Produtos elegíveis:
+CLPs
+RION 5NEON 5P7C
+GATEWAYS
+GTON-C GTON-P
+MODEM CELULAR E RÁDIO 900MHz
+GTON-M R9X307
+39SOLUÇÕES DEDICADAS
+
+===== PDF p. 41 (impressa 40) =====
+Com mais de 30 anos de experiência em
+automação industrial, em um contexto que
+atualm ente carece de capacitação
+proﬁssional prática, queremos passar esse
+conhecimento adiante. Dessa forma, o HI
+U n ive rsity n a s c e u p a ra d is p o n ib iliz a rm o s
+cursos online, com o intuito de transformar a
+educação no setor com ensino de Clique
+excelência, aprendendo com quem faz.
+CURSOS DISPONÍVEIS
+Introdução ao softwar e de Introdução ao
+programação HIstudio Protocolo MQT T
+N este curso introdutório, você aprenderá O MQ T T se tornou um dos protocolos mais
+todas as etapas para a criação de um projeto u tiliz a d o s p a ra o d e s e n v o lv im e n to d e
+no am biente de program ação de CLPs aplicações da indústria 4.0. Nesse curso
+(Controladores Lógicos Programá veis) da HI online, explicaremos na prática os conceitos
+T e c n o lo g ia , o H Istu d io (p á g in a 3 5 ). básicos para você ter domínio do protocolo e
+poder aplicá-lo em seu cotidiano.
+T reinament o Portal de Introdução a linguagem
+Telemetria Ladder no software HIstudio
+Aprenda a utilizar o P ortal de Telemetria, a Neste curso, você aprenderá a trabalhar com
+plataforma IoT desenvolvida por nós, para a linguagem Ladder Diagram (LD) dentro do
+m onitorar e controlar m áquinas, am biente Histudio,um dos softw ares
+equipamentos e processos industriais de desenvolvidos pela H I Tecnologia. A
+forma eﬁciente. Neste treinamento prático, linguagem Ladder, ou Diagrama de Escada, é
+você desenvolverá uma aplicação completa uma das cinco linguagens de programação
+d e n tro d a p lata fo rm a p a ra re aliz ar o d eﬁ nida s pela no rm a IE C 6 11 3 1-3 e é
+monitoramento de energia elétrica, criando a m p la m e n te u tiliza d a d e vid o à s u a
+d a sh b o a rd s in te ra tivo s e re la tó rio s representação gráﬁca intuitiva.
+personalizados.
+40
+
+===== PDF p. 42 (impressa 41) =====
+O p ro g ra m a H I P a rtn e r fo i d e s e n v o lvid o p a ra e s tre ita r o
+relacionamento entre a HI e os desenvolvedores de soluções.
+Acreditamos no trabalho em conjunt o e na parceria para oferecer
+o melhor par a a indústria brasileira.
+Seja nosso próximo parceiro de negócios e tecnologia!
+Clique
+Benefícios
+P ossibilidade de gerar e desenvolver negócios em conjunto
+Tabela de preços diferenciada para que tenha
+margens melhores e mais competitivas
+Licença para utilizar a marca da HI Tecnologia em todas as
+suas comunicações
+Time de Supor te T écnico à disposição para auxiliar
+Treinamentos e workshops exclusivos
+Divulgação de notícias, cases e outras publicações no nosso
+site e redes sociais
+Nossos Integradores
+neow ater
+EFIC IÊN CIA H ÍD RICA
+41
+
+===== PDF p. 43 (impressa 42) =====
+Representantes
+Além da equipe da HI Tecnologia, contamos com
+re pre se n ta n te s em o u tra s reg iõ e s d o B ra s il.
+A tualmente nossos representantes, TBC A utomação
+e 4Sys Sistemas, atuam em Minas Gerais, Região
+Metropolitana de Sorocaba (SP) e Indaiatuba, Região
+de Joinville e Blumenau (SC ).
+Entre em contato com o mais próximo para garantir o
+m elhor atendim ento,com a excelência da H I
+T ecnologia para a sua solução!
+Clique
+Clientes
+42
+
+===== PDF p. 44 (impressa 43) =====
+A v. Dr. Armando Sales de Oliveira, 445. T aquar al - Campinas - SP - Brasil

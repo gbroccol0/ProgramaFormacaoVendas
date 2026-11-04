@@ -1,0 +1,36 @@
+
+---
+
+### 🚀 Arquivo 4: `PROMPT_CONTINUIDADE.md`
+*(Salve como `PROMPT_CONTINUIDADE.md` — seu colega só precisa copiar o texto abaixo e colar na IA dele junto com os arquivos para gerar os próximos treinamentos)*
+
+```markdown
+# PROMPT_CONTINUIDADE.md - Como Gerar os Próximos Módulos com IA
+
+## Passo a Passo para o Integrante do Time:
+1. Abra a sua ferramenta de IA preferida (Google Gemini, ChatGPT, Claude, Cursor, etc.).
+2. Anexe no chat os arquivos:
+   - `CONTEXT.md`
+   - `SKILLS.md`
+   - `DICIONARIO_FONETICO.md`
+   - `apresentacao.html` (nosso Módulo 01 de CLPs que serve como código-base)
+   - *(Opcional)* Prints dos slides ou links das imagens dos produtos do novo módulo.
+3. Copie e cole o comando abaixo preenchendo o tema desejado:
+
+---
+
+### 📋 Copie e cole este Prompt na IA:
+
+> Você é um especialista em automação industrial da **HI Tecnologia** e desenvolvedor sênior do nosso sistema de treinamentos comerciais narrados.
+> 
+> Analise os arquivos em anexo (`CONTEXT.md`, `SKILLS.md`, `DICIONARIO_FONETICO.md` e o código-fonte base `apresentacao.html` que criamos para a linha de CLPs).
+> 
+> Agora vamos criar o **[INSIRA AQUI: Ex: Módulo 02 sobre Gateways e Conversores (GTON-C, GTON-P, GTON-M, ESC717) / OU Módulo 03 sobre Sistemas Supervisórios (HIscada Pro e Portal de Telemetria em Nuvem)]**.
+> 
+> Siga rigorosamente todas as diretrizes do `SKILLS.md` e do `CONTEXT.md`:
+> 1. Mantenha 100% da estrutura HTML/CSS/JS do player interativo, os controles de voz, tela cheia e o botão de Dicionário de Pronúncia.
+> 2. Atualize o `phoneticRulesText` com o bloco completo do `DICIONARIO_FONETICO.md`.
+> 3. Crie os slides e a narração explicando de forma ágil e didática **POR QUE** cada recurso ou equipamento é utilizado na prática pelo cliente industrial e como ele se relaciona com os nossos CLPs e soluções.
+> 4. Inclua diagramas visuais em SVG nativo (`data:image/svg+xml;utf8,...`) e as imagens dos equipamentos sincronizadas com cada frase da narração através do `#showcaseBox` e do `highlightCard`.
+> 
+> Gere o arquivo `.html` completo e pronto para execução.

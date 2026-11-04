@@ -1,0 +1,42 @@
+# SKILLS.md - Especificação Técnica e Diretrizes de Desenvolvimento (Player HTML5 Narrado)
+
+Este documento define a arquitetura técnica e as regras de geração de código para todas as apresentações em vídeo narradas da **HI Tecnologia**. Qualquer desenvolvedor ou assistente de IA (Gemini, ChatGPT, Claude, Cursor, Copilot) DEVE seguir rigorosamente estes padrões ao criar novos módulos ou editar os existentes.
+
+---
+
+## 1. Arquitetura Single-File (HTML5 + CSS3 + Vanilla JS)
+- Cada módulo de treinamento deve ser entregue em um **único arquivo `.html` autocontido** (zero dependências externas de bibliotecas JS ou servidores backend), podendo ser executado com duplo clique em qualquer computador.
+- **Navegador Recomendado:** Microsoft Edge (por disponibilizar nativamente na `window.speechSynthesis` as vozes neurais naturais `Microsoft Antonio Online (Natural)` e `Microsoft Francisca Online (Natural)` em `pt-BR`).
+
+---
+
+## 2. Identidade Visual HI Tecnologia (Design Tokens)
+Manter rigorosamente as variáveis CSS e o layout de cabeçalho institucional:
+- `--hi-blue-dark: #093b66;` (Cabeçalho principal, títulos de destaque e badges)
+- `--hi-blue-mid: #386fa4;` (Barra superior central)
+- `--hi-blue-light: #6ea4d8;` (Barra superior direita)
+- `--hi-red: #d32f2f;` (Bordas das caixas de resumo técnico `.spec-box`)
+- **Proporção do Palco (`.slide-frame`):** `aspect-ratio: 16 / 9`, `max-width: 1160px`, fundo branco `#ffffff`.
+- **Reserva de Espaço para Legenda:** O `.slide-body` deve sempre manter `padding-bottom: 68px` para que a barra de legenda flutuante (`.subtitle-bar`) nunca cubra textos, caixas de especificação ou imagens.
+
+---
+
+## 3. Regra de Ouro: Separação entre Legenda Visual e Texto Falado (Motor Fonético)
+Os motores de Text-to-Speech (TTS) em Português erram a pronúncia de siglas técnicas no plural (ex: `CLPs`, `IHMs`), barras (ex: `I/O`, `A/D`) e termos em inglês (ex: `Wi-Fi`, `Gateway`, `Dashboard`).
+
+Por isso, **NUNCA altere a grafia correta no texto da legenda**. Utilize sempre a arquitetura de dupla camada já implementada no código:
+1. **`displayText` (Exibido na `#subtitleBox`):** Mantém a escrita técnica padrão da indústria (ex: *"Os CLPs e Gateways enviam sinais de I/O de 4 a 20 mA via Wi-Fi 2.4 GHz para o SCADA"*).
+2. **`spokenText = applyPhonetics(displayText)` (Enviado para `SpeechSynthesisUtterance`):** Passa pela função `applyPhonetics()`, que substitui as siglas pela transcrição fonética antes de falar (ex: *"Os cê éle pês e guêit-uêis enviam sinais de ai ôu de quatro a vinte miliamperes via Uái Fái dois ponto quatro Giga-hertz para o Iscáda"*).
+
+### Como estruturar frases no `slidesData`:
+Divida a narração de cada slide em frases curtas/médias (de 10 a 22 palavras por item no array `narration`). Isso evita o bug de timeout de 15 segundos da Web Speech API em navegadores baseados em Chromium e mantém a legenda dinâmica como em um vídeo profissional.
+
+```javascript
+narration: [
+  {
+    text: "Texto técnico com grafia correta que aparecerá na legenda.",
+    img: IMG_LINKS.EXEMPLO, // Opcional: troca automaticamente a imagem do quadro dinâmico
+    caption: "Título descritivo da imagem ou diagrama exibido", // Opcional
+    highlightCard: "id-do-card" // Opcional: aplica zoom e borda azul no card do produto citado
+  }
+]

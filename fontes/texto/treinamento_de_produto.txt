@@ -1,0 +1,252 @@
+
+===== PDF p. 1 =====
+Treinamento de Produto HI Tecnologia
+
+===== PDF p. 2 =====
+Ementa do conteúdo
+Hardware:
+- Controladores lógicos programáveis [ CLPs ]
+- Interface homem máquina [ IHMs ]
+- Gateways e Conversores
+- Modem
+- Rádios
+- Sensores
+- Fontes
+Software:
+- HIscada Pro [ Sistema Supervisório ]
+- MPL Server [ Servidor de comunicação OPC ]
+- Portal de Telemetria [ Plataforma IoT ]
+
+===== PDF p. 3 =====
+Conceitos Fundamentais dos CLPs
+Alimentação:
+Para ligar nossos controladores, IHMs e outros dispositivos, é necessário fornecer energia elétrica, que pode ser em corrente
+alternada (AC) ou corrente contínua (DC).
+- Alimentação AC (Corrente Alternada): Permite ligar o equipamento diretamente na tomada, sem necessidade de fonte adicional.
+No Brasil, os valores comuns são 110/127V AC e 220V AC, com uma faixa permitida de 85 a 265V AC.
+- Alimentação DC (Corrente Contínua): Requer o uso de uma fonte de alimentação para converter a corrente alternada (AC) em
+contínua (DC) e reduzir a tensão, evitando danos ao equipamento. Os valores mais comuns para automação são 12 VDC e 24 VDC.
+Sinais Analógicos e Digitais:
+Os CLPs leem e controlam:
+- Sinais digitais: 0 ou 1 (ex: sensores de presença, botoeiras, chaves, leds, sinaleiros, relés e etc).
+- Sinais analógicos: valores contínuos como tensão (0–10V) ou corrente (4–20mA) para medições de temperatura, pressão, etc.
+- Internamente, sinais analógicos são convertidos em digitais por conversores A/D para processamento.
+
+===== PDF p. 4 =====
+Conceitos Fundamentais dos CLPs
+Módulos de I/O:
+- Existem módulos para entradas e saídas digitais (ligado/desligado) e analógicas (valores variáveis).
+- Modelos como o P7C suportam até 368 pontos de I/O, enquanto o NEON5 pode ser expandido com módulos remotos.
+- Os módulos permitem conexão com sensores, botões, relés, motores, células de carga, PT100, entre outros.
+Interfaces de conectividade:
+Oferecem várias portas de comunicação: RS232, RS485, Ethernet, rádio 900MHz, interface celular 4G.
+Suportam protocolos industriais como:
+- Modbus RTU e Modbus TCP (protocolo de comunicação mais utilizado no mercado, em diversos outros inversores, CLPs, IHMs, etc)
+- SCP-HI (protocolo proprietário)
+- ASCII (protocolo textual muito utilizado em scanners, impressoras e balanças)
+- MQTT (protocolo muito utilizado em aplicações de IIoT com plataforma de supervisão em nuvem)
+
+===== PDF p. 5 =====
+Controladores HI Tecnologia
+Equipamento responsável por receber e enviar informações para o processo, seja por meio de entradas e saídas
+analógicas/digitais ou via protocolos de comunicação. Este dispositivo atua como o "cérebro" do processo, pois nele é carregada a
+programação que define todas as instruções de operação para as diferentes situações previstas. Ele é composto por alimentação
+AC ou DC, interfaces de comunicação (como Ethernet e Serial) e módulos de I/O (entradas e saídas analógicas e digitais).
+CLP P7C 302CLP NEON5CLP RION5
+Atualmente trabalhamos com 3 modelos de controladores:
+-P7C 302
+- NEON5
+- RION5
+
+===== PDF p. 6 =====
+Controladores HI Tecnologia
+As principais diferenças entre os CLPs P7C, NEON5 e RION5 estão relacionadas à quantidade de módulos de I/O que cada um pode
+suportar. Além disso, o suporte para SD Card está disponível apenas nos modelos NEON5 e P7C, enquanto o RION5 não oferece essa
+funcionalidade. Uma característica exclusiva do RION5 é que ele não possui opção de alimentação AC, sendo alimentado apenas
+por DC. Por outro lado, os modelos P7C e NEON5 podem ser adquiridos com alimentação AC. A seguir, apresentaremos mais
+detalhes sobre cada equipamento de forma individual.
+
+===== PDF p. 7 =====
+Controladores HI Tecnologia [ P7C 302 ]
+O CLP P7C possui uma opção chamada de P7C 302 que é a versão do P7C que pode ser expansível, ou seja, permite ao cliente
+comprar além do chamado “Bastidor Principal” até mais 5 “Bastidores de Expansão” permitindo então incluir mais 4 módulos de
+I/O para cada expansão, além dos tradicionais 3 módulos que vão no bastidor principal.
+Alimentação: AC ou DC.
+Conectividade: Ethernet, RS485 e RS232.
+I/O’s: Bastidor Principal: CPU+3 Módulos,
+Expansões: 4 Módulos.
+Suporta SD Card: Sim
+
+===== PDF p. 8 =====
+Controladores HI Tecnologia [ NEON5 ]
+O CLP NEON5 utiliza o mesmo processador do P7C, o que significa que ambos possuem a mesma capacidade de processamento em
+termos de programação. Ele é capaz de suportar projetos com a mesma quantidade de linhas e variáveis. O NEON5 pode ser
+comercializado com 1 ou 2 módulos de I/O, oferecendo diversas combinações de interfaces de conectividade. Além disso, conta com
+suporte para SD Card, um recurso essencial para registro de dados (log) e aplicações que envolvem receitas.
+Alimentação: AC ou DC.
+Conectividade: Múltiplas
+opções.
+I/O’s: 1 módulo ou 2 módulos.
+Suporta SD Card: Sim
+
+===== PDF p. 9 =====
+Controladores HI Tecnologia [ RION5 ]
+O CLP RION5 possui um processador mais simples, com menor capacidade de programação e variáveis, mas é ideal para diversas
+aplicações. Muito usado como I/O Remoto, funciona como um "módulo de I/O extra" para mestres como o NEON5. Suporta 1 módulo
+de I/O, possui memória retentiva com supercapacitor, não tem suporte para SD Card e é o CLP mais econômico da HI Tecnologia.
+Alimentação: DC.
+Conectividade: Múltiplas
+opções.
+I/O’s: 1 módulo.
+Suporta SD Card: Não
+
+===== PDF p. 10 =====
+IHMs HI Tecnologia
+A Interface Homem-Máquina (IHM) ou Man Machine Interface (MMI) é uma tela usada para criar uma visão clara do processo
+ou máquina para o operador. Ela exibe informações e dados armazenados no CLP que não seriam visíveis diretamente. No
+projeto da IHM, são adicionados elementos como displays, botões e históricos para informar e controlar o processo.Atualmente,
+trabalhamos com 3 modelos de IHMs, que serão apresentados a seguir:
+- MMI700[ IHM Alfanumérica fabricada pela HI Tecnologia ]
+- Touch Screen Weintek [ IHM fabricada pela Weintek e revendida pela HI Tecnologia em diversas opções de tamanho ]
+- Touch Screen Veichi [ IHM fabricada pela Veichi e revendida pela HI Tecnologia em diversas opções de tamanho ]
+OBS: Todos os softwares para programação das IHMs
+podem ser baixados em nosso site e utilizados
+gratuitamente, são eles:
+OPPE: Software das IHMs MMI700
+EasyBuilderPro: Software das IHMs Weintek
+VI20Studio: Software das IHMs Veichi
+
+===== PDF p. 11 =====
+Conversores e Gateways HI Tecnologia
+De forma simples, um gateway é um equipamento que recebe informações por uma interface de comunicação e as transmite por
+outra. Por exemplo, um rádio (Serial - Wireless) recebe dados pela Serial e os envia via Wireless. Existem gateways programáveis,
+que permitem diversas possibilidades de manipulação e envio das informações entre interfaces. Além disso, alguns modelos
+realizam conversão de protocolos, como o GTON C SET, que converte Modbus RTU (Serial) para Modbus TCP (Ethernet), permitindo
+que dispositivos ou softwares que utilizam apenas Modbus TCP acessem dados de equipamentos que utilizam apenas Modbus RTU.
+
+===== PDF p. 12 =====
+Conversores e Gateways HI Tecnologia - GTON
+Atualmente trabalhamos com uma linha de Gateways chamada GTON que comporta todos os cenários disponíveis (interfaces de
+conectividade, opções de programação, conversão de protocolos), basicamente estas são as diferenças entre as nomenclaturas de
+cada modelo:
+GTON C SET - C onversor Serial Ethernet e do protocolo Modbus
+GTON P - Gateway Programável com diversas opções de interface
+GTON M - M odem industrial, basicamente recebe uma informações via Ethernet ou Serial e repassa via rede celular
+Recurso GTON C SETGTON P GTON M
+AlimentaçãoDC DC DC
+ProgramávelNão Sim Não
+Interfaces de Serial e Diversas Serial ou
+conectividadeEthernet combinaçõesEthernet e
+Celular 4G
+Suporte SD Não Não Não
+Card
+
+===== PDF p. 13 =====
+Conversores e Gateways HI Tecnologia - USB721
+Como observamos, receber dados por uma interface e repassar por
+outra é uma conversão do meio físico, ou seja, conversão das redes,
+das interfaces de conectividade, por isso os equipamentos são
+chamados de conversores/gateways, um outro modelo de conversor
+comercializado pela HI Tecnologia é o USB721, o nosso conversor
+USB-Serial, utilizado para que computadores que possuem apenas
+interface de conectividade USB acessem informações de
+equipamentos seriais.
+
+===== PDF p. 14 =====
+Rádios HI Tecnologia
+Rádios são conversores de meio físico que recebem sinais de uma interface, como serial ou ethernet, e os transmitem via wireless,
+permitindo também o caminho inverso (wireless para serial/ethernet). Eles são transparentes ao protocolo, ou seja, apenas
+repassam os dados entre as interfaces sem realizar conversões. É importante destacar que rádios nunca funcionam sozinhos,
+sendo necessário sempre um dos cenários descritos a seguir.
+- Um rádio enviando para outro.
+- Múltiplos rádios enviando para um.
+- Múltiplos rádios enviando para múltiplos.
+Atualmente podemos oferecer 2 modelos de rádios, são eles: WSC720, integrado nativamente nos CLPs e Gateways, também
+conhecido como Rádio XBee-PRO, e o modelo R9X307, que não é nativo aos CLPs, conforme demonstrado nas imagens.
+
+===== PDF p. 15 =====
+Rádios HI Tecnologia
+A principal diferença para a escolha entre um ou outro é o alcance do rádio, o R9X307 é recomendado para distâncias maiores e o
+WSC720 é recomendado para distâncias menores. Verifique as informações na tabela:
+Rádio nativo ao CLP/GTONRádio R9X
+Recomendação:
+até 60 km.
+
+===== PDF p. 16 =====
+Rádios HI Tecnologia
+Rádios precisam de antenas para transmitir informações e necessitam de "visada", ou seja, que as antenas possam se "enxergar"
+sem obstáculos. Para isso, é essencial que o cliente forneça as coordenadas geográficas dos pontos a serem interligados. O cliente
+pode usar o Google Earth para marcar os pontos e exportar o arquivo em formato KML. Com essas informações, a Engenharia de
+Produto da HI Tecnologia realiza o estudo de altimetria para verificar a viabilidade da interligação entre os rádios.
+Cenário com visada
+Cenário sem visada
+
+===== PDF p. 17 =====
+Sensores HI Tecnologia - THT863 E HPS850
+O Sensor HPS850 é um sensor magnético utilizado para
+detectar quando uma máquina passou por uma posição e
+ao detectar enviar um sinal para o CLP contar uma volta,
+muito utilizado nas aplicações de bombeio mecânico de
+petróleo para contar os ciclos da máquina.
+O THT863 é um transmissor analógico à dois fios para
+medição de temperatura e umidade. O módulo possui
+uma única saída analógica de 4 a 20mA para indicar o
+valor da medição da variável selecionada: temperatura
+ambiente ou umidade relativa do ar.
+4 ~ 20mA
+Temperatura: -20 a 80 °C
+Umidade: 0 a 100% da umidade relativa do ar
+RION5THT 863
+
+===== PDF p. 18 =====
+Fontes de alimentação HI Tecnologia
+São equipamentos utilizados para converter Tensão AC da rede de alimentação [ 127 Volts ou 220 Volts ] para valores de tensão DC,
+estes valores de tensão DC, normalmente 24 Vdc, a tensão DC é utilizada para “alimentar” o CLP e seus respectivos módulos de I/O.
+A HI Tecnologia possui sua própria fonte, que também funciona como No-Break e controlador de carga, chamada BPU508 , a
+tensão de saída é de 13,8 Volts DC.
+Também comercializamos na categoria revenda fontes da fabricante Mean Well, com diversas opções de potências para
+alimentar os equipamentos.
+
+===== PDF p. 19 =====
+Sistema Supervisório HIscada Pro
+Também conhecidos como SCADA (Supervisory Control A nd D ata A cquisition) ou Sistemas de Supervisão e Aquisição de Dados são
+softwares onde são elaborados projetos para criar uma interface de usuário com processos e máquinas de maneira semelhante ao
+que é feito com as IHMs Touch Screen, diferente das IHMs que são hardwares, os sistemas de supervisão são softwares que rodam
+em computadores na rede local da empresa e podem ter múltiplos computadores acessando. o HIscada Pro oferece todos os
+principais recursos de supervisórios do mercado e no aspecto comercial ele é vendido na forma de licença para rodar o projeto,
+essa licença para rodar o projeto depende da quantidade de dados utilizados no sistema de supervisão e de quantos computadores
+diferentes precisam acessar essa tela.
+
+===== PDF p. 20 =====
+Sistema Supervisório HIscada Pro
+O HIscada Pro é um dos produtos mais utilizados pelos clientes da HI Tecnologia devido ao baixo custo das licenças comparado aos
+concorrentes de mercado, para que possa acessar os dados dos equipamentos, O HIscada precisa que um servidor OPC faça o meio
+campo e traduza o protocolo dos equipamentos, como por exemplo, Modbus, para o padrão OPC, que é o padrão de comunicação
+utilizado pelo HIscada Pro, em breve falaremos sobre o MPL Server, o servidor OPC da HI Tecnologia em que 99% das vezes é
+utilizado em conjunto com o HIscada Pro.
+
+===== PDF p. 21 =====
+Servidor OPC MPL Server
+São softwares capazes de abrir conexões seja via serial ou ethernet com equipamentos [ CLPs, IHMs, Inversores, Etc ] ler os dados
+destes equipamentos através do respectivo protocolo que o equipamento fala e converter este dado lido para o padrão de
+comunicação OPC para que sistemas supervisórios, como por exemplo, o HIscada Pro, tenha acesso a estes dados.
+O MPL Server é o servidor OPC da HI Tecnologia e é capaz de converter o protocolo Modbus, seja Modbus RTU ou TCP para o padrão
+OPC, com isto ele pode abrir conexão com qualquer equipamento que fala Modbus, inclusive os CLPs da HI, e entregar do outro lado
+para qualquer supervisório do padrão OPC acessar, inclusive o HIscada Pro. No aspecto comercial, caso o cliente utilize um
+equipamento Modbus que não é da HI, ele deverá comprar uma licença para utilizar o MPL Server com este equipamento,
+independente da licença do HIscada Pro.
+
+===== PDF p. 22 =====
+Portal de Telemetria HI Tecnologia
+O Portal de Telemetria é a “nuvem” da HI Tecnologia, a plataforma de supervisão online, foi idealizado para permitir o acesso
+remoto (via web) às informações de equipamentos da HI Tecnologia ou de terceiros sem a necessidade de um computador ou fazer
+aquisição de uma licença softkey de sistema supervisório tradicional. É comercializado a partir mensalidades ou anuidade
+referente ao tipo de plano contratado pelo cliente X número de dados, cada plano oferece um número de recursos específicos.
+
+===== PDF p. 23 =====
+Portal de Telemetria HI Tecnologia
+Semelhante ao HIscada Pro, o Portal permite que o usuário desenvolva telas para visualizar e interagir com as informações dos
+processos e máquinas, além de possuir todos os principais recursos utilizados em sistemas de supervisão, como por exemplo,
+desenvolvimento de telas sinóticas, notificações por alarme, geração de relatórios, etc. Como o Portal é “online”, qualquer
+equipamento com acesso à internet (computadores, tablets, celulares) poderá entrar em sua respectiva conta e conferir as
+informações nela contidas, portanto, não há restrição de acesso apenas na rede local da empresa como no HIscada Pro.

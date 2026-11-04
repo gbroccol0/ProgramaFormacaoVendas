@@ -1,0 +1,2507 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formação Comercial - HI Tecnologia</title>
+
+    <style>
+
+        /* =========================================================
+           PALETA DE CORES
+        ========================================================= */
+
+        :root {
+            --azul-hi: #004A8F;
+            --azul-escuro: #002b5e;
+            --azul-claro: #eaf3fb;
+
+            --laranja-hi: #F26522;
+            --laranja-hover: #d9561b;
+
+            --cinza-fundo: #F5F7FA;
+            --texto-escuro: #333333;
+            --texto-cinza: #666666;
+
+            --borda: #e3e8ef;
+
+            --sombra-card:
+                0 8px 25px rgba(0, 0, 0, 0.055);
+
+            --sombra-card-hover:
+                0 14px 34px rgba(0, 0, 0, 0.11);
+
+            /* Altura padrão dos cards abertos: calculada em JS a partir
+               do card com o texto mais longo, para que TODOS os cards
+               fiquem exatamente do mesmo tamanho e nenhum texto seja
+               cortado ou precise de rolagem. */
+            --stage-open-height: 300px;
+        }
+
+
+        /* =========================================================
+           CONFIGURAÇÃO GERAL
+        ========================================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            font-family:
+                'Segoe UI',
+                Tahoma,
+                Geneva,
+                Verdana,
+                sans-serif;
+
+            margin: 0;
+            padding: 0;
+
+            color: var(--texto-escuro);
+            line-height: 1.6;
+
+            background: #ffffff;
+
+            overflow-x: hidden;
+        }
+
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        header {
+            min-height: 72px;
+
+            padding: 12px 5%;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr
+                auto
+                1fr;
+
+            align-items: center;
+
+            gap: 20px;
+
+            background: rgba(255, 255, 255, 0.94);
+
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+
+            box-shadow:
+                0 2px 18px rgba(0, 0, 0, 0.055);
+
+            border-bottom:
+                1px solid rgba(0, 74, 143, 0.07);
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+        }
+
+        header > div {
+            justify-self: start;
+        }
+
+        header nav {
+            justify-self: end;
+        }
+
+        header h1 {
+            margin: 0;
+
+            color: var(--azul-hi);
+
+            font-size:
+                clamp(0.95rem, 1.8vw, 1.35rem);
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            text-align: center;
+
+            white-space: nowrap;
+        }
+
+
+        /* =========================================================
+           BOTÃO OUTLINE
+        ========================================================= */
+
+        .btn-outline {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 6px;
+
+            padding: 8px 15px;
+
+            background: transparent;
+
+            color: var(--azul-hi);
+
+            border:
+                1px solid #cdd9e5;
+
+            border-radius: 7px;
+
+            font-size: 0.84rem;
+
+            font-weight: 700;
+
+            text-decoration: none;
+
+            transition:
+                all 0.25s ease;
+
+            white-space: nowrap;
+        }
+
+        .btn-outline:hover {
+            background: var(--azul-hi);
+
+            border-color: var(--azul-hi);
+
+            color: #ffffff;
+
+            transform: translateY(-1px);
+
+            box-shadow:
+                0 5px 14px rgba(0, 74, 143, 0.18);
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            position: relative;
+
+            padding:
+                68px 5%
+                74px;
+
+            text-align: center;
+
+            color: white;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 85% 15%,
+                    rgba(242, 101, 34, 0.16),
+                    transparent 28%
+                ),
+
+                radial-gradient(
+                    circle at 10% 90%,
+                    rgba(255, 255, 255, 0.07),
+                    transparent 30%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    var(--azul-hi) 0%,
+                    var(--azul-escuro) 100%
+                );
+        }
+
+        .hero::before,
+        .hero::after {
+            content: "";
+
+            position: absolute;
+
+            border:
+                1px solid rgba(255, 255, 255, 0.07);
+
+            border-radius: 50%;
+
+            pointer-events: none;
+        }
+
+        .hero::before {
+            width: 520px;
+            height: 520px;
+
+            right: -230px;
+            top: -290px;
+        }
+
+        .hero::after {
+            width: 350px;
+            height: 350px;
+
+            left: -220px;
+            bottom: -260px;
+        }
+
+        .hero > div {
+            position: relative;
+
+            z-index: 1;
+        }
+
+        .hero img {
+            max-width: min(100%, 900px);
+
+            height: auto;
+
+            border-radius: 14px;
+
+            box-shadow:
+                0 18px 48px rgba(0, 0, 0, 0.22);
+
+            animation:
+                fadeUp 0.8s ease forwards;
+        }
+
+        .hero p {
+            max-width: 820px;
+
+            margin:
+                28px auto 0;
+
+            font-size:
+                clamp(1rem, 2vw, 1.18rem);
+
+            line-height: 1.8;
+
+            opacity: 0.92;
+
+            animation:
+                fadeUp 1s ease forwards;
+        }
+
+
+        /* =========================================================
+           ANIMAÇÃO
+        ========================================================= */
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(22px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* =========================================================
+           SEÇÕES
+        ========================================================= */
+
+        .section {
+            padding: 64px 5%;
+        }
+
+        .section-cinza {
+            background:
+                linear-gradient(
+                    180deg,
+                    #f5f7fa 0%,
+                    #eef3f8 100%
+                );
+        }
+
+        .section-title {
+            margin:
+                0 0 40px;
+
+            text-align: center;
+
+            color: var(--azul-hi);
+
+            font-size:
+                clamp(1.75rem, 4vw, 2.2rem);
+
+            font-weight: 800;
+
+            letter-spacing: -0.4px;
+        }
+
+
+        /* =========================================================
+           GRID
+        ========================================================= */
+
+        .grid-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            align-items: start; /* VOLTAMOS PARA O START: CARDS FECHADOS FICAM FECHADOS */
+        }
+
+
+        /* =========================================================
+           CARDS
+        ========================================================= */
+
+        .card {
+            background: #ffffff;
+
+            border:
+                1px solid var(--borda);
+
+            border-radius: 14px;
+
+            box-shadow:
+                var(--sombra-card);
+
+            padding: 26px;
+
+            transition:
+                transform 0.28s ease,
+                box-shadow 0.28s ease,
+                border-color 0.28s ease;
+
+            border-bottom:
+                3px solid var(--azul-hi);
+
+            display: flex;
+
+            flex-direction: column;
+
+            box-sizing: border-box;
+
+            opacity: 0;
+
+            animation:
+                fadeUp 0.6s ease forwards;
+        }
+
+        .card:hover {
+            transform:
+                translateY(-4px);
+
+            border-bottom-color:
+                var(--laranja-hi);
+
+            box-shadow:
+                var(--sombra-card-hover);
+        }
+
+        .card h3 {
+            margin: 0;
+
+            padding-right: 15px;
+
+            color: var(--azul-hi);
+
+            font-size: 1.15rem;
+
+            line-height: 1.38;
+        }
+
+        .card p {
+            color:
+                var(--texto-cinza);
+
+            font-size:
+                0.95rem;
+        }
+
+
+        /* =========================================================
+           BOTÕES
+        ========================================================= */
+
+        .btn {
+            display: inline-block;
+
+            padding:
+                11px 20px;
+
+            margin-top: 15px;
+
+            background:
+                var(--laranja-hi);
+
+            color: white;
+
+            text-decoration: none;
+
+            text-align: center;
+
+            border-radius: 7px;
+
+            font-weight: 700;
+
+            transition:
+                all 0.25s ease;
+        }
+
+        .btn:hover {
+            background:
+                var(--laranja-hover);
+
+            box-shadow:
+                0 5px 14px
+                rgba(242, 101, 34, 0.25);
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        .btn-azul {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding:
+                11px 18px;
+
+            min-width: 200px;
+
+            flex: 1;
+
+            background:
+                var(--azul-escuro);
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 7px;
+
+            font-weight: 700;
+
+            box-shadow:
+                0 4px 8px rgba(0, 0, 0, 0.08);
+
+            transition:
+                all 0.25s ease;
+        }
+
+        .btn-azul:hover {
+            background:
+                var(--azul-hi);
+
+            box-shadow:
+                0 6px 15px
+                rgba(0, 74, 143, 0.25);
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        .training-container {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content:
+                space-between;
+
+            gap: 15px;
+
+            margin-top: 25px;
+        }
+
+
+        /* =========================================================
+           ACORDEÃO DAS ETAPAS
+        ========================================================= */
+
+        .accordion-checkbox {
+            display: none;
+        }
+
+        .card-header {
+            min-height: 90px;
+
+            padding: 7px 0;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content:
+                space-between;
+
+            gap: 15px;
+
+            cursor: pointer;
+
+            user-select: none;
+
+            -webkit-tap-highlight-color:
+                transparent;
+        }
+
+        .card-header h3 {
+            flex: 1;
+        }
+
+        .setinha {
+            width: 40px;
+            height: 40px;
+
+            flex-shrink: 0;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color:
+                var(--azul-hi);
+
+            background:
+                var(--cinza-fundo);
+
+            border:
+                1px solid #e5eaf0;
+
+            border-radius: 50%;
+
+            transition:
+                all 0.3s ease;
+        }
+
+        .setinha::after {
+            content: "";
+
+            width: 9px;
+            height: 9px;
+
+            border-right: 2px solid currentColor;
+            border-bottom: 2px solid currentColor;
+
+            transform:
+                translateY(-2px) rotate(45deg);
+
+            transition:
+                transform 0.3s ease;
+        }
+
+        .card-header:hover .setinha {
+            background:
+                var(--azul-claro);
+
+            color:
+                var(--laranja-hi);
+
+            border-color:
+                #d5e3f0;
+        }
+
+        .card-content {
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+
+            transition:
+                height 0.4s cubic-bezier(.4, 0, .2, 1),
+                opacity 0.3s ease,
+                margin-top 0.3s ease;
+        }
+
+        /* Wrapper interno usado também para medir, via JS, a altura
+           natural de cada etapa (o maior deles define o padrão).
+           Preenche 100% da altura do card e empurra o botão para a
+           base, para que TODOS os botões fiquem alinhados. */
+        .card-content-inner {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .accordion-checkbox:checked ~ .card-content {
+            height: var(--stage-open-height);
+            margin-top: 12px;
+            opacity: 1;
+        }
+
+        .accordion-checkbox:checked ~ .card-header .setinha {
+            background: var(--azul-hi);
+            color: white;
+            border-color: var(--azul-hi);
+            box-shadow: 0 4px 10px rgba(0, 74, 143, 0.18);
+        }
+
+        .accordion-checkbox:checked ~ .card-header .setinha::after {
+            transform: translateY(2px) rotate(225deg);
+        }
+
+
+        /* =========================================================
+           FERRAMENTAS DE NAVEGAÇÃO
+        ========================================================= */
+
+        .formation-tools {
+            max-width: 1200px;
+
+            margin:
+                -10px auto 28px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            flex-wrap: wrap;
+        }
+
+        .formation-search {
+            position: relative;
+
+            flex: 1;
+
+            min-width: 240px;
+        }
+
+        .formation-search::before {
+            content: "⌕";
+
+            position: absolute;
+
+            left: 14px;
+            top: 50%;
+
+            transform:
+                translateY(-51%);
+
+            color:
+                var(--texto-cinza);
+
+            font-size:
+                1.25rem;
+
+            z-index: 1;
+        }
+
+        .formation-search input {
+            width: 100%;
+
+            height: 44px;
+
+            padding:
+                0 15px 0 40px;
+
+            border:
+                1px solid var(--borda);
+
+            border-radius: 8px;
+
+            background: white;
+
+            color:
+                var(--texto-escuro);
+
+            font-family: inherit;
+
+            font-size: 0.9rem;
+
+            outline: none;
+
+            transition:
+                0.2s;
+        }
+
+        .formation-search input:focus {
+            border-color:
+                var(--azul-hi);
+
+            box-shadow:
+                0 0 0 3px
+                rgba(0, 74, 143, 0.08);
+        }
+
+        .tool-btn {
+            height: 44px;
+
+            padding:
+                0 14px;
+
+            border:
+                1px solid var(--borda);
+
+            border-radius: 8px;
+
+            background: white;
+
+            color:
+                var(--azul-hi);
+
+            font-family: inherit;
+
+            font-size: 0.82rem;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition:
+                0.2s;
+        }
+
+        .tool-btn:hover {
+            background:
+                var(--azul-hi);
+
+            border-color:
+                var(--azul-hi);
+
+            color: white;
+        }
+
+        .stage-count {
+            height: 44px;
+
+            padding:
+                0 13px;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            border-radius: 50px;
+
+            background:
+                var(--azul-claro);
+
+            color:
+                var(--azul-hi);
+
+            font-size: 0.8rem;
+
+            font-weight: 800;
+
+            white-space: nowrap;
+        }
+
+        .card.stage-hidden {
+            display: none !important;
+        }
+
+        .no-results {
+            display: none;
+
+            max-width: 1200px;
+
+            margin:
+                0 auto 30px;
+
+            padding: 28px;
+
+            border:
+                1px dashed #cbd5e1;
+
+            border-radius: 12px;
+
+            background:
+                rgba(255, 255, 255, 0.7);
+
+            color:
+                var(--texto-cinza);
+
+            text-align: center;
+        }
+
+        .no-results.show {
+            display: block;
+        }
+
+
+        /* =========================================================
+           VOLTAR AO TOPO
+        ========================================================= */
+
+        #backToTop {
+            position: fixed;
+
+            right: 22px;
+            bottom: 22px;
+
+            width: 42px;
+            height: 42px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background:
+                var(--laranja-hi);
+
+            color: white;
+
+            cursor: pointer;
+
+            font-size: 1.1rem;
+
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.18);
+
+            opacity: 0;
+
+            transform:
+                translateY(12px);
+
+            pointer-events: none;
+
+            transition:
+                0.25s;
+
+            z-index: 999;
+        }
+
+        #backToTop.visible {
+            opacity: 1;
+
+            transform:
+                translateY(0);
+
+            pointer-events: auto;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            background:
+                #171717;
+
+            color:
+                #c8c8c8;
+
+            text-align: center;
+
+            padding:
+                28px 5%;
+
+            font-size:
+                0.9rem;
+        }
+
+
+        /* =========================================================
+           RESPONSIVIDADE
+        ========================================================= */
+
+        @media (max-width: 820px) {
+
+            header {
+                grid-template-columns:
+                    1fr 1fr;
+
+                gap: 10px;
+            }
+
+            header h1 {
+                grid-column:
+                    1 / -1;
+
+                grid-row: 1;
+
+                order: 0;
+            }
+
+            header > div {
+                grid-column: 1;
+
+                grid-row: 2;
+            }
+
+            header nav {
+                grid-column: 2;
+
+                grid-row: 2;
+            }
+
+            header > div,
+            header nav {
+                justify-self: stretch;
+            }
+
+            header .btn-outline {
+                width: 100%;
+            }
+
+            .hero {
+                padding-top: 52px;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .section {
+                padding:
+                    50px 5%;
+            }
+
+            .hero {
+                padding:
+                    45px 5% 55px;
+            }
+
+            .hero p {
+                font-size:
+                    0.98rem;
+
+                line-height:
+                    1.7;
+            }
+
+            .grid-container {
+                grid-template-columns:
+                    1fr;
+
+                gap: 16px;
+            }
+
+            .card {
+                padding:
+                    21px;
+
+                border-radius:
+                    12px;
+            }
+
+            .card-header {
+                min-height:
+                    72px;
+            }
+
+            .card h3 {
+                font-size:
+                    1.02rem;
+            }
+
+            .setinha {
+                width: 36px;
+                height: 36px;
+            }
+            
+            .formation-tools {
+                margin-top: -5px;
+
+                align-items:
+                    stretch;
+            }
+
+            .formation-search {
+                min-width:
+                    100%;
+            }
+
+            .tool-btn {
+                flex: 1;
+            }
+
+            .stage-count {
+                width: 100%;
+
+                justify-content:
+                    center;
+            }
+
+            .btn,
+            .btn-azul {
+                width: 100%;
+
+                min-width: 0;
+
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+
+            #backToTop {
+                right: 15px;
+                bottom: 15px;
+            }
+        }
+
+
+        /* =========================================================
+           REDUÇÃO DE MOVIMENTO
+        ========================================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior:
+                    auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration:
+                    0.01ms !important;
+
+                animation-iteration-count:
+                    1 !important;
+
+                transition-duration:
+                    0.01ms !important;
+            }
+        }
+
+
+        /* =====================================================
+           FORMAÇÃO COMERCIAL: trilha do hero, rotina e agenda
+        ====================================================== */
+
+        .hero .trilha {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .rotina {
+            margin: 0;
+            padding-left: 22px;
+            line-height: 1.7;
+            color: var(--texto-escuro);
+        }
+
+        .agenda {
+            overflow-x: auto;
+            margin: 10px 0 16px;
+        }
+
+        .agenda table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        .agenda th,
+        .agenda td {
+            border: 1px solid var(--borda);
+            padding: 9px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .agenda th {
+            background: var(--azul-hi);
+            color: #fff;
+        }
+
+        .agenda td:nth-child(odd) {
+            width: 52px;
+            text-align: center;
+            font-weight: 700;
+            color: var(--azul-hi);
+        }
+
+        html[data-theme="dark"] .agenda th {
+            background: var(--esc-azul-fundo);
+            color: var(--esc-texto);
+        }
+
+        html[data-theme="dark"] .agenda th,
+        html[data-theme="dark"] .agenda td {
+            border-color: var(--esc-borda);
+        }
+
+        html[data-theme="dark"] .agenda td:nth-child(odd) {
+            color: var(--esc-azul-texto);
+        }
+
+        /* "Jornada de Formação Comercial" não cabe numa linha no
+           celular; o nowrap do header h1 vem da home do suporte. */
+        @media (max-width: 600px) {
+            header h1 {
+                white-space: normal;
+            }
+        }
+
+    </style>
+    <link rel="stylesheet" href="Assets/responsive.css">
+    <script src="Assets/tema.js"></script>
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         HEADER
+    ========================================================= -->
+
+    <header>
+
+        <div>
+
+            <a
+                href="https://www.hitecnologia.com.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-outline"
+            >
+                HI Tecnologia
+            </a>
+
+        </div>
+
+
+        <h1>
+            Jornada de Formação Comercial
+        </h1>
+
+
+        <nav>
+
+            <a
+                href="https://www.hitecnologia.com.br/suporte/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-outline"
+            >
+                Central de Ajuda
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================================================
+         HERO
+    ========================================================= -->
+
+    <section class="hero">
+
+        <div
+            style="
+                max-width: 900px;
+                margin: 0 auto;
+            "
+        >
+
+            <svg
+                class="trilha"
+                viewBox="0 0 900 360"
+                role="img"
+                aria-labelledby="trilhaTitulo trilhaDesc"
+            >
+                <title id="trilhaTitulo">Jornada de Formação Comercial: 10 etapas em 2 semanas</title>
+                <desc id="trilhaDesc">Semana 1: etapas 1 a 5 (A HI Tecnologia, Fundamentos, Comunicação,
+                CLPs, Gateways e rádios) e o primeiro encontro com o instrutor. Semana 2: etapas 6 a 10
+                (IHMs e sensores, Supervisão, Soluções, Conversa de venda, Avaliação final) e o segundo encontro.</desc>
+
+                <rect x="0" y="0" width="900" height="360" rx="16" fill="#ffffff"/>
+                <text x="450" y="40" text-anchor="middle" fill="#004A8F" font-size="22" font-weight="800">Jornada de Formação Comercial</text>
+                <text x="450" y="64" text-anchor="middle" fill="#666666" font-size="14">10 etapas · 2 semanas · cerca de 2 horas por dia</text>
+
+                <!-- Semana 1 -->
+                <text x="40" y="110" fill="#F26522" font-size="13" font-weight="800">SEMANA 1</text>
+                <line x1="100" y1="140" x2="780" y2="140" stroke="#cfd8e3" stroke-width="4"/>
+                <g font-size="17" font-weight="800" text-anchor="middle">
+                    <circle cx="100" cy="140" r="22" fill="#004A8F"/><text x="100" y="146" fill="#fff">1</text>
+                    <circle cx="270" cy="140" r="22" fill="#004A8F"/><text x="270" y="146" fill="#fff">2</text>
+                    <circle cx="440" cy="140" r="22" fill="#004A8F"/><text x="440" y="146" fill="#fff">3</text>
+                    <circle cx="610" cy="140" r="22" fill="#004A8F"/><text x="610" y="146" fill="#fff">4</text>
+                    <circle cx="780" cy="140" r="22" fill="#004A8F"/><text x="780" y="146" fill="#fff">5</text>
+                </g>
+                <g font-size="13" fill="#333333" text-anchor="middle">
+                    <text x="100" y="184">A HI Tecnologia</text>
+                    <text x="270" y="184">Fundamentos</text>
+                    <text x="440" y="184">Comunicação</text>
+                    <text x="610" y="184">Linha de CLPs</text>
+                    <text x="780" y="184">Gateways e rádios</text>
+                </g>
+                <rect x="806" y="96" width="78" height="24" rx="12" fill="#F26522"/>
+                <text x="845" y="113" text-anchor="middle" fill="#fff" font-size="12" font-weight="800">Encontro 1</text>
+
+                <!-- Semana 2 -->
+                <text x="40" y="240" fill="#F26522" font-size="13" font-weight="800">SEMANA 2</text>
+                <line x1="100" y1="270" x2="780" y2="270" stroke="#cfd8e3" stroke-width="4"/>
+                <g font-size="17" font-weight="800" text-anchor="middle">
+                    <circle cx="100" cy="270" r="22" fill="#004A8F"/><text x="100" y="276" fill="#fff">6</text>
+                    <circle cx="270" cy="270" r="22" fill="#004A8F"/><text x="270" y="276" fill="#fff">7</text>
+                    <circle cx="440" cy="270" r="22" fill="#004A8F"/><text x="440" y="276" fill="#fff">8</text>
+                    <circle cx="610" cy="270" r="22" fill="#004A8F"/><text x="610" y="276" fill="#fff">9</text>
+                    <circle cx="780" cy="270" r="22" fill="#F26522"/><text x="780" y="276" fill="#fff">10</text>
+                </g>
+                <g font-size="13" fill="#333333" text-anchor="middle">
+                    <text x="100" y="314">IHMs e sensores</text>
+                    <text x="270" y="314">Supervisão</text>
+                    <text x="440" y="314">Soluções</text>
+                    <text x="610" y="314">Conversa de venda</text>
+                    <text x="780" y="314">Avaliação final</text>
+                </g>
+                <rect x="806" y="226" width="78" height="24" rx="12" fill="#F26522"/>
+                <text x="845" y="243" text-anchor="middle" fill="#fff" font-size="12" font-weight="800">Encontro 2</text>
+            </svg>
+
+        </div>
+
+
+        <p>
+            Bem-vindo à jornada de formação comercial da HI Tecnologia.
+            Em duas semanas você vai entender o que a HI faz, que problema
+            cada produto resolve e como conduzir a primeira conversa com um
+            cliente industrial, sem precisar ser técnico e sem prometer o
+            que o produto não faz.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         INTRODUÇÃO
+    ========================================================= -->
+
+    <section class="section">
+
+        <h2 class="section-title">
+            Como funciona a formação
+        </h2>
+
+
+        <div
+            class="grid-container"
+            style="max-width: 1050px;"
+        >
+
+            <div
+                class="card"
+                style="
+                    grid-column: 1 / -1;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    gap: 40px;
+                    align-items: flex-start;
+                    padding: 45px;
+                    background:
+                        linear-gradient(
+                            135deg,
+                            #ffffff,
+                            var(--cinza-fundo)
+                        );
+                    border-left:
+                        6px solid var(--laranja-hi);
+                    border-bottom: none;
+                    text-align: left;
+                "
+            >
+
+
+                <!-- TEXTO -->
+
+                <div
+                    style="
+                        flex: 2;
+                        min-width: min(300px, 100%);
+                    "
+                >
+
+                    <h3
+                        style="
+                            font-size: 1.7rem;
+                            margin-bottom: 20px;
+                        "
+                    >
+                        Vender automação sem ser técnico
+                    </h3>
+
+
+                    <p
+                        style="
+                            font-size: 1.1rem;
+                            line-height: 1.7;
+                            color: var(--texto-escuro);
+                        "
+                    >
+
+                        Quem compra da HI é um cliente industrial: ele fala de
+                        CLP, de rede, de supervisório. Você não precisa saber
+                        programar, mas precisa <strong>entender o problema dele</strong>
+                        e saber qual solução da HI resolve.
+
+                    </p>
+
+
+                    <p
+                        style="
+                            font-size: 1.1rem;
+                            line-height: 1.7;
+                            color: var(--texto-escuro);
+                            margin-bottom: 0;
+                        "
+                    >
+
+                        Cada etapa traz o material de estudo na própria página,
+                        com analogias, a seção <strong>"Na venda"</strong> (perguntas
+                        de clientes, argumentos e erros a evitar), um glossário e
+                        um <strong>quiz com correção na hora</strong>. Nos dois
+                        encontros com o instrutor você pratica com estudos de
+                        caso e simulações de atendimento.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- ROTINA -->
+
+                <div
+                    style="
+                        flex: 1;
+                        min-width: min(250px, 100%);
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        background-color: #ffffff;
+                        padding: 30px 25px;
+                        border-radius: 8px;
+                        box-shadow:
+                            0 5px 15px
+                            rgba(0,0,0,0.06);
+                    "
+                >
+
+                    <p
+                        style="
+                            font-weight: 700;
+                            color: var(--azul-hi);
+                            margin: 0 0 5px 0;
+                            font-size: 1.05rem;
+                            text-align: center;
+                        "
+                    >
+                        Em cada etapa
+                    </p>
+
+                    <ol class="rotina">
+                        <li>Leia o conteúdo da página.</li>
+                        <li>Faça o quiz no final (meta: 80%).</li>
+                        <li>Prepare o caso para o encontro com o instrutor.</li>
+                        <li>Marque a etapa como concluída.</li>
+                    </ol>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- AGENDA -->
+
+            <div
+                class="card"
+                style="
+                    grid-column: 1 / -1;
+                    text-align: left;
+                "
+            >
+
+                <h3>
+                    Agenda sugerida (cerca de 2 horas por dia)
+                </h3>
+
+                <div class="agenda">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Dia</th>
+                                <th>Semana 1</th>
+                                <th>Dia</th>
+                                <th>Semana 2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Etapa 1 e início da Etapa 2</td>
+                                <td>6</td>
+                                <td>Etapa 5</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Etapa 2</td>
+                                <td>7</td>
+                                <td>Etapa 6 e início da Etapa 7</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Etapa 3</td>
+                                <td>8</td>
+                                <td>Etapa 7</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Etapa 4</td>
+                                <td>9</td>
+                                <td>Etapa 8 e início da Etapa 9</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><strong>Encontro 1</strong> com o instrutor (casos das Etapas 1 a 4)</td>
+                                <td>10</td>
+                                <td>Etapa 9 e <strong>Encontro 2</strong>: avaliação final e simulação de atendimento</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p style="margin-bottom: 0;">
+                    A agenda é uma sugestão: o instrutor pode ajustar ao ritmo
+                    de cada turma.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         FASES
+    ========================================================= -->
+
+    <section class="section section-cinza">
+
+        <h2 class="section-title">
+            Etapas da Formação
+        </h2>
+
+
+
+        <!-- REGRAS DE OURO -->
+
+        <div
+            class="grid-container"
+            style="margin-bottom: 40px;"
+        >
+
+            <div
+                class="card"
+                style="
+                    grid-column: 1 / -1;
+                    background-color: var(--azul-hi);
+                    color: white;
+                    border: none;
+                "
+            >
+
+                <h3
+                    style="
+                        color: white;
+                        margin-bottom: 15px;
+                    "
+                >
+                    Três regras de ouro
+                </h3>
+
+
+                <ol
+                    style="
+                        color: #e0e0e0;
+                        margin: 0;
+                        padding-left: 22px;
+                        line-height: 1.7;
+                    "
+                >
+                    <li>
+                        <strong style="color: white;">Não invente.</strong>
+                        Especificação, cliente ou resultado que não está no
+                        material oficial não entra na conversa.
+                    </li>
+                    <li>
+                        <strong style="color: white;">Preço só pelo orçamento.</strong>
+                        O valor depende do tipo de venda, do produto e das
+                        condições; não existe "preço de cabeça".
+                    </li>
+                    <li>
+                        <strong style="color: white;">Na dúvida técnica, chame o suporte.</strong>
+                        Uma pergunta a mais agora evita prometer o que o
+                        produto não faz.
+                    </li>
+                </ol>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             FERRAMENTAS
+        ====================================================== -->
+
+        <div
+            class="formation-tools"
+            aria-label="Ferramentas de navegação das etapas"
+        >
+
+            <div class="formation-search">
+
+                <input
+                    type="search"
+                    id="stageSearch"
+                    placeholder="Pesquisar etapa ou assunto..."
+                    aria-label="Pesquisar etapa ou assunto"
+                >
+
+            </div>
+
+
+            <span
+                class="stage-count"
+                id="stageCount"
+            >
+                10 etapas
+            </span>
+
+
+            <button
+                type="button"
+                class="tool-btn"
+                id="openStages"
+            >
+                ＋ Abrir todas
+            </button>
+
+
+            <button
+                type="button"
+                class="tool-btn"
+                id="closeStages"
+            >
+                − Fechar todas
+            </button>
+
+        </div>
+
+
+        <div
+            class="progresso-formacao"
+            id="progressoFormacao"
+        >
+
+            <div class="progresso-topo">
+
+                <span
+                    class="progresso-texto"
+                    id="progressoTexto"
+                >
+                    0 de 10 etapas concluídas
+                </span>
+
+                <button
+                    type="button"
+                    class="progresso-zerar"
+                    id="progressoZerar"
+                    hidden
+                >
+                    Zerar progresso
+                </button>
+
+            </div>
+
+            <div
+                class="progresso-trilha"
+                role="progressbar"
+                aria-label="Etapas concluídas"
+                aria-valuemin="0"
+                aria-valuemax="10"
+                aria-valuenow="0"
+            >
+                <div
+                    class="progresso-barra"
+                    id="progressoBarra"
+                ></div>
+            </div>
+
+            <p class="progresso-dica">
+                Marque cada etapa como concluída no final da página dela.
+                O progresso fica salvo neste navegador.
+            </p>
+
+        </div>
+
+
+        <div
+            class="no-results"
+            id="noResults"
+        >
+            Nenhuma etapa corresponde à pesquisa.
+        </div>
+
+
+
+        <!-- =====================================================
+             ETAPAS
+        ====================================================== -->
+
+        <div class="grid-container">
+
+
+            <!-- ETAPA 1 -->
+
+            <div class="card">
+
+                <input
+                    type="checkbox"
+                    id="etapa1"
+                    class="accordion-checkbox"
+                >
+
+
+                <label
+                    class="card-header"
+                    for="etapa1"
+                >
+
+                    <h3>
+                        Etapa 1: A HI Tecnologia
+                    </h3>
+
+                    <span class="setinha"></span>
+
+                </label>
+
+
+                <div class="card-content">
+                    <div class="card-content-inner">
+
+                    <p>
+
+                        Quem somos, o que vendemos e para quem: história, visão geral da linha de produtos, segmentos com clientes de referência e os programas HI Partner, HI OEM e HI University. Você termina a etapa com o seu pitch de 1 minuto.
+
+                    </p>
+
+
+                    <a
+                        href="Assets/hi_tecnologia.html"
+                        class="btn"
+                        rel="noopener noreferrer"
+                    >
+                        Acesso ao Conteúdo
+                    </a>
+
+                </div>
+                </div>
+
+            </div>
+
+
+            <!-- ETAPA 2 -->
+
+            <div class="card">
+
+                <input
+                    type="checkbox"
+                    id="etapa2"
+                    class="accordion-checkbox"
+                >
+
+
+                <label
+                    class="card-header"
+                    for="etapa2"
+                >
+
+                    <h3>
+                        Etapa 2: Fundamentos da Automação
+                    </h3>
+
+                    <span class="setinha"></span>
+
+                </label>
+
+
+                <div class="card-content">
+                    <div class="card-content-inner">
+
+                    <p>
+
+                        O mínimo de técnica para entender o cliente industrial: processo, sensor, atuador e CLP; alimentação AC e DC; sinais digitais e analógicos; e a pirâmide da automação, do campo à nuvem.
+
+                    </p>
+
+
+                    <a
+                        href="Assets/fundamentos.html"
+                        class="btn"
+                        rel="noopener noreferrer"
+                    >
+                        Acesso ao Conteúdo
+                    </a>
+
+                </div>
+                </div>
+
+            </div>
+
+
+            <!-- ETAPA 3 -->
+
+            <div class="card">
+
+                <input
+                    type="checkbox"
+                    id="etapa3"
+                    class="accordion-checkbox"
+                >
+
+
+                <label
+                    class="card-header"
+                    for="etapa3"
+                >
+
+                    <h3>
+                        Etapa 3: Comunicação Industrial
+                    </h3>
+
+                    <span class="setinha"></span>
+
+                </label>
+
+
+                <div class="card-content">
+                    <div class="card-content-inner">
+
+                    <p>
+
+                        Como os equipamentos conversam: meios físicos (RS232, RS485, Ethernet, Wi-Fi, rádio, 4G) e protocolos (Modbus, MQTT, ASCII, SCP-HI), explicados como linha telefônica e idioma.
+
+                    </p>
+
+
+                    <a
+                        href="Assets/comunicacao.html"
+                        class="btn"
+                        rel="noopener noreferrer"
+                    >
+                        Acesso ao Conteúdo
+                    </a>
+
+                </div>
+                </div>
+
+            </div>
+
+
+            <!-- ETAPA 4 -->
+
+            <div class="card">
+
+                <input
+                    type="checkbox"
+                    id="etapa4"
+                    class="accordion-checkbox"
+                >
+
+
+                <label
+                    class="card-header"
+                    for="etapa4"
+                >
+
+                    <h3>
+                        Etapa 4: Linha de CLPs
+                    </h3>
+
+                    <span class="setinha"></span>
+
+                </label>
+
+
+                <div class="card-content">
+                    <div class="card-content-inner">
+
+                    <p>
+
+                        RION5, NEON5 e P7C: como indicar o controlador certo pelo tamanho da aplicação, pela alimentação e pela conectividade. E o HIstudio, o software de programação gratuito.
+
+                    </p>
+
+
+                    <a
+                        href="Assets/clps.html"
+                        class="btn"
+                        rel="noopener noreferrer"
+                    >
+                        Acesso ao Conteúdo
+                    </a>
+
+                </div>
+                </div>
+
+            </div>
+
+
+            <!-- ETAPA 5 -->
+
+            <div class="card">
+
+                <input
+                    type="checkbox"
+                    id="etapa5"
+                    class="accordion-checkbox"
+                >
+
+
+                <label
+                    class="card-header"
+                    for="etapa5"
+                >
+
+                    <h3>
+                        Etapa 5: Gateways, Modem e Rádios
+                    </h3>
+
+                    <span class="setinha"></span>
+
+                </label>
+
+
+                <div class="card-content">
+                    <div class="card-content-inner">
+
+                    <p>
+
+                        GTON-C, GTON-P, GTON-M, USB721 e rádio R9X307: conectar o que o cliente já tem, levar os dados à internet e comunicar sem fio a longas distâncias.
+
+                    </p>
+
+
+                    <a
+                        href="Assets/conectividade.html"
+                        class="btn"
+                        rel="noopener noreferrer"
+                    >
+                        Acesso ao Conteúdo
+                    </a>
+
+                </div>
+                </div>
+
+            </div>
+
+
+            <!-- ETAPA 6 -->
+
+            <div class="card">
+
+                <input
+                    type="checkbox"
+                    id="etapa6"
+                    class="accordion-checkbox"
+                >
+
+
+                <label
+                    class="card-header"
+                    for="etapa6"
+                >
+
+                    <h3>
+                        Etapa 6: IHMs, Sensores e Acessórios
+                    </h3>
+
+                    <span class="setinha"></span>
+
+                </label>
+
+
+                <div class="card-content">
+                    <div class="card-content-inner">
+
+                    <p>
+
+                        A IHM GTI5, os sensores THT863 e HPS850, as fontes, a caixa GEM100 e o kit de treinamento RTK510: o que completa o painel e o pedido.
+
+                    </p>
+
+
+                    <a
+                        href="Assets/ihm_sensores.html"
+                        class="btn"
+                        rel="noopener noreferrer"
+                    >
+                        Acesso ao Conteúdo
+                    </a>
+
+                </div>
+                </div>
+
+            </div>
+
+
+            <!-- ETAPA 7 -->
+
+            <div class="card">
+
+                <input
+                    type="checkbox"
+                    id="etapa7"
+                    class="accordion-checkbox"
+                >
+
+
+                <label
+                    class="card-header"
+                    for="etapa7"
+                >
+
+                    <h3>
+                        Etapa 7: Supervisão Local e em Nuvem
+                    </h3>
+
+                    <span class="setinha"></span>
+
+                </label>
+
+
+                <div class="card-content">
+                    <div class="card-content-inner">
+
+                    <p>
+
+                        HIscada Pro e MPL Server na planta; Portal de Telemetria e HI Connect na nuvem: como escolher e como cada um é licenciado.
+
+                    </p>
+
+
+                    <a
+                        href="Assets/supervisao.html"
+                        class="btn"
+                        rel="noopener noreferrer"
+                    >
+                        Acesso ao Conteúdo
+                    </a>
+
+                </div>
+                </div>
+
+            </div>
+
+
+            <!-- ETAPA 8 -->
+
+            <div class="card">
+
+                <input
+                    type="checkbox"
+                    id="etapa8"
+                    class="accordion-checkbox"
+                >
+
+
+                <label
+                    class="card-header"
+                    for="etapa8"
+                >
+
+                    <h3>
+                        Etapa 8: Soluções e Programas
+                    </h3>
+
+                    <span class="setinha"></span>
+
+                </label>
+
+
+                <div class="card-content">
+                    <div class="card-content-inner">
+
+                    <p>
+
+                        O painel de aquisição de dados DAP5, a solução de óleo e gás e os programas HI OEM, HI Partner e HI University.
+
+                    </p>
+
+
+                    <a
+                        href="Assets/solucoes.html"
+                        class="btn"
+                        rel="noopener noreferrer"
+                    >
+                        Acesso ao Conteúdo
+                    </a>
+
+                </div>
+                </div>
+
+            </div>
+
+
+            <!-- ETAPA 9 -->
+
+            <div class="card">
+
+                <input
+                    type="checkbox"
+                    id="etapa9"
+                    class="accordion-checkbox"
+                >
+
+
+                <label
+                    class="card-header"
+                    for="etapa9"
+                >
+
+                    <h3>
+                        Etapa 9: A Conversa de Venda
+                    </h3>
+
+                    <span class="setinha"></span>
+
+                </label>
+
+
+                <div class="card-content">
+                    <div class="card-content-inner">
+
+                    <p>
+
+                        Juntando tudo: perguntas de qualificação, arquiteturas típicas do sensor à nuvem, o que não prometer e quando chamar o suporte ou a engenharia.
+
+                    </p>
+
+
+                    <a
+                        href="Assets/conversa_venda.html"
+                        class="btn"
+                        rel="noopener noreferrer"
+                    >
+                        Acesso ao Conteúdo
+                    </a>
+
+                </div>
+                </div>
+
+            </div>
+
+
+            <!-- ETAPA 10 -->
+
+            <div class="card">
+
+                <input
+                    type="checkbox"
+                    id="etapa10"
+                    class="accordion-checkbox"
+                >
+
+
+                <label
+                    class="card-header"
+                    for="etapa10"
+                >
+
+                    <h3>
+                        Etapa 10: Avaliação Final
+                    </h3>
+
+                    <span class="setinha"></span>
+
+                </label>
+
+
+                <div class="card-content">
+                    <div class="card-content-inner">
+
+                    <p>
+
+                        Avaliação final do programa e simulação de atendimento com o instrutor, do primeiro contato à solução indicada.
+
+                    </p>
+
+
+                    <a
+                        href="Assets/avaliacao_final.html"
+                        class="btn"
+                        rel="noopener noreferrer"
+                    >
+                        Acesso ao Conteúdo
+                    </a>
+
+                </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+
+    <footer>
+
+        <p>
+            Copyright © HI Tecnologia Automação Industrial.
+            Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================================================
+         BOTÃO VOLTAR AO TOPO
+    ========================================================= -->
+
+    <button
+        id="backToTop"
+        type="button"
+        aria-label="Voltar ao topo"
+        title="Voltar ao topo"
+    >
+        ↑
+    </button>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================= -->
+
+    <script>
+
+        (function () {
+
+            /* -----------------------------------------------------
+               ELEMENTOS
+            ----------------------------------------------------- */
+
+            const search =
+                document.getElementById(
+                    "stageSearch"
+                );
+
+            const stageCards =
+                Array.from(
+                    document.querySelectorAll(
+                        ".formation-tools ~ .grid-container .card"
+                    )
+                );
+
+            const count =
+                document.getElementById(
+                    "stageCount"
+                );
+
+            const noResults =
+                document.getElementById(
+                    "noResults"
+                );
+
+            const openButton =
+                document.getElementById(
+                    "openStages"
+                );
+
+            const closeButton =
+                document.getElementById(
+                    "closeStages"
+                );
+
+            const backToTop =
+                document.getElementById(
+                    "backToTop"
+                );
+
+
+            /* -----------------------------------------------------
+               PESQUISA
+            ----------------------------------------------------- */
+
+            function updateStages() {
+
+                const term =
+                    (search.value || "")
+                    .trim()
+                    .toLowerCase();
+
+                let visible = 0;
+
+
+                stageCards.forEach(
+                    function (card) {
+
+                        const text =
+                            card.textContent
+                            .toLowerCase();
+
+                        /* Assets/busca-conteudo.js: procura também
+                           dentro da página da etapa */
+                        const match =
+                            !term ||
+                            text.includes(term) ||
+                            (
+                                window.buscaConteudo &&
+                                window.buscaConteudo.etapaContem(
+                                    card,
+                                    term
+                                )
+                            );
+
+
+                        card.classList.toggle(
+                            "stage-hidden",
+                            !match
+                        );
+
+
+                        if (match) {
+                            visible++;
+                        }
+
+                    }
+                );
+
+
+                count.textContent =
+                    `${visible} ${
+                        visible === 1
+                            ? "etapa"
+                            : "etapas"
+                    }`;
+
+
+                noResults.classList.toggle(
+                    "show",
+                    visible === 0
+                );
+
+            }
+
+
+            search.addEventListener(
+                "input",
+                updateStages
+            );
+
+
+            /* -----------------------------------------------------
+               ABRIR TODAS
+            ----------------------------------------------------- */
+
+            openButton.addEventListener(
+                "click",
+                function () {
+
+                    stageCards.forEach(
+                        function (card) {
+
+                            if (
+                                !card.classList.contains(
+                                    "stage-hidden"
+                                )
+                            ) {
+
+                                const checkbox =
+                                    card.querySelector(
+                                        ".accordion-checkbox"
+                                    );
+
+                                if (checkbox) {
+                                    checkbox.checked =
+                                        true;
+                                }
+
+                            }
+
+                        }
+                    );
+
+                }
+            );
+
+
+            /* -----------------------------------------------------
+               FECHAR TODAS
+            ----------------------------------------------------- */
+
+            closeButton.addEventListener(
+                "click",
+                function () {
+
+                    stageCards.forEach(
+                        function (card) {
+
+                            const checkbox =
+                                card.querySelector(
+                                    ".accordion-checkbox"
+                                );
+
+                            if (checkbox) {
+                                checkbox.checked =
+                                    false;
+                            }
+
+                        }
+                    );
+
+                }
+            );
+
+
+            /* -----------------------------------------------------
+               VOLTAR AO TOPO
+            ----------------------------------------------------- */
+
+            window.addEventListener(
+                "scroll",
+                function () {
+
+                    backToTop.classList.toggle(
+                        "visible",
+                        window.scrollY > 450
+                    );
+
+                },
+                {
+                    passive: true
+                }
+            );
+
+
+            backToTop.addEventListener(
+                "click",
+                function () {
+
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+
+                }
+            );
+
+
+            /* -----------------------------------------------------
+               ALTURA PADRÃO DOS CARDS ABERTOS
+               Mede o card com o texto mais longo e usa essa altura
+               para TODOS, garantindo tamanho idêntico sem cutting
+               nenhum texto. Recalcula ao redimensionar a tela, pois
+               a quebra de linha muda com a largura do card.
+            ----------------------------------------------------- */
+
+            function calcStageOpenHeight() {
+
+                const inners =
+                    document.querySelectorAll(
+                        ".card-content-inner"
+                    );
+
+                let maxHeight = 0;
+
+                inners.forEach(
+                    function (inner) {
+
+                        const height =
+                            inner.scrollHeight;
+
+                        if (height > maxHeight) {
+                            maxHeight = height;
+                        }
+
+                    }
+                );
+
+                if (maxHeight > 0) {
+
+                    document.documentElement.style.setProperty(
+                        "--stage-open-height",
+                        (maxHeight + 4) + "px"
+                    );
+
+                }
+
+            }
+
+
+            let resizeTimer;
+
+            window.addEventListener(
+                "resize",
+                function () {
+
+                    clearTimeout(resizeTimer);
+
+                    resizeTimer =
+                        setTimeout(
+                            calcStageOpenHeight,
+                            150
+                        );
+
+                }
+            );
+
+
+            calcStageOpenHeight();
+
+
+            /* -----------------------------------------------------
+               INICIALIZAÇÃO
+            ----------------------------------------------------- */
+
+            updateStages();
+
+        })();
+
+    </script>
+
+
+    <script src="Assets/progresso.js"></script>
+    <script src="Assets/config-conta.js"></script>
+    <script src="Assets/conta.js"></script>
+    <script src="Assets/busca-conteudo.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+
+---
+
+### 🗣️ Arquivo 3: `DICIONARIO_FONETICO.md`
+*(Salve como `DICIONARIO_FONETICO.md` — já inclui todas as regras dos CLPs + as novas siglas prontas para Gateways, SCADA e Portal de Telemetria)*
+
+```markdown
+# DICIONARIO_FONETICO.md - Regras de Pronúncia PT-BR (Automação HI Tecnologia)
+
+> **Importante:** Na variável `phoneticRulesText` do arquivo HTML, mantenha sempre as siglas no **plural** ou **compostas** nas linhas acima das siglas no singular (ex: `CLPs` antes de `CLP`, `I/Os` antes de `I/O`).
+
+## Bloco Completo Pronto para Copiar no Código (`phoneticRulesText`):
+
+```text
+I/O's = ai ôus
+I/Os = ai ôus
+I/O = ai ôu
+CLPs = cê éle pês
+CLP = cê éle pê
+IHMs = i agá êmes
+IHM = i agá ême
+P7C 302 = Pê sete Cê trezentos e dois
+P7C = Pê sete Cê
+NEON5 = Néon cinco
+RION5 = Ríon cinco
+GTON-P = Gê Tê Ó Êne Pê
+GTON-C = Gê Tê Ó Êne Cê
+GTON-M = Gê Tê Ó Êne Ême
+GTON = Gê Tê Ó Êne
+ESC717 = Éssi Cê setecentos e dezessete
+ESC713 = Éssi Cê setecentos e treze
+USB721 = U Éssi Bê setecentos e vinte e um
+R9X307 = Érre nove Xis trezentos e sete
+GTI5 = Gê Tê I cinco
+HIscada Pro = Agá I Iscáda Pró
+HIstudio = Agá I Estúdio
+MplServer = Ême Pê Éle Sérver
+SCP-HI = Éssi Cê Pê, Agá I
+HI Tecnologia = Agá I Tecnologia
+RS232/RS485 = Érre Éssi dois três dois e Érre Éssi quatro oito cinco
+RS232-C = Érre Éssi dois três dois Cê
+RS232 = Érre Éssi dois três dois
+RS485 = Érre Éssi quatro oito cinco
+Wi-Fi = Uái Fái
+WiFi = Uái Fái
+2.4 GHz = dois ponto quatro Giga-hertz
+2,4 GHz = dois vírgula quatro Giga-hertz
+GHz = Giga-hertz
+MHz = Mega-hertz
+SD Card = Éssi Dê Cárd
+cartão SD = cartão Éssi Dê
+Cartão SD = Cartão Éssi Dê
+PT100 = Pê Tê cem
+A/D = A Dê
+D/A = Dê A
+psi = pê éssi i
+PSI = pê éssi i
+4 a 20 mA = quatro a vinte miliamperes
+4–20 mA = quatro a vinte miliamperes
+0–10 V = zero a dez Volts
+0 a 10 V = zero a dez Volts
+ASCII = Áski
+MQTT = Ême Quê Tê Tê
+Modbus RTU = Mód-bâs Érre Tê U
+Modbus TCP = Mód-bâs Tê Cê Pê
+Modbus = Mód-bâs
+IIoT = Ai Ai Ou Ti
+IoT = Ai Ou Ti
+SCADA = Iscáda
+Gateways = Guêit-uêis
+Gateway = Guêit-uêi
+Bridges = Brídjis
+Bridge = Brídji
+Brokers = Brôkers
+Broker = Brôker
+Dashboards = Désh-bórds
+Dashboard = Désh-bórd
+White Label = Uáit Lêibel
+API REST = A Pê I Rést
+API = A Pê I
+OPC = Ó Pê Cê
+ERP = Ê Érre Pê
+MES = Ême Ê Éssi
+CRM = Cê Érre Ême
+BI = Bê I
+TCP/IP = Tê Cê Pê, I Pê
+VPN = Vê Pê Êne
+GPRS = Gê Pê Érre Éssi
+USB = U Éssi Bê
+CPU = Cê Pê U
+VDC = Volts Dê Cê
+VAC = Volts A Cê
+AC = A Cê
+DC = Dê Cê
+4G = quatro Gê
+3G = três Gê
+2G = dois Gê
