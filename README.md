@@ -53,7 +53,7 @@ Formacao-Vendas-HI/
 | 1 | A HI Tecnologia | `hi_tecnologia.html` | **Aprovada** por Gabriel (04/11/2026), depois de 2 revisões |
 | 2 | Fundamentos da Automação | `fundamentos.html` | **Aprovada** por Gabriel (04/11/2026) |
 | 3 | Comunicação Industrial | `comunicacao.html` | **Aprovada** por Gabriel (05/11/2026) |
-| 4 | Linha de CLPs | `clps.html` | Em produção |
+| 4 | Linha de CLPs | `clps.html` | **Pronta, aguardando a revisão de Gabriel** (branch `etapa-4-clps`, pull request) |
 | 5 | Gateways, Modem e Rádios | `conectividade.html` | Em produção |
 | 6 | IHMs, Sensores e Acessórios | `ihm_sensores.html` | Em produção |
 | 7 | Supervisão Local e em Nuvem | `supervisao.html` | Em produção |
@@ -123,6 +123,7 @@ disponíveis (estilo em `etapa.css`):
 | `.linha-tempo` | lista de marcos com ano |
 | `.glossario` | `<dl>` de termos |
 | `.diagrama` | SVG inline com cores que seguem o modo escuro. Classes internas: `d-titulo`, `d-caixa`, `d-rotulo`, `d-itens`, `d-seta`/`d-ponta`, `d-nota`, `d-cheio` (preenchimento laranja), `d-linha` (guia tracejada), `d-texto-claro` (texto branco sobre o laranja) |
+| `.foto` | imagem de produto ou de tela dentro de uma seção (`<img class="foto" src="Files/...">`), centralizada, até 360 px |
 | `.diagrama-corpo` | junto com `.diagrama`, para um SVG no meio do texto de uma seção (centralizado, com margem) |
 | `.quiz-bloco` + `form.quiz` | quiz; marcação descrita no topo de `quiz.js` |
 | `.caso` | preparação para o encontro com o instrutor |

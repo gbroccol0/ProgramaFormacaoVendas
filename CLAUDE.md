@@ -151,11 +151,27 @@ Oferecido também: preparar slides e roteiro de cada vídeo a partir do texto.
 | 1 A HI Tecnologia | `Assets/hi_tecnologia.html` | **Aprovada** por Gabriel em 04/11/2026 (reteste depois da correção da GTI5/SmartManagerPro). |
 | 2 Fundamentos da Automação | `Assets/fundamentos.html` | **Aprovada** por Gabriel em 04/11/2026 (PR #1, branch `etapa-2-fundamentos`; ele faz o merge). Erros achados depois serão corrigidos depois. |
 | 3 Comunicação Industrial | `Assets/comunicacao.html` | **Aprovada** por Gabriel em 05/11/2026 (PR #2, branch `etapa-3-comunicacao`; ele faz o merge, depois do #1). |
-| 4 a 10 | `Assets/*.html` | Páginas "em produção": selo, objetivos, tempo, caixa "Conteúdo em produção" e fontes previstas. |
+| 4 Linha de CLPs | `Assets/clps.html` | **Pronta, aguardando a revisão de Gabriel.** Branch `etapa-4-clps` (criada a partir de `etapa-3-comunicacao`), pull request próprio. |
+| 5 a 10 | `Assets/*.html` | Páginas "em produção": selo, objetivos, tempo, caixa "Conteúdo em produção" e fontes previstas. |
 
-**Próximo passo:** produzir a Etapa 4 (Linha de CLPs) na branch
-`etapa-4-clps`, criada a partir de `etapa-3-comunicacao`; depois uma por vez
-até a 10, e então a Fase 4.
+**Próximo passo:** esperar a revisão da Etapa 4, aplicar as correções e, com a
+aprovação, produzir a Etapa 5 (Gateways, Modem e Rádios). **Antes da Etapa 5,
+perguntar a Gabriel as três inconsistências dela** (alcance do R9X307 60 × 105
+km; ESC717/ESC713 entram?; "GTON C SET" × "GTON-C").
+
+**Etapa 4, o que foi feito (para não refazer):** 10 seções (tabela
+comparativa; RION5; NEON5 com as combinações de conectividade do slide 6; P7C
+302 com diagrama dos bastidores; RION5 como I/O remoto do NEON5, até 14 e 240
+pontos, sem programar o RION5; módulos de I/O por tipo, sem códigos, com o
+aviso de canais excludentes e famílias separadas; HIstudio com a foto
+`Files/HIstudio.png`; as quatro perguntas de escolha com tabela "o cliente diz
+→ CLP"; na venda; glossário), 4 diagramas, quiz de 10 e caso com 5 itens.
+Nenhum `[CONFIRMAR]` novo. Decisões de redação: "CLP mais econômico da HI"
+para o RION5 aparece **uma vez**, atribuído ao Treinamento (p. 9), sem valor e
+com "valores, só pelo orçamento"; "baixo custo" da narração do slide 7 não foi
+usado; "o P7C não tem rádio, Wi-Fi nem 4G" vem da lista de conectividade do
+Treinamento p. 7. Fontes: Treinamento p. 4–9; slides 4–7; Catálogo p. 5–10,
+14, 32 e 40. CSS novo: `.step .foto`.
 
 **Etapa 3, o que foi feito (para não refazer):** 8 seções (linha e idioma;
 RS232/RS485/Ethernet com tabela de distâncias **de referência geral**, marcada
@@ -243,6 +259,11 @@ Etapa 3 usou o **4** e o **8** (conceitos, no caso) e, só para diagnosticar
 meio, idioma e falta de tradutor (sem escolher produto), o **14**, o **15**, o
 **17**, o **18** e o **19**. Esses cinco voltam na Etapa 5 para a escolha do
 GTON-C, GTON-M etc.
+Etapa 4 usou o **2**, o **3** e o **7** (conceitos, no caso) e, para escolher a
+família de CLP, o **10**, o **12**, o **13** e o **16**. Ainda não usados: **5**,
+**6**, **9** e **21**; o **11** e o **20** só apareceram na Etapa 2 (lista de
+sinais) e voltam com a IHM na Etapa 6 e na oferta completa (Encontro 2,
+Avaliação Final).
 
 **Os 21 exercícios** de `fontes/texto/exercicios_treinamento_de_produto.txt`
 mapeiam assim (sugestão, ainda não discutida com Gabriel): 1 → Etapa 2;

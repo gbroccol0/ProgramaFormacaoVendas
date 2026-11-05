@@ -810,3 +810,17 @@ html[data-theme="dark"] .diagrama .d-nota {
 html[data-theme="dark"] .diagrama .d-linha {
     stroke: var(--esc-azul-texto);
 }
+
+/* Foto de produto ou de tela dentro de uma seção (Etapa 4 em diante). */
+.step .foto {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    margin: 16px auto;
+    border-radius: 12px;
+}
+
+html[data-theme="dark"] .step .foto {
+    background: #fff;
+}
