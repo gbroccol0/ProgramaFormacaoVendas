@@ -50,9 +50,9 @@ Formacao-Vendas-HI/
 
 | Etapa | Título | Arquivo | Status |
 |------:|---|---|---|
-| 1 | A HI Tecnologia | `hi_tecnologia.html` | **Pronta**, revisada 2 vezes; aguardando o reteste de Gabriel (correção da GTI5) |
-| 2 | Fundamentos da Automação | `fundamentos.html` | Em produção (página com objetivos) |
-| 3 | Comunicação Industrial | `comunicacao.html` | Em produção |
+| 1 | A HI Tecnologia | `hi_tecnologia.html` | **Aprovada** por Gabriel (04/11/2026), depois de 2 revisões |
+| 2 | Fundamentos da Automação | `fundamentos.html` | **Aprovada** por Gabriel (04/11/2026) |
+| 3 | Comunicação Industrial | `comunicacao.html` | **Aprovada** por Gabriel (05/11/2026) |
 | 4 | Linha de CLPs | `clps.html` | Em produção |
 | 5 | Gateways, Modem e Rádios | `conectividade.html` | Em produção |
 | 6 | IHMs, Sensores e Acessórios | `ihm_sensores.html` | Em produção |
@@ -122,7 +122,8 @@ disponíveis (estilo em `etapa.css`):
 | `.cartoes` / `.cartao` | grade de cartões (segmentos, perfis, produtos) |
 | `.linha-tempo` | lista de marcos com ano |
 | `.glossario` | `<dl>` de termos |
-| `.diagrama` | SVG inline com cores que seguem o modo escuro |
+| `.diagrama` | SVG inline com cores que seguem o modo escuro. Classes internas: `d-titulo`, `d-caixa`, `d-rotulo`, `d-itens`, `d-seta`/`d-ponta`, `d-nota`, `d-cheio` (preenchimento laranja), `d-linha` (guia tracejada), `d-texto-claro` (texto branco sobre o laranja) |
+| `.diagrama-corpo` | junto com `.diagrama`, para um SVG no meio do texto de uma seção (centralizado, com margem) |
 | `.quiz-bloco` + `form.quiz` | quiz; marcação descrita no topo de `quiz.js` |
 | `.caso` | preparação para o encontro com o instrutor |
 | `.fonte` | página das fontes de onde saiu cada dado |
@@ -146,6 +147,7 @@ onde está.
 | Etapa 1, item 4 | Clientes de referência de Energia, Indústria 4.0, Meio ambiente, Hospitalar e Predial (Gabriel vai levantar com a equipe) |
 | Etapa 1, item 5 | Qual representante (TBC Automação, 4Sys Sistemas) cobre cada região (Gabriel vai levantar) |
 | Etapa 1, item 4 | Texto das áreas Indústria 4.0, Meio Ambiente, Hospitalar e Energia (catálogo p. 3–4, ilegível na extração; um print resolve) |
+| Etapa 3, item 5 | Em que situações o vendedor precisa citar o SCP-HI (entre quais equipamentos e softwares HI ele é usado); as fontes só dizem que é o protocolo proprietário da HI |
 | Etapa 5 (futura) | Alcance rural do R9X307: 60 km (catálogo) ou 105 km (Treinamento de Produto) |
 | Etapa 5 (futura) | Nome do conversor: "GTON C SET" (Treinamento) ou "GTON-C" (catálogo) |
 | Etapa 5 (futura) | ESC717/ESC713 entram na formação de vendas? (estão no site do suporte, não no catálogo) |
