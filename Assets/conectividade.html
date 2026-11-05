@@ -19,8 +19,56 @@
     <section class="hero">
         <div class="hero-content">
             <span class="etapa-badge">Etapa 5 de 10</span>
-            <h1>Gateways, conversores, modem e rádios</h1>
-            <p><strong>Como conectar o que o cliente já tem, sem trocar o equipamento, e como levar os dados longe.</strong></p>
+            <h1>Gateways, modem e rádios: ligar o que já existe</h1>
+            <p><strong>Traduzir redes, levar dados à internet e cobrir distâncias sem cabo, sem trocar o que o cliente já tem.</strong></p>
+            <p>Na Etapa 3 você aprendeu a perceber quando falta um "tradutor". Agora conhece os produtos
+            que resolvem cada caso: a linha <strong>GTON</strong> (GTON-C, GTON-P e GTON-M), o conversor
+            <strong>USB721</strong> e os rádios <strong>WSC720</strong> (integrado) e <strong>R9X307</strong>.
+            E aprende o passo a passo de uma venda de rádio, que sempre passa pela Engenharia.</p>
+        </div>
+        <div class="hero-image">
+            <svg class="diagrama" viewBox="0 0 540 440" role="img"
+                 aria-labelledby="gtonTitulo gtonDesc">
+                <title id="gtonTitulo">Qual equipamento resolve qual problema</title>
+                <desc id="gtonDesc">Cinco caixas, cada uma com um problema e o produto. Traduzir a rede
+                (serial para Ethernet, Modbus RTU para TCP): GTON-C. Tratar os dados no caminho (programável):
+                GTON-P. Chegar à internet pela rede celular: GTON-M. Ligar o computador com USB a um equipamento
+                serial: USB721. Ligar pontos distantes sem cabo: rádio WSC720 (integrado, distâncias menores) ou
+                R9X307 (distâncias maiores, até 60 km recomendados).</desc>
+
+                <text class="d-titulo" x="270" y="24" text-anchor="middle">Qual equipamento resolve qual problema</text>
+
+                <rect class="d-caixa" x="10" y="44" width="250" height="80" rx="10"/>
+                <text class="d-rotulo" x="135" y="72" text-anchor="middle">GTON-C</text>
+                <text class="d-itens" x="135" y="94" text-anchor="middle">traduz a rede: serial ↔ Ethernet,</text>
+                <text class="d-itens" x="135" y="112" text-anchor="middle">Modbus RTU ↔ Modbus TCP</text>
+
+                <rect class="d-caixa" x="280" y="44" width="250" height="80" rx="10"/>
+                <text class="d-rotulo" x="405" y="72" text-anchor="middle">GTON-P</text>
+                <text class="d-itens" x="405" y="94" text-anchor="middle">programável: trata os dados</text>
+                <text class="d-itens" x="405" y="112" text-anchor="middle">no caminho, como um CLP</text>
+
+                <rect class="d-caixa" x="10" y="144" width="250" height="80" rx="10"/>
+                <text class="d-rotulo" x="135" y="172" text-anchor="middle">GTON-M</text>
+                <text class="d-itens" x="135" y="194" text-anchor="middle">modem 4G: leva à internet</text>
+                <text class="d-itens" x="135" y="212" text-anchor="middle">pela rede celular</text>
+
+                <rect class="d-caixa" x="280" y="144" width="250" height="80" rx="10"/>
+                <text class="d-rotulo" x="405" y="172" text-anchor="middle">USB721</text>
+                <text class="d-itens" x="405" y="194" text-anchor="middle">liga o computador (USB)</text>
+                <text class="d-itens" x="405" y="212" text-anchor="middle">a um equipamento serial</text>
+
+                <rect class="d-caixa" x="10" y="244" width="520" height="100" rx="10"/>
+                <text class="d-rotulo" x="270" y="272" text-anchor="middle">Rádios 900 MHz: ligam pontos distantes sem cabo</text>
+                <text class="d-itens" x="140" y="300" text-anchor="middle">WSC720 (integrado ao CLP/GTON)</text>
+                <text class="d-itens" x="140" y="320" text-anchor="middle">distâncias menores</text>
+                <text class="d-itens" x="400" y="300" text-anchor="middle">R9X307 (equipamento à parte)</text>
+                <text class="d-itens" x="400" y="320" text-anchor="middle">distâncias maiores, até 60 km</text>
+                <line class="d-linha" x1="270" y1="286" x2="270" y2="334"/>
+
+                <text class="d-nota" x="270" y="372" text-anchor="middle">GTON = linha atual de gateways. A linha anterior era a ESC.</text>
+                <text class="d-nota" x="270" y="392" text-anchor="middle">Rádio: sempre com visada e estudo da Engenharia.</text>
+            </svg>
         </div>
     </section>
 
@@ -37,15 +85,616 @@
                     <li>explicar quando o rádio integrado ao CLP basta e quando indicar o R9X307;</li>
                     <li>conduzir a venda de rádio: visada, coordenadas em KML e estudo de altimetria pela Engenharia de Produto.</li>
                 </ul>
-                <p class="tempo">Tempo estimado: 2h30.</p>
+                <p class="tempo">Tempo estimado: 2h30 (leitura, quiz e preparo dos exercícios do encontro).</p>
             </div>
 
-            <div class="em-producao">
-                <strong>Conteúdo em produção</strong>
-                Esta etapa está sendo escrita e entra no ar depois da revisão da etapa anterior.
+            <ul class="sumario" aria-label="Nesta etapa">
+                <li><a href="#gton">A linha GTON</a></li>
+                <li><a href="#gton-c">GTON-C</a></li>
+                <li><a href="#gton-p">GTON-P</a></li>
+                <li><a href="#gton-m">GTON-M</a></li>
+                <li><a href="#usb721">USB721</a></li>
+                <li><a href="#radios">Rádios</a></li>
+                <li><a href="#venda-radio">Venda de rádio</a></li>
+                <li><a href="#escolher">Como escolher</a></li>
+                <li><a href="#na-venda">Na venda</a></li>
+                <li><a href="#glossario">Glossário</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="gton">
+                <h3>1. A linha GTON: os "tradutores" da HI</h3>
+
+                <p>Um <strong>gateway</strong> recebe informações por uma interface de comunicação e as transmite
+                por outra (Etapa 3). A HI tem uma linha de gateways chamada <strong>GTON</strong>, que cobre os
+                cenários possíveis: trocar o meio físico, converter protocolo, programar e levar à internet. A
+                família foi lançada em 2021.</p>
+
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th></th><th>GTON-C</th><th>GTON-P</th><th>GTON-M</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Em uma frase</td><td>Conversor serial ↔ Ethernet e do protocolo Modbus</td><td>Gateway programável, com várias opções de interface</td><td>Modem industrial: recebe por Ethernet ou serial e repassa pela rede celular</td></tr>
+                            <tr><td>Programável</td><td>Não</td><td>Sim (HIstudio)</td><td>Não</td></tr>
+                            <tr><td>Interfaces</td><td>Serial (RS232 ou RS485) e Ethernet</td><td>Diversas combinações</td><td>Serial ou Ethernet, e celular 4G</td></tr>
+                            <tr><td>Alimentação</td><td>DC (10 a 30 V DC)</td><td>DC (10 a 30 V DC)</td><td>DC (10 a 30 V DC)</td></tr>
+                            <tr><td>SD Card</td><td>Não</td><td>Não</td><td>Não</td></tr>
+                            <tr><td>Montagem</td><td colspan="3">Trilho DIN (TS35), com proteção contra inversão de polaridade e surto na alimentação</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4>Como ler os nomes</h4>
+                <p>A letra depois de "GTON" diz o tipo: <strong>C</strong> de conversor, <strong>P</strong> de
+                programável, <strong>M</strong> de modem. No Treinamento de Produto o GTON-C aparece como
+                <strong>"GTON C SET"</strong>: é o mesmo equipamento, e <strong>SET</strong> é a abreviação de
+                <strong>Serial Ethernet</strong>. A mesma lógica aparece em outros códigos da HI, como
+                <strong>S4E</strong> (Serial 485 Ethernet). Se o cliente citar um código assim, ele está dizendo
+                quais interfaces o equipamento tem.</p>
+
+                <h4>A linha anterior: ESC717 e ESC713</h4>
+                <p>Antes da GTON, a HI tinha os modelos <strong>ESC</strong>, como o <strong>ESC717</strong> e o
+                <strong>ESC713</strong>. Eles são os <strong>antecessores dos GTON</strong>. Você pode encontrar
+                ESC instalados em clientes antigos.</p>
+
+                <div class="atencao">
+                    <p>Se o cliente tem um ESC e quer trocar ou ampliar, não prometa que um GTON específico faz
+                    exatamente o mesmo papel: anote o modelo, o que ele faz hoje na instalação e confirme com o
+                    suporte qual GTON indicar. <span class="confirmar">[CONFIRMAR] qual GTON corresponde a cada ESC (ESC717 e ESC713) e se os ESC ainda são vendidos</span></p>
+                </div>
+
+                <p class="fonte">Fontes: Treinamento de Produto, p. 11 e 12; Catálogo Geral, p. 5, 16, 17 e 20; informações
+                de Gabriel (05/11/2026) sobre a sigla SET, o padrão S4E e os ESC como antecessores dos GTON.</p>
             </div>
 
-            <p class="fonte">Fontes previstas: Treinamento de Produto, p. 11 a 16; Catálogo Geral, p. 15 a 22.</p>
+
+            <!-- ===================================================== -->
+            <div class="step" id="gton-c">
+                <h3>2. GTON-C: traduzir a rede, sem trocar nada</h3>
+
+                <img class="foto" src="Files/GTON-C.png" alt="Gateway GTON-C, para trilho DIN" width="550" height="520">
+
+                <p>O GTON-C é <strong>conversor serial/Ethernet</strong> e <strong>bridge Modbus RTU/TCP</strong>
+                num único equipamento. Trabalha de dois modos:</p>
+
+                <div class="cartoes">
+                    <div class="cartao">
+                        <h4>Modo transparente</h4>
+                        <p>Só troca o meio físico: serial (RS232 ou RS485) ↔ Ethernet. Não mexe no conteúdo dos
+                        dados, então funciona com qualquer protocolo.</p>
+                        <p><span class="rotulo">Exemplo</span><br>Uma impressora antiga com RS232 que precisa
+                        receber dados pela rede Ethernet (em ASCII, por exemplo).</p>
+                    </div>
+                    <div class="cartao">
+                        <h4>Modo bridge (gateway Modbus)</h4>
+                        <p>Pela Ethernet, em Modbus TCP, permite acessar equipamentos seriais que falam Modbus RTU,
+                        e vice-versa. Traduz o caminho e a versão do idioma.</p>
+                        <p><span class="rotulo">Exemplo</span><br>Uma rede RS485 com equipamentos Modbus RTU lida
+                        por um supervisório que só fala Modbus TCP.</p>
+                    </div>
+                </div>
+
+                <div class="analogia">
+                    <p>No modo transparente, o GTON-C é um adaptador de tomada: muda o plugue, a energia é a mesma.
+                    No modo bridge, é o intérprete que ouve em "Modbus RTU" e repete em "Modbus TCP".</p>
+                </div>
+
+                <div class="na-venda">
+                    <p>É o produto de quem diz "meus equipamentos são serial e o meu sistema é Ethernet". O
+                    argumento é aproveitar o que o cliente já tem: os equipamentos e o software continuam os
+                    mesmos; o GTON-C faz a ponte.</p>
+                </div>
+
+                <p class="fonte">Fontes: Catálogo Geral, p. 17; Treinamento de Produto, p. 11 e 12.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="gton-p">
+                <h3>3. GTON-P: um gateway que pensa</h3>
+
+                <img class="foto" src="Files/GTON-P.jpg" alt="Gateway programável GTON-P" width="550" height="520">
+
+                <p>O GTON-P tem a <strong>mesma capacidade de programação de um CLP</strong> e é programado no
+                <strong>HIstudio</strong> (gratuito), em Ladder ou Texto Estruturado. Ele é montado com duas
+                interfaces, à escolha:</p>
+                <ul>
+                    <li><strong>Interface A:</strong> serial RS232, serial RS485 ou Ethernet;</li>
+                    <li><strong>Interface B:</strong> modem 4G, rádio, Ethernet, serial RS232, serial RS485 ou Wi-Fi.</li>
+                </ul>
+                <p>Fala <strong>ASCII, HTTP, MQTT e Modbus</strong>. Um uso típico: ser o mestre de uma rede RS485
+                com I/O remotos, inversores de frequência e medidores de energia, e repassar os dados por outra
+                interface.</p>
+
+                <div class="analogia">
+                    <p>Se o GTON-C é o intérprete, o GTON-P é o assistente: ouve, organiza, faz as contas, decide o
+                    que é importante e só então repassa, no idioma e pelo caminho que o destino precisa.</p>
+                </div>
+
+                <div class="na-venda">
+                    <p>Indique o GTON-P quando o cliente quer <strong>tratar os dados no caminho</strong>: fazer
+                    cálculos, guardar, filtrar, juntar dados de vários equipamentos ou converter para MQTT e mandar
+                    para uma plataforma na nuvem. Exemplo: ler escravos Modbus TCP pela Ethernet, calcular e enviar
+                    em MQTT pela rede 4G.</p>
+                </div>
+
+                <div class="atencao">
+                    <p>O GTON-P é programado: alguém precisa escrever o programa (a equipe do cliente, um integrador
+                    ou a engenharia da HI). Combine isso na proposta. E ele não tem SD Card.</p>
+                </div>
+
+                <p class="fonte">Fontes: Catálogo Geral, p. 16 e 32; Treinamento de Produto, p. 11 e 12.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="gton-m">
+                <h3>4. GTON-M: o modem 4G industrial</h3>
+
+                <img class="foto" src="Files/GTON-M.png" alt="Modem celular industrial GTON-M" width="550" height="520">
+
+                <p>O GTON-M recebe informações por <strong>serial (RS232/RS485) ou Ethernet</strong> e dá acesso à
+                internet de forma transparente pela <strong>rede 4G</strong>. Usa um chip no formato
+                <strong>Nano SIM</strong>, antena com conector <strong>SMA</strong> e é certificado pela
+                <strong>Anatel</strong>.</p>
+
+                <div class="na-venda">
+                    <p>É a resposta para "não quero usar a rede do meu cliente" ou "lá não tem internet". Ligado por
+                    Ethernet a um NEON5, por exemplo, o GTON-M leva os dados ao Portal de Telemetria sem passar pela
+                    rede do local. Complete a oferta com o <strong>chip e o plano de dados</strong> (HI Connect, a
+                    seguir) e a antena.</p>
+                </div>
+
+                <h4>HI Connect: chip e plano de dados da HI</h4>
+                <p>O HI Connect é o serviço de plano de dados celular da HI para aplicações IoT: chip e plano sem
+                tempo mínimo de contrato, com a gestão do consumo feita pela HI. O chip é multioperadora (TIM e
+                Vivo) e pode ser configurado para ficar sempre no melhor sinal. Há planos individuais (franquia
+                fixa, bloqueada ao atingir o limite) e compartilhados (a franquia é dividida entre os chips do
+                cliente). Com ele, a HI entrega a solução IoT completa: CLP, modem 4G, plataforma em nuvem e plano
+                de dados. A mensalidade sai do orçamento do setor de vendas.</p>
+
+                <div class="atencao">
+                    <p>Antes de vender 4G, confirme se há <strong>sinal de celular</strong> no local. Sem sinal, nem
+                    o melhor modem resolve.</p>
+                </div>
+
+                <p class="fonte">Fontes: Catálogo Geral, p. 20 e 38; Treinamento de Produto, p. 12.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="usb721">
+                <h3>5. USB721: ligar o computador a um equipamento serial</h3>
+
+                <p>Muitos computadores e notebooks só têm porta <strong>USB</strong>, e muitos equipamentos
+                industriais só têm porta <strong>serial</strong>. O USB721 é o conversor <strong>USB ↔ serial
+                RS232/RS485</strong> da HI: permite que o computador acesse CLPs, inversores de frequência,
+                transmissores e sensores seriais, <strong>sem alimentação externa</strong>.</p>
+
+                <div class="na-venda">
+                    <p>É um item pequeno que costuma faltar no pedido: quando o técnico do cliente vai programar ou
+                    diagnosticar um equipamento serial com o notebook, ele precisa do USB721. Pergunte: "como o seu
+                    técnico vai se conectar ao equipamento em campo?"</p>
+                </div>
+
+                <p class="fonte">Fontes: Catálogo Geral, p. 18; Treinamento de Produto, p. 13.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="radios">
+                <h3>6. Rádios: WSC720 (integrado) ou R9X307</h3>
+
+                <p>Rádios são conversores de meio físico: recebem dados por serial ou Ethernet e transmitem sem
+                fio (e o caminho inverso). São <strong>transparentes ao protocolo</strong>: só repassam os dados.
+                E <strong>nunca funcionam sozinhos</strong>: é sempre um rádio enviando para outro, vários para um
+                ou vários para vários.</p>
+
+                <div class="cartoes">
+                    <div class="cartao">
+                        <h4>WSC720: o rádio integrado</h4>
+                        <p>Vem <strong>dentro</strong> dos CLPs e gateways que têm a opção de rádio (também chamado de
+                        rádio XBee-PRO). Indicado para <strong>distâncias menores</strong>: cerca de
+                        <strong>3 km ao ar livre</strong> e <strong>150 m em ambiente interno</strong>.</p>
+                    </div>
+                    <div class="cartao">
+                        <h4>R9X307: o rádio de longa distância</h4>
+                        <p>Equipamento <strong>à parte</strong> (não é nativo aos CLPs), com rádio 900 MHz e serial
+                        RS232/RS485, em rede DigiMesh, que dá redundância à transmissão. Indicado para
+                        <strong>distâncias maiores</strong>: a HI <strong>recomenda até 60 km</strong> em área
+                        rural e cerca de 18 km em área urbana, sempre com visada.</p>
+                    </div>
+                </div>
+
+                <img class="foto" src="Files/radio.png" alt="Rádio R9X307, para trilho DIN" width="550" height="520">
+
+                <div class="analogia">
+                    <p>O WSC720 é o walkie-talkie que já vem no bolso do uniforme: prático para falar no mesmo
+                    terreno. O R9X307 é a estação de rádio com antena no alto: alcança bem mais longe, mas é um
+                    equipamento a mais e precisa de planejamento.</p>
+                </div>
+
+                <div class="atencao">
+                    <p>Os alcances são de referência e dependem de <strong>visada</strong> (uma antena enxergar a
+                    outra) e da velocidade de transmissão. A tabela técnica do Treinamento mostra valores maiores
+                    para o R9X307, mas a recomendação da HI é <strong>até 60 km</strong>. Nunca prometa alcance sem
+                    o estudo da Engenharia.</p>
+                </div>
+
+                <p class="fonte">Fontes: Treinamento de Produto, p. 14 e 15; Catálogo Geral, p. 22; recomendação de 60 km
+                confirmada por Gabriel (05/11/2026).</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="venda-radio">
+                <h3>7. A venda de rádio, passo a passo</h3>
+
+                <svg class="diagrama diagrama-corpo" viewBox="0 0 420 330" role="img"
+                     aria-labelledby="radioTitulo radioDesc">
+                    <title id="radioTitulo">Os quatro passos da venda de rádio</title>
+                    <desc id="radioDesc">Passo 1: entender quantos pontos e a distância. Passo 2: o cliente marca os
+                    pontos no Google Earth e envia o arquivo KML. Passo 3: a Engenharia de Produto faz o estudo de
+                    altimetria e verifica a visada. Passo 4: com a viabilidade confirmada, o vendedor monta a proposta
+                    com rádios, antenas e acessórios.</desc>
+                    <defs>
+                        <marker id="radioPonta" viewBox="0 0 10 10" refX="5" refY="5"
+                                markerWidth="5" markerHeight="5" orient="auto">
+                            <path class="d-ponta" d="M0,0 L10,5 L0,10 z"/>
+                        </marker>
+                    </defs>
+
+                    <rect class="d-caixa" x="10" y="10" width="400" height="58" rx="10"/>
+                    <text class="d-rotulo" x="210" y="34" text-anchor="middle">1. Quantos pontos e a que distância?</text>
+                    <text class="d-itens" x="210" y="56" text-anchor="middle">vendedor, na conversa</text>
+                    <line class="d-seta" x1="210" y1="68" x2="210" y2="84" marker-end="url(#radioPonta)"/>
+
+                    <rect class="d-caixa" x="10" y="90" width="400" height="58" rx="10"/>
+                    <text class="d-rotulo" x="210" y="114" text-anchor="middle">2. Coordenadas dos pontos (KML)</text>
+                    <text class="d-itens" x="210" y="136" text-anchor="middle">cliente marca no Google Earth e exporta</text>
+                    <line class="d-seta" x1="210" y1="148" x2="210" y2="164" marker-end="url(#radioPonta)"/>
+
+                    <rect class="d-cheio" x="10" y="170" width="400" height="58" rx="10"/>
+                    <text class="d-texto-claro" x="210" y="194" text-anchor="middle">3. Estudo de altimetria e visada</text>
+                    <text class="d-texto-claro" x="210" y="216" text-anchor="middle">Engenharia de Produto da HI</text>
+                    <line class="d-seta" x1="210" y1="228" x2="210" y2="244" marker-end="url(#radioPonta)"/>
+
+                    <rect class="d-caixa" x="10" y="250" width="400" height="58" rx="10"/>
+                    <text class="d-rotulo" x="210" y="274" text-anchor="middle">4. Proposta com rádios e antenas</text>
+                    <text class="d-itens" x="210" y="296" text-anchor="middle">só depois da viabilidade confirmada</text>
+                </svg>
+
+                <p>Por que o estudo? Morros, prédios e árvores bloqueiam o sinal. Com as coordenadas, a Engenharia
+                de Produto da HI verifica o relevo entre os pontos (altimetria) e diz se há visada, que rádio usar
+                e se é preciso, por exemplo, um ponto intermediário.</p>
+
+                <div class="na-venda">
+                    <p>Transforme o estudo em argumento: "antes de vender, a nossa engenharia confirma se o seu
+                    enlace funciona". Isso passa segurança e evita a pior venda possível: a que não funciona no
+                    campo. O pedido do arquivo KML também mostra que o cliente está engajado.</p>
+                </div>
+
+                <div class="atencao">
+                    <p>Não pule o passo 3, nem com cliente apressado. Sem estudo, não há promessa de alcance.</p>
+                </div>
+
+                <p class="fonte">Fontes: Treinamento de Produto, p. 16. "Ponto intermediário" é exemplo geral de solução para falta de visada; quem decide é a Engenharia.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="escolher">
+                <h3>8. Como escolher: o problema define o produto</h3>
+
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>O cliente diz…</th><th>Produto provável</th><th>O que anotar e confirmar</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>"Tenho 25 equipamentos Modbus RTU numa RS485 e quero ler no meu supervisório pela Ethernet (Modbus TCP)."</td>
+                                <td>GTON-C, modo bridge</td>
+                                <td>Quantidade de equipamentos, protocolo, software.</td>
+                            </tr>
+                            <tr>
+                                <td>"Minha impressora antiga é RS232 e quero mandar dados pela rede."</td>
+                                <td>GTON-C, modo transparente</td>
+                                <td>Porta da impressora e protocolo (normalmente ASCII).</td>
+                            </tr>
+                            <tr>
+                                <td>"Quero ler escravos Modbus, fazer contas e mandar em MQTT para a nuvem pelo 4G."</td>
+                                <td>GTON-P (interfaces Ethernet + 4G) e chip/plano</td>
+                                <td>Quem vai programar; plataforma de destino; sinal de celular.</td>
+                            </tr>
+                            <tr>
+                                <td>"Meu CLP já manda para o Portal pela Ethernet, mas não quero usar a rede do cliente."</td>
+                                <td>GTON-M, chip e plano (HI Connect), antena</td>
+                                <td>Sinal de celular no local.</td>
+                            </tr>
+                            <tr>
+                                <td>"O técnico precisa ligar o notebook no equipamento serial."</td>
+                                <td>USB721</td>
+                                <td>RS232 ou RS485.</td>
+                            </tr>
+                            <tr>
+                                <td>"Dois CLPs a 1 km, no mesmo terreno aberto."</td>
+                                <td>CLPs com rádio integrado (WSC720)</td>
+                                <td>Visada; coordenadas para confirmar.</td>
+                            </tr>
+                            <tr>
+                                <td>"Reservatórios a 25 km da estação, em área rural."</td>
+                                <td>R9X307</td>
+                                <td>KML para o estudo de altimetria da Engenharia.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="atencao">
+                    <p>Gateways e rádios trocam caminhos e idiomas; eles <strong>não leem sensores</strong>. Se o
+                    cliente quer ler sinais 4 a 20 mA ou liga/desliga, quem lê é um CLP (Etapa 4), que pode ter rádio
+                    ou 4G integrado.</p>
+                </div>
+
+                <p class="fonte">Fontes: Catálogo Geral, p. 7, 8, 16 a 22 e 38; Treinamento de Produto, p. 11 a 16;
+                exercícios 14, 17, 19 e 21 do Treinamento de Produto (situações).</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="na-venda">
+                <h3>9. Como isso aparece na venda</h3>
+
+                <h4>As perguntas que você faz (regra de bolso)</h4>
+                <ol>
+                    <li>"O que você já tem instalado e quer manter?" (equipamentos, software, rede)</li>
+                    <li>"Qual a porta e o protocolo de cada lado?" (Etapa 3)</li>
+                    <li>"Os dados só passam, ou precisam ser tratados no caminho?"</li>
+                    <li>"Precisa chegar à internet? Tem rede no local? Tem sinal de celular?"</li>
+                    <li>"Os pontos estão a que distância? Pode me mandar as coordenadas (KML)?"</li>
+                </ol>
+
+                <h4>Perguntas que o cliente costuma fazer</h4>
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>O cliente pergunta</th><th>Como responder</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>"Vou ter que trocar meus equipamentos para ligar na rede?"</td>
+                                <td>Na maioria dos casos, não: um gateway faz a ponte entre o que já existe e o sistema
+                                novo. Anote portas e protocolos para o suporte confirmar.</td>
+                            </tr>
+                            <tr>
+                                <td>"Qual a diferença entre GTON-C e GTON-P?"</td>
+                                <td>O GTON-C converte (meio físico e Modbus RTU/TCP). O GTON-P é programável: trata os
+                                dados antes de repassar.</td>
+                            </tr>
+                            <tr>
+                                <td>"Qual o alcance do rádio?"</td>
+                                <td>O integrado é para distâncias menores (cerca de 3 km ao ar livre); o R9X307, para
+                                maiores, com recomendação de até 60 km. Mas o alcance real só a Engenharia confirma, com
+                                as coordenadas e o estudo de visada.</td>
+                            </tr>
+                            <tr>
+                                <td>"Tenho um ESC antigo. O que coloco no lugar?"</td>
+                                <td>Os ESC são os antecessores dos GTON. Anote o modelo e o que ele faz hoje; o suporte
+                                indica o GTON equivalente.</td>
+                            </tr>
+                            <tr>
+                                <td>"Vocês fornecem o chip?"</td>
+                                <td>Sim, com o HI Connect: chip multioperadora e plano de dados, sem tempo mínimo de
+                                contrato. Valores pelo orçamento.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4>Erros comuns a evitar</h4>
+                <div class="atencao">
+                    <ul>
+                        <li>Prometer alcance de rádio sem o estudo da Engenharia.</li>
+                        <li>Vender um rádio só (rádio nunca funciona sozinho).</li>
+                        <li>Indicar GTON-C para quem precisa tratar dados (é caso de GTON-P), ou GTON-P sem combinar quem programa.</li>
+                        <li>Vender 4G sem confirmar sinal de celular, chip e antena.</li>
+                        <li>Achar que gateway lê sensor: quem lê é o CLP.</li>
+                        <li>Esquecer o USB721 quando o técnico vai usar notebook em equipamento serial.</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="glossario">
+                <h3>10. Glossário da etapa</h3>
+
+                <dl class="glossario">
+                    <dt>GTON</dt>
+                    <dd>Linha atual de gateways da HI: GTON-C (conversor), GTON-P (programável), GTON-M (modem).</dd>
+
+                    <dt>ESC (ESC717, ESC713)</dt>
+                    <dd>Linha anterior de gateways da HI, antecessora dos GTON.</dd>
+
+                    <dt>SET / S4E</dt>
+                    <dd>Siglas que indicam as interfaces: SET = Serial Ethernet; S4E = Serial 485 Ethernet.</dd>
+
+                    <dt>Modo transparente</dt>
+                    <dd>O equipamento só troca o meio físico, sem ler nem alterar os dados.</dd>
+
+                    <dt>Bridge (ponte) Modbus</dt>
+                    <dd>Modo do GTON-C que converte Modbus RTU (serial) em Modbus TCP (Ethernet) e vice-versa.</dd>
+
+                    <dt>Gateway programável</dt>
+                    <dd>Gateway que roda um programa (como um CLP) para tratar os dados no caminho. Ex.: GTON-P.</dd>
+
+                    <dt>Modem</dt>
+                    <dd>Equipamento que dá acesso à internet. O GTON-M usa a rede celular 4G.</dd>
+
+                    <dt>Nano SIM / antena SMA</dt>
+                    <dd>Formato do chip de celular e tipo de conector da antena do GTON-M.</dd>
+
+                    <dt>Anatel</dt>
+                    <dd>Agência Nacional de Telecomunicações, que certifica equipamentos de rádio e celular no Brasil.</dd>
+
+                    <dt>HI Connect</dt>
+                    <dd>Chip e plano de dados celular da HI para IoT, sem tempo mínimo de contrato.</dd>
+
+                    <dt>WSC720 (XBee-PRO)</dt>
+                    <dd>Rádio 900 MHz integrado aos CLPs e gateways HI, para distâncias menores.</dd>
+
+                    <dt>R9X307</dt>
+                    <dd>Rádio 900 MHz da HI, equipamento à parte, para distâncias maiores (recomendação: até 60 km).</dd>
+
+                    <dt>DigiMesh</dt>
+                    <dd>Tipo de rede de rádio em malha usada pelo R9X307, que dá redundância à transmissão.</dd>
+
+                    <dt>Altimetria</dt>
+                    <dd>Estudo do relevo entre dois pontos, para saber se as antenas terão visada.</dd>
+
+                    <dt>Enlace</dt>
+                    <dd>A ligação de rádio entre dois pontos.</dd>
+                </dl>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="quiz-bloco" id="quiz">
+                <h3>Quiz da etapa</h3>
+                <p>Confira o que ficou. A correção é na hora, com a explicação de cada resposta.
+                Acerte pelo menos 80% antes de marcar a etapa como concluída.</p>
+
+                <form class="quiz">
+                    <fieldset class="quiz-q" data-certa="c">
+                        <legend>1. O cliente tem 25 equipamentos Modbus RTU numa rede RS485 e quer ler os dados num supervisório que fala Modbus TCP, pela Ethernet. O que indicar?</legend>
+                        <label><input type="radio" name="q1" value="a"> USB721.</label>
+                        <label><input type="radio" name="q1" value="b"> Um rádio R9X307.</label>
+                        <label><input type="radio" name="q1" value="c"> GTON-C no modo bridge (Modbus RTU ↔ Modbus TCP).</label>
+                        <label><input type="radio" name="q1" value="d"> GTON-M.</label>
+                        <p class="quiz-explica" hidden>É exatamente o modo bridge do GTON-C: pela Ethernet, em Modbus TCP, ele acessa os equipamentos seriais que falam Modbus RTU.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="a">
+                        <legend>2. Uma impressora antiga com RS232 precisa receber dados pela Ethernet, sem alterar o protocolo. O que atende?</legend>
+                        <label><input type="radio" name="q2" value="a"> GTON-C no modo transparente.</label>
+                        <label><input type="radio" name="q2" value="b"> GTON-C no modo bridge, porque toda impressora fala Modbus.</label>
+                        <label><input type="radio" name="q2" value="c"> Um CLP RION5.</label>
+                        <label><input type="radio" name="q2" value="d"> Nenhum equipamento faz isso.</label>
+                        <p class="quiz-explica" hidden>No modo transparente, o GTON-C só troca o meio físico (serial ↔ Ethernet), sem mexer no conteúdo, então serve para qualquer protocolo, como o ASCII das impressoras.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="d">
+                        <legend>3. O cliente quer ler escravos Modbus TCP, fazer cálculos com os dados e enviá-los em MQTT para uma plataforma na nuvem pela rede celular. Qual gateway é o indicado?</legend>
+                        <label><input type="radio" name="q3" value="a"> GTON-C, que não é programável.</label>
+                        <label><input type="radio" name="q3" value="b"> USB721.</label>
+                        <label><input type="radio" name="q3" value="c"> Um rádio WSC720.</label>
+                        <label><input type="radio" name="q3" value="d"> GTON-P, programável no HIstudio, com interface Ethernet e modem 4G, mais chip e plano de dados.</label>
+                        <p class="quiz-explica" hidden>Fazer cálculos no caminho exige um gateway programável. O GTON-P fala Modbus e MQTT e pode ter Ethernet numa interface e 4G na outra.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="b">
+                        <legend>4. Um NEON5 envia dados ao Portal de Telemetria pela Ethernet da empresa onde está instalado, mas o cliente não quer depender dessa rede. O que ofertar?</legend>
+                        <label><input type="radio" name="q4" value="a"> Um rádio R9X307, que leva à internet.</label>
+                        <label><input type="radio" name="q4" value="b"> O modem GTON-M, ligado ao NEON5 pela Ethernet, com chip e plano de dados (HI Connect) e antena, se houver sinal de celular.</label>
+                        <label><input type="radio" name="q4" value="c"> Um USB721.</label>
+                        <label><input type="radio" name="q4" value="d"> Nada: sem a rede do cliente não há como chegar ao Portal.</label>
+                        <p class="quiz-explica" hidden>O GTON-M recebe por Ethernet e repassa pela rede 4G, com conexão própria. Rádio não dá acesso à internet. Confirme o sinal de celular no local.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="c">
+                        <legend>5. Para que serve o USB721?</legend>
+                        <label><input type="radio" name="q5" value="a"> Para dar acesso à internet pelo 4G.</label>
+                        <label><input type="radio" name="q5" value="b"> Para converter Modbus RTU em MQTT.</label>
+                        <label><input type="radio" name="q5" value="c"> Para um computador com porta USB acessar equipamentos seriais RS232/RS485.</label>
+                        <label><input type="radio" name="q5" value="d"> Para alimentar o CLP pela porta USB.</label>
+                        <p class="quiz-explica" hidden>O USB721 é o conversor USB ↔ serial da HI. Não precisa de alimentação externa.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="a">
+                        <legend>6. Dois pontos a cerca de 25 km, em área rural, precisam trocar dados por rádio. Qual rádio é o candidato e o que vem antes da proposta?</legend>
+                        <label><input type="radio" name="q6" value="a"> R9X307 (recomendação de até 60 km), depois do estudo de altimetria da Engenharia com as coordenadas (KML) dos pontos.</label>
+                        <label><input type="radio" name="q6" value="b"> WSC720, que alcança qualquer distância.</label>
+                        <label><input type="radio" name="q6" value="c"> R9X307, com alcance garantido sem estudo.</label>
+                        <label><input type="radio" name="q6" value="d"> Um único rádio no ponto principal.</label>
+                        <p class="quiz-explica" hidden>Para distâncias maiores, o R9X307. O integrado (WSC720) é para distâncias menores, cerca de 3 km ao ar livre. E nenhum alcance é prometido sem o estudo da Engenharia.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="d">
+                        <legend>7. Qual é a ordem certa numa venda de rádio?</legend>
+                        <label><input type="radio" name="q7" value="a"> Proposta, instalação e depois o estudo.</label>
+                        <label><input type="radio" name="q7" value="b"> Proposta direto, porque rádio sempre funciona.</label>
+                        <label><input type="radio" name="q7" value="c"> Instalar e testar no cliente, sem estudo.</label>
+                        <label><input type="radio" name="q7" value="d"> Entender pontos e distância; pedir as coordenadas (KML); estudo de altimetria pela Engenharia; proposta com a viabilidade confirmada.</label>
+                        <p class="quiz-explica" hidden>Rádio precisa de visada. Com o KML, a Engenharia de Produto verifica o relevo e confirma a viabilidade. Só então a proposta.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="b">
+                        <legend>8. No Treinamento aparece "GTON C SET". O que isso significa?</legend>
+                        <label><input type="radio" name="q8" value="a"> Um modelo diferente do GTON-C, mais novo.</label>
+                        <label><input type="radio" name="q8" value="b"> É o próprio GTON-C; SET é a abreviação de Serial Ethernet, as interfaces dele.</label>
+                        <label><input type="radio" name="q8" value="c"> Um kit com três GTON.</label>
+                        <label><input type="radio" name="q8" value="d"> Um modem 4G.</label>
+                        <p class="quiz-explica" hidden>GTON C SET e GTON-C são o mesmo equipamento. A sigla diz as interfaces, como em S4E (Serial 485 Ethernet).</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="c">
+                        <legend>9. Um cliente antigo tem um ESC717 instalado e quer ampliar a instalação. O que é correto?</legend>
+                        <label><input type="radio" name="q9" value="a"> O ESC717 é um CLP; indique um P7C.</label>
+                        <label><input type="radio" name="q9" value="b"> Garantir que qualquer GTON faz exatamente o mesmo, sem perguntar.</label>
+                        <label><input type="radio" name="q9" value="c"> Os ESC são os antecessores dos GTON; anote o modelo e o que ele faz hoje, e confirme com o suporte qual GTON indicar.</label>
+                        <label><input type="radio" name="q9" value="d"> Dizer que a HI não atende mais esse cliente.</label>
+                        <p class="quiz-explica" hidden>A linha ESC veio antes da GTON. A equivalência exata é técnica: o suporte confirma.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="a">
+                        <legend>10. O cliente quer mandar o sinal de 6 transmissores 4 a 20 mA para a nuvem e pergunta se um GTON-M resolve sozinho. O que responder?</legend>
+                        <label><input type="radio" name="q10" value="a"> Não: gateways e modems não leem sensores. É preciso algo com entradas analógicas, como um CLP (que pode ter 4G integrado); o suporte confirma a configuração.</label>
+                        <label><input type="radio" name="q10" value="b"> Sim, o GTON-M lê qualquer sensor.</label>
+                        <label><input type="radio" name="q10" value="c"> Sim, se ligar os transmissores na antena.</label>
+                        <label><input type="radio" name="q10" value="d"> Não, porque 4 a 20 mA não vai para a nuvem.</label>
+                        <p class="quiz-explica" hidden>Os GTON trocam caminho e idioma; quem lê sinais 4 a 20 mA é um CLP com entradas analógicas. NEON5 e RION5 têm versões com 4G integrado (Etapa 4).</p>
+                    </fieldset>
+
+                    <div class="quiz-acoes">
+                        <button type="submit" class="btn">Corrigir</button>
+                        <button type="button" class="btn btn-secondary quiz-refazer" hidden>Refazer</button>
+                    </div>
+                    <p class="quiz-resultado" aria-live="polite"></p>
+                </form>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="caso">
+                <h3>Para o encontro com o instrutor</h3>
+                <p>Traga preparado (para cada caso, o produto, por quê, e o que confirmaria com o suporte ou a
+                Engenharia):</p>
+                <ol>
+                    <li><strong>Explique como a um cliente</strong> o que é um gateway e cite quatro modelos de
+                    conversores e gateways da HI, com a função de cada um.</li>
+                    <li><strong>Retome os diagnósticos da Etapa 3, agora com produto:</strong>
+                        <ol type="a">
+                            <li>25 equipamentos Modbus RTU numa RS485, lidos pela Ethernet num supervisório de mercado em Modbus TCP;</li>
+                            <li>impressora antiga RS232 recebendo dados pela Ethernet, transparente ao protocolo;</li>
+                            <li>rede RS485 com 20 equipamentos Modbus RTU e um CLP de outra marca, só com RS232, que precisa buscar os dados dos escravos;</li>
+                            <li>seis transmissores de nível 4 a 20 mA enviando para a plataforma na nuvem do cliente, pelo 4G, em MQTT.</li>
+                        </ol>
+                    </li>
+                    <li><strong>Sem a rede do cliente.</strong> Um NEON5 manda dados ao Portal pela Ethernet do local, e o
+                    cliente quer deixar de usar essa rede. Que equipamento e que acessórios você oferta?</li>
+                    <li><strong>Nuvem de terceiros.</strong> Ler escravos Modbus TCP pela Ethernet, armazenar e tratar os
+                    dados com cálculos e enviar para a plataforma TagoIO pela rede celular, em MQTT. O que ofertar e o que
+                    precisa ser combinado (quem programa, chip, sinal)?</li>
+                    <li><strong>Role-play de rádio.</strong> O instrutor faz o cliente com três reservatórios a 8, 15 e 30 km
+                    da estação, que quer "a resposta hoje". Conduza a conversa até o pedido do KML, sem prometer alcance.</li>
+                </ol>
+                <p class="fonte">Casos adaptados dos exercícios 5, 14, 15, 17, 18, 19 e 21 do Treinamento de Produto.</p>
+            </div>
         </div>
     </section>
 
@@ -65,5 +714,6 @@
     <script src="progresso.js"></script>
     <script src="config-conta.js"></script>
     <script src="conta.js"></script>
+    <script src="quiz.js"></script>
 </body>
 </html>

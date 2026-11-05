@@ -53,8 +53,8 @@ Formacao-Vendas-HI/
 | 1 | A HI Tecnologia | `hi_tecnologia.html` | **Aprovada** por Gabriel (04/11/2026), depois de 2 revisões |
 | 2 | Fundamentos da Automação | `fundamentos.html` | **Aprovada** por Gabriel (04/11/2026) |
 | 3 | Comunicação Industrial | `comunicacao.html` | **Aprovada** por Gabriel (05/11/2026) |
-| 4 | Linha de CLPs | `clps.html` | **Pronta, aguardando a revisão de Gabriel** (branch `etapa-4-clps`, pull request) |
-| 5 | Gateways, Modem e Rádios | `conectividade.html` | Em produção |
+| 4 | Linha de CLPs | `clps.html` | **Aprovada** por Gabriel (05/11/2026), com revisão geral prevista para depois |
+| 5 | Gateways, Modem e Rádios | `conectividade.html` | **Pronta, aguardando a revisão de Gabriel** (branch `etapa-5-conectividade`, pull request) |
 | 6 | IHMs, Sensores e Acessórios | `ihm_sensores.html` | Em produção |
 | 7 | Supervisão Local e em Nuvem | `supervisao.html` | Em produção |
 | 8 | Soluções e Programas | `solucoes.html` | Em produção |
@@ -149,9 +149,7 @@ onde está.
 | Etapa 1, item 5 | Qual representante (TBC Automação, 4Sys Sistemas) cobre cada região (Gabriel vai levantar) |
 | Etapa 1, item 4 | Texto das áreas Indústria 4.0, Meio Ambiente, Hospitalar e Energia (catálogo p. 3–4, ilegível na extração; um print resolve) |
 | Etapa 3, item 5 | Em que situações o vendedor precisa citar o SCP-HI (entre quais equipamentos e softwares HI ele é usado); as fontes só dizem que é o protocolo proprietário da HI |
-| Etapa 5 (futura) | Alcance rural do R9X307: 60 km (catálogo) ou 105 km (Treinamento de Produto) |
-| Etapa 5 (futura) | Nome do conversor: "GTON C SET" (Treinamento) ou "GTON-C" (catálogo) |
-| Etapa 5 (futura) | ESC717/ESC713 entram na formação de vendas? (estão no site do suporte, não no catálogo) |
+| Etapa 5, item 1 | Qual GTON corresponde a cada ESC (ESC717 e ESC713) e se os ESC ainda são vendidos |
 | Etapa 6 (futura) | MMI700 ainda é vendida? BPU508 ainda é vendida (o catálogo traz a SBC513)? |
 | Etapa 9 (futura) | Processo comercial (orçamento, prazo, garantia) e regras para acionar suporte/engenharia |
 | Etapa 9 (futura) | Cases reais (problema → solução → resultado); Gabriel ofereceu compartilhar |
