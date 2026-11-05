@@ -157,8 +157,8 @@
                     combinações diferentes de entradas, saídas e recursos.</li>
                     <li><strong>Só alimentação DC</strong> (10 a 30 V DC). Não tem opção AC.</li>
                     <li><strong>Sem SD Card.</strong></li>
-                    <li><strong>Memória retentiva com supercapacitor:</strong> guarda os valores importantes do
-                    programa mesmo quando a energia cai.</li>
+                    <li><strong>Memória retentiva:</strong> guarda os valores importantes do programa mesmo quando a
+                    energia cai.</li>
                     <li><strong>Conectividade:</strong> opções com serial RS232 ou RS485, Ethernet/Wi-Fi, rádio
                     900 MHz ou modem 4G, conforme o modelo.</li>
                     <li>Processador mais simples, com menor capacidade de programação e de variáveis que o NEON5 e
@@ -267,8 +267,8 @@
                     <li><strong>Conectividade:</strong> Ethernet, RS485 e RS232.</li>
                     <li><strong>SD Card</strong>.</li>
                     <li>A linha tem módulos próprios (diferentes dos módulos do RION5 e do NEON5), com entradas e
-                    saídas digitais e analógicas, saídas a relé, entradas PT100, célula de carga e canais de
-                    encoder/contador rápido.</li>
+                    saídas digitais e analógicas e entradas para sinais especiais (temperatura, pesagem, pulsos
+                    rápidos).</li>
                 </ul>
 
                 <div class="atencao">
@@ -353,11 +353,10 @@
                         </thead>
                         <tbody>
                             <tr><td>Entradas e saídas digitais</td><td>Liga/desliga: botões, sensores de presença, relés, sinaleiros.</td></tr>
-                            <tr><td>Saídas digitais a transistor ou a relé</td><td>Dois jeitos de acionar a carga; qual usar é decisão técnica, com o suporte.</td></tr>
                             <tr><td>Entradas e saídas analógicas</td><td>Medições e comandos de 0 a 100% (4 a 20 mA, 0 a 10 V).</td></tr>
-                            <tr><td>Entradas PT100 e NTC</td><td>Sensores de temperatura que precisam de entrada própria.</td></tr>
+                            <tr><td>Entradas para sensores de temperatura (como o PT100)</td><td>Sensores de temperatura que precisam de entrada própria.</td></tr>
                             <tr><td>Entrada para célula de carga</td><td>Pesagem.</td></tr>
-                            <tr><td>Encoder, contador rápido, PWM</td><td>Pulsos rápidos (medidores de vazão a pulso, posição e giro) e comandos por pulso.</td></tr>
+                            <tr><td>Entradas para pulsos rápidos</td><td>Medidores de vazão a pulso e sensores de posição e giro.</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -366,8 +365,7 @@
                 <strong>P7C</strong>. Elas não se misturam.</p>
 
                 <div class="atencao">
-                    <p>Uma combinação de sinais nem sempre cabe num único módulo, e alguns canais de um módulo podem
-                    ser excludentes entre si (usar um recurso desativa outro). Por isso, quem fecha a escolha dos
+                    <p>Uma combinação de sinais nem sempre cabe num único módulo. Por isso, quem fecha a escolha dos
                     módulos é o suporte, a partir da sua lista de sinais. Não prometa "cabe num RION5" sem essa
                     confirmação.</p>
                 </div>
@@ -450,7 +448,7 @@
                                 <td>Receitas pedem SD Card. A tela é outro item (Etapa 6).</td>
                             </tr>
                             <tr>
-                                <td>"São 12 sinais, mas o CLP tem que ligar direto na tomada."</td>
+                                <td>"São 12 sinais, mas o CLP tem que ser alimentado direto pela rede elétrica."</td>
                                 <td>NEON5</td>
                                 <td>Poucos pontos, mas AC: o RION5 não tem opção AC.</td>
                             </tr>
@@ -491,7 +489,7 @@
                 <ol>
                     <li>"Quantos sinais de cada tipo o CLP vai ler e comandar?" (a lista de sinais)</li>
                     <li>"Os sinais estão todos no mesmo painel ou espalhados? A que distância?"</li>
-                    <li>"O CLP vai ligar na tomada ou num painel com fonte de 24 V DC?"</li>
+                    <li>"O CLP vai ser alimentado direto pela rede elétrica ou por uma fonte de 24 V DC no painel?"</li>
                     <li>"Precisa guardar histórico de dados ou receitas de produção?"</li>
                     <li>"Por onde o CLP vai conversar: tela, computador, rádio, internet?"</li>
                     <li>"A sua equipe vai programar, ou quer que a HI entregue o projeto pronto?"</li>
@@ -584,10 +582,7 @@
                     <dd>Conjunto de valores (quantidades, tempos, temperaturas) de um produto, guardado para ser carregado no CLP.</dd>
 
                     <dt>Memória retentiva</dt>
-                    <dd>Memória que guarda valores mesmo quando a energia cai. No RION5, mantida por um supercapacitor.</dd>
-
-                    <dt>Saída a transistor / a relé</dt>
-                    <dd>Dois tipos de saída digital. A escolha é técnica e é feita com o suporte.</dd>
+                    <dd>Memória que guarda valores mesmo quando a energia cai.</dd>
 
                     <dt>HIstudio</dt>
                     <dd>Software gratuito da HI para programar, testar e documentar os CLPs (e o GTON-P).</dd>
@@ -695,7 +690,7 @@
                         <label><input type="radio" name="q10" value="b"> Escolher o módulo mais barato.</label>
                         <label><input type="radio" name="q10" value="c"> Levar ao suporte a lista de sinais (tipos, quantidades, sinais especiais e reserva); o suporte fecha a combinação de módulos.</label>
                         <label><input type="radio" name="q10" value="d"> Deixar o cliente escolher pelo catálogo, sem conferir.</label>
-                        <p class="quiz-explica" hidden>Cada módulo tem uma combinação de pontos, e alguns canais são excludentes. O vendedor leva a necessidade bem descrita; a escolha exata é técnica.</p>
+                        <p class="quiz-explica" hidden>Cada módulo tem uma combinação de pontos. O vendedor leva a necessidade bem descrita; a escolha exata é técnica.</p>
                     </fieldset>
 
                     <div class="quiz-acoes">
