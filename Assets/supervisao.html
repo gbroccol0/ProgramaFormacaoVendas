@@ -137,8 +137,8 @@
                 </div>
 
                 <p>A HI tem dois supervisórios: o <strong>HIscada Pro</strong>, que roda em computadores da rede
-                local, e o <strong>Portal de Telemetria</strong>, que roda na nuvem. A IHM (Etapa 6) mostra uma
-                máquina, no painel; o supervisório mostra a planta inteira, para várias pessoas.</p>
+                local, e o <strong>Portal de Telemetria</strong>, que roda na nuvem. A IHM (Etapa 6) também
+                supervisiona, mas uma máquina, no local; o supervisório mostra a planta inteira, para várias pessoas.</p>
 
                 <p class="fonte">Fontes: Treinamento de Produto, p. 19 e 23; Catálogo Geral, p. 30 e 33.</p>
             </div>
@@ -161,15 +161,13 @@
                     <li>gerência de alarmes e envio de e-mails;</li>
                     <li>relatórios personalizados, históricos e banco de dados;</li>
                     <li>gerência de usuários;</li>
-                    <li>scripts na linguagem LUA e modelos de processo;</li>
                     <li>recursos para a norma <strong>CFR 21 Part 11</strong> (exigência de rastreabilidade de
                     registros eletrônicos, comum em indústrias reguladas, como a farmacêutica).</li>
                 </ul>
 
-                <p>O HIscada Pro se comunica com <strong>servidores de dados OPC</strong>, um padrão de
-                comunicação. Isso dá acesso a equipamentos de <strong>qualquer fabricante</strong>, desde que haja um
-                servidor OPC "no meio de campo", traduzindo o protocolo do equipamento para OPC. Na HI, esse servidor
-                é o <strong>MPL Server</strong> (item 4).</p>
+                <p>O HIscada Pro recebe os dados por um padrão chamado <strong>OPC</strong>. Com um "tradutor" no meio
+                do caminho, ele acessa equipamentos de <strong>qualquer fabricante</strong>. Na HI, esse tradutor é o
+                <strong>MPL Server</strong> (item 4).</p>
 
                 <div class="na-venda">
                     <p>O HIscada Pro é a resposta para "quero ver toda a planta num computador da sala de controle",
@@ -198,18 +196,18 @@
                 <div class="tabela">
                     <table>
                         <thead>
-                            <tr><th>Licença</th><th>Servidor OPC</th><th>Tags OPC (máx.)</th><th>Tags locais (máx.)</th><th>Viewers (máx.)</th><th>Sessão (máx.)</th></tr>
+                            <tr><th>Licença</th><th>Servidor OPC</th><th>Tags (máx.)</th><th>Viewers (máx.)</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>Teste</td><td>qualquer</td><td>16</td><td>32</td><td>1</td><td>2 h</td></tr>
-                            <tr><td>L1</td><td>MPL Server</td><td>32</td><td>64</td><td>2</td><td>sem limite</td></tr>
-                            <tr><td>L2</td><td>MPL Server</td><td>160</td><td>sem limite</td><td>5</td><td>sem limite</td></tr>
-                            <tr><td>L3</td><td>qualquer</td><td>160</td><td>sem limite</td><td>5</td><td>sem limite</td></tr>
-                            <tr><td>L4</td><td>MPL Server</td><td>600</td><td>sem limite</td><td>sem limite</td><td>sem limite</td></tr>
-                            <tr><td>L5</td><td>qualquer</td><td>600</td><td>sem limite</td><td>sem limite</td><td>sem limite</td></tr>
-                            <tr><td>L6</td><td>MPL Server</td><td>sem limite</td><td>sem limite</td><td>sem limite</td><td>sem limite</td></tr>
-                            <tr><td>L7</td><td>qualquer</td><td>sem limite</td><td>sem limite</td><td>sem limite</td><td>sem limite</td></tr>
-                            <tr><td>LDev (desenvolvimento)</td><td>qualquer</td><td>sem limite</td><td>sem limite</td><td>sem limite</td><td>2 h</td></tr>
+                            <tr><td>Teste</td><td>qualquer</td><td>16</td><td>1</td></tr>
+                            <tr><td>L1</td><td>MPL Server</td><td>32</td><td>2</td></tr>
+                            <tr><td>L2</td><td>MPL Server</td><td>160</td><td>5</td></tr>
+                            <tr><td>L3</td><td>qualquer</td><td>160</td><td>5</td></tr>
+                            <tr><td>L4</td><td>MPL Server</td><td>600</td><td>sem limite</td></tr>
+                            <tr><td>L5</td><td>qualquer</td><td>600</td><td>sem limite</td></tr>
+                            <tr><td>L6</td><td>MPL Server</td><td>sem limite</td><td>sem limite</td></tr>
+                            <tr><td>L7</td><td>qualquer</td><td>sem limite</td><td>sem limite</td></tr>
+                            <tr><td>LDev (desenvolvimento)</td><td>qualquer</td><td>sem limite</td><td>sem limite</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -244,11 +242,8 @@
             <div class="step" id="mpl">
                 <h3>4. MPL Server: o tradutor entre os equipamentos e o HIscada</h3>
 
-                <p>Servidores OPC são softwares que abrem conexão (serial ou Ethernet) com os equipamentos (CLPs,
-                IHMs, inversores), leem os dados no protocolo de cada um e os convertem para o padrão
-                <strong>OPC</strong>, para que supervisórios como o HIscada Pro tenham acesso.</p>
-
-                <p>O <strong>MPL Server</strong> é o servidor OPC da HI. Ele converte <strong>Modbus RTU ou TCP</strong>
+                                <p>O <strong>MPL Server</strong> é o software da HI que lê os equipamentos (CLPs, IHMs, inversores) e
+                entrega os dados ao supervisório: um "servidor OPC". Ele converte <strong>Modbus RTU ou TCP</strong>
                 para OPC: conversa com qualquer equipamento que fale Modbus, inclusive os CLPs da HI, e entrega os
                 dados para qualquer supervisório OPC, inclusive o HIscada Pro. Na prática, ele é usado junto com o
                 HIscada Pro em quase todos os projetos (o Treinamento fala em 99% das vezes).</p>
@@ -550,8 +545,6 @@
                     <dt>CFR 21 Part 11</dt>
                     <dd>Norma americana sobre registros e assinaturas eletrônicas, exigida em setores regulados como o farmacêutico.</dd>
 
-                    <dt>LUA</dt>
-                    <dd>Linguagem de programação usada para scripts no HIscada Pro.</dd>
                 </dl>
             </div>
 
