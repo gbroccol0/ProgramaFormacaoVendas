@@ -782,3 +782,45 @@ html[data-theme="dark"] .diagrama .d-caixa {
 html[data-theme="dark"] .diagrama .d-nota {
     fill: var(--esc-texto-2);
 }
+
+/* Diagramas no meio do texto (Etapa 2 em diante): centralizados,
+   com espaço em volta. A régua analógica e a faixa de comunicação
+   usam o laranja da marca, legível nos dois temas. */
+.step .diagrama-corpo {
+    display: block;
+    margin: 18px auto;
+}
+
+.diagrama .d-cheio {
+    fill: var(--laranja-hi);
+}
+
+.diagrama .d-linha {
+    stroke: var(--azul-hi);
+    stroke-width: 1.5;
+    stroke-dasharray: 4 4;
+}
+
+.diagrama .d-texto-claro {
+    fill: #fff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+html[data-theme="dark"] .diagrama .d-linha {
+    stroke: var(--esc-azul-texto);
+}
+
+/* Foto de produto ou de tela dentro de uma seção (Etapa 4 em diante). */
+.step .foto {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    margin: 16px auto;
+    border-radius: 12px;
+}
+
+html[data-theme="dark"] .step .foto {
+    background: #fff;
+}
