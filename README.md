@@ -56,8 +56,8 @@ Formacao-Vendas-HI/
 | 4 | Linha de CLPs | `clps.html` | **Aprovada** por Gabriel (05/11/2026), com revisão geral prevista para depois |
 | 5 | Gateways, Modem e Rádios | `conectividade.html` | **Pronta, aguardando revisão** (branch `etapa-5-conectividade`, PR #4) |
 | 6 | IHMs, Sensores e Acessórios | `ihm_sensores.html` | **Pronta, aguardando revisão** (branch `etapa-6-ihm-sensores`, PR #5) |
-| 7 | Supervisão Local e em Nuvem | `supervisao.html` | **Pronta, aguardando revisão** (branch `etapa-7-supervisao`, pull request) |
-| 8 | Soluções e Programas | `solucoes.html` | Em produção |
+| 7 | Supervisão Local e em Nuvem | `supervisao.html` | **Pronta, aguardando revisão** (branch `etapa-7-supervisao`, PR #6) |
+| 8 | Soluções e Programas | `solucoes.html` | **Pronta, aguardando revisão** (branch `etapa-8-solucoes`, PR #7) |
 | 9 | A Conversa de Venda | `conversa_venda.html` | Em produção |
 | 10 | Avaliação Final | `avaliacao_final.html` | Em produção |
 
@@ -153,6 +153,8 @@ onde está.
 | Etapa 6, itens 3 e 6 | MMI700 ainda é vendida? BPU508 ainda é vendida (o catálogo traz a SBC513)? |
 | Etapa 6, item 2 | O SmartManagerPro (software da GTI5) é gratuito, como os das IHMs de revenda? |
 | Etapa 6, item 7 | Perfil típico de cliente da caixa GEM100 e se ela é vendida avulsa |
+| Etapa 8, item 1 | Quantos e quais sinais o DAP5 lê e qual CLP e comunicação vêm dentro dele |
+| Etapa 8, item 6 | Critérios e processo para um integrador entrar no HI Partner |
 | Etapa 9 (futura) | Processo comercial (orçamento, prazo, garantia) e regras para acionar suporte/engenharia |
 | Etapa 9 (futura) | Cases reais (problema → solução → resultado); Gabriel ofereceu compartilhar |
 | Fase 4 | Lista dos vídeos/tutoriais do suporte reaproveitáveis (começar pelos links do site Forma-o-HI) |

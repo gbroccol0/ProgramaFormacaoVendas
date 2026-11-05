@@ -169,12 +169,37 @@ Oferecido também: preparar slides e roteiro de cada vídeo a partir do texto.
 | 4 Linha de CLPs | `Assets/clps.html` | **Aprovada** ("pode continuar", 05/11/2026). PR #3, branch `etapa-4-clps`. |
 | 5 Gateways, Modem e Rádios | `Assets/conectividade.html` | **Pronta, aguardando revisão.** Branch `etapa-5-conectividade` (a partir de `etapa-4-clps`), PR #4. |
 | 6 IHMs, Sensores e Acessórios | `Assets/ihm_sensores.html` | **Pronta, aguardando revisão.** Branch `etapa-6-ihm-sensores` (a partir da 5), PR #5. |
-| 7 Supervisão Local e em Nuvem | `Assets/supervisao.html` | **Pronta, aguardando revisão.** Branch `etapa-7-supervisao` (a partir da 6), PR próprio. |
-| 8 a 10 | `Assets/*.html` | Páginas "em produção": selo, objetivos, tempo, caixa "Conteúdo em produção" e fontes previstas. |
+| 7 Supervisão Local e em Nuvem | `Assets/supervisao.html` | **Pronta, aguardando revisão.** Branch `etapa-7-supervisao` (a partir da 6), PR #6. |
+| 8 Soluções e Programas | `Assets/solucoes.html` | **Pronta, aguardando revisão.** Branch `etapa-8-solucoes` (a partir da 7), PR #7. Testada (quiz, conclusão, escuro, 360 px, busca). |
+| 9 e 10 | `Assets/*.html` | Páginas "em produção": selo, objetivos, tempo, caixa "Conteúdo em produção" e fontes previstas. |
 
-**Próximo passo:** seguir em sequência (decisão de 05/11/2026, seção 3): Etapa 8
-(Soluções e Programas), depois 9 e 10, cada uma numa branch criada a partir da
-anterior e com PR próprio.
+### ONDE PAREI (05/11/2026, fim dos créditos na nuvem)
+- Etapas 2 a 8 prontas, cada uma numa branch encadeada e com PR aberto:
+  #1 (Etapa 2) → #2 (3) → #3 (4) → #4 (5) → #5 (6) → #6 (7) → #7 (8).
+  **Merge nessa ordem**; nada foi para o `main`, nada foi publicado.
+- Gabriel aprovou até a Etapa 4; as Etapas 5 a 8 foram feitas em sequência
+  sem revisão (ele pediu) e serão revisadas depois.
+- **Próximo passo no VS Code:** `git fetch origin` e
+  `git checkout etapa-8-solucoes` (é a branch mais recente e contém todas as
+  anteriores). Criar `etapa-9-conversa` a partir dela e produzir a **Etapa 9
+  (A Conversa de Venda)**: roteiro de qualificação juntando as perguntas de bolso
+  das Etapas 2–8, arquiteturas típicas "do sensor à nuvem", lista do que não
+  prometer, quando acionar suporte/engenharia (processo comercial ainda
+  `[CONFIRMAR]`), exercício 9 (onde consultar informações). Depois a **Etapa 10
+  (Avaliação Final)** e a Fase 4.
+- Ferramentas usadas na nuvem (não estão no repositório, recriar se quiser):
+  teste com Playwright que responde o quiz, marca a etapa, mede 360 px, tira
+  print dos SVGs nos dois temas e testa a busca da home; e um gerador de
+  prévia autocontida (CSS, quiz e imagens embutidos) para mandar a Gabriel.
+  Tabelas em imagem dos PDFs foram lidas com `pdftoppm -f N -l N -r 200`.
+
+**Etapa 8, o que foi feito (para não refazer):** 10 seções (DAP5 com a tabela
+do catálogo p. 35; óleo e gás com os 4 métodos de elevação, números e recursos
+do bombeio mecânico, clientes do catálogo; HI OilTools; tabela "o cliente diz
+→ programa"; HI OEM com produtos elegíveis; HI Partner; HI University;
+representantes; na venda; glossário), 1 diagrama, quiz de 10 e caso com 3
+itens. Três `[CONFIRMAR]` novos: sinais/CLP/comunicação do DAP5; critérios para
+entrar no HI Partner; representante por região (repete o da Etapa 1).
 
 **Etapa 7, o que foi feito (para não refazer):** 10 seções (por que
 supervisionar; HIscada Pro com recursos do catálogo p. 33 e OPC; licença do
