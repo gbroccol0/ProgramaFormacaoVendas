@@ -32,7 +32,7 @@
                  aria-labelledby="meiosTitulo meiosDesc">
                 <title id="meiosTitulo">Os caminhos de comunicação de um CLP</title>
                 <desc id="meiosDesc">Um CLP no centro, ligado a seis caminhos. Com cabo: RS232 liga um
-                equipamento próximo; RS485 liga vários equipamentos numa rede com um mestre; Ethernet liga
+                equipamento próximo; RS485 liga até 32 equipamentos numa mesma rede; Ethernet liga
                 computadores e supervisórios na rede local. Sem fio: Wi-Fi liga ao roteador e à internet;
                 rádio 900 MHz liga pontos distantes sem cabo; celular 4G leva os dados à internet de
                 qualquer lugar.</desc>
@@ -52,7 +52,7 @@
 
                 <rect class="d-caixa" x="10" y="190" width="180" height="62" rx="10"/>
                 <text class="d-rotulo" x="100" y="216" text-anchor="middle">RS485</text>
-                <text class="d-itens" x="100" y="238" text-anchor="middle">1 mestre, vários na rede</text>
+                <text class="d-itens" x="100" y="238" text-anchor="middle">até 32 na mesma rede</text>
 
                 <rect class="d-caixa" x="10" y="306" width="180" height="62" rx="10"/>
                 <text class="d-rotulo" x="100" y="332" text-anchor="middle">Ethernet</text>
@@ -161,10 +161,10 @@
 
                 <svg class="diagrama diagrama-corpo" viewBox="0 0 420 300" role="img"
                      aria-labelledby="serialTitulo serialDesc">
-                    <title id="serialTitulo">RS232 ponto a ponto e RS485 com mestre e vários equipamentos</title>
+                    <title id="serialTitulo">RS232 ponto a ponto e RS485 com vários equipamentos</title>
                     <desc id="serialDesc">Em cima, RS232: um CLP ligado por um cabo a um único equipamento.
-                    Embaixo, RS485: um CLP mestre ligado a um cabo que passa por três equipamentos escravos
-                    (equipamento 1, 2 e N) na mesma rede.</desc>
+                    Embaixo, RS485: um CLP ligado a um cabo que passa por vários equipamentos
+                    (equipamento 1, 2 e N) na mesma rede, até 32 equipamentos: 1 mestre e até 31 escravos.</desc>
 
                     <text class="d-rotulo" x="10" y="24">RS232: um para um</text>
                     <rect class="d-caixa" x="10" y="38" width="120" height="56" rx="10"/>
@@ -174,7 +174,7 @@
                     <text class="d-itens" x="350" y="62" text-anchor="middle">1 equipamento</text>
                     <text class="d-itens" x="350" y="80" text-anchor="middle">(ex.: IHM)</text>
 
-                    <text class="d-rotulo" x="10" y="140">RS485: um mestre, vários na rede</text>
+                    <text class="d-rotulo" x="10" y="140">RS485: vários na mesma rede</text>
                     <rect class="d-caixa" x="10" y="154" width="120" height="56" rx="10"/>
                     <text class="d-rotulo" x="70" y="180" text-anchor="middle">CLP</text>
                     <text class="d-itens" x="70" y="198" text-anchor="middle">mestre</text>
@@ -188,7 +188,7 @@
                     <text class="d-itens" x="285" y="259" text-anchor="middle">equip. 2</text>
                     <rect class="d-caixa" x="335" y="232" width="80" height="44" rx="8"/>
                     <text class="d-itens" x="375" y="259" text-anchor="middle">equip. N</text>
-                    <text class="d-nota" x="210" y="294" text-anchor="middle">O mestre pergunta; cada escravo responde quando é chamado.</text>
+                    <text class="d-nota" x="210" y="294" text-anchor="middle">Até 32 equipamentos: 1 mestre (o CLP) e até 31 escravos.</text>
                 </svg>
 
                 <div class="cartoes">
@@ -200,9 +200,9 @@
                     </div>
                     <div class="cartao">
                         <h4>RS485 (serial)</h4>
-                        <p>Um equipamento <strong>mestre</strong> (um CLP ou um gateway) controla e busca dados
-                        de <strong>vários equipamentos</strong> ligados na mesma rede: inversores de frequência,
-                        medidores de energia, I/O remotos.</p>
+                        <p>Liga <strong>vários equipamentos na mesma rede</strong>, no mesmo cabo: inversores de
+                        frequência, medidores de energia, I/O remotos. São <strong>até 32 equipamentos</strong>: 1
+                        mestre (o CLP ou um gateway, que busca os dados) e até 31 escravos.</p>
                     </div>
                     <div class="cartao">
                         <h4>Ethernet (rede)</h4>
@@ -222,7 +222,7 @@
                         </thead>
                         <tbody>
                             <tr><td>RS232</td><td>2 (ponto a ponto)</td><td>Curta: equipamentos lado a lado, no mesmo painel (por volta de 15 m).</td></tr>
-                            <tr><td>RS485</td><td>1 mestre e vários escravos na mesma rede</td><td>Maior: centenas de metros, até cerca de 1.200 m de cabo.</td></tr>
+                            <tr><td>RS485</td><td>Até 32 na mesma rede (1 mestre e até 31 escravos)</td><td>Maior: centenas de metros, até cerca de 1.200 m de cabo.</td></tr>
                             <tr><td>Ethernet</td><td>Muitos, pela rede da empresa (switches)</td><td>Cerca de 100 m de cabo entre o equipamento e o switch; a rede da empresa leva mais longe.</td></tr>
                         </tbody>
                     </table>
@@ -257,8 +257,9 @@
                     </div>
                     <div class="cartao">
                         <h4>Rádio 900 MHz</h4>
-                        <p>Comunica dados sem fio a <strong>longas distâncias</strong>, em campo aberto, entre
-                        CLPs e outros equipamentos. Elimina o cabo e <strong>não tem mensalidade</strong>.
+                        <p>Comunica dados sem fio entre CLPs e outros equipamentos, de distâncias curtas (inclusive
+                        em ambientes fechados) a <strong>longas distâncias</strong>. Elimina o cabo e <strong>não tem
+                        mensalidade</strong>.
                         Rádios <strong>nunca funcionam sozinhos</strong>: é sempre um rádio falando com outro,
                         vários com um ou vários com vários.</p>
                     </div>
@@ -272,22 +273,22 @@
 
                 <div class="analogia">
                     <p>O rádio é como um walkie-talkie: dois aparelhos conversam direto entre si, sem conta de
-                    telefone, mas precisam "se enxergar" e não levam ninguém à internet. O 4G é como o
+                    telefone, mas, quanto mais longe, mais precisam "se enxergar", e não levam ninguém à internet. O 4G é como o
                     celular: chega à internet de quase qualquer lugar, mas precisa de um chip e de um plano de
                     dados.</p>
                 </div>
 
                 <h4>Rádio exige estudo antes da venda</h4>
-                <p>As antenas dos rádios precisam de <strong>visada</strong>: uma precisa "enxergar" a outra,
-                sem morros ou prédios no caminho. Por isso o cliente informa as <strong>coordenadas
-                geográficas</strong> dos pontos (pode marcá-los no Google Earth e exportar um arquivo
-                <strong>KML</strong>), e a <strong>Engenharia de Produto da HI</strong> faz o estudo de
-                altimetria para ver se a ligação é viável. A HI trabalha com dois rádios: o integrado aos
+                <p>Em ligações a longa distância, as antenas dos rádios precisam de <strong>visada</strong>: uma
+                precisa "enxergar" a outra, sem morros ou prédios no caminho. Por isso o cliente informa as
+                <strong>coordenadas geográficas</strong> dos pontos (pode marcá-los no Google Earth e exportar um
+                arquivo <strong>KML</strong>), e o <strong>suporte técnico</strong> ou a <strong>engenharia de
+                aplicação</strong> da HI faz o estudo de altimetria para ver se a ligação é viável. A HI trabalha com dois rádios: o integrado aos
                 CLPs e gateways (WSC720), para distâncias menores, e o R9X307, para distâncias maiores.
                 Você vê os detalhes e o alcance de cada um na Etapa 5.</p>
 
                 <div class="atencao">
-                    <p>Nunca prometa alcance de rádio sem o estudo da Engenharia. E não ofereça rádio para
+                    <p>Nunca prometa alcance de rádio sem o estudo de viabilidade. E não ofereça rádio para
                     "levar à internet": ele liga pontos entre si. Para chegar à nuvem, o dado precisa, em algum
                     ponto, de uma conexão com a internet (Ethernet, Wi-Fi ou 4G).</p>
                 </div>
@@ -337,7 +338,7 @@
                     <text class="d-itens" x="73" y="232" text-anchor="middle">1, perto:</text>
                     <text class="d-rotulo" x="73" y="252" text-anchor="middle">RS232</text>
                     <rect class="d-caixa" x="147" y="208" width="126" height="56" rx="8"/>
-                    <text class="d-itens" x="210" y="232" text-anchor="middle">vários, 1 mestre:</text>
+                    <text class="d-itens" x="210" y="232" text-anchor="middle">vários (até 32):</text>
                     <text class="d-rotulo" x="210" y="252" text-anchor="middle">RS485</text>
                     <rect class="d-caixa" x="284" y="208" width="126" height="56" rx="8"/>
                     <text class="d-itens" x="347" y="232" text-anchor="middle">computadores:</text>
@@ -345,7 +346,7 @@
 
                     <rect class="d-caixa" x="10" y="290" width="400" height="44" rx="10"/>
                     <text class="d-rotulo" x="210" y="318" text-anchor="middle">3. Longe e sem cabo? → Rádio 900 MHz</text>
-                    <text class="d-nota" x="210" y="354" text-anchor="middle">Rádio sempre com estudo de visada pela Engenharia.</text>
+                    <text class="d-nota" x="210" y="354" text-anchor="middle">Rádio a longa distância sempre com estudo de visada.</text>
                 </svg>
 
                 <div class="tabela">
@@ -361,7 +362,7 @@
                             </tr>
                             <tr>
                                 <td>"Tenho 20 medidores de energia e quero ler todos."</td>
-                                <td>RS485, com o CLP ou um gateway como mestre</td>
+                                <td>RS485 (até 31 equipamentos lidos pelo CLP ou por um gateway)</td>
                                 <td>Quantos são, modelo, protocolo (normalmente Modbus RTU).</td>
                             </tr>
                             <tr>
@@ -372,7 +373,7 @@
                             <tr>
                                 <td>"Os reservatórios ficam a quilômetros da estação, sem cabo."</td>
                                 <td>Rádio 900 MHz</td>
-                                <td>Coordenadas dos pontos (KML) para o estudo de visada da Engenharia.</td>
+                                <td>Coordenadas dos pontos (KML) para o estudo de visada.</td>
                             </tr>
                             <tr>
                                 <td>"Quero acompanhar pelo celular, e no local não tem internet."</td>
@@ -437,22 +438,8 @@
                     </table>
                 </div>
 
-                <p>Dois outros nomes que você vai ouvir mais adiante: <strong>OPC</strong>, o padrão que o
-                supervisório HIscada Pro usa para receber dados (quem traduz o Modbus dos equipamentos para OPC
-                é o software <strong>MPL Server</strong>, na Etapa 7), e <strong>HTTP</strong>, o protocolo da
-                web, que o gateway programável GTON-P também fala.</p>
-
-                <h4>Mestre e escravo</h4>
-                <p>No Modbus, um equipamento é o <strong>mestre</strong>: ele pergunta. Os outros são
-                <strong>escravos</strong>: respondem quando são chamados, cada um com um endereço na rede.
-                Quando o cliente fala em "ler os escravos Modbus", ele está dizendo que precisa de um mestre
-                (um CLP, um gateway ou um software) para buscar os dados.</p>
-
-                <div class="analogia">
-                    <p>Pense numa chamada na sala de aula. O professor (mestre) diz um nome e só aquele aluno
-                    (escravo) responde. Ninguém fala fora da vez, por isso todos podem estar na mesma sala, ou
-                    no mesmo cabo RS485.</p>
-                </div>
+                <p>Quando o cliente fala em "ler os escravos Modbus", ele está dizendo que precisa de um
+                equipamento (um CLP, um gateway ou um software) que busque os dados desses equipamentos.</p>
 
                 <div class="atencao">
                     <p>Meio físico e protocolo andam juntos, mas são coisas diferentes. "Esse equipamento tem
@@ -468,8 +455,7 @@
                 </div>
 
                 <p class="fonte">Fontes: Treinamento de Produto, p. 4, 11, 19 a 21; apresentação de CLPs, slide 3;
-                Catálogo Geral, p. 5, 16, 17, 30 e 32. Mestre e escravo: conceito geral do Modbus (o Catálogo,
-                p. 17, usa esses termos).</p>
+                Catálogo Geral, p. 5, 16, 17, 30 e 32.</p>
             </div>
 
 
@@ -609,13 +595,13 @@
                             </tr>
                             <tr>
                                 <td>"Qual a diferença entre RS232 e RS485?"</td>
-                                <td>RS232 liga dois equipamentos, ponto a ponto. RS485 liga um mestre a vários
-                                equipamentos na mesma rede.</td>
+                                <td>RS232 liga dois equipamentos, ponto a ponto. RS485 liga vários equipamentos na mesma
+                                rede: até 32 (1 mestre e até 31 escravos).</td>
                             </tr>
                             <tr>
                                 <td>"Dá para ligar sem cabo? São 10 km."</td>
                                 <td>Pode ser por rádio, sem mensalidade, desde que as antenas tenham visada. Peça as
-                                coordenadas (KML) para o estudo da Engenharia antes de confirmar.</td>
+                                coordenadas (KML) para o estudo de visada antes de confirmar.</td>
                             </tr>
                             <tr>
                                 <td>"Lá não tem internet. Como os dados chegam à nuvem?"</td>
@@ -673,7 +659,7 @@
                     <dd>Comunicação serial ponto a ponto: liga dois equipamentos, próximos.</dd>
 
                     <dt>RS485</dt>
-                    <dd>Comunicação serial em rede: um mestre conversa com vários equipamentos no mesmo cabo.</dd>
+                    <dd>Comunicação serial em rede: até 32 equipamentos no mesmo cabo (1 mestre e até 31 escravos).</dd>
 
                     <dt>Ethernet</dt>
                     <dd>O cabo de rede dos computadores. Liga o equipamento à rede local da empresa.</dd>
@@ -682,13 +668,13 @@
                     <dd>Rede sem fio local, que chega à internet por um roteador.</dd>
 
                     <dt>Rádio 900 MHz</dt>
-                    <dd>Comunicação sem fio de longa distância entre pontos, sem mensalidade. Precisa de visada.</dd>
+                    <dd>Comunicação sem fio entre equipamentos, de distâncias curtas (inclusive em ambientes fechados) a longas, sem mensalidade. A longa distância, precisa de visada.</dd>
 
                     <dt>Visada</dt>
                     <dd>Quando uma antena "enxerga" a outra, sem obstáculos no caminho.</dd>
 
                     <dt>KML</dt>
-                    <dd>Arquivo com pontos marcados no mapa (por exemplo, no Google Earth). É o que a Engenharia usa no estudo de altimetria.</dd>
+                    <dd>Arquivo com pontos marcados no mapa (por exemplo, no Google Earth). É o que o suporte técnico ou a engenharia de aplicação usa no estudo de altimetria.</dd>
 
                     <dt>Celular 4G / modem</dt>
                     <dd>Acesso à internet pela rede de celular, com chip de operadora. O modem é o equipamento que faz isso.</dd>
@@ -700,7 +686,7 @@
                     <dd>O protocolo mais usado na automação. RTU viaja no cabo serial; TCP, na Ethernet.</dd>
 
                     <dt>Mestre e escravo</dt>
-                    <dd>No Modbus, o mestre pergunta e os escravos respondem quando são chamados.</dd>
+                    <dd>Numa rede, o mestre é o equipamento que busca os dados (normalmente o CLP ou um gateway); os escravos são os outros.</dd>
 
                     <dt>SCP-HI</dt>
                     <dd>Protocolo próprio (proprietário) da HI Tecnologia.</dd>
@@ -710,9 +696,6 @@
 
                     <dt>MQTT</dt>
                     <dd>Protocolo da IIoT, feito para enviar dados a plataformas na nuvem.</dd>
-
-                    <dt>OPC</dt>
-                    <dd>Padrão de comunicação usado pelo supervisório HIscada Pro. O MPL Server traduz Modbus para OPC.</dd>
 
                     <dt>Conversor</dt>
                     <dd>Equipamento que troca o caminho (por exemplo, serial para Ethernet) sem mudar o idioma.</dd>
@@ -756,17 +739,17 @@
                         <label><input type="radio" name="q3" value="a"> RS232.</label>
                         <label><input type="radio" name="q3" value="b"> Wi-Fi.</label>
                         <label><input type="radio" name="q3" value="c"> USB.</label>
-                        <label><input type="radio" name="q3" value="d"> RS485, em que um mestre conversa com vários equipamentos na mesma rede.</label>
-                        <p class="quiz-explica" hidden>Vários equipamentos no mesmo cabo, com um mestre buscando os dados, é a rede RS485. O RS232 liga só dois.</p>
+                        <label><input type="radio" name="q3" value="d"> RS485, que liga vários equipamentos na mesma rede (até 32).</label>
+                        <p class="quiz-explica" hidden>Vários equipamentos no mesmo cabo é a rede RS485: até 32, sendo o CLP (mestre) e até 31 equipamentos. O RS232 liga só dois.</p>
                     </fieldset>
 
                     <fieldset class="quiz-q" data-certa="b">
                         <legend>4. Dois pontos de uma fazenda, a 12 km um do outro, precisam trocar dados sem cabo e sem mensalidade. O que você faz?</legend>
                         <label><input type="radio" name="q4" value="a"> Garante que o rádio funciona a qualquer distância e fecha a venda.</label>
-                        <label><input type="radio" name="q4" value="b"> Indica rádio 900 MHz como caminho provável e pede as coordenadas dos pontos (KML) para a Engenharia fazer o estudo de visada antes de confirmar.</label>
+                        <label><input type="radio" name="q4" value="b"> Indica rádio 900 MHz como caminho provável e pede as coordenadas dos pontos (KML) para o estudo de visada antes de confirmar.</label>
                         <label><input type="radio" name="q4" value="c"> Oferece um único rádio, instalado num dos pontos.</label>
                         <label><input type="radio" name="q4" value="d"> Indica RS232, que não tem mensalidade.</label>
-                        <p class="quiz-explica" hidden>Rádio é o caminho para longa distância sem cabo e sem mensalidade, mas precisa de visada, e quem confirma a viabilidade é a Engenharia. E rádio nunca funciona sozinho: são pelo menos dois.</p>
+                        <p class="quiz-explica" hidden>Rádio é um caminho sem cabo e sem mensalidade; a 12 km, precisa de visada, e a viabilidade é confirmada pelo estudo (suporte técnico ou engenharia de aplicação). E rádio nunca funciona sozinho: são pelo menos dois.</p>
                     </fieldset>
 
                     <fieldset class="quiz-q" data-certa="c">
