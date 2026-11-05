@@ -135,7 +135,7 @@
 
                 <div class="analogia">
                     <p>Pense num bom médico: ele não começa receitando. Primeiro pergunta o que você sente, desde quando,
-                    examina, pede exames quando precisa (o "exame" do vendedor é o suporte ou o estudo da engenharia) e só
+                    examina, pede exames quando precisa (o "exame" do vendedor é a confirmação do suporte ou o estudo de visada) e só
                     então indica o tratamento. Um vendedor que começa pelo produto é o médico que receita antes de ouvir.</p>
                 </div>
 
@@ -214,7 +214,7 @@
                             </tr>
                             <tr>
                                 <td>Energia</td>
-                                <td>Vai ligar na tomada (qual tensão) ou num painel com 24 V DC? Tem fonte com potência
+                                <td>Vai ser alimentado direto pela rede elétrica (qual tensão) ou por uma fonte de 24 V DC no painel? Tem fonte com potência
                                 sobrando? Tem energia elétrica no local?</td>
                                 <td>Etapas 2 e 6</td>
                             </tr>
@@ -314,7 +314,7 @@
                                 <td>D. Pontos espalhados, a quilômetros, sem cabo</td>
                                 <td>CLPs remotos ⇢ rádio ⇢ CLP central</td>
                                 <td>NEON5 ou RION5 com rádio integrado (distâncias menores) ou R9X307 (recomendação de até
-                                60 km), sempre com o estudo da Engenharia de Produto</td>
+                                60 km), sempre com o estudo de visada (suporte técnico ou engenharia de aplicação)</td>
                                 <td>Pode mandar as coordenadas dos pontos (KML)?</td>
                             </tr>
                             <tr>
@@ -342,7 +342,7 @@
                     <title id="arqTitulo">Exemplo de arquitetura em saneamento</title>
                     <desc id="arqDesc">À esquerda, um reservatório a 20 km da estação, com o sensor de nível de 4 a 20 mA, o
                     comando da bomba e um CLP com rádio R9X307. Uma seta pontilhada de rádio 900 MHz liga o reservatório à
-                    estação, com a nota de que a visada é confirmada pela Engenharia de Produto. À direita, a estação, que tem
+                    estação, com a nota de que a visada é confirmada pelo estudo. À direita, a estação, que tem
                     internet, com um CLP com rádio, a IHM GTI5 no painel e o HIscada Pro na sala de controle. Da estação,
                     uma seta de internet desce até o Portal de Telemetria, na nuvem, e do Portal uma seta vai até o gerente,
                     que acompanha pelo celular.</desc>
@@ -372,9 +372,9 @@
                     <line class="d-linha" x1="212" y1="118" x2="322" y2="118"/>
                     <line class="d-seta" x1="300" y1="118" x2="322" y2="118" marker-end="url(#arqPonta)"/>
                     <text class="d-itens" x="270" y="108" text-anchor="middle">rádio</text>
-                    <text class="d-nota" x="270" y="140" text-anchor="middle">visada:</text>
-                    <text class="d-nota" x="270" y="156" text-anchor="middle">estudo da</text>
-                    <text class="d-nota" x="270" y="172" text-anchor="middle">Engenharia</text>
+                    <text class="d-nota" x="270" y="140" text-anchor="middle">visada</text>
+                    <text class="d-nota" x="270" y="156" text-anchor="middle">confirmada</text>
+                    <text class="d-nota" x="270" y="172" text-anchor="middle">pelo estudo</text>
 
                     <line class="d-seta" x1="430" y1="194" x2="430" y2="254" marker-end="url(#arqPonta)"/>
                     <text class="d-itens" x="440" y="230">internet</text>
@@ -402,7 +402,7 @@
                 <div class="atencao">
                     <p>A arquitetura que você desenha é uma <strong>proposta para validar</strong>, não uma configuração
                     fechada. Modelo de CLP, módulos, potência da fonte, rádio e licenças são confirmados pelo suporte (e,
-                    no rádio, pelo estudo da Engenharia de Produto) antes do orçamento.</p>
+                    no rádio, pelo estudo de visada) antes do orçamento.</p>
                 </div>
 
                 <p class="fonte">Fontes: Treinamento de Produto, p. 5 a 9, 11 a 16 e 19 a 23; Catálogo Geral, p. 7 a 12, 16 a
@@ -443,7 +443,7 @@
                 <strong>Vendedor:</strong> "Então o desenho seria assim: um CLP em cada reservatório lendo o nível e
                 comandando a bomba, falando por rádio com a estação, sem mensalidade. Na estação, uma tela no painel e o
                 supervisório para o operador. E a estação manda os dados para o nosso Portal na nuvem, que você abre no
-                celular, com alarme se o nível baixar. Para o rádio, a nossa engenharia faz um estudo do relevo antes; você
+                celular, com alarme se o nível baixar. Para o rádio, a nossa equipe técnica faz um estudo do relevo antes; você
                 consegue me mandar a localização dos reservatórios e da estação?"</p>
 
                 <p><em>Momento 5, encaminhar.</em><br>
@@ -494,8 +494,8 @@
                             </tr>
                             <tr>
                                 <td>Alcance de rádio</td>
-                                <td>"Com as coordenadas (KML), a nossa engenharia faz o estudo de visada antes de vender."</td>
-                                <td>Engenharia de Produto</td>
+                                <td>"Com as coordenadas (KML), a nossa equipe técnica faz o estudo de visada antes de vender."</td>
+                                <td>Suporte técnico ou engenharia de aplicação</td>
                             </tr>
                             <tr>
                                 <td>A combinação exata de CLP e módulos, ou a potência da fonte</td>
@@ -578,7 +578,7 @@
                             </tr>
                             <tr>
                                 <td>Viabilidade do rádio</td>
-                                <td>Engenharia de Produto</td>
+                                <td>Suporte técnico ou engenharia de aplicação</td>
                                 <td>Estudo de altimetria e visada com o KML dos pontos; se precisa de outro rádio ou de
                                 ajuste no enlace.</td>
                             </tr>
@@ -591,6 +591,10 @@
                         </tbody>
                     </table>
                 </div>
+
+                <p>E a <strong>Engenharia de Produto</strong>? Ela desenvolve os produtos da HI e atende demandas
+                internas. Demanda técnica de cliente, inclusive o estudo de visada do rádio, vai para o
+                <strong>suporte técnico</strong> ou para a <strong>engenharia de aplicação</strong>.</p>
 
                 <h4>Sinais de que é hora de acionar</h4>
                 <ul>
@@ -622,8 +626,8 @@
                 </div>
 
                 <p class="fonte">Fontes: Catálogo Geral, p. 2 e 4 (engenharia de aplicação e serviços) e p. 31 (suporte
-                técnico sob demanda do Portal); Treinamento de Produto, p. 16 (estudo da Engenharia de Produto); Etapas 1 a
-                8.</p>
+                técnico sob demanda do Portal); Treinamento de Produto, p. 16 (estudo de visada); divisão entre suporte técnico, engenharia de aplicação e
+                Engenharia de Produto: orientação de Gabriel (05/11/2026); Etapas 1 a 8.</p>
             </div>
 
 
@@ -714,7 +718,7 @@
                             <tr>
                                 <td>"Vocês garantem que funciona?"</td>
                                 <td>"A gente confirma antes de vender: o suporte valida a configuração e, no rádio, a
-                                engenharia faz o estudo de visada." Não diga "funciona" antes disso.</td>
+                                equipe técnica faz o estudo de visada." Não diga "funciona" antes disso.</td>
                             </tr>
                             <tr>
                                 <td>"Qual o prazo de entrega?" / "Qual a garantia?"</td>
@@ -790,7 +794,7 @@
                     <dd>Área da HI que faz projetos e serviços: startup, programação, projeto elétrico, integração, supervisório.</dd>
 
                     <dt>Engenharia de Produto</dt>
-                    <dd>Área da HI que faz, entre outros, o estudo de altimetria e visada para a venda de rádio.</dd>
+                    <dd>Área da HI que desenvolve os produtos e atende demandas internas. Demanda técnica de cliente vai ao suporte técnico ou à engenharia de aplicação.</dd>
 
                     <dt>Estudo de visada</dt>
                     <dd>Análise do relevo entre dois pontos para saber se as antenas do rádio se "enxergam".</dd>
@@ -831,7 +835,7 @@
                         <label><input type="radio" name="q3" value="a"> Um GTON-C em cada reservatório lendo o sensor de nível.</label>
                         <label><input type="radio" name="q3" value="b"> Só o HIscada Pro na estação, sem nada nos reservatórios.</label>
                         <label><input type="radio" name="q3" value="c"> 4G em cada reservatório, sem perguntar mais nada.</label>
-                        <label><input type="radio" name="q3" value="d"> CLP em cada reservatório com rádio até a estação (com estudo da Engenharia), e da estação para o Portal pela internet.</label>
+                        <label><input type="radio" name="q3" value="d"> CLP em cada reservatório com rádio até a estação (com estudo de visada), e da estação para o Portal pela internet.</label>
                         <p class="quiz-explica" hidden>Sem cabo, sem internet e sem sinal de celular nos pontos, o caminho é o rádio, com o estudo de visada antes de vender. A estação tem internet e leva os dados ao Portal, que o gerente abre no celular. Gateway não lê sensor, e 4G sem sinal não funciona.</p>
                     </fieldset>
 
@@ -840,7 +844,7 @@
                         <label><input type="radio" name="q4" value="a"> Dizer que sim, porque todo inversor fala Modbus.</label>
                         <label><input type="radio" name="q4" value="b"> Anotar o modelo, a porta e o protocolo do inversor e confirmar com o suporte técnico.</label>
                         <label><input type="radio" name="q4" value="c"> Dizer que não, para não correr risco.</label>
-                        <label><input type="radio" name="q4" value="d"> Pedir para a Engenharia de Produto fazer o estudo de altimetria.</label>
+                        <label><input type="radio" name="q4" value="d"> Pedir um estudo de altimetria.</label>
                         <p class="quiz-explica" hidden>Compatibilidade é assunto do suporte técnico, e ele precisa do modelo, da porta e do protocolo. O estudo de altimetria é para rádio. Dizer "sim" ou "não" sem confirmar fere a regra de ouro.</p>
                     </fieldset>
 
