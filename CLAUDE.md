@@ -66,14 +66,29 @@ vendedor leigo. Gabriel gosta de entender o porquê das decisões.
 ### Metodologia "Explicar o porquê" (do `fontes/originais/CONTEXT.txt`, obrigatória)
 - **Traduzir "tecniquês" em função prática.** Nunca citar sigla ou recurso
   solto; dizer para que serve. Exemplos canônicos: RS232 = liga **dois**
-  equipamentos ponto a ponto; RS485 = um **mestre** conversa com **vários**
-  equipamentos na mesma rede; meio físico = "linha telefônica", protocolo =
+  equipamentos ponto a ponto; RS485 = **vários** equipamentos na mesma rede,
+  **até 32 (1 mestre + 31 escravos)**; meio físico = "linha telefônica", protocolo =
   "idioma"; sinal analógico (0–10 V, 4–20 mA) = **0 a 100 %** da grandeza
   física (o CLP não sabe o que é "litro", lê a porcentagem).
 - **Regra de bolso comercial:** cada etapa ensina **quais perguntas fazer ao
   cliente** para escolher o produto certo.
 - **Apoio visual:** diagrama (SVG inline, classe `.diagrama`) ou foto do
   produto sempre que o texto falar de um equipamento ou arquitetura.
+- **Pouca profundidade técnica (Gabriel, 05/11/2026).** O público não é
+  técnico; o foco é o que cada equipamento faz e o ecossistema da HI.
+  Conceitos gerais com número entram (ex.: RS485 = até 32 equipamentos);
+  detalhe de funcionamento não (como o mestre pergunta e o escravo responde,
+  "zero vivo" do 4–20 mA, A/D, OPC por dentro, linguagem de script, código
+  de modelo de fonte, resolução de tela, tipo de touch, efeito Hall, chip Nano
+  SIM, conector SMA, DigiMesh, XBee, TS35, completação dupla...). Na dúvida,
+  perguntar: "o vendedor precisa disso para indicar o produto ou para não
+  prometer errado?" Se não, sai.
+- **Não afunilar.** Frases categóricas que um aprendiz leva como regra
+  (ex.: "rádio é para campo aberto") só com fonte e quando forem verdade
+  sempre. Rádio funciona de distâncias curtas (inclusive ambiente fechado) a
+  longas; visada é exigência das longas distâncias.
+- **Alimentação:** escrever "alimentado pela rede elétrica" (ou "direto da
+  rede"), nunca "ligar o CLP na tomada". "Tomada" só em analogia.
 
 ## 3. Decisões tomadas por Gabriel (histórico)
 
@@ -151,6 +166,25 @@ vendedor leigo. Gabriel gosta de entender o porquê das decisões.
     Ethernet. Outros equipamentos seguem o mesmo padrão, por exemplo
     **S4E = Serial 485 Ethernet**.
 
+**05/11/2026 — revisão de Gabriel lendo as Etapas 2 a 9 (no VS Code)**
+- **IHM também está na supervisão**, não só no controle: aparece nos dois
+  níveis da pirâmide (Etapa 2) e no mapa de camadas da Etapa 1. A diferença
+  para o supervisório é o alcance (a máquina × a planta inteira), não "operar
+  × supervisionar".
+- **RS485: até 32 equipamentos (1 mestre + 31 escravos).** Sem explicar como
+  o mestre funciona.
+- **Estudo de altimetria/visada do rádio: suporte técnico ou engenharia de
+  aplicação**, não a Engenharia de Produto (o Treinamento p. 16 diz
+  Engenharia de Produto; vale o que Gabriel disse). A Engenharia de Produto
+  desenvolve os produtos e atende demandas internas; **demanda técnica
+  externa (de cliente) vai ao suporte técnico ou à engenharia de aplicação.**
+- Mais as três regras de redação acrescentadas à metodologia (seção 2):
+  pouca profundidade técnica, não afunilar, "alimentado pela rede elétrica".
+- Aplicado em todas as etapas, cada correção na branch da sua etapa e
+  levada adiante por merge (2 → 3 → … → 9), para cada PR continuar certo
+  sozinho. A Etapa 1 (que está no `main`) foi corrigida na branch da Etapa 2.
+  Gabriel ainda não terminou de ler; pode haver mais correções.
+
 **Vídeos (ideia de Gabriel, ainda NÃO é pedido):** ele pensa em gravar vídeos e
 colocar em cada etapa uma escolha que expande para baixo: "Ler o conteúdo" ou
 "Assistir ao vídeo". Proposta já apresentada a ele: dois painéis expansíveis,
@@ -185,8 +219,13 @@ Oferecido também: preparar slides e roteiro de cada vídeo a partir do texto.
   `etapa-8-solucoes`.
 - Gabriel aprovou até a Etapa 4; as Etapas 5 a 9 foram feitas em sequência
   sem revisão (ele pediu) e serão revisadas depois.
-- **Próximo passo:** a **Etapa 10 (Avaliação Final)** numa branch
-  `etapa-10-avaliacao` a partir da 9, e depois a Fase 4.
+- **Revisão geral em andamento (05/11/2026):** Gabriel está lendo as Etapas 2
+  a 9 e mandou o primeiro lote de correções (seção 3, "revisão de Gabriel").
+  Corrigir **na branch da etapa** e levar adiante com merge, nunca só na
+  última branch: senão o PR de uma etapa vai ao ar com o texto antigo.
+- **Próximo passo:** terminar a revisão com Gabriel; depois a **Etapa 10
+  (Avaliação Final)** numa branch `etapa-10-avaliacao` a partir da 9, e a
+  Fase 4.
 - Ferramentas de teste: na nuvem havia um teste com Playwright (não está no
   repositório). No VS Code os testes rodam no Edge sem interface
   (`msedge --headless=new --dump-dom` e `--screenshot`), sobre uma **cópia** do
