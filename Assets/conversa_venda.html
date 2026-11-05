@@ -19,8 +19,56 @@
     <section class="hero">
         <div class="hero-content">
             <span class="etapa-badge">Etapa 9 de 10</span>
-            <h1>A conversa de venda</h1>
+            <h1>A conversa de venda: do problema do cliente à solução certa</h1>
             <p><strong>Juntar tudo: qualificar o cliente, desenhar a solução e saber quando chamar o suporte ou a engenharia.</strong></p>
+            <p>Nas Etapas 1 a 8 você conheceu a HI, os conceitos e cada linha de produto. Cada etapa trouxe as suas
+            <strong>perguntas de bolso</strong>. Nesta etapa você junta tudo num <strong>roteiro de conversa</strong>:
+            como abrir, como entender o problema, que perguntas fazer, como montar a <strong>arquitetura</strong> "do
+            sensor à nuvem", <strong>o que não prometer</strong> e <strong>quando acionar</strong> o suporte técnico
+            e a engenharia. É a preparação direta para o role-play do Encontro 2 e para a Avaliação Final.</p>
+        </div>
+        <div class="hero-image">
+            <svg class="diagrama" viewBox="0 0 540 430" role="img"
+                 aria-labelledby="momentosTitulo momentosDesc">
+                <title id="momentosTitulo">A conversa em cinco momentos</title>
+                <desc id="momentosDesc">Cinco momentos em sequência. 1, abrir: apresentar a HI e combinar o objetivo
+                da conversa. 2, entender o problema: o que acontece hoje e o que o cliente quer resolver. 3, qualificar:
+                perfil, sinais, energia, comunicação, operação e supervisão. 4, desenhar a solução: a arquitetura do
+                sensor à nuvem. 5, encaminhar: a ficha completa para o orçamento e o suporte, e o próximo passo
+                combinado.</desc>
+                <defs>
+                    <marker id="momentoPonta" viewBox="0 0 10 10" refX="5" refY="5"
+                            markerWidth="5" markerHeight="5" orient="auto">
+                        <path class="d-ponta" d="M0,0 L10,5 L0,10 z"/>
+                    </marker>
+                </defs>
+
+                <text class="d-titulo" x="270" y="24" text-anchor="middle">A conversa em cinco momentos</text>
+
+                <rect class="d-caixa" x="70" y="40" width="400" height="58" rx="10"/>
+                <text class="d-rotulo" x="270" y="63" text-anchor="middle">1. Abrir</text>
+                <text class="d-itens" x="270" y="85" text-anchor="middle">apresentar a HI e combinar o objetivo</text>
+                <line class="d-seta" x1="270" y1="98" x2="270" y2="112" marker-end="url(#momentoPonta)"/>
+
+                <rect class="d-caixa" x="70" y="118" width="400" height="58" rx="10"/>
+                <text class="d-rotulo" x="270" y="141" text-anchor="middle">2. Entender o problema</text>
+                <text class="d-itens" x="270" y="163" text-anchor="middle">o que acontece hoje e o que quer resolver</text>
+                <line class="d-seta" x1="270" y1="176" x2="270" y2="190" marker-end="url(#momentoPonta)"/>
+
+                <rect class="d-caixa" x="70" y="196" width="400" height="58" rx="10"/>
+                <text class="d-rotulo" x="270" y="219" text-anchor="middle">3. Qualificar</text>
+                <text class="d-itens" x="270" y="241" text-anchor="middle">perfil · sinais · energia · comunicação · dados</text>
+                <line class="d-seta" x1="270" y1="254" x2="270" y2="268" marker-end="url(#momentoPonta)"/>
+
+                <rect class="d-caixa" x="70" y="274" width="400" height="58" rx="10"/>
+                <text class="d-rotulo" x="270" y="297" text-anchor="middle">4. Desenhar a solução</text>
+                <text class="d-itens" x="270" y="319" text-anchor="middle">a arquitetura, do sensor à nuvem</text>
+                <line class="d-seta" x1="270" y1="332" x2="270" y2="346" marker-end="url(#momentoPonta)"/>
+
+                <rect class="d-cheio" x="70" y="352" width="400" height="58" rx="10"/>
+                <text class="d-texto-claro" x="270" y="375" text-anchor="middle">5. Encaminhar</text>
+                <text class="d-texto-claro" x="270" y="397" text-anchor="middle">ficha para orçamento e suporte · próximo passo</text>
+            </svg>
         </div>
     </section>
 
@@ -38,15 +86,851 @@
                     <li>aplicar a lista do que não prometer;</li>
                     <li>saber quando e como acionar o suporte técnico e a engenharia.</li>
                 </ul>
-                <p class="tempo">Tempo estimado: 2h30.</p>
+                <p class="tempo">Tempo estimado: 2h30 (leitura, quiz e preparo do role-play do Encontro 2).</p>
             </div>
 
-            <div class="em-producao">
-                <strong>Conteúdo em produção</strong>
-                Esta etapa está sendo escrita e entra no ar depois da revisão da etapa anterior.
+            <ul class="sumario" aria-label="Nesta etapa">
+                <li><a href="#momentos">Cinco momentos</a></li>
+                <li><a href="#problema">Começar pelo problema</a></li>
+                <li><a href="#qualificacao">Roteiro de qualificação</a></li>
+                <li><a href="#arquiteturas">Arquiteturas típicas</a></li>
+                <li><a href="#exemplo">Uma conversa de exemplo</a></li>
+                <li><a href="#nao-prometer">O que não prometer</a></li>
+                <li><a href="#acionar">Suporte e engenharia</a></li>
+                <li><a href="#consultar">Onde consultar</a></li>
+                <li><a href="#na-venda">Na venda</a></li>
+                <li><a href="#glossario">Glossário</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="momentos">
+                <h3>1. A conversa em cinco momentos</h3>
+
+                <p>Uma conversa comercial de automação não é uma apresentação de catálogo. Quem compra quer resolver um
+                problema: perder menos água, parar menos a máquina, acompanhar de longe, cumprir uma exigência. O
+                produto é consequência. Por isso a conversa segue uma ordem:</p>
+
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>Momento</th><th>O que você faz</th><th>Onde você aprendeu</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1. Abrir</td><td>Apresenta a HI em 1 minuto e combina o objetivo: "quero entender o
+                            que vocês precisam para indicar a solução certa".</td><td>Etapa 1 (pitch)</td></tr>
+                            <tr><td>2. Entender o problema</td><td>Pergunta o que acontece hoje, o que o cliente quer
+                            resolver e por quê. Ouve mais do que fala.</td><td>Item 2 desta etapa</td></tr>
+                            <tr><td>3. Qualificar</td><td>Passa pelas perguntas de bolso: perfil, sinais, energia,
+                            comunicação, operação e supervisão.</td><td>Etapas 2 a 8; item 3 desta etapa</td></tr>
+                            <tr><td>4. Desenhar a solução</td><td>Monta com o cliente a arquitetura "do sensor à nuvem", em
+                            linhas gerais.</td><td>Item 4 desta etapa</td></tr>
+                            <tr><td>5. Encaminhar</td><td>Resume o que entendeu, completa o pedido, manda a ficha para o
+                            orçamento (e para o suporte, se for o caso) e combina o próximo passo.</td><td>Itens 6 e 7 desta
+                            etapa</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="analogia">
+                    <p>Pense num bom médico: ele não começa receitando. Primeiro pergunta o que você sente, desde quando,
+                    examina, pede exames quando precisa (o "exame" do vendedor é o suporte ou o estudo da engenharia) e só
+                    então indica o tratamento. Um vendedor que começa pelo produto é o médico que receita antes de ouvir.</p>
+                </div>
+
+                <div class="atencao">
+                    <p>Os momentos não são um formulário rígido. Numa ligação rápida você talvez só chegue ao momento 3 e
+                    combine uma segunda conversa. O que não pode faltar é o momento 5: <strong>nenhuma conversa termina sem
+                    um próximo passo combinado</strong>.</p>
+                </div>
+
+                <p class="fonte">Fontes: estrutura de conversa consultiva (conceito geral de vendas); perguntas e produtos
+                das Etapas 1 a 8.</p>
             </div>
 
-            <p class="fonte">Fontes previstas: Todas as etapas anteriores e as orientações do setor de vendas.</p>
+
+            <!-- ===================================================== -->
+            <div class="step" id="problema">
+                <h3>2. Começar pelo problema, não pelo produto</h3>
+
+                <p>O cliente às vezes chega pedindo um produto ("preciso de um CLP", "quero um rádio"). Às vezes chega com
+                um problema ("perco a hora de ligar a bomba", "não sei o que acontece na fazenda à noite"). Nos dois
+                casos, descubra primeiro o problema. É ele que diz se o produto pedido é o certo.</p>
+
+                <h4>Perguntas abertas para o momento 2</h4>
+                <ul>
+                    <li>"Como funciona hoje? O que é feito à mão?"</li>
+                    <li>"O que você quer resolver? O que acontece quando dá problema?"</li>
+                    <li>"Quem vai usar a solução no dia a dia: o operador, a manutenção, a gerência?"</li>
+                    <li>"O que você já tem instalado e quer aproveitar?"</li>
+                    <li>"Tem algum prazo ou motivo para resolver agora?"</li>
+                </ul>
+
+                <div class="na-venda">
+                    <p>Pergunta aberta é a que não se responde com "sim" ou "não". "Vocês têm problema com as bombas?"
+                    rende uma palavra; "Como vocês sabem hoje que uma bomba parou?" rende a história inteira, e nela vêm os
+                    sinais, as distâncias e quem precisa ver o dado.</p>
+                </div>
+
+                <div class="atencao">
+                    <p>Quando o cliente pede um produto, não o contrarie de saída, mas confirme a necessidade. Já vimos
+                    casos típicos nas etapas anteriores: quem pede "um rádio" pode precisar de 4G (se o dado tem que chegar à
+                    internet); quem pede "um gateway para ler sensores" precisa de um CLP (gateway não lê sensor); quem pede
+                    "o supervisório" pode querer ver pelo celular (Portal, não HIscada).</p>
+                </div>
+
+                <p class="fonte">Fontes: perguntas abertas (conceito geral de vendas); exemplos das Etapas 3, 5 e 7.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="qualificacao">
+                <h3>3. O roteiro de qualificação: as perguntas de bolso, juntas</h3>
+
+                <p>Esta é a lista das perguntas das Etapas 1 a 8, organizada por assunto. Você não precisa fazer todas,
+                nem nesta ordem: siga a conversa e use a lista para conferir, no fim, o que ficou faltando.
+                <strong>"Não sei" também é resposta</strong>: anote, e o suporte ajuda a descobrir.</p>
+
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>Assunto</th><th>Perguntas</th><th>Para relembrar</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Perfil do cliente</td>
+                                <td>A automação é para a sua planta ou para clientes seus? Vai vender com a sua marca ou usar
+                                o produto HI nos seus projetos? Em que região fica a instalação?</td>
+                                <td>Etapas 1 e 8</td>
+                            </tr>
+                            <tr>
+                                <td>Sinais (a lista de sinais)</td>
+                                <td>Quantos botões, chaves e sensores liga/desliga? Quantos motores, bombas e sinaleiros a
+                                comandar? Quantas medições (nível, pressão, temperatura, vazão) e em que sinal: 4 a 20 mA ou
+                                0 a 10 V? Alguma válvula com comando de 0 a 100 %? Algum sinal especial (PT100, célula de
+                                carga, pulso)? Estão no mesmo painel ou espalhados?</td>
+                                <td>Etapas 2 e 4</td>
+                            </tr>
+                            <tr>
+                                <td>Energia</td>
+                                <td>Vai ligar na tomada (qual tensão) ou num painel com 24 V DC? Tem fonte com potência
+                                sobrando? Tem energia elétrica no local?</td>
+                                <td>Etapas 2 e 6</td>
+                            </tr>
+                            <tr>
+                                <td>Comunicação e distância</td>
+                                <td>Quantos equipamentos precisam conversar? A que distância? Precisa chegar à internet? Tem
+                                rede ou sinal de celular no local? Qual a porta e o protocolo do que já existe? Pode mandar as
+                                coordenadas (KML)?</td>
+                                <td>Etapas 3 e 5</td>
+                            </tr>
+                            <tr>
+                                <td>Operação no local</td>
+                                <td>O operador precisa ver ou comandar na máquina? Qual o tamanho mínimo de tela? Como ela se
+                                liga ao CLP? Já usa alguma marca de IHM?</td>
+                                <td>Etapa 6</td>
+                            </tr>
+                            <tr>
+                                <td>Supervisão</td>
+                                <td>Quem vai ver os dados e de onde: da sala de controle ou de qualquer lugar? Pode depender
+                                de internet? Quantos dados (tags) e quantas pessoas ou computadores? Há equipamentos de outros
+                                fabricantes? Precisa de integração (API) ou de marca própria (white label)?</td>
+                                <td>Etapa 7</td>
+                            </tr>
+                            <tr>
+                                <td>Projeto e equipe</td>
+                                <td>Precisa guardar histórico ou receitas? A planta vai crescer? A sua equipe vai programar ou
+                                quer o projeto pronto? Precisa de treinamento?</td>
+                                <td>Etapas 4 e 8</td>
+                            </tr>
+                            <tr>
+                                <td>Próximos passos</td>
+                                <td>Para quando precisa? Quem mais participa da decisão? Qual o melhor contato para a
+                                proposta?</td>
+                                <td>Item 1 desta etapa</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="analogia">
+                    <p>As perguntas são como o check-list de um piloto antes de decolar: ninguém duvida que ele saiba voar,
+                    mas a lista garante que nada foi esquecido. A lista é a mesma em todo voo; a viagem muda.</p>
+                </div>
+
+                <div class="na-venda">
+                    <p>Faça as perguntas em linguagem do cliente. Em vez de "quantas entradas digitais?", pergunte
+                    "quantos botões, chaves e sensores de liga/desliga?". O cliente entende, e você converte em entradas e
+                    saídas na ficha. A conversão você aprendeu na Etapa 2.</p>
+                </div>
+
+                <div class="atencao">
+                    <p>Não transforme a lista num interrogatório. Se o cliente responder três perguntas de uma vez contando
+                    a história, ótimo: risque e siga. E se ele não souber responder a parte técnica, pergunte quem cuida da
+                    manutenção ou do painel: muitas vezes a resposta está com outra pessoa da empresa.</p>
+                </div>
+
+                <p class="fonte">Fontes: seções "Como isso aparece na venda" e de escolha das Etapas 1 a 8 (Catálogo Geral e
+                Treinamento de Produto, citados em cada uma).</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="arquiteturas">
+                <h3>4. Arquiteturas típicas, do sensor à nuvem</h3>
+
+                <p>Com as respostas em mãos, a solução quase sempre se encaixa num destes desenhos, ou numa combinação
+                deles. A arquitetura é o "mapa" da solução: onde ficam os sinais, quem os lê, por onde os dados viajam e
+                onde alguém os vê. Os níveis são os da pirâmide da Etapa 2: campo, controle, supervisão local e nuvem.</p>
+
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>Situação do cliente</th><th>Desenho</th><th>Produtos HI típicos</th><th>Pergunta que confirma</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A. Máquina ou painel, operador no local</td>
+                                <td>sensores → CLP → IHM</td>
+                                <td>RION5, NEON5 ou P7C (pela lista de sinais); GTI5; fonte, se o painel não tiver 24 V DC</td>
+                                <td>Quantos sinais de cada tipo? O operador precisa ver ou comandar?</td>
+                            </tr>
+                            <tr>
+                                <td>B. Planta concentrada com sala de controle</td>
+                                <td>CLPs em rede → supervisório local</td>
+                                <td>CLPs HI; HIscada Pro + MPL Server (licença do MPL Server para equipamentos Modbus de
+                                terceiros)</td>
+                                <td>Quantas tags e quantos computadores? Há equipamentos de outros fabricantes?</td>
+                            </tr>
+                            <tr>
+                                <td>C. Equipamentos que já existem, a integrar</td>
+                                <td>equipamentos atuais → gateway → sistema novo</td>
+                                <td>GTON-C (traduz meio físico ou Modbus RTU ↔ TCP) ou GTON-P (lê, trata e repassa, por
+                                exemplo em MQTT)</td>
+                                <td>Qual a porta e o protocolo de cada lado? Os dados só passam ou precisam ser tratados?</td>
+                            </tr>
+                            <tr>
+                                <td>D. Pontos espalhados, a quilômetros, sem cabo</td>
+                                <td>CLPs remotos ⇢ rádio ⇢ CLP central</td>
+                                <td>NEON5 ou RION5 com rádio integrado (distâncias menores) ou R9X307 (recomendação de até
+                                60 km), sempre com o estudo da Engenharia de Produto</td>
+                                <td>Pode mandar as coordenadas dos pontos (KML)?</td>
+                            </tr>
+                            <tr>
+                                <td>E. Ver de qualquer lugar; pontos em campo</td>
+                                <td>CLP ou gateway → 4G ou internet → Portal → celular</td>
+                                <td>NEON5 ou RION5 com 4G, ou GTON-M; HI Connect (chip e plano); Portal de Telemetria</td>
+                                <td>Tem sinal de celular? Quantos dados? Quem vai acessar?</td>
+                            </tr>
+                            <tr>
+                                <td>F. Solução pronta, sem montar painel</td>
+                                <td>painel dedicado → supervisão</td>
+                                <td>DAP5 com o Portal; painéis de poço com o HI OilTools e o HIscada Pro (óleo e gás)</td>
+                                <td>Quantos e quais sinais? Que método de elevação e quantos poços?</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>Um projeto real costuma <strong>combinar</strong> desenhos. O exemplo abaixo, de saneamento, junta o D
+                (rádio até a estação), o A (IHM no painel da estação), o B (supervisório na sala de controle) e o E
+                (gerência no celular pelo Portal). É o caso da conversa do item 5.</p>
+
+                <svg class="diagrama diagrama-corpo" viewBox="0 0 540 400" role="img"
+                     aria-labelledby="arqTitulo arqDesc">
+                    <title id="arqTitulo">Exemplo de arquitetura em saneamento</title>
+                    <desc id="arqDesc">À esquerda, um reservatório a 20 km da estação, com o sensor de nível de 4 a 20 mA, o
+                    comando da bomba e um CLP com rádio R9X307. Uma seta pontilhada de rádio 900 MHz liga o reservatório à
+                    estação, com a nota de que a visada é confirmada pela Engenharia de Produto. À direita, a estação, que tem
+                    internet, com um CLP com rádio, a IHM GTI5 no painel e o HIscada Pro na sala de controle. Da estação,
+                    uma seta de internet desce até o Portal de Telemetria, na nuvem, e do Portal uma seta vai até o gerente,
+                    que acompanha pelo celular.</desc>
+                    <defs>
+                        <marker id="arqPonta" viewBox="0 0 10 10" refX="5" refY="5"
+                                markerWidth="5" markerHeight="5" orient="auto">
+                            <path class="d-ponta" d="M0,0 L10,5 L0,10 z"/>
+                        </marker>
+                    </defs>
+
+                    <text class="d-titulo" x="270" y="24" text-anchor="middle">Exemplo: reservatórios de uma cidade</text>
+
+                    <rect class="d-caixa" x="10" y="44" width="200" height="150" rx="10"/>
+                    <text class="d-rotulo" x="110" y="70" text-anchor="middle">Reservatório</text>
+                    <text class="d-nota" x="110" y="90" text-anchor="middle">a 20 km, sem internet</text>
+                    <text class="d-itens" x="110" y="120" text-anchor="middle">sensor de nível (4–20 mA)</text>
+                    <text class="d-itens" x="110" y="145" text-anchor="middle">bomba (liga/desliga)</text>
+                    <text class="d-itens" x="110" y="170" text-anchor="middle">CLP + rádio R9X307</text>
+
+                    <rect class="d-caixa" x="330" y="44" width="200" height="150" rx="10"/>
+                    <text class="d-rotulo" x="430" y="70" text-anchor="middle">Estação</text>
+                    <text class="d-nota" x="430" y="90" text-anchor="middle">com internet</text>
+                    <text class="d-itens" x="430" y="120" text-anchor="middle">CLP + rádio R9X307</text>
+                    <text class="d-itens" x="430" y="145" text-anchor="middle">IHM GTI5 no painel</text>
+                    <text class="d-itens" x="430" y="170" text-anchor="middle">HIscada Pro na sala</text>
+
+                    <line class="d-linha" x1="212" y1="118" x2="322" y2="118"/>
+                    <line class="d-seta" x1="300" y1="118" x2="322" y2="118" marker-end="url(#arqPonta)"/>
+                    <text class="d-itens" x="270" y="108" text-anchor="middle">rádio</text>
+                    <text class="d-nota" x="270" y="140" text-anchor="middle">visada:</text>
+                    <text class="d-nota" x="270" y="156" text-anchor="middle">estudo da</text>
+                    <text class="d-nota" x="270" y="172" text-anchor="middle">Engenharia</text>
+
+                    <line class="d-seta" x1="430" y1="194" x2="430" y2="254" marker-end="url(#arqPonta)"/>
+                    <text class="d-itens" x="440" y="230">internet</text>
+
+                    <rect class="d-cheio" x="330" y="262" width="200" height="64" rx="10"/>
+                    <text class="d-texto-claro" x="430" y="290" text-anchor="middle">Portal de Telemetria</text>
+                    <text class="d-texto-claro" x="430" y="310" text-anchor="middle">nuvem</text>
+
+                    <line class="d-seta" x1="330" y1="294" x2="218" y2="294" marker-end="url(#arqPonta)"/>
+
+                    <rect class="d-caixa" x="10" y="262" width="200" height="64" rx="10"/>
+                    <text class="d-rotulo" x="110" y="290" text-anchor="middle">Gerente</text>
+                    <text class="d-itens" x="110" y="310" text-anchor="middle">acompanha pelo celular</text>
+
+                    <text class="d-nota" x="270" y="360" text-anchor="middle">Desenho de exemplo. Os modelos certos saem da lista</text>
+                    <text class="d-nota" x="270" y="378" text-anchor="middle">de sinais e da confirmação do suporte e da engenharia.</text>
+                </svg>
+
+                <div class="na-venda">
+                    <p>Desenhar a arquitetura junto com o cliente, num papel ou num quadro, é um dos momentos mais fortes da
+                    conversa: ele vê a solução dele, e você confirma se entendeu. Use os nomes do cliente ("o reservatório
+                    do bairro alto", "a sala do operador"), não os códigos dos produtos.</p>
+                </div>
+
+                <div class="atencao">
+                    <p>A arquitetura que você desenha é uma <strong>proposta para validar</strong>, não uma configuração
+                    fechada. Modelo de CLP, módulos, potência da fonte, rádio e licenças são confirmados pelo suporte (e,
+                    no rádio, pelo estudo da Engenharia de Produto) antes do orçamento.</p>
+                </div>
+
+                <p class="fonte">Fontes: Treinamento de Produto, p. 5 a 9, 11 a 16 e 19 a 23; Catálogo Geral, p. 7 a 12, 16 a
+                22 e 30 a 38; Etapas 2 a 8. O exemplo de saneamento é fictício, montado com produtos e regras das fontes.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="exemplo">
+                <h3>5. Uma conversa de exemplo, momento a momento</h3>
+
+                <p>Exemplo fictício. O cliente é o coordenador de operação de um serviço de água municipal. Repare em
+                <strong>quando</strong> o vendedor fala de produto: só no momento 4.</p>
+
+                <p><em>Momento 1, abrir.</em><br>
+                <strong>Vendedor:</strong> "Obrigado pelo tempo. Em um minuto: a HI é uma fabricante brasileira de
+                automação, de Campinas, desde 1989; a Sabesp, a Copasa e a Embasa estão entre os clientes de saneamento. Hoje
+                eu queria entender a operação de vocês para indicar o que faz sentido. Pode ser?"</p>
+
+                <p><em>Momento 2, entender o problema.</em><br>
+                <strong>Vendedor:</strong> "Como vocês acompanham os reservatórios hoje?"<br>
+                <strong>Cliente:</strong> "Um operador passa de carro duas vezes por dia. Se o nível baixa à noite, a gente só
+                fica sabendo de manhã, quando falta água no bairro."<br>
+                <strong>Vendedor:</strong> "E quem precisa saber quando isso acontece?"<br>
+                <strong>Cliente:</strong> "O operador da estação, para ligar a bomba, e eu, que respondo pela operação."</p>
+
+                <p><em>Momento 3, qualificar.</em><br>
+                <strong>Vendedor:</strong> "Quantos reservatórios são, e a que distância da estação?"<br>
+                <strong>Cliente:</strong> "Três, o mais longe a uns 20 km, na zona rural."<br>
+                <strong>Vendedor:</strong> "Lá tem internet ou sinal de celular? E energia?"<br>
+                <strong>Cliente:</strong> "Energia tem. Internet não, e o sinal de celular é ruim. Na estação tem internet."<br>
+                <strong>Vendedor:</strong> "Em cada reservatório, o que precisa medir e comandar?"<br>
+                <strong>Cliente:</strong> "O nível, que já tem um transmissor de 4 a 20 mA, e a bomba, liga e desliga."<br>
+                <strong>Vendedor:</strong> "Você quer ver esses dados de onde?"<br>
+                <strong>Cliente:</strong> "O operador, na estação. Eu, no celular."</p>
+
+                <p><em>Momento 4, desenhar a solução.</em><br>
+                <strong>Vendedor:</strong> "Então o desenho seria assim: um CLP em cada reservatório lendo o nível e
+                comandando a bomba, falando por rádio com a estação, sem mensalidade. Na estação, uma tela no painel e o
+                supervisório para o operador. E a estação manda os dados para o nosso Portal na nuvem, que você abre no
+                celular, com alarme se o nível baixar. Para o rádio, a nossa engenharia faz um estudo do relevo antes; você
+                consegue me mandar a localização dos reservatórios e da estação?"</p>
+
+                <p><em>Momento 5, encaminhar.</em><br>
+                <strong>Vendedor:</strong> "Deixa eu confirmar: três reservatórios, nível 4 a 20 mA e bomba liga/desliga em
+                cada um, energia no local, sem internet; estação com internet; operador na estação e você no celular. Eu
+                levo isso ao suporte para fechar a configuração e peço o estudo do rádio assim que chegarem as coordenadas.
+                Depois o orçamento sai pelo nosso setor de vendas. Combinamos um retorno na semana que vem?"</p>
+
+                <div class="na-venda">
+                    <p>O vendedor não citou código de produto, não falou de preço e não prometeu alcance de rádio. Mesmo
+                    assim, saiu com tudo o que o suporte precisa: a lista de sinais, a energia, as distâncias, a falta de
+                    internet nos pontos e quem precisa ver o quê. E com um próximo passo marcado.</p>
+                </div>
+
+                <p class="fonte">Fontes: exemplo fictício; clientes de saneamento do Catálogo Geral, p. 3; regras do rádio
+                (Treinamento de Produto, p. 16) e do Portal (Catálogo Geral, p. 30 e 31).</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="nao-prometer">
+                <h3>6. O que não prometer (e o que dizer no lugar)</h3>
+
+                <p>Os avisos de "Atenção" das Etapas 1 a 8, juntos. Cada um tem uma frase que mantém a conversa andando
+                sem prometer o que você não pode garantir.</p>
+
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>Não prometa</th><th>Diga no lugar</th><th>Quem confirma</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Preço, desconto ou condição de memória</td>
+                                <td>"Vou montar a necessidade completa; o orçamento sai pelo setor de vendas."</td>
+                                <td>Setor de vendas</td>
+                            </tr>
+                            <tr>
+                                <td>Prazo de entrega ou garantia sem confirmar</td>
+                                <td>"Vou confirmar o prazo e as condições e te retorno."
+                                <span class="confirmar">[CONFIRMAR] política de prazo de entrega e de garantia</span></td>
+                                <td>Equipe comercial</td>
+                            </tr>
+                            <tr>
+                                <td>Que dois equipamentos conversam</td>
+                                <td>"Me passa o modelo, a porta e o protocolo do equipamento; o suporte confirma."</td>
+                                <td>Suporte técnico</td>
+                            </tr>
+                            <tr>
+                                <td>Alcance de rádio</td>
+                                <td>"Com as coordenadas (KML), a nossa engenharia faz o estudo de visada antes de vender."</td>
+                                <td>Engenharia de Produto</td>
+                            </tr>
+                            <tr>
+                                <td>A combinação exata de CLP e módulos, ou a potência da fonte</td>
+                                <td>"Com a lista de sinais, o suporte fecha a configuração."</td>
+                                <td>Suporte técnico</td>
+                            </tr>
+                            <tr>
+                                <td>Que o CLP lê "qualquer sensor"</td>
+                                <td>"4 a 20 mA e 0 a 10 V são padrão; para PT100, célula de carga ou pulso, me passa o modelo
+                                que eu confirmo."</td>
+                                <td>Suporte técnico</td>
+                            </tr>
+                            <tr>
+                                <td>Que a GTI5 faz tudo o que a Weintek do cliente faz</td>
+                                <td>"Quais recursos você usa? Confirmo com o suporte se a GTI5 atende."</td>
+                                <td>Suporte técnico</td>
+                            </tr>
+                            <tr>
+                                <td>4G sem saber do sinal de celular</td>
+                                <td>"Tem sinal de celular no local? De qual operadora?"</td>
+                                <td>Cliente e suporte</td>
+                            </tr>
+                            <tr>
+                                <td>Integração com sistema ou plataforma de terceiros</td>
+                                <td>"Qual é o sistema? Vou confirmar o escopo da integração."</td>
+                                <td>Suporte técnico</td>
+                            </tr>
+                            <tr>
+                                <td>Recurso que não está no catálogo (painéis de poço, DAP5, softwares)</td>
+                                <td>"Vou confirmar se esse recurso existe e como funciona."</td>
+                                <td>Suporte e engenharia</td>
+                            </tr>
+                            <tr>
+                                <td>Resultados de clientes que não estão nas fontes</td>
+                                <td>Cite só nomes e fatos do catálogo.</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>Que um produto de revenda é fabricação HI</td>
+                                <td>"Esse item a HI revende para completar a solução."</td>
+                                <td>—</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="analogia">
+                    <p>Prometer o que não foi confirmado é pegar um empréstimo com a confiança do cliente: na hora parece que
+                    ajudou a fechar, mas a conta chega no campo, com juros, e quem paga é a HI inteira. "Vou confirmar e te
+                    retorno" é uma frase de vendedor profissional, não de quem não sabe.</p>
+                </div>
+
+                <p class="fonte">Fontes: regras de ouro da home; seções "Atenção" e "Erros comuns a evitar" das Etapas 1 a 8.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="acionar">
+                <h3>7. Quando e como acionar o suporte e a engenharia</h3>
+
+                <p>Você não precisa saber tudo: precisa saber <strong>a quem perguntar</strong>. Pelas fontes, cada assunto
+                tem um dono:</p>
+
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>Assunto</th><th>Quem responde</th><th>Exemplos</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Preço, condições, programas, região</td>
+                                <td>Setor de vendas / equipe comercial</td>
+                                <td>Orçamento; condições do HI Partner e do HI OEM; qual representante atende a região.</td>
+                            </tr>
+                            <tr>
+                                <td>Produto e compatibilidade</td>
+                                <td>Suporte técnico</td>
+                                <td>"Conversa com o meu inversor?"; combinação de módulos; potência da fonte; recursos da
+                                GTI5 × Weintek; protocolos; integração com outra plataforma.</td>
+                            </tr>
+                            <tr>
+                                <td>Viabilidade do rádio</td>
+                                <td>Engenharia de Produto</td>
+                                <td>Estudo de altimetria e visada com o KML dos pontos; se precisa de outro rádio ou de
+                                ajuste no enlace.</td>
+                            </tr>
+                            <tr>
+                                <td>Projeto pronto e serviços</td>
+                                <td>Engenharia de aplicação</td>
+                                <td>Startup (projeto entregue funcionando), programação de CLP e IHM, projeto elétrico,
+                                integração de sistemas, supervisório, manutenção de equipamentos.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4>Sinais de que é hora de acionar</h4>
+                <ul>
+                    <li>O cliente usa as palavras <strong>"compatível"</strong>, "funciona com", "conversa com".</li>
+                    <li>Aparece <strong>distância sem cabo</strong> (rádio) ou local sem internet.</li>
+                    <li>Há <strong>equipamento de outro fabricante</strong> no meio, ou um sinal especial (PT100, célula de
+                    carga, pulso).</li>
+                    <li>O cliente quer <strong>"tudo pronto"</strong> ou não tem quem programe.</li>
+                    <li>O cliente técnico pede um detalhe que não está no catálogo nem nesta formação.</li>
+                    <li>Você percebe que ia responder <strong>"acho que sim"</strong>.</li>
+                </ul>
+
+                <h4>Como acionar: leve a ficha completa</h4>
+                <p>O suporte responde mais rápido e melhor quando recebe a necessidade inteira. Antes de acionar, tenha em
+                mãos: quem é o cliente e o perfil dele; o problema em uma frase; a lista de sinais por tipo; a energia
+                disponível; equipamentos existentes (modelo, porta, protocolo); distâncias e coordenadas, se houver rádio;
+                onde e por quem os dados serão vistos; se a equipe programa ou quer o projeto pronto; o prazo desejado. É a
+                mesma lista do item 3.</p>
+
+                <div class="na-venda">
+                    <p>Acionar cedo é argumento de venda: "antes de te mandar a proposta, o nosso suporte valida a
+                    configuração" passa segurança. O cliente percebe que está falando com um fabricante que conhece o produto
+                    por dentro.</p>
+                </div>
+
+                <div class="atencao">
+                    <p>O caminho formal ainda está em confirmação com a equipe.
+                    <span class="confirmar">[CONFIRMAR] por qual canal acionar o suporte e a engenharia (e-mail, chamado, sistema), prazo de resposta, quando o suporte participa de reunião ou visita e quando a engenharia de aplicação entra com proposta de serviço</span></p>
+                </div>
+
+                <p class="fonte">Fontes: Catálogo Geral, p. 2 e 4 (engenharia de aplicação e serviços) e p. 31 (suporte
+                técnico sob demanda do Portal); Treinamento de Produto, p. 16 (estudo da Engenharia de Produto); Etapas 1 a
+                8.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="consultar">
+                <h3>8. Onde consultar informações (para estudar e para o cliente)</h3>
+
+                <p>Exercício 9 do Treinamento de Produto: "onde é possível consultar informações técnicas e comerciais sobre
+                os produtos da HI Tecnologia para estudo e compartilhamento com o cliente?". O que as fontes indicam:</p>
+
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>Onde</th><th>O que tem</th><th>Para quem</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Catálogo Geral (interativo)</td>
+                                <td>Empresa, segmentos, clientes, todos os produtos, softwares, soluções e programas. Na
+                                versão interativa, os botões "Clique" levam à página de cada produto ou programa no site.</td>
+                                <td>Estudo e cliente (é o material comercial da HI)</td>
+                            </tr>
+                            <tr>
+                                <td>Site da HI (www.hitecnologia.com.br)</td>
+                                <td>Uma página para cada produto (por exemplo, /produto/clp-neon5/), páginas das soluções e
+                                dos programas (óleo e gás, DAP5, HI Connect, HI OEM, HI Partner) e dos representantes.
+                                Segundo o Treinamento, os softwares de programação das IHMs podem ser baixados no site e
+                                usados gratuitamente; o HIstudio também é gratuito.
+                                <span class="confirmar">[CONFIRMAR] onde ficam no site os manuais e as fichas técnicas dos produtos</span></td>
+                                <td>Estudo e cliente</td>
+                            </tr>
+                            <tr>
+                                <td>HI University</td>
+                                <td>Cursos online (HIstudio, MQTT, Portal de Telemetria, Ladder), com inscrição na página da HI
+                                na Sympla.</td>
+                                <td>Cliente e você</td>
+                            </tr>
+                            <tr>
+                                <td>Canal da HI no YouTube e redes sociais (LinkedIn, Instagram, Facebook)</td>
+                                <td>Vídeos e notícias da empresa. As redes também divulgam cases e publicações de parceiros
+                                do HI Partner.</td>
+                                <td>Estudo e cliente</td>
+                            </tr>
+                            <tr>
+                                <td>Esta formação</td>
+                                <td>Conceitos, produtos em linguagem comercial, perguntas de bolso, glossário.</td>
+                                <td>Estudo (uso interno)</td>
+                            </tr>
+                            <tr>
+                                <td>Suporte técnico</td>
+                                <td>O que não está em nenhum material, e a confirmação de tudo o que é técnico.</td>
+                                <td>Você, com a ficha do item 7</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="atencao">
+                    <p>Material interno (o Treinamento de Produto, os exercícios, esta formação) foi feito para a equipe.
+                    Antes de mandar algo ao cliente além do catálogo e do site, confirme com a equipe se pode.
+                    <span class="confirmar">[CONFIRMAR] que materiais, além do catálogo e do site, podem ser enviados ao cliente</span></p>
+                </div>
+
+                <p class="fonte">Fontes: exercício 9 do Treinamento de Produto; Treinamento de Produto, p. 10 (softwares
+                das IHMs para baixar no site, gratuitos); Catálogo Geral, p. 6 e 32 (HIstudio gratuito), p. 40 (HI
+                University) e p. 41 (divulgação de cases do HI Partner); endereços dos botões "Clique" do Catálogo
+                Geral interativo (site, Sympla, YouTube e redes sociais).</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="na-venda">
+                <h3>9. Como isso aparece na venda</h3>
+
+                <h4>Perguntas que o cliente costuma fazer no fim da conversa</h4>
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>O cliente pergunta</th><th>Como responder</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>"Me manda uma proposta hoje?"</td>
+                                <td>"Para a proposta sair certa, preciso fechar com você a lista de sinais, a energia e a
+                                comunicação. Com isso o suporte valida e o setor de vendas monta o orçamento." Se faltar
+                                informação, diga qual e combine quando ela chega.</td>
+                            </tr>
+                            <tr>
+                                <td>"Vocês garantem que funciona?"</td>
+                                <td>"A gente confirma antes de vender: o suporte valida a configuração e, no rádio, a
+                                engenharia faz o estudo de visada." Não diga "funciona" antes disso.</td>
+                            </tr>
+                            <tr>
+                                <td>"Qual o prazo de entrega?" / "Qual a garantia?"</td>
+                                <td>Anote e confirme com a equipe antes de responder.
+                                <span class="confirmar">[CONFIRMAR] processo comercial: prazos e garantia</span></td>
+                            </tr>
+                            <tr>
+                                <td>"O concorrente é mais barato."</td>
+                                <td>Não discuta preço de cabeça. Entenda o que está sendo comparado (a solução inteira ou só uma
+                                peça?) e mostre o que a HI entrega: tecnologia própria e suporte de quem conhece o produto por
+                                dentro, HIstudio gratuito, e a solução completa (equipamento, conexão com o HI Connect e
+                                Portal) num fornecedor só. O valor vem do orçamento.</td>
+                            </tr>
+                            <tr>
+                                <td>"Pode vir alguém ver a instalação?"</td>
+                                <td>Anote o motivo (ver o painel, medir distâncias, levantar sinais) e confirme com a equipe.
+                                <span class="confirmar">[CONFIRMAR] quando há visita técnica e quem vai</span></td>
+                            </tr>
+                            <tr>
+                                <td>"Não sei responder essas perguntas técnicas."</td>
+                                <td>"Sem problema. Quem cuida da manutenção ou do painel aí? Posso conversar com essa pessoa?"
+                                O que ficar sem resposta vai como "não sei" na ficha.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4>Erros comuns a evitar</h4>
+                <div class="atencao">
+                    <ul>
+                        <li>Falar de produto antes de entender o problema.</li>
+                        <li>Fazer as perguntas como interrogatório, sem ouvir a história.</li>
+                        <li>Prometer preço, prazo, alcance ou compatibilidade para fechar mais rápido.</li>
+                        <li>Mandar ao suporte uma necessidade pela metade ("o cliente quer um CLP").</li>
+                        <li>Esquecer itens do pedido completo: fonte, IHM, USB721, chip e plano, treinamento.</li>
+                        <li>Terminar a conversa sem um próximo passo com data.</li>
+                        <li>Tratar todos os clientes igual: integrador, fabricante e usuário final pedem ofertas diferentes.</li>
+                    </ul>
+                </div>
+
+                <p class="fonte">Fontes: Catálogo Geral, p. 2 (tecnologia própria), p. 6 e 32 (HIstudio gratuito) e
+                p. 38 (HI Connect); regras de ouro da home; Etapas 1 a 8.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="glossario">
+                <h3>10. Glossário da etapa</h3>
+
+                <dl class="glossario">
+                    <dt>Qualificação</dt>
+                    <dd>Conjunto de perguntas que levanta o que o cliente precisa, para indicar a solução certa.</dd>
+
+                    <dt>Pergunta aberta</dt>
+                    <dd>Pergunta que não se responde com "sim" ou "não" ("como vocês fazem hoje?").</dd>
+
+                    <dt>Lista de sinais</dt>
+                    <dd>Contagem de entradas e saídas, digitais e analógicas, e dos sinais especiais. Base da escolha do CLP.</dd>
+
+                    <dt>Arquitetura</dt>
+                    <dd>Desenho da solução: onde ficam os sinais, quem os lê, por onde os dados viajam e onde são vistos.</dd>
+
+                    <dt>Pedido completo</dt>
+                    <dd>Oferta que inclui o que faz a solução funcionar: fonte, IHM, USB721, chip e plano, treinamento (Etapa 6).</dd>
+
+                    <dt>Próximo passo</dt>
+                    <dd>O que foi combinado no fim da conversa, com responsável e data.</dd>
+
+                    <dt>Acionar (escalar)</dt>
+                    <dd>Levar ao suporte, à engenharia ou à equipe comercial o que você não pode confirmar sozinho.</dd>
+
+                    <dt>Engenharia de aplicação</dt>
+                    <dd>Área da HI que faz projetos e serviços: startup, programação, projeto elétrico, integração, supervisório.</dd>
+
+                    <dt>Engenharia de Produto</dt>
+                    <dd>Área da HI que faz, entre outros, o estudo de altimetria e visada para a venda de rádio.</dd>
+
+                    <dt>Estudo de visada</dt>
+                    <dd>Análise do relevo entre dois pontos para saber se as antenas do rádio se "enxergam".</dd>
+
+                    <dt>Role-play</dt>
+                    <dd>Simulação de atendimento em que alguém faz o papel do cliente. É o formato do Encontro 2.</dd>
+                </dl>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="quiz-bloco" id="quiz">
+                <h3>Quiz da etapa</h3>
+                <p>Confira o que ficou. A correção é na hora, com a explicação de cada resposta.
+                Acerte pelo menos 80% antes de marcar a etapa como concluída.</p>
+
+                <form class="quiz">
+                    <fieldset class="quiz-q" data-certa="c">
+                        <legend>1. Um cliente liga dizendo "preciso de um CLP". Qual é o melhor primeiro passo?</legend>
+                        <label><input type="radio" name="q1" value="a"> Indicar o P7C, que é o maior.</label>
+                        <label><input type="radio" name="q1" value="b"> Mandar o catálogo e esperar o retorno.</label>
+                        <label><input type="radio" name="q1" value="c"> Entender o problema: o que ele quer automatizar, como funciona hoje e quem vai usar.</label>
+                        <label><input type="radio" name="q1" value="d"> Passar uma estimativa de preço para ver se ele se interessa.</label>
+                        <p class="quiz-explica" hidden>O produto é consequência do problema. Sem entender a aplicação, não dá nem para saber se o CLP é o produto certo, muito menos qual. Preço só pelo orçamento.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="a">
+                        <legend>2. Qual destas é uma pergunta aberta, boa para o momento "entender o problema"?</legend>
+                        <label><input type="radio" name="q2" value="a"> "Como vocês ficam sabendo hoje que uma bomba parou?"</label>
+                        <label><input type="radio" name="q2" value="b"> "Vocês têm problema com as bombas?"</label>
+                        <label><input type="radio" name="q2" value="c"> "Vocês querem o NEON5?"</label>
+                        <label><input type="radio" name="q2" value="d"> "O orçamento pode ser até sexta?"</label>
+                        <p class="quiz-explica" hidden>A pergunta aberta faz o cliente contar a história, e nela aparecem sinais, distâncias e quem precisa do dado. As outras se respondem com "sim" ou "não" ou já pulam para produto e prazo.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="d">
+                        <legend>3. Reservatórios a 20 km da estação, sem internet nem sinal de celular; a estação tem internet e o gerente quer ver tudo no celular. Qual arquitetura faz sentido apresentar para validar?</legend>
+                        <label><input type="radio" name="q3" value="a"> Um GTON-C em cada reservatório lendo o sensor de nível.</label>
+                        <label><input type="radio" name="q3" value="b"> Só o HIscada Pro na estação, sem nada nos reservatórios.</label>
+                        <label><input type="radio" name="q3" value="c"> 4G em cada reservatório, sem perguntar mais nada.</label>
+                        <label><input type="radio" name="q3" value="d"> CLP em cada reservatório com rádio até a estação (com estudo da Engenharia), e da estação para o Portal pela internet.</label>
+                        <p class="quiz-explica" hidden>Sem cabo, sem internet e sem sinal de celular nos pontos, o caminho é o rádio, com o estudo de visada antes de vender. A estação tem internet e leva os dados ao Portal, que o gerente abre no celular. Gateway não lê sensor, e 4G sem sinal não funciona.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="b">
+                        <legend>4. O cliente pergunta se o CLP da HI "conversa" com o inversor de frequência de outra marca que ele já tem. O que fazer?</legend>
+                        <label><input type="radio" name="q4" value="a"> Dizer que sim, porque todo inversor fala Modbus.</label>
+                        <label><input type="radio" name="q4" value="b"> Anotar o modelo, a porta e o protocolo do inversor e confirmar com o suporte técnico.</label>
+                        <label><input type="radio" name="q4" value="c"> Dizer que não, para não correr risco.</label>
+                        <label><input type="radio" name="q4" value="d"> Pedir para a Engenharia de Produto fazer o estudo de altimetria.</label>
+                        <p class="quiz-explica" hidden>Compatibilidade é assunto do suporte técnico, e ele precisa do modelo, da porta e do protocolo. O estudo de altimetria é para rádio. Dizer "sim" ou "não" sem confirmar fere a regra de ouro.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="c">
+                        <legend>5. O cliente diz: "não tenho ninguém para programar, quero receber funcionando". Quem a HI envolve?</legend>
+                        <label><input type="radio" name="q5" value="a"> Ninguém: a HI só vende equipamento.</label>
+                        <label><input type="radio" name="q5" value="b"> Só a HI University.</label>
+                        <label><input type="radio" name="q5" value="c"> A engenharia de aplicação, que faz desde o startup completo até programação de CLP e IHM.</label>
+                        <label><input type="radio" name="q5" value="d"> O representante mais próximo, obrigatoriamente.</label>
+                        <p class="quiz-explica" hidden>A engenharia de aplicação da HI faz projetos completos (startup) e demandas pontuais. A HI University é para quem quer aprender; pode complementar, mas não substitui o projeto pronto.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="a">
+                        <legend>6. Onde você consulta informações técnicas e comerciais da HI para estudar e para compartilhar com o cliente? (exercício 9)</legend>
+                        <label><input type="radio" name="q6" value="a"> No Catálogo Geral e no site da HI (uma página por produto); cursos na HI University; e, para o que não estiver lá, no suporte técnico.</label>
+                        <label><input type="radio" name="q6" value="b"> Em fóruns da internet sobre automação.</label>
+                        <label><input type="radio" name="q6" value="c"> Só na memória de conversas anteriores.</label>
+                        <label><input type="radio" name="q6" value="d"> No material interno, que pode ser enviado ao cliente sem consultar ninguém.</label>
+                        <p class="quiz-explica" hidden>Catálogo e site são as fontes oficiais; a HI University tem cursos; o suporte confirma o resto. Material interno só vai ao cliente depois de confirmar com a equipe.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="d">
+                        <legend>7. O cliente pergunta o prazo de entrega. O que fazer?</legend>
+                        <label><input type="radio" name="q7" value="a"> Dizer "uns 15 dias", que é o normal.</label>
+                        <label><input type="radio" name="q7" value="b"> Dizer que é imediato, para fechar logo.</label>
+                        <label><input type="radio" name="q7" value="c"> Mudar de assunto.</label>
+                        <label><input type="radio" name="q7" value="d"> Anotar, confirmar com a equipe e dar o retorno.</label>
+                        <p class="quiz-explica" hidden>Prazo, como preço, não se passa de memória. "Vou confirmar e te retorno" é a resposta profissional.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="b">
+                        <legend>8. Você vai pedir ao suporte a indicação do CLP. O que deve levar?</legend>
+                        <label><input type="radio" name="q8" value="a"> Só o nome do cliente: "ele quer um CLP".</label>
+                        <label><input type="radio" name="q8" value="b"> A lista de sinais por tipo, a energia disponível, a comunicação e onde os dados serão vistos.</label>
+                        <label><input type="radio" name="q8" value="c"> O preço que o cliente quer pagar.</label>
+                        <label><input type="radio" name="q8" value="d"> O modelo que você acha melhor, sem os dados do cliente.</label>
+                        <p class="quiz-explica" hidden>A ficha completa é o que permite ao suporte indicar a configuração certa de primeira, sem voltar ao cliente.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="c">
+                        <legend>9. O cliente diz: "o concorrente é mais barato". Qual é a melhor reação?</legend>
+                        <label><input type="radio" name="q9" value="a"> Oferecer um desconto na hora.</label>
+                        <label><input type="radio" name="q9" value="b"> Dizer que a HI é sempre mais barata.</label>
+                        <label><input type="radio" name="q9" value="c"> Entender o que está sendo comparado, mostrar o que a solução HI inclui e deixar o valor para o orçamento.</label>
+                        <label><input type="radio" name="q9" value="d"> Falar mal do concorrente.</label>
+                        <p class="quiz-explica" hidden>Preço só pelo orçamento, e "mais barato" sem fonte não se diz. Muitas vezes a comparação é de uma peça contra uma solução completa; mostre o que a HI entrega (tecnologia própria, suporte, HIstudio gratuito, solução completa).</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="a">
+                        <legend>10. Como uma boa conversa de venda termina?</legend>
+                        <label><input type="radio" name="q10" value="a"> Com um resumo do que foi entendido e um próximo passo combinado, com data.</label>
+                        <label><input type="radio" name="q10" value="b"> Com o vendedor prometendo que tudo vai funcionar.</label>
+                        <label><input type="radio" name="q10" value="c"> Com "qualquer coisa, me liga".</label>
+                        <label><input type="radio" name="q10" value="d"> Com o preço de cada item, de memória.</label>
+                        <p class="quiz-explica" hidden>O resumo confirma que você entendeu; o próximo passo com data mantém a venda andando. As outras ferem as regras de ouro ou deixam a venda parada.</p>
+                    </fieldset>
+
+                    <div class="quiz-acoes">
+                        <button type="submit" class="btn">Corrigir</button>
+                        <button type="button" class="btn btn-secondary quiz-refazer" hidden>Refazer</button>
+                    </div>
+                    <p class="quiz-resultado" aria-live="polite"></p>
+                </form>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="caso">
+                <h3>Para o encontro com o instrutor (Encontro 2: role-play)</h3>
+                <p>No Encontro 2, o instrutor faz o papel do cliente e só responde o que for perguntado. Você conduz a
+                conversa pelos cinco momentos; os colegas acompanham com a lista do item 3 e anotam o que ficou faltando.
+                Traga preparado:</p>
+                <ol>
+                    <li><strong>A conversa dos reservatórios.</strong> Refaça a conversa do item 5 com as suas palavras. O
+                    instrutor pode mudar um detalhe (por exemplo: "tem sinal de celular em dois reservatórios"); como isso
+                    muda o desenho e as perguntas?</li>
+                    <li><strong>A fábrica de café.</strong> O cliente diz só: "quero automatizar a produção de café". Por
+                    trás, ele precisa guardar receitas, comandar por uma tela de 7 polegadas, usar Ethernet e acionar 10
+                    saídas digitais. Que perguntas fazem essas necessidades aparecerem? Que arquitetura você apresenta para o
+                    suporte validar?</li>
+                    <li><strong>Níveis na nuvem do cliente.</strong> O cliente tem 6 transmissores de nível de 4 a 20 mA e
+                    quer os dados na plataforma em nuvem dele, pelo 4G, em MQTT. Que perguntas você faz antes de indicar
+                    qualquer produto (sinal de celular, plataforma, quem programa)? O que vai na ficha para o suporte?</li>
+                    <li><strong>O cliente apressado.</strong> O instrutor pressiona: "me dá o preço agora", "garante que o
+                    rádio chega lá?", "entrega em uma semana?". Responda sem prometer e sem perder a venda.</li>
+                    <li><strong>Exercício 9, por escrito.</strong> Monte duas listas: onde você estuda e o que pode mandar ao
+                    cliente.</li>
+                </ol>
+                <p class="fonte">Casos com base nos exercícios 9, 15 e 16 do Treinamento de Produto e nas Etapas 1 a 8.</p>
+            </div>
         </div>
     </section>
 
@@ -66,5 +950,6 @@
     <script src="progresso.js"></script>
     <script src="config-conta.js"></script>
     <script src="conta.js"></script>
+    <script src="quiz.js"></script>
 </body>
 </html>

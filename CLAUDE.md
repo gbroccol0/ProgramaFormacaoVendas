@@ -159,7 +159,7 @@ no DOM (a busca da home depende dele), player + link para YouTube/OneDrive.
 Oferecido também: preparar slides e roteiro de cada vídeo a partir do texto.
 **Não implementar sem ele decidir.**
 
-## 4. Estado atual (04/11/2026)
+## 4. Estado atual (05/11/2026)
 
 | Etapa | Arquivo | Estado |
 |---:|---|---|
@@ -171,27 +171,55 @@ Oferecido também: preparar slides e roteiro de cada vídeo a partir do texto.
 | 6 IHMs, Sensores e Acessórios | `Assets/ihm_sensores.html` | **Pronta, aguardando revisão.** Branch `etapa-6-ihm-sensores` (a partir da 5), PR #5. |
 | 7 Supervisão Local e em Nuvem | `Assets/supervisao.html` | **Pronta, aguardando revisão.** Branch `etapa-7-supervisao` (a partir da 6), PR #6. |
 | 8 Soluções e Programas | `Assets/solucoes.html` | **Pronta, aguardando revisão.** Branch `etapa-8-solucoes` (a partir da 7), PR #7. Testada (quiz, conclusão, escuro, 360 px, busca). |
-| 9 e 10 | `Assets/*.html` | Páginas "em produção": selo, objetivos, tempo, caixa "Conteúdo em produção" e fontes previstas. |
+| 9 A Conversa de Venda | `Assets/conversa_venda.html` | **Pronta, aguardando revisão.** Branch `etapa-9-conversa` (a partir da 8), feita no VS Code em 05/11/2026. Testada (quiz, conclusão, escuro, 360 px, busca). PR ainda não aberto (ver "Onde parei"). |
+| 10 Avaliação Final | `Assets/avaliacao_final.html` | Página "em produção": selo, objetivos, tempo, caixa "Conteúdo em produção" e fontes previstas. |
 
-### ONDE PAREI (05/11/2026, fim dos créditos na nuvem)
-- Etapas 2 a 8 prontas, cada uma numa branch encadeada e com PR aberto:
+### ONDE PAREI (05/11/2026, de volta ao VS Code)
+- Os créditos da nuvem acabaram em 05/11/2026 e o trabalho voltou ao VS Code de
+  Gabriel. As Etapas 2 a 8 estão em branches encadeadas com PR aberto:
   #1 (Etapa 2) → #2 (3) → #3 (4) → #4 (5) → #5 (6) → #6 (7) → #7 (8).
   **Merge nessa ordem**; nada foi para o `main`, nada foi publicado.
-- Gabriel aprovou até a Etapa 4; as Etapas 5 a 8 foram feitas em sequência
+- **Etapa 9** feita no VS Code na branch `etapa-9-conversa`, criada a partir de
+  `etapa-8-solucoes`. O `gh` não está instalado nessa máquina: o PR é aberto
+  pelo link que o `git push` mostra (ou pela página do repositório), com base
+  `etapa-8-solucoes`.
+- Gabriel aprovou até a Etapa 4; as Etapas 5 a 9 foram feitas em sequência
   sem revisão (ele pediu) e serão revisadas depois.
-- **Próximo passo no VS Code:** `git fetch origin` e
-  `git checkout etapa-8-solucoes` (é a branch mais recente e contém todas as
-  anteriores). Criar `etapa-9-conversa` a partir dela e produzir a **Etapa 9
-  (A Conversa de Venda)**: roteiro de qualificação juntando as perguntas de bolso
-  das Etapas 2–8, arquiteturas típicas "do sensor à nuvem", lista do que não
-  prometer, quando acionar suporte/engenharia (processo comercial ainda
-  `[CONFIRMAR]`), exercício 9 (onde consultar informações). Depois a **Etapa 10
-  (Avaliação Final)** e a Fase 4.
-- Ferramentas usadas na nuvem (não estão no repositório, recriar se quiser):
-  teste com Playwright que responde o quiz, marca a etapa, mede 360 px, tira
-  print dos SVGs nos dois temas e testa a busca da home; e um gerador de
-  prévia autocontida (CSS, quiz e imagens embutidos) para mandar a Gabriel.
-  Tabelas em imagem dos PDFs foram lidas com `pdftoppm -f N -l N -r 200`.
+- **Próximo passo:** a **Etapa 10 (Avaliação Final)** numa branch
+  `etapa-10-avaliacao` a partir da 9, e depois a Fase 4.
+- Ferramentas de teste: na nuvem havia um teste com Playwright (não está no
+  repositório). No VS Code os testes rodam no Edge sem interface
+  (`msedge --headless=new --dump-dom` e `--screenshot`), sobre uma **cópia** do
+  site no scratchpad com o login desligado (`url` e `anonKey` vazios), servida
+  por `python -m http.server`. As páginas de teste de `ferramentas/testes/`
+  foram copiadas com o nome da etapa trocado, mais três novas (marcar a etapa,
+  os SVGs nos dois temas lado a lado, a busca da home). Tabelas em imagem dos
+  PDFs foram lidas na nuvem com `pdftoppm -f N -l N -r 200`.
+- **Links do catálogo:** os botões "Clique" do PDF interativo apontam para o
+  site (`www.hitecnologia.com.br/produto/...`, uma página por produto), a
+  Sympla, o YouTube e as redes da HI. Dá para listar com
+  `grep -a -o "https\?://[^)> ]*" fontes/originais/Catalogo-HI-Interativo.pdf`.
+  Foi a base do exercício 9 na Etapa 9.
+
+**Etapa 9, o que foi feito (para não refazer):** 10 seções (a conversa em
+cinco momentos: abrir, entender o problema, qualificar, desenhar a solução,
+encaminhar; perguntas abertas; roteiro de qualificação juntando as perguntas
+de bolso das Etapas 1–8 por assunto, com a etapa de origem; arquiteturas
+típicas A–F (máquina com IHM, planta com supervisório local, integrar
+equipamentos existentes, pontos remotos por rádio, nuvem pelo 4G, solução
+pronta) com diagrama de um exemplo de saneamento que combina D, A, B e E;
+conversa de exemplo fictícia, momento a momento, sobre esse mesmo exemplo;
+tabela "não prometa → diga no lugar → quem confirma"; quem responde cada
+assunto (setor de vendas, suporte, Engenharia de Produto, engenharia de
+aplicação), sinais de que é hora de acionar e a ficha a levar; onde consultar
+(exercício 9); na venda; glossário), 2 diagramas, quiz de 10 e caso com 5 itens
+para o role-play do Encontro 2. Cinco `[CONFIRMAR]` novos (prazo e garantia;
+canal e regras para acionar suporte/engenharia; visita técnica; manuais e
+fichas técnicas no site; materiais que podem ir ao cliente). Decisões de
+redação: o momento 1 e as perguntas abertas são conceito geral de vendas,
+dito no `.fonte`; "concorrente mais barato" é tratado sem dizer que a HI é
+mais barata (mostrar o que a solução inclui e mandar ao orçamento); o exemplo
+de saneamento e a conversa são marcados como fictícios.
 
 **Etapa 8, o que foi feito (para não refazer):** 10 seções (DAP5 com a tabela
 do catálogo p. 35; óleo e gás com os 4 métodos de elevação, números e recursos
@@ -348,7 +376,12 @@ Avaliação Final).
 Etapa 5 usou o **5** e retomou, agora com produto, o **14**, o **15**, o
 **17**, o **18**, o **19** e o **21**.
 Etapa 6 usou o **6** e, com a IHM e o pedido completo, o **11**, o **13** e o
-**20**. Ainda não usado: **9** (onde consultar informações; Etapa 9).
+**20**.
+Etapa 9 usou o **9** (seção "Onde consultar", quiz e caso) e, no role-play do
+caso, o **15** e o **16** reescritos como clientes que só revelam a
+necessidade se o vendedor perguntar. Todos os 21 já apareceram; a Avaliação
+Final pode reaproveitar qualquer um como caso completo (os de oferta, 10–13,
+16, 20 e 21, são os melhores).
 
 **Os 21 exercícios** de `fontes/texto/exercicios_treinamento_de_produto.txt`
 mapeiam assim (sugestão, ainda não discutida com Gabriel): 1 → Etapa 2;

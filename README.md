@@ -58,7 +58,7 @@ Formacao-Vendas-HI/
 | 6 | IHMs, Sensores e Acessórios | `ihm_sensores.html` | **Pronta, aguardando revisão** (branch `etapa-6-ihm-sensores`, PR #5) |
 | 7 | Supervisão Local e em Nuvem | `supervisao.html` | **Pronta, aguardando revisão** (branch `etapa-7-supervisao`, PR #6) |
 | 8 | Soluções e Programas | `solucoes.html` | **Pronta, aguardando revisão** (branch `etapa-8-solucoes`, PR #7) |
-| 9 | A Conversa de Venda | `conversa_venda.html` | Em produção |
+| 9 | A Conversa de Venda | `conversa_venda.html` | **Pronta, aguardando revisão** (branch `etapa-9-conversa`, feita no VS Code depois do fim dos créditos na nuvem) |
 | 10 | Avaliação Final | `avaliacao_final.html` | Em produção |
 
 Uma etapa é produzida por vez e só segue depois da revisão da anterior.
@@ -155,6 +155,10 @@ onde está.
 | Etapa 6, item 7 | Perfil típico de cliente da caixa GEM100 e se ela é vendida avulsa |
 | Etapa 8, item 1 | Quantos e quais sinais o DAP5 lê e qual CLP e comunicação vêm dentro dele |
 | Etapa 8, item 6 | Critérios e processo para um integrador entrar no HI Partner |
-| Etapa 9 (futura) | Processo comercial (orçamento, prazo, garantia) e regras para acionar suporte/engenharia |
-| Etapa 9 (futura) | Cases reais (problema → solução → resultado); Gabriel ofereceu compartilhar |
+| Etapa 9, itens 6 e 9 | Processo comercial: política de prazo de entrega e de garantia |
+| Etapa 9, item 7 | Como acionar o suporte e a engenharia: canal (e-mail, chamado, sistema), prazo de resposta, quando o suporte participa de reunião ou visita, quando a engenharia de aplicação entra com proposta de serviço |
+| Etapa 9, item 9 | Quando há visita técnica ao cliente e quem vai |
+| Etapa 9, item 8 | Onde ficam no site os manuais e as fichas técnicas dos produtos |
+| Etapa 9, item 8 | Que materiais, além do catálogo e do site, podem ser enviados ao cliente |
+| Etapa 9 / Avaliação Final | Cases reais (problema → solução → resultado); Gabriel ofereceu compartilhar |
 | Fase 4 | Lista dos vídeos/tutoriais do suporte reaproveitáveis (começar pelos links do site Forma-o-HI) |
