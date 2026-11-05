@@ -226,7 +226,7 @@
                             <tr>
                                 <td>Alimentação (AC ou DC)</td>
                                 <td>A energia que liga o CLP.</td>
-                                <td>"Como o equipamento vai ser ligado: direto na tomada ou num painel com fonte?"</td>
+                                <td>"Como o equipamento vai ser alimentado: direto pela rede elétrica do local ou por uma fonte no painel?"</td>
                                 <td>Item 4 desta etapa</td>
                             </tr>
                             <tr>
@@ -246,7 +246,7 @@
                 </div>
 
                 <div class="analogia">
-                    <p>Pense num computador: ele precisa de tomada (alimentação), de teclado, mouse e monitor
+                    <p>Pense num computador: ele precisa de energia (alimentação), de teclado, mouse e monitor
                     (entradas e saídas) e de internet ou cabo de rede (comunicação). Se faltar um dos três, não
                     adianta o processador ser bom. No CLP é igual.</p>
                 </div>
@@ -274,8 +274,8 @@
                 <svg class="diagrama diagrama-corpo" viewBox="0 0 420 270" role="img"
                      aria-labelledby="acdcTitulo acdcDesc">
                     <title id="acdcTitulo">Alimentação AC e DC</title>
-                    <desc id="acdcDesc">Duas linhas. Em AC, a tomada de 110/127 ou 220 V AC liga direto no
-                    equipamento AC, sem fonte. Em DC, a tomada liga numa fonte de alimentação, que entrega 12 ou
+                    <desc id="acdcDesc">Duas linhas. Em AC, a rede elétrica de 110/127 ou 220 V AC alimenta direto o
+                    equipamento AC, sem fonte. Em DC, a rede elétrica alimenta uma fonte de alimentação, que entrega 12 ou
                     24 V DC ao equipamento DC e aos sensores.</desc>
                     <defs>
                         <marker id="acdcPonta" viewBox="0 0 10 10" refX="5" refY="5"
@@ -284,9 +284,9 @@
                         </marker>
                     </defs>
 
-                    <text class="d-rotulo" x="10" y="26">AC: direto na tomada</text>
+                    <text class="d-rotulo" x="10" y="26">AC: direto da rede elétrica</text>
                     <rect class="d-caixa" x="10" y="40" width="110" height="64" rx="10"/>
-                    <text class="d-rotulo" x="65" y="66" text-anchor="middle">Tomada</text>
+                    <text class="d-rotulo" x="65" y="66" text-anchor="middle">Rede elétrica</text>
                     <text class="d-itens" x="65" y="88" text-anchor="middle">110/220 V AC</text>
                     <line class="d-seta" x1="120" y1="72" x2="292" y2="72" marker-end="url(#acdcPonta)"/>
                     <text class="d-nota" x="206" y="64" text-anchor="middle">sem fonte</text>
@@ -296,7 +296,7 @@
 
                     <text class="d-rotulo" x="10" y="146">DC: com fonte de alimentação</text>
                     <rect class="d-caixa" x="10" y="160" width="110" height="64" rx="10"/>
-                    <text class="d-rotulo" x="65" y="186" text-anchor="middle">Tomada</text>
+                    <text class="d-rotulo" x="65" y="186" text-anchor="middle">Rede elétrica</text>
                     <text class="d-itens" x="65" y="208" text-anchor="middle">110/220 V AC</text>
                     <line class="d-seta" x1="120" y1="192" x2="147" y2="192" marker-end="url(#acdcPonta)"/>
                     <rect class="d-caixa" x="155" y="160" width="110" height="64" rx="10"/>
@@ -312,17 +312,17 @@
                 <div class="cartoes">
                     <div class="cartao">
                         <h4>AC (corrente alternada)</h4>
-                        <p>É a energia da tomada. O equipamento com alimentação AC liga <strong>direto na
-                        tomada</strong>, sem fonte adicional. No Brasil, as tensões comuns são 110/127 V AC e
+                        <p>É a energia da rede elétrica, a mesma que chega às tomadas. O equipamento com alimentação AC é
+                        <strong>alimentado direto pela rede</strong>, sem fonte adicional. No Brasil, as tensões comuns são 110/127 V AC e
                         220 V AC; os CLPs HI com opção AC aceitam a faixa de <strong>85 a 265 V AC</strong>,
                         que cobre as duas.</p>
                         <p><span class="rotulo">Quando o cliente escolhe</span><br>Quando quer praticidade:
-                        ligar o CLP onde há tomada, sem precisar de fonte.</p>
+                        alimentar o CLP direto pela rede elétrica do local, sem precisar de fonte.</p>
                     </div>
                     <div class="cartao">
                         <h4>DC (corrente contínua)</h4>
                         <p>É uma tensão mais baixa e constante. O equipamento DC precisa de uma <strong>fonte de
-                        alimentação</strong>, que converte a energia da tomada em corrente contínua e reduz a
+                        alimentação</strong>, que converte a energia da rede elétrica em corrente contínua e reduz a
                         tensão. Em automação, os valores mais comuns são <strong>12 V DC</strong> e
                         <strong>24 V DC</strong>.</p>
                         <p><span class="rotulo">Quando o cliente escolhe</span><br>Em painéis industriais, para
@@ -332,8 +332,8 @@
 
                 <div class="analogia">
                     <p>Pense no celular e no carregador. O celular funciona com uma tensão baixa e contínua (DC);
-                    o carregador é a "fonte" que converte a energia da tomada (AC) para o que ele aceita. Um
-                    equipamento AC é como um liquidificador: vai direto na tomada.</p>
+                    o carregador é a "fonte" que converte a energia da rede (AC) para o que ele aceita. Um
+                    equipamento AC é como um liquidificador: usa a energia da rede direto, sem carregador.</p>
                 </div>
 
                 <h4>Como isso aparece na linha HI</h4>
@@ -347,7 +347,7 @@
                             <tr><td>CLP NEON5</td><td>AC (85 a 265 V AC) ou DC (10 a 30 V DC), conforme o modelo</td></tr>
                             <tr><td>CLP RION5</td><td>Só DC (10 a 30 V DC)</td></tr>
                             <tr><td>Sensor THT863</td><td>DC (12 a 30 V DC)</td></tr>
-                            <tr><td>Fontes Mean Well (revenda)</td><td>Entram na tomada (90 a 264 V AC) e entregam 24 V DC</td></tr>
+                            <tr><td>Fontes Mean Well (revenda)</td><td>Alimentadas pela rede elétrica (90 a 264 V AC), entregam 24 V DC</td></tr>
                             <tr><td>SBC513 (fabricação HI)</td><td>Controlador de carga com bateria de 12 V incorporada; alimentado por 18 a 26 V DC ou painel fotovoltaico. Mantém o equipamento ligado onde a rede elétrica falha ou não existe</td></tr>
                         </tbody>
                     </table>
@@ -361,7 +361,7 @@
 
                 <div class="atencao">
                     <p><strong>Não decida a alimentação pelo cliente.</strong> Se ele não disser se quer AC ou DC,
-                    pergunte como é o local (tem tomada? qual tensão? já existe painel com fonte de 24 V DC?). Se
+                    pergunte como é o local (qual a tensão da rede elétrica? já existe painel com fonte de 24 V DC?). Se
                     ele não souber, anote e confirme com o suporte antes de fechar a configuração. E lembre: o
                     RION5 não tem opção AC.</p>
                 </div>
@@ -387,7 +387,7 @@
                 <p>Varia continuamente, como o ponteiro de um medidor. Os padrões da automação são
                 <strong>0 a 10 V</strong> (tensão) e <strong>4 a 20 mA</strong> (corrente). O segredo é este:
                 <strong>o sinal representa de 0 a 100% da grandeza medida ou comandada</strong>. O CLP não sabe
-                o que é "litro" nem "psi": ele lê ou envia uma porcentagem.</p>
+                o que é "litro" nem "metro": ele lê ou envia uma porcentagem.</p>
 
                 <svg class="diagrama diagrama-corpo" viewBox="0 0 420 250" role="img"
                      aria-labelledby="escalaTitulo escalaDesc">
@@ -431,14 +431,8 @@
                     <p>Pense no marcador de combustível do carro. Ele não mostra litros: mostra "meio tanque".
                     Quem sabe que o tanque tem 50 litros conclui que há 25. O CLP é igual: lê "50%" de um tanque
                     de 0 a 500 litros, e o programa (ou a tela) converte em 250 litros. No caminho de volta,
-                    para abrir 30% uma válvula que trabalha de 3 a 15 psi, o CLP não precisa saber o que é psi:
-                    ele envia 30% do sinal de 4 a 20 mA.</p>
+                    para abrir 30% uma válvula, o CLP envia 30% do sinal.</p>
                 </div>
-
-                <p>Por que a escala de corrente começa em 4 mA, e não em 0? Porque assim o "zero" da medida
-                ainda tem corrente passando. Se o fio romper, o sinal cai para 0 mA, e o sistema percebe que
-                há uma falha, em vez de achar que o tanque esvaziou. Dentro do CLP, conversores (A/D e D/A)
-                fazem a passagem entre o sinal elétrico e o número que o programa usa.</p>
 
                 <h4>Entrada ou saída?</h4>
                 <p>A direção do sinal importa tanto quanto o tipo: <strong>entrada</strong> é o que o CLP
@@ -478,9 +472,8 @@
                 <h4>Sinais "especiais": anote e confirme</h4>
                 <p>Alguns sensores não usam liga/desliga, 0 a 10 V nem 4 a 20 mA e precisam de uma entrada própria
                 no módulo de I/O. Os módulos da HI trazem, por exemplo, entradas para <strong>PT100</strong>
-                (sensor de temperatura), para <strong>célula de carga</strong> (pesagem) e canais de
-                <strong>contador rápido</strong> e <strong>encoder</strong> (pulsos muito rápidos, como os de um
-                medidor de vazão a pulso).</p>
+                (sensor de temperatura), para <strong>célula de carga</strong> (pesagem) e para
+                <strong>pulsos rápidos</strong> (como os de um medidor de vazão a pulso).</p>
 
                 <div class="atencao">
                     <p>Se o cliente citar um sinal desses (ou qualquer um que você não reconheça), <strong>anote o
@@ -497,7 +490,7 @@
                 </div>
 
                 <p class="fonte">Fontes: Treinamento de Produto, p. 3, 4 e 17; apresentação de CLPs, slide 2;
-                Catálogo Geral, p. 10 e 24. O "zero vivo" de 4 mA é conceito geral de automação.</p>
+                Catálogo Geral, p. 10 e 24.</p>
             </div>
 
 
@@ -514,7 +507,7 @@
                     <title id="piramideTitulo">Pirâmide da automação com os produtos HI</title>
                     <desc id="piramideDesc">Pirâmide de quatro níveis. Nível 1, campo: sensores THT863 e HPS850,
                     fontes e caixas GEM100. Nível 2, controle: CLPs RION5, NEON5 e P7C, IHM GTI5 e o software
-                    HIstudio. Nível 3, supervisão local: HIscada Pro e MPL Server. Nível 4, nuvem: Portal de
+                    HIstudio. Nível 3, supervisão local: IHM GTI5, HIscada Pro e MPL Server. A IHM aparece nos dois níveis. Nível 4, nuvem: Portal de
                     Telemetria e plano HI Connect. Ao lado, uma faixa vertical indica a comunicação que liga
                     os níveis: GTON-C, GTON-P, GTON-M, rádio R9X307 e USB721.</desc>
 
@@ -524,7 +517,7 @@
 
                     <polygon class="d-caixa" points="112,82 288,82 313,144 87,144"/>
                     <text class="d-rotulo" x="200" y="108" text-anchor="middle">3. Supervisão local</text>
-                    <text class="d-itens" x="200" y="130" text-anchor="middle">HIscada Pro · MPL Server</text>
+                    <text class="d-itens" x="200" y="130" text-anchor="middle">GTI5 · HIscada Pro · MPL Server</text>
 
                     <polygon class="d-caixa" points="84,152 316,152 341,214 59,214"/>
                     <text class="d-rotulo" x="200" y="178" text-anchor="middle">2. Controle</text>
@@ -556,15 +549,15 @@
                             </tr>
                             <tr>
                                 <td>2. Controle</td>
-                                <td>O CLP lê o campo e decide; a IHM mostra e comanda junto da máquina.</td>
+                                <td>O CLP lê o campo e decide; a IHM, junto dele, mostra e comanda a máquina.</td>
                                 <td>CLPs RION5, NEON5 e P7C; IHM GTI5; HIstudio (software de programação)</td>
                                 <td>4 e 6</td>
                             </tr>
                             <tr>
                                 <td>3. Supervisão local</td>
-                                <td>Telas, alarmes, gráficos e histórico em computadores da rede local da empresa.</td>
-                                <td>HIscada Pro (supervisório) e MPL Server (servidor de comunicação)</td>
-                                <td>7</td>
+                                <td>Telas, alarmes, gráficos e histórico: na IHM, junto da máquina, e em computadores da rede local da empresa.</td>
+                                <td>IHM GTI5; HIscada Pro (supervisório) e MPL Server (servidor de comunicação)</td>
+                                <td>6 e 7</td>
                             </tr>
                             <tr>
                                 <td>4. Nuvem</td>
@@ -604,9 +597,12 @@
                 </div>
 
                 <div class="atencao">
-                    <p>IHM e supervisório não são a mesma coisa: a IHM é uma tela física ao lado da máquina
-                    (nível 2); o supervisório é um software em computadores da rede (nível 3) ou na internet
-                    (nível 4). Pergunte ao cliente onde ele quer ver os dados antes de indicar um ou outro.</p>
+                    <p>A IHM aparece em dois níveis porque faz duas coisas: fica junto do CLP, comandando a máquina
+                    (controle), e também <strong>supervisiona</strong> o processo no local, com telas, alarmes e
+                    históricos (supervisão). A diferença para o supervisório é o alcance: a IHM é uma tela física na
+                    máquina ou no painel; o supervisório é um software que junta a planta inteira em computadores da
+                    rede (nível 3) ou na internet (nível 4). Pergunte ao cliente onde ele quer ver os dados antes de
+                    indicar um ou outro.</p>
                 </div>
 
                 <p class="fonte">Fontes: Catálogo Geral, sumário e p. 7 a 33 e 38; Treinamento de Produto, p. 2, 10,
@@ -622,8 +618,8 @@
                 <p>Com estas cinco perguntas você sai da primeira conversa com o que o suporte precisa para
                 indicar a solução. Não precisa entender cada resposta a fundo: precisa <strong>anotar</strong>.</p>
                 <ol>
-                    <li><strong>Alimentação:</strong> "Onde o equipamento vai ser instalado? Tem tomada, qual a
-                    tensão? Já existe painel com fonte de 24 V DC? Tem rede elétrica no local?"</li>
+                    <li><strong>Alimentação:</strong> "Onde o equipamento vai ser instalado? Qual a tensão da rede
+                    elétrica? Já existe painel com fonte de 24 V DC? Tem rede elétrica no local?"</li>
                     <li><strong>Sinais liga/desliga:</strong> "Quantos botões, chaves e sensores o CLP vai ler? Quantos
                     motores, bombas, relés e sinaleiros vai comandar?"</li>
                     <li><strong>Medições e comandos proporcionais:</strong> "Quantas medições (nível, pressão,
@@ -643,14 +639,14 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>"Vocês têm CLP que liga direto na tomada?"</td>
+                                <td>"Vocês têm CLP alimentado direto pela rede elétrica, em 127 ou 220 V?"</td>
                                 <td>Sim: o P7C e o NEON5 têm opção de alimentação AC (85 a 265 V AC). O RION5 é só DC.
                                 Confirme a tensão do local e anote.</td>
                             </tr>
                             <tr>
                                 <td>"Vou precisar de fonte?"</td>
                                 <td>Se o equipamento for DC e o painel não tiver fonte, sim: a fonte converte a energia
-                                da tomada em 12 ou 24 V DC. A HI fornece fontes (Mean Well, revenda) e, onde a rede
+                                da rede elétrica em 12 ou 24 V DC. A HI fornece fontes (Mean Well, revenda) e, onde a rede
                                 falta, o SBC513. Inclua no pedido de orçamento.</td>
                             </tr>
                             <tr>
@@ -690,8 +686,8 @@
                         <li>Esquecer a fonte quando o equipamento é DC e o cliente não tem com o que ligar.</li>
                         <li>Contar os sinais sem separar entrada de saída e digital de analógico.</li>
                         <li>Prometer que o CLP lê "qualquer sensor": PT100, célula de carga e pulsos rápidos precisam de entrada própria; confirme com o suporte.</li>
-                        <li>Confundir IHM (tela no painel) com supervisório (software em computador ou na nuvem).</li>
-                        <li>Tentar explicar ao cliente o que é A/D, mA e psi: o cliente quer saber se o problema dele vai ser resolvido.</li>
+                        <li>Achar que IHM e supervisório são a mesma coisa: os dois supervisionam, mas a IHM fica na máquina e o supervisório junta a planta em computadores ou na nuvem.</li>
+                        <li>Tentar explicar ao cliente detalhes técnicos do sinal: o cliente quer saber se o problema dele vai ser resolvido.</li>
                     </ul>
                 </div>
             </div>
@@ -724,13 +720,13 @@
                     <dd>A parte do CLP onde se ligam os fios dos sensores e atuadores. Há módulos digitais, analógicos e especiais.</dd>
 
                     <dt>AC (corrente alternada)</dt>
-                    <dd>A energia da tomada (no Brasil, 110/127 V ou 220 V). Equipamento AC liga direto, sem fonte.</dd>
+                    <dd>A energia da rede elétrica, a que chega às tomadas (no Brasil, 110/127 V ou 220 V). Equipamento AC é alimentado direto por ela, sem fonte.</dd>
 
                     <dt>DC (corrente contínua)</dt>
                     <dd>Tensão baixa e constante, normalmente 12 ou 24 V DC em automação. Precisa de uma fonte de alimentação.</dd>
 
                     <dt>Fonte de alimentação</dt>
-                    <dd>Equipamento que converte a energia da tomada (AC) em corrente contínua (DC) para o CLP, os módulos e os sensores.</dd>
+                    <dd>Equipamento que converte a energia da rede elétrica (AC) em corrente contínua (DC) para o CLP, os módulos e os sensores.</dd>
 
                     <dt>Sinal digital</dt>
                     <dd>Sinal de dois estados: 0 ou 1, ligado ou desligado.</dd>
@@ -739,7 +735,7 @@
                     <dd>Sinal que varia continuamente e representa de 0 a 100% de uma grandeza. Padrões: 0 a 10 V e 4 a 20 mA.</dd>
 
                     <dt>4 a 20 mA</dt>
-                    <dd>Sinal analógico por corrente: 4 mA = 0%, 20 mA = 100%. Começar em 4 mA permite perceber um fio rompido.</dd>
+                    <dd>Sinal analógico por corrente: 4 mA = 0%, 20 mA = 100%. É o padrão mais comum dos transmissores.</dd>
 
                     <dt>PT100</dt>
                     <dd>Tipo de sensor de temperatura que precisa de entrada própria no módulo de I/O.</dd>
@@ -747,14 +743,11 @@
                     <dt>Célula de carga</dt>
                     <dd>Sensor usado em pesagem (balanças, silos). Também precisa de entrada própria.</dd>
 
-                    <dt>Contador rápido / encoder</dt>
-                    <dd>Entradas para pulsos muito rápidos, como os de medidores de vazão a pulso ou de encoders (que medem posição e giro).</dd>
-
                     <dt>Pirâmide da automação</dt>
                     <dd>Forma de organizar a automação em níveis: campo, controle, supervisão local e nuvem.</dd>
 
                     <dt>IHM</dt>
-                    <dd>Interface Homem-Máquina: tela física junto da máquina ou no painel. Na HI, a GTI5.</dd>
+                    <dd>Interface Homem-Máquina: tela física junto da máquina ou no painel, para operar e supervisionar no local. Na HI, a GTI5.</dd>
 
                     <dt>Supervisório (SCADA)</dt>
                     <dd>Software com telas, alarmes, gráficos e histórico do processo. Local: HIscada Pro. Na nuvem: Portal de Telemetria.</dd>
@@ -779,21 +772,21 @@
                     </fieldset>
 
                     <fieldset class="quiz-q" data-certa="c">
-                        <legend>2. O cliente quer ligar o CLP direto na tomada de 220 V, sem nenhuma fonte adicional. Que tipo de alimentação ele procura?</legend>
+                        <legend>2. O cliente quer alimentar o CLP direto pela rede elétrica de 220 V, sem nenhuma fonte adicional. Que tipo de alimentação ele procura?</legend>
                         <label><input type="radio" name="q2" value="a"> DC de 24 V.</label>
                         <label><input type="radio" name="q2" value="b"> DC de 12 V.</label>
                         <label><input type="radio" name="q2" value="c"> AC: na linha HI, P7C e NEON5 têm opção de 85 a 265 V AC.</label>
-                        <label><input type="radio" name="q2" value="d"> Qualquer uma: todo CLP liga direto na tomada.</label>
-                        <p class="quiz-explica" hidden>Equipamento AC liga direto na tomada, sem fonte. A faixa de 85 a 265 V AC cobre 110/127 V e 220 V. DC sempre precisa de fonte, e o RION5, por exemplo, é só DC.</p>
+                        <label><input type="radio" name="q2" value="d"> Qualquer uma: todo CLP pode ser alimentado direto pela rede elétrica.</label>
+                        <p class="quiz-explica" hidden>Equipamento AC é alimentado direto pela rede elétrica, sem fonte. A faixa de 85 a 265 V AC cobre 110/127 V e 220 V. DC sempre precisa de fonte, e o RION5, por exemplo, é só DC.</p>
                     </fieldset>
 
                     <fieldset class="quiz-q" data-certa="a">
                         <legend>3. A cliente vai usar um CLP alimentado em 24 V DC e diz que não tem nada no painel para ligar o CLP e a IHM. O que você inclui na conversa?</legend>
-                        <label><input type="radio" name="q3" value="a"> Uma fonte de alimentação, que converte a energia da tomada em 24 V DC; ela entra no pedido de orçamento.</label>
-                        <label><input type="radio" name="q3" value="b"> Nada: o CLP DC pode ir direto na tomada.</label>
+                        <label><input type="radio" name="q3" value="a"> Uma fonte de alimentação, que converte a energia da rede elétrica em 24 V DC; ela entra no pedido de orçamento.</label>
+                        <label><input type="radio" name="q3" value="b"> Nada: o CLP DC pode ser alimentado direto pela rede elétrica.</label>
                         <label><input type="radio" name="q3" value="c"> Um segundo CLP para alimentar o primeiro.</label>
                         <label><input type="radio" name="q3" value="d"> Um sensor THT863.</label>
-                        <p class="quiz-explica" hidden>Equipamento DC precisa de fonte. Se a cliente não tem, a fonte entra no pedido (a HI fornece fontes Mean Well, de revenda, que entram na tomada e entregam 24 V DC).</p>
+                        <p class="quiz-explica" hidden>Equipamento DC precisa de fonte. Se a cliente não tem, a fonte entra no pedido (a HI fornece fontes Mean Well, de revenda, alimentadas pela rede elétrica, que entregam 24 V DC).</p>
                     </fieldset>
 
                     <fieldset class="quiz-q" data-certa="d">
@@ -801,7 +794,7 @@
                         <label><input type="radio" name="q4" value="a"> Escolher AC, porque é sempre a melhor opção.</label>
                         <label><input type="radio" name="q4" value="b"> Escolher DC sem perguntar, porque é o padrão dos painéis.</label>
                         <label><input type="radio" name="q4" value="c"> Dizer que tanto faz e seguir.</label>
-                        <label><input type="radio" name="q4" value="d"> Perguntar como é o local (tomada, tensão, se já existe painel com fonte de 24 V DC) e, se ele não souber, anotar e confirmar com o suporte.</label>
+                        <label><input type="radio" name="q4" value="d"> Perguntar como é o local (tensão da rede elétrica, se já existe painel com fonte de 24 V DC) e, se ele não souber, anotar e confirmar com o suporte.</label>
                         <p class="quiz-explica" hidden>Não existe opção "sempre melhor": a escolha depende do local. Quem sabe como é a instalação é o cliente; na dúvida técnica, o suporte confirma antes de fechar a configuração.</p>
                     </fieldset>
 
@@ -837,8 +830,8 @@
                         <label><input type="radio" name="q8" value="a"> Dizer que sim, porque o CLP lê qualquer sensor.</label>
                         <label><input type="radio" name="q8" value="b"> Dizer que não, porque pulso não é sinal de automação.</label>
                         <label><input type="radio" name="q8" value="c"> Tratar como duas entradas digitais comuns e seguir sem confirmar.</label>
-                        <label><input type="radio" name="q8" value="d"> Anotar o tipo de sinal, o modelo e a frequência e confirmar com o suporte qual entrada atende (pulsos rápidos usam canais especiais, como contador rápido).</label>
-                        <p class="quiz-explica" hidden>Pulsos rápidos precisam de entradas próprias (contador rápido, encoder). Não prometa nem negue: anote os dados e confirme com o suporte. É a regra de ouro "na dúvida técnica, chame o suporte".</p>
+                        <label><input type="radio" name="q8" value="d"> Anotar o tipo de sinal, o modelo e a frequência e confirmar com o suporte qual entrada atende (pulsos rápidos precisam de entrada própria).</label>
+                        <p class="quiz-explica" hidden>Pulsos rápidos precisam de entrada própria no módulo de I/O. Não prometa nem negue: anote os dados e confirme com o suporte. É a regra de ouro "na dúvida técnica, chame o suporte".</p>
                     </fieldset>
 
                     <fieldset class="quiz-q" data-certa="c">
