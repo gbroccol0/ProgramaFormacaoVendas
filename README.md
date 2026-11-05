@@ -54,8 +54,8 @@ Formacao-Vendas-HI/
 | 2 | Fundamentos da Automação | `fundamentos.html` | **Aprovada** por Gabriel (04/11/2026) |
 | 3 | Comunicação Industrial | `comunicacao.html` | **Aprovada** por Gabriel (05/11/2026) |
 | 4 | Linha de CLPs | `clps.html` | **Aprovada** por Gabriel (05/11/2026), com revisão geral prevista para depois |
-| 5 | Gateways, Modem e Rádios | `conectividade.html` | **Pronta, aguardando a revisão de Gabriel** (branch `etapa-5-conectividade`, pull request) |
-| 6 | IHMs, Sensores e Acessórios | `ihm_sensores.html` | Em produção |
+| 5 | Gateways, Modem e Rádios | `conectividade.html` | **Pronta, aguardando revisão** (branch `etapa-5-conectividade`, PR #4) |
+| 6 | IHMs, Sensores e Acessórios | `ihm_sensores.html` | **Pronta, aguardando revisão** (branch `etapa-6-ihm-sensores`, pull request) |
 | 7 | Supervisão Local e em Nuvem | `supervisao.html` | Em produção |
 | 8 | Soluções e Programas | `solucoes.html` | Em produção |
 | 9 | A Conversa de Venda | `conversa_venda.html` | Em produção |
@@ -150,7 +150,9 @@ onde está.
 | Etapa 1, item 4 | Texto das áreas Indústria 4.0, Meio Ambiente, Hospitalar e Energia (catálogo p. 3–4, ilegível na extração; um print resolve) |
 | Etapa 3, item 5 | Em que situações o vendedor precisa citar o SCP-HI (entre quais equipamentos e softwares HI ele é usado); as fontes só dizem que é o protocolo proprietário da HI |
 | Etapa 5, item 1 | Qual GTON corresponde a cada ESC (ESC717 e ESC713) e se os ESC ainda são vendidos |
-| Etapa 6 (futura) | MMI700 ainda é vendida? BPU508 ainda é vendida (o catálogo traz a SBC513)? |
+| Etapa 6, itens 3 e 6 | MMI700 ainda é vendida? BPU508 ainda é vendida (o catálogo traz a SBC513)? |
+| Etapa 6, item 2 | O SmartManagerPro (software da GTI5) é gratuito, como os das IHMs de revenda? |
+| Etapa 6, item 7 | Perfil típico de cliente da caixa GEM100 e se ela é vendida avulsa |
 | Etapa 9 (futura) | Processo comercial (orçamento, prazo, garantia) e regras para acionar suporte/engenharia |
 | Etapa 9 (futura) | Cases reais (problema → solução → resultado); Gabriel ofereceu compartilhar |
 | Fase 4 | Lista dos vídeos/tutoriais do suporte reaproveitáveis (começar pelos links do site Forma-o-HI) |

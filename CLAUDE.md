@@ -167,14 +167,24 @@ Oferecido também: preparar slides e roteiro de cada vídeo a partir do texto.
 | 2 Fundamentos da Automação | `Assets/fundamentos.html` | **Aprovada** por Gabriel em 04/11/2026 (PR #1, branch `etapa-2-fundamentos`; ele faz o merge). Erros achados depois serão corrigidos depois. |
 | 3 Comunicação Industrial | `Assets/comunicacao.html` | **Aprovada** por Gabriel em 05/11/2026 (PR #2, branch `etapa-3-comunicacao`; ele faz o merge, depois do #1). |
 | 4 Linha de CLPs | `Assets/clps.html` | **Aprovada** ("pode continuar", 05/11/2026). PR #3, branch `etapa-4-clps`. |
-| 5 Gateways, Modem e Rádios | `Assets/conectividade.html` | **Pronta, aguardando revisão.** Branch `etapa-5-conectividade` (a partir de `etapa-4-clps`), PR próprio. |
-| 6 a 10 | `Assets/*.html` | Páginas "em produção": selo, objetivos, tempo, caixa "Conteúdo em produção" e fontes previstas. |
+| 5 Gateways, Modem e Rádios | `Assets/conectividade.html` | **Pronta, aguardando revisão.** Branch `etapa-5-conectividade` (a partir de `etapa-4-clps`), PR #4. |
+| 6 IHMs, Sensores e Acessórios | `Assets/ihm_sensores.html` | **Pronta, aguardando revisão.** Branch `etapa-6-ihm-sensores` (a partir da 5), PR próprio. |
+| 7 a 10 | `Assets/*.html` | Páginas "em produção": selo, objetivos, tempo, caixa "Conteúdo em produção" e fontes previstas. |
 
-**Próximo passo:** seguir em sequência (decisão de 05/11/2026, seção 3): Etapa 6
-(IHMs, Sensores e Acessórios), depois 7, 8, 9 e 10, cada uma numa branch criada
-a partir da anterior e com PR próprio. Antes da Etapa 6, as inconsistências
-dela (MMI700 e BPU508 ainda são vendidas?) viram `[CONFIRMAR]` se Gabriel não
-tiver respondido.
+**Próximo passo:** seguir em sequência (decisão de 05/11/2026, seção 3): Etapa 7
+(Supervisão Local e em Nuvem), depois 8, 9 e 10, cada uma numa branch criada a
+partir da anterior e com PR próprio. Na Etapa 7, **não usar os preços do
+Portal** que aparecem no Treinamento (só a lógica dos planos).
+
+**Etapa 6, o que foi feito (para não refazer):** 11 seções (IHM × supervisório
+em tabela; GTI5 com modelos, portas, IP65, SmartManagerPro e a regra da
+Weintek; revenda Weintek/Veichi e MMI700; perguntas para escolher a IHM e como
+tratar "IHM econômica"; THT863 e HPS850; fontes Mean Well por potência, SBC513
+e BPU508; GEM100; RTK510 com os recursos lidos do quadro em imagem do catálogo
+p. 14; checklist "pedido completo"; na venda; glossário), 1 diagrama, foto
+`Files/IHM_GTI5.png`, quiz de 10 e caso com 5 itens. Quatro `[CONFIRMAR]`
+novos na página: SmartManagerPro gratuito?, MMI700 ainda vendida?, BPU508 ainda
+vendida?, perfil de cliente da GEM100. Exercícios: 6, 11, 13 e 20.
 
 **Etapa 5, o que foi feito (para não refazer):** 10 seções (linha GTON com
 tabela do Treinamento p. 12, nomenclatura SET/S4E e os ESC como antecessores;
@@ -296,6 +306,8 @@ sinais) e voltam com a IHM na Etapa 6 e na oferta completa (Encontro 2,
 Avaliação Final).
 Etapa 5 usou o **5** e retomou, agora com produto, o **14**, o **15**, o
 **17**, o **18**, o **19** e o **21**.
+Etapa 6 usou o **6** e, com a IHM e o pedido completo, o **11**, o **13** e o
+**20**. Ainda não usado: **9** (onde consultar informações; Etapa 9).
 
 **Os 21 exercícios** de `fontes/texto/exercicios_treinamento_de_produto.txt`
 mapeiam assim (sugestão, ainda não discutida com Gabriel): 1 → Etapa 2;
@@ -317,8 +329,8 @@ econômica" — tratar sem citar preço (regra 4).
 | Etapa | Ponto |
 |---|---|
 | 5 | ~~R9X307 60 × 105 km; ESC717/ESC713; GTON C SET × GTON-C~~ **resolvidas em 05/11/2026** (ver seção 3) |
-| 6 | MMI700 (IHM alfanumérica, no Treinamento e no site do suporte) ainda é vendida? |
-| 6 | Fonte própria: BPU508 (Treinamento, no-break 13,8 V) × SBC513 (catálogo, LiFePO4). A BPU508 ainda é vendida? |
+| 6 | MMI700 (IHM alfanumérica, no Treinamento e no site do suporte) ainda é vendida? (`[CONFIRMAR]` na Etapa 6) |
+| 6 | Fonte própria: BPU508 (Treinamento, no-break 13,8 V) × SBC513 (catálogo, LiFePO4). A BPU508 ainda é vendida? (`[CONFIRMAR]` na Etapa 6) |
 | 7 | Preços do Portal no Treinamento (print com R$): **não usar** (regra 4); ensinar só a lógica dos planos (Free/Basic/Plus/Enterprise, por quantidade de dados) |
 | 1 | Catálogo p. 12 escreve "Smart Manager Pro"; Gabriel escreve "SmartManagerPro". Usar a grafia dele. |
 

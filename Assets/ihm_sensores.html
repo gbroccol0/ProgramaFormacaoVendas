@@ -19,8 +19,57 @@
     <section class="hero">
         <div class="hero-content">
             <span class="etapa-badge">Etapa 6 de 10</span>
-            <h1>IHMs, sensores, fontes e acessórios</h1>
-            <p><strong>O que completa o painel e aumenta o valor do pedido.</strong></p>
+            <h1>IHMs, sensores e acessórios: o pedido completo</h1>
+            <p><strong>A tela do operador, os sensores HI e os itens que completam o pedido e evitam a segunda viagem.</strong></p>
+            <p>Um CLP sozinho não opera nada: alguém precisa ver e comandar o processo, o equipamento
+            precisa de energia, a eletrônica precisa de uma caixa, e a equipe do cliente às vezes precisa
+            aprender. Nesta etapa você conhece a IHM <strong>GTI5</strong> e as IHMs de revenda, os sensores
+            <strong>THT863</strong> e <strong>HPS850</strong>, as <strong>fontes</strong>, a caixa
+            <strong>GEM100</strong> e o kit <strong>RTK510</strong>, e monta um pedido que não esquece nada.</p>
+        </div>
+        <div class="hero-image">
+            <svg class="diagrama" viewBox="0 0 540 430" role="img"
+                 aria-labelledby="pedidoTitulo pedidoDesc">
+                <title id="pedidoTitulo">O pedido completo em volta do CLP</title>
+                <desc id="pedidoDesc">O CLP no centro, cercado pelos itens que completam o pedido: IHM GTI5 para o
+                operador ver e comandar; sensores THT863 e HPS850 para medir; fonte de alimentação Mean Well ou SBC513
+                para dar energia; caixa GEM100 para acomodar a eletrônica; kit RTK510 para a equipe treinar.</desc>
+
+                <text class="d-titulo" x="270" y="24" text-anchor="middle">O pedido completo em volta do CLP</text>
+
+                <rect class="d-cheio" x="195" y="180" width="150" height="70" rx="12"/>
+                <text class="d-texto-claro" x="270" y="210" text-anchor="middle">CLP</text>
+                <text class="d-texto-claro" x="270" y="232" text-anchor="middle">(Etapa 4)</text>
+
+                <rect class="d-caixa" x="185" y="44" width="170" height="70" rx="10"/>
+                <text class="d-rotulo" x="270" y="72" text-anchor="middle">IHM GTI5</text>
+                <text class="d-itens" x="270" y="96" text-anchor="middle">o operador vê e comanda</text>
+
+                <rect class="d-caixa" x="10" y="130" width="160" height="70" rx="10"/>
+                <text class="d-rotulo" x="90" y="158" text-anchor="middle">Sensores</text>
+                <text class="d-itens" x="90" y="182" text-anchor="middle">THT863 · HPS850</text>
+
+                <rect class="d-caixa" x="370" y="130" width="160" height="70" rx="10"/>
+                <text class="d-rotulo" x="450" y="158" text-anchor="middle">Fonte</text>
+                <text class="d-itens" x="450" y="182" text-anchor="middle">Mean Well · SBC513</text>
+
+                <rect class="d-caixa" x="10" y="260" width="160" height="70" rx="10"/>
+                <text class="d-rotulo" x="90" y="288" text-anchor="middle">Caixa GEM100</text>
+                <text class="d-itens" x="90" y="312" text-anchor="middle">acomoda a eletrônica</text>
+
+                <rect class="d-caixa" x="370" y="260" width="160" height="70" rx="10"/>
+                <text class="d-rotulo" x="450" y="288" text-anchor="middle">Kit RTK510</text>
+                <text class="d-itens" x="450" y="312" text-anchor="middle">a equipe treina</text>
+
+                <line class="d-seta" x1="270" y1="114" x2="270" y2="180"/>
+                <line class="d-seta" x1="170" y1="170" x2="195" y2="200"/>
+                <line class="d-seta" x1="370" y1="170" x2="345" y2="200"/>
+                <line class="d-seta" x1="170" y1="290" x2="195" y2="240"/>
+                <line class="d-seta" x1="370" y1="290" x2="345" y2="240"/>
+
+                <text class="d-nota" x="270" y="370" text-anchor="middle">Cada item esquecido vira uma segunda compra</text>
+                <text class="d-nota" x="270" y="390" text-anchor="middle">ou uma instalação parada.</text>
+            </svg>
         </div>
     </section>
 
@@ -33,20 +82,581 @@
             <div class="objetivos">
                 <h3>Ao final desta etapa você consegue:</h3>
                 <ul>
-                    <li>diferenciar a IHM (operar a máquina no painel) do supervisório (enxergar a planta inteira);</li>
-                    <li>apresentar a IHM GTI5, a linha própria da HI;</li>
-                    <li>citar os sensores THT863 e HPS850 e onde se usam;</li>
-                    <li>oferecer fonte, caixa GEM100 e kit RTK510 como complemento da solução.</li>
+                    <li>explicar a diferença entre operar no painel (IHM) e supervisionar (supervisório);</li>
+                    <li>ofertar a GTI5 como primeira opção de IHM e saber quando entram as de revenda;</li>
+                    <li>apresentar os sensores THT863 e HPS850;</li>
+                    <li>completar o pedido com fontes, caixa GEM100 e kit de treinamento RTK510.</li>
                 </ul>
-                <p class="tempo">Tempo estimado: 1h30.</p>
+                <p class="tempo">Tempo estimado: 1h30 (leitura, quiz e preparo dos exercícios do encontro).</p>
             </div>
 
-            <div class="em-producao">
-                <strong>Conteúdo em produção</strong>
-                Esta etapa está sendo escrita e entra no ar depois da revisão da etapa anterior.
+            <ul class="sumario" aria-label="Nesta etapa">
+                <li><a href="#ihm-supervisorio">IHM × supervisório</a></li>
+                <li><a href="#gti5">GTI5</a></li>
+                <li><a href="#revenda">IHMs de revenda</a></li>
+                <li><a href="#escolher-ihm">Escolher a IHM</a></li>
+                <li><a href="#sensores">Sensores</a></li>
+                <li><a href="#fontes">Fontes</a></li>
+                <li><a href="#gem100">Caixa GEM100</a></li>
+                <li><a href="#rtk510">Kit RTK510</a></li>
+                <li><a href="#pedido">Pedido completo</a></li>
+                <li><a href="#na-venda">Na venda</a></li>
+                <li><a href="#glossario">Glossário</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="ihm-supervisorio">
+                <h3>1. IHM ou supervisório: operar no painel ou supervisionar a planta</h3>
+
+                <p>A <strong>IHM</strong> (Interface Homem-Máquina) é uma <strong>tela física</strong> que dá ao
+                operador uma visão clara da máquina ou do processo: mostra informações guardadas no CLP que não
+                seriam visíveis de outro jeito e tem botões, valores e históricos para informar e comandar. O
+                <strong>supervisório</strong> faz algo parecido, mas é <strong>software</strong>: roda em
+                computadores da rede (HIscada Pro) ou na nuvem (Portal de Telemetria), e vários computadores
+                podem acessar as mesmas telas.</p>
+
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th></th><th>IHM</th><th>Supervisório</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>O que é</td><td>Hardware: uma tela touch screen</td><td>Software em computador ou na nuvem</td></tr>
+                            <tr><td>Onde fica</td><td>Na porta do painel, junto da máquina</td><td>Na sala de controle, em qualquer computador da rede, ou na internet</td></tr>
+                            <tr><td>Quem usa</td><td>O operador daquela máquina</td><td>Supervisores, gestores, várias pessoas ao mesmo tempo</td></tr>
+                            <tr><td>Na HI</td><td>GTI5 (linha própria); Weintek e Veichi (revenda)</td><td>HIscada Pro; Portal de Telemetria (Etapa 7)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="analogia">
+                    <p>A IHM é o painel do carro: mostra o que importa a quem está dirigindo, ali na frente. O
+                    supervisório é a central de uma frota: vê todos os carros ao mesmo tempo, com histórico e
+                    alarmes, de longe.</p>
+                </div>
+
+                <div class="na-venda">
+                    <p>Muitos projetos têm os dois: IHM para o operador na máquina e supervisório para a gestão.
+                    Pergunte: "quem precisa ver os dados, e onde essa pessoa está?"</p>
+                </div>
+
+                <p class="fonte">Fontes: Treinamento de Produto, p. 10, 19 e 23.</p>
             </div>
 
-            <p class="fonte">Fontes previstas: Treinamento de Produto, p. 10, 17 e 18; Catálogo Geral, p. 11 a 14 e 23 a 28.</p>
+
+            <!-- ===================================================== -->
+            <div class="step" id="gti5">
+                <h3>2. GTI5: a IHM da linha própria, primeira opção</h3>
+
+                <img class="foto" src="Files/IHM_GTI5.png" alt="IHM touch screen GTI5" width="550" height="520">
+
+                <p>A série <strong>GTI5</strong> é a IHM touch screen da HI, com telas TFT de alta resolução e
+                construção robusta para ambiente industrial. É a <strong>preferência na oferta de IHM</strong>.</p>
+
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>Modelo</th><th>Tela</th><th>Resolução</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>GTI5 4.3"</td><td>4,3 polegadas</td><td>480 × 272</td></tr>
+                            <tr><td>GTI5 7"</td><td>7 polegadas</td><td>800 × 480</td></tr>
+                            <tr><td>GTI5 10.1"</td><td>10,1 polegadas</td><td>1280 × 800</td></tr>
+                            <tr><td>GTI5 15.6"</td><td>15,6 polegadas</td><td>1920 × 1080</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <ul>
+                    <li><strong>Portas:</strong> Ethernet, RS232, RS485 e USB (para conectar dispositivos).</li>
+                    <li><strong>Alimentação:</strong> 24 V DC (precisa de fonte; Etapa 2).</li>
+                    <li><strong>Proteção:</strong> IP65 na frente (resiste a poeira e jatos d'água) e resistência a
+                    vibrações; certificação CE.</li>
+                    <li><strong>Toque:</strong> touch screen resistivo.</li>
+                    <li><strong>Software:</strong> <strong>SmartManagerPro</strong>, para criar telas com alarmes,
+                    históricos e tendências. <span class="confirmar">[CONFIRMAR] se o SmartManagerPro é gratuito, como os softwares das IHMs de revenda</span></li>
+                </ul>
+
+                <div class="na-venda">
+                    <p>O SmartManagerPro é <strong>muito parecido</strong> com o EasyBuilderPro, o software das IHMs
+                    Weintek (não é o mesmo software). Para quem já programa Weintek, o argumento é: "você se adapta
+                    rápido". Se o cliente já usa Weintek, <strong>pergunte quais recursos ele usa</strong> e confirme
+                    com o suporte interno se a GTI5 atende antes de propor a troca.</p>
+                </div>
+
+                <div class="atencao">
+                    <p>Não existe uma lista fixa do que a GTI5 faz ou não em relação à Weintek. Não prometa
+                    compatibilidade de recursos sem a confirmação do suporte.</p>
+                </div>
+
+                <p class="fonte">Fontes: Catálogo Geral, p. 12; decisões de Gabriel sobre a GTI5 e o SmartManagerPro
+                (Etapa 1, revisões de 29/10 e 04/11/2026).</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="revenda">
+                <h3>3. IHMs de revenda: Weintek e Veichi</h3>
+
+                <p>Além da GTI5, a HI revende IHMs touch screen de dois fabricantes, em várias opções de
+                tamanho:</p>
+                <ul>
+                    <li><strong>Weintek</strong>, programada no software <strong>EasyBuilderPro</strong>;</li>
+                    <li><strong>Veichi</strong>, programada no software <strong>VI20Studio</strong>.</li>
+                </ul>
+                <p>Os softwares de programação dessas IHMs podem ser baixados no site da HI e usados
+                <strong>gratuitamente</strong>.</p>
+
+                <p>O Treinamento de Produto também cita a <strong>MMI700</strong>, uma IHM
+                <strong>alfanumérica</strong> (mostra texto e números, sem gráficos) fabricada pela HI e programada
+                no software OPPE. Ela não aparece no Catálogo Geral.
+                <span class="confirmar">[CONFIRMAR] se a MMI700 ainda é vendida</span></p>
+
+                <div class="atencao">
+                    <p>Seja transparente: Weintek e Veichi são revenda, não fabricação HI (Etapa 1). E a
+                    preferência é ofertar a GTI5; as de revenda entram quando o cliente pede uma marca específica ou
+                    quando a GTI5 não atende a necessidade, com confirmação do suporte.</p>
+                </div>
+
+                <p class="fonte">Fontes: Treinamento de Produto, p. 10; Catálogo Geral (a MMI700 não consta); decisões de
+                Gabriel sobre revenda e preferência pela GTI5 (29/10/2026).</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="escolher-ihm">
+                <h3>4. Como escolher a IHM: as perguntas</h3>
+
+                <ol>
+                    <li><strong>O que o operador precisa ver e fazer?</strong> Só acompanhar alguns valores, ou
+                    também comandar, ver gráficos, alarmes e históricos?</li>
+                    <li><strong>Qual o tamanho mínimo de tela?</strong> Muitas vezes o cliente já sabe ("pelo menos
+                    10 polegadas", "7 polegadas").</li>
+                    <li><strong>Como ela se liga ao CLP?</strong> Ethernet, RS232 ou RS485 (Etapa 3). A GTI5 tem as
+                    três portas.</li>
+                    <li><strong>Onde ela fica?</strong> Na porta do painel, em ambiente com poeira ou água? A frente
+                    IP65 da GTI5 ajuda.</li>
+                    <li><strong>Já usa alguma marca?</strong> Se usa Weintek, pergunte os recursos e confirme com o
+                    suporte (item 2).</li>
+                    <li><strong>Tem 24 V DC no painel?</strong> Se não, inclua a fonte.</li>
+                </ol>
+
+                <div class="na-venda">
+                    <p>Quando o cliente pede uma IHM "de baixo custo" ou "econômica", não responda com preço nem com
+                    "a mais barata". Descubra o que ela precisa fazer (por exemplo, só exibir uma temperatura) e qual
+                    o tamanho mínimo; indique a opção que atende, e o orçamento do setor de vendas mostra os valores.</p>
+                </div>
+
+                <p class="fonte">Fontes: Catálogo Geral, p. 12; exercícios 11, 13, 16 e 20 do Treinamento de Produto (situações).</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="sensores">
+                <h3>5. Sensores HI: THT863 e HPS850</h3>
+
+                <div class="cartoes">
+                    <div class="cartao">
+                        <h4>THT863: temperatura e umidade</h4>
+                        <p>Transmissor analógico a dois fios. Mede a <strong>temperatura ambiente</strong> (-20 a
+                        80 °C) ou a <strong>umidade relativa do ar</strong> (0 a 100%) e manda o valor por uma única
+                        saída <strong>4 a 20 mA</strong>. Uma chave seleciona o que medir: só temperatura, só umidade
+                        ou as duas, alternando na saída. Alimentação de 12 a 30 V DC.</p>
+                        <p><span class="rotulo">No CLP</span><br>Ocupa uma entrada analógica (Etapa 2).</p>
+                    </div>
+                    <div class="cartao">
+                        <h4>HPS850: passagem e contagem</h4>
+                        <p>Sensor magnético (efeito Hall), usado com um ímã. Detecta quando a máquina passa por uma
+                        posição e manda um sinal para o CLP <strong>contar uma volta</strong>. Muito usado no
+                        <strong>bombeio mecânico de petróleo</strong>, para contar os ciclos. Sem partes móveis: alta
+                        robustez e longa vida útil. Também serve como sensor de posição, movimento e contagem de
+                        objetos.</p>
+                        <p><span class="rotulo">No CLP</span><br>Ocupa uma entrada digital.</p>
+                    </div>
+                </div>
+
+                <div class="na-venda">
+                    <p>Em óleo e gás, o HPS850 faz parte da solução de bombeio mecânico, segmento em que a HI tem
+                    mais de 6 mil painéis na Petrobras (Etapa 1). O THT863 é a resposta rápida para "quero monitorar
+                    a temperatura e a umidade de uma sala".</p>
+                </div>
+
+                <p class="fonte">Fontes: Catálogo Geral, p. 24 e 37; Treinamento de Produto, p. 17.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="fontes">
+                <h3>6. Fontes de alimentação: energia para o painel</h3>
+
+                <p>As fontes convertem a energia da tomada (127 V ou 220 V AC) em corrente contínua,
+                normalmente 24 V DC, para alimentar o CLP, os módulos de I/O, a IHM e os sensores (Etapa 2).</p>
+
+                <div class="cartoes">
+                    <div class="cartao">
+                        <h4>Fontes Mean Well (revenda)</h4>
+                        <p>Fixação em trilho DIN, entrada full range (90 a 264 V AC), saída de 24 V DC, fusível na
+                        entrada e proteção contra curto-circuito e sobretensão na saída. Modelos por potência:</p>
+                        <p>MDR20-24 (20 W), MDR40-24 (40 W), MDR60-24 (60 W), EDR75-24 (75 W), EDR120-24 (120 W) e
+                        NDR240-24 (240 W).</p>
+                    </div>
+                    <div class="cartao">
+                        <h4>SBC513 (fabricação HI)</h4>
+                        <p>Controlador inteligente de carga com bateria de lítio (LiFePO4) de 12 V incorporada.
+                        Alimentado por 18 a 26 V DC ou <strong>painel fotovoltaico</strong>, mantém o equipamento
+                        ligado onde a rede elétrica falha ou não existe. Pode desligar a própria saída por tempo
+                        programado (de segundos a horas) e tem saída de status.</p>
+                    </div>
+                </div>
+
+                <p>O Treinamento de Produto cita ainda uma fonte própria que funciona como no-break e controlador de
+                carga, a <strong>BPU508</strong> (saída de 13,8 V DC). O catálogo atual traz a SBC513.
+                <span class="confirmar">[CONFIRMAR] se a BPU508 ainda é vendida</span></p>
+
+                <div class="atencao">
+                    <p>A potência da fonte precisa cobrir o consumo de tudo o que ela alimenta (CLP, módulos, IHM,
+                    sensores). Esse dimensionamento é técnico: leve a lista de equipamentos ao suporte em vez de
+                    escolher a fonte "no olho".</p>
+                </div>
+
+                <div class="na-venda">
+                    <p>"Onde não tem energia" é uma pergunta de ouro: estações isoladas, poços, pontos de telemetria.
+                    A SBC513 com painel fotovoltaico pode ser a diferença entre a solução funcionar ou não.</p>
+                </div>
+
+                <p class="fonte">Fontes: Catálogo Geral, p. 26; Treinamento de Produto, p. 18.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="gem100">
+                <h3>7. Caixa mecânica GEM100</h3>
+
+                <p>A linha <strong>GEM100</strong> é uma família de caixas modulares para acomodar módulos
+                eletroeletrônicos em geral. É feita de um perfil de alumínio extrudado, desenvolvido exclusivamente
+                para ela, e permite montar os módulos na vertical, na horizontal ou por um backplane (placa de
+                ligação no fundo).</p>
+
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>Modelo</th><th>Dimensões (L × A × P)</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>GEM100-030</td><td>30 × 89 × 93 mm</td></tr>
+                            <tr><td>GEM100-050</td><td>50 × 89 × 93 mm</td></tr>
+                            <tr><td>GEM100-085</td><td>85 × 89 × 93 mm</td></tr>
+                            <tr><td>GEM100-110</td><td>110 × 89 × 93 mm</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Grau de proteção IP30, alumínio e poliestireno, fixação em trilho DIN TS35 ou painel.</p>
+
+                <div class="na-venda">
+                    <p>A GEM100 interessa a quem desenvolve ou monta eletrônica e precisa de uma caixa de padrão
+                    industrial para trilho DIN.
+                    <span class="confirmar">[CONFIRMAR] perfil típico de cliente da GEM100 e se ela é vendida avulsa</span></p>
+                </div>
+
+                <p class="fonte">Fonte: Catálogo Geral, p. 28.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="rtk510">
+                <h3>8. Kit de treinamento RTK510</h3>
+
+                <p>Os kits <strong>RTK510</strong> servem para treinar programação de CLP baseada na norma
+                IEC 61131 (a mesma do HIstudio, Etapa 4). Numa bancada só, eles trazem:</p>
+                <ul>
+                    <li>fonte de alimentação;</li>
+                    <li>chaves para simular sensores e sinais digitais, e LEDs que mostram o estado das saídas;</li>
+                    <li>potenciômetros para simular sinais analógicos (0 a 10 V) e entradas e saídas 4 a 20 mA em
+                    bornes;</li>
+                    <li>bornes para ligar processos reais;</li>
+                    <li>comunicação serial RS485 e Ethernet (Modbus, ASCII e, na Ethernet, também MQTT e HTTP).</li>
+                </ul>
+
+                <div class="na-venda">
+                    <p>O RTK510 combina com o HIstudio gratuito e com os cursos da <strong>HI University</strong>:
+                    é a oferta para quem diz "a minha equipe precisa aprender a programar". Bom também para escolas
+                    técnicas e para o integrador que está começando com a linha HI.</p>
+                </div>
+
+                <p class="fonte">Fonte: Catálogo Geral, p. 14 (texto e quadro "Recursos disponíveis") e p. 40.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="pedido">
+                <h3>9. O pedido completo: a lista que evita a segunda viagem</h3>
+
+                <p>Antes de mandar a necessidade para o orçamento, passe por esta lista com o cliente:</p>
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>Pergunta</th><th>Se a resposta for "não" ou "não sei"…</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Tem fonte de 24 V DC no painel, com potência sobrando?</td><td>Inclua uma fonte (o suporte dimensiona).</td></tr>
+                            <tr><td>Tem energia elétrica no local?</td><td>Avalie a SBC513 com painel fotovoltaico.</td></tr>
+                            <tr><td>O operador precisa ver ou comandar na máquina?</td><td>Inclua uma IHM (GTI5 primeiro).</td></tr>
+                            <tr><td>Os sensores já existem?</td><td>Veja se THT863 ou HPS850 atendem; os demais vêm de outros fabricantes.</td></tr>
+                            <tr><td>Como o técnico vai se conectar em campo?</td><td>USB721, se o equipamento for serial (Etapa 5).</td></tr>
+                            <tr><td>A equipe já sabe programar?</td><td>HIstudio gratuito, HI University, kit RTK510, ou a engenharia da HI entrega pronto.</td></tr>
+                            <tr><td>Vai mandar dados pelo 4G?</td><td>Chip e plano de dados (HI Connect) e antena (Etapa 5).</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="na-venda">
+                    <p>Completar o pedido não é "empurrar produto": é evitar que o projeto pare na instalação por
+                    falta de uma fonte, de um cabo de ligação ou de quem saiba programar. O cliente percebe a
+                    diferença.</p>
+                </div>
+
+                <p class="fonte">Fontes: itens desta etapa e das Etapas 2, 4 e 5.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="na-venda">
+                <h3>10. Como isso aparece na venda</h3>
+
+                <h4>Perguntas que o cliente costuma fazer</h4>
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>O cliente pergunta</th><th>Como responder</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>"Que IHMs vocês têm?"</td>
+                                <td>A GTI5, linha própria, de 4,3" a 15,6", com Ethernet, RS232, RS485 e USB. Também
+                                revendemos Weintek e Veichi.</td>
+                            </tr>
+                            <tr>
+                                <td>"Uso Weintek há anos. Por que trocaria?"</td>
+                                <td>A GTI5 é da linha própria e o SmartManagerPro é muito parecido com o EasyBuilderPro,
+                                então a adaptação é rápida. Quais recursos você usa? Vou confirmar com o suporte se a
+                                GTI5 atende.</td>
+                            </tr>
+                            <tr>
+                                <td>"Preciso de uma tela de pelo menos 10 polegadas ligada por RS232."</td>
+                                <td>A GTI5 10.1" (ou a de 15,6") tem porta RS232. Anote o modelo do CLP para confirmar a
+                                comunicação.</td>
+                            </tr>
+                            <tr>
+                                <td>"Vocês têm sensor de temperatura?"</td>
+                                <td>O THT863, que mede temperatura ambiente ou umidade e manda 4 a 20 mA. Para outras
+                                faixas ou tipos (PT100, por exemplo), anote a necessidade e confirme com o suporte.</td>
+                            </tr>
+                            <tr>
+                                <td>"No local não tem energia."</td>
+                                <td>A SBC513 mantém o equipamento ligado com bateria e painel fotovoltaico. O suporte
+                                dimensiona com você.</td>
+                            </tr>
+                            <tr>
+                                <td>"Quanto custa a IHM?"</td>
+                                <td>Depende do modelo e do tamanho. Com a necessidade anotada, siga o processo de orçamento.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4>Erros comuns a evitar</h4>
+                <div class="atencao">
+                    <ul>
+                        <li>Oferecer IHM de revenda primeiro, sem considerar a GTI5.</li>
+                        <li>Dizer que a GTI5 faz tudo o que a Weintek faz, sem confirmar os recursos com o suporte.</li>
+                        <li>Esquecer a fonte de 24 V DC da IHM e do CLP.</li>
+                        <li>Escolher a potência da fonte sem o suporte dimensionar.</li>
+                        <li>Responder a "IHM econômica" com preço ou com "a mais barata".</li>
+                        <li>Dizer que Weintek, Veichi ou Mean Well são fabricação HI.</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="glossario">
+                <h3>11. Glossário da etapa</h3>
+
+                <dl class="glossario">
+                    <dt>IHM / MMI</dt>
+                    <dd>Interface Homem-Máquina (em inglês, Man Machine Interface): tela física para o operador ver e comandar.</dd>
+
+                    <dt>Touch screen resistivo</dt>
+                    <dd>Tela sensível ao toque por pressão; funciona inclusive com luvas.</dd>
+
+                    <dt>TFT</dt>
+                    <dd>Tipo de tela colorida de alta resolução, como a de monitores e tablets.</dd>
+
+                    <dt>IHM alfanumérica</dt>
+                    <dd>Tela que mostra só letras e números, sem gráficos. Ex.: MMI700.</dd>
+
+                    <dt>SmartManagerPro</dt>
+                    <dd>Software de programação da GTI5. Muito parecido com o EasyBuilderPro da Weintek.</dd>
+
+                    <dt>EasyBuilderPro / VI20Studio / OPPE</dt>
+                    <dd>Softwares das IHMs Weintek, Veichi e MMI700, gratuitos.</dd>
+
+                    <dt>IP65 / IP30 / IP20</dt>
+                    <dd>Grau de proteção contra poeira e água. IP65: resiste a poeira e jatos d'água; IP20 e IP30: para dentro do painel.</dd>
+
+                    <dt>Transmissor a dois fios</dt>
+                    <dd>Transmissor em que os mesmos dois fios levam a alimentação e o sinal 4 a 20 mA.</dd>
+
+                    <dt>Efeito Hall</dt>
+                    <dd>Princípio do sensor magnético que detecta um ímã sem contato e sem partes móveis.</dd>
+
+                    <dt>Fonte full range</dt>
+                    <dd>Fonte que aceita qualquer tensão de tomada da faixa (90 a 264 V AC), sem ajuste.</dd>
+
+                    <dt>LiFePO4</dt>
+                    <dd>Tipo de bateria de lítio usada na SBC513.</dd>
+
+                    <dt>Painel fotovoltaico</dt>
+                    <dd>Placa solar que gera energia elétrica a partir da luz do sol.</dd>
+
+                    <dt>Trilho DIN (TS35)</dt>
+                    <dd>Trilho metálico padrão dentro dos painéis, onde se encaixam CLPs, fontes e gateways.</dd>
+
+                    <dt>Backplane</dt>
+                    <dd>Placa no fundo da caixa que interliga os módulos montados nela.</dd>
+                </dl>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="quiz-bloco" id="quiz">
+                <h3>Quiz da etapa</h3>
+                <p>Confira o que ficou. A correção é na hora, com a explicação de cada resposta.
+                Acerte pelo menos 80% antes de marcar a etapa como concluída.</p>
+
+                <form class="quiz">
+                    <fieldset class="quiz-q" data-certa="b">
+                        <legend>1. Qual é a diferença entre uma IHM e um supervisório?</legend>
+                        <label><input type="radio" name="q1" value="a"> Não há diferença.</label>
+                        <label><input type="radio" name="q1" value="b"> A IHM é uma tela física junto da máquina; o supervisório é software em computadores da rede ou na nuvem, com várias pessoas acessando.</label>
+                        <label><input type="radio" name="q1" value="c"> A IHM é software e o supervisório é hardware.</label>
+                        <label><input type="radio" name="q1" value="d"> O supervisório só funciona sem CLP.</label>
+                        <p class="quiz-explica" hidden>IHM é hardware, no painel, para o operador. Supervisório é software (HIscada Pro na rede local, Portal de Telemetria na nuvem), para supervisionar a planta.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="a">
+                        <legend>2. Um cliente pede uma IHM touch screen. Qual é a primeira opção a ofertar?</legend>
+                        <label><input type="radio" name="q2" value="a"> A GTI5, da linha própria da HI.</label>
+                        <label><input type="radio" name="q2" value="b"> Sempre uma Weintek.</label>
+                        <label><input type="radio" name="q2" value="c"> Sempre uma Veichi.</label>
+                        <label><input type="radio" name="q2" value="d"> Nenhuma: a HI não trabalha com IHM.</label>
+                        <p class="quiz-explica" hidden>Weintek e Veichi seguem na revenda, mas a preferência é ofertar a GTI5, a linha própria.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="d">
+                        <legend>3. O cliente usa IHMs Weintek e pergunta se a GTI5 faz tudo o que a Weintek dele faz. O que responder?</legend>
+                        <label><input type="radio" name="q3" value="a"> "Sim, é o mesmo software."</label>
+                        <label><input type="radio" name="q3" value="b"> "Não, a GTI5 é muito diferente."</label>
+                        <label><input type="radio" name="q3" value="c"> "Faz tudo, pode trocar sem medo."</label>
+                        <label><input type="radio" name="q3" value="d"> "O software da GTI5, o SmartManagerPro, é muito parecido com o EasyBuilderPro, então a adaptação é rápida. Quais recursos você usa? Vou confirmar com o suporte se a GTI5 atende."</label>
+                        <p class="quiz-explica" hidden>Os softwares são parecidos, mas não são o mesmo, e não há lista fixa de recursos equivalentes. Pergunte o que o cliente usa e confirme com o suporte antes de prometer.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="c">
+                        <legend>4. A cliente precisa de uma tela local de pelo menos 10 polegadas, ligada ao CLP por RS232. O que atende na linha própria?</legend>
+                        <label><input type="radio" name="q4" value="a"> GTI5 4.3".</label>
+                        <label><input type="radio" name="q4" value="b"> Nenhuma GTI5 tem RS232.</label>
+                        <label><input type="radio" name="q4" value="c"> GTI5 10.1" (ou 15.6"), que tem porta RS232.</label>
+                        <label><input type="radio" name="q4" value="d"> Só um supervisório.</label>
+                        <p class="quiz-explica" hidden>A GTI5 tem modelos de 10,1" e 15,6", e todos têm Ethernet, RS232, RS485 e USB.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="b">
+                        <legend>5. O cliente pede "uma IHM bem econômica, só para mostrar a temperatura". Como você conduz?</legend>
+                        <label><input type="radio" name="q5" value="a"> Passa o preço da IHM mais barata de memória.</label>
+                        <label><input type="radio" name="q5" value="b"> Anota o que ela precisa fazer (só exibir a temperatura) e o tamanho mínimo, indica a opção que atende e manda para o orçamento, sem falar em preço.</label>
+                        <label><input type="radio" name="q5" value="c"> Diz que a HI não tem IHM econômica.</label>
+                        <label><input type="radio" name="q5" value="d"> Oferece a maior tela, para garantir.</label>
+                        <p class="quiz-explica" hidden>Preço só pelo orçamento. O seu papel é traduzir "econômica" em necessidade (o que mostrar, tamanho, ligação ao CLP); o orçamento faz o resto.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="a">
+                        <legend>6. O que o sensor THT863 mede e como manda o valor ao CLP?</legend>
+                        <label><input type="radio" name="q6" value="a"> Temperatura ambiente ou umidade relativa do ar, por um sinal 4 a 20 mA.</label>
+                        <label><input type="radio" name="q6" value="b"> Peso, por célula de carga.</label>
+                        <label><input type="radio" name="q6" value="c"> Passagem de ímã, por sinal liga/desliga.</label>
+                        <label><input type="radio" name="q6" value="d"> Vazão, por pulsos.</label>
+                        <p class="quiz-explica" hidden>O THT863 é um transmissor analógico a dois fios: temperatura (-20 a 80 °C) ou umidade (0 a 100%), numa saída 4 a 20 mA. Ocupa uma entrada analógica.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="c">
+                        <legend>7. Para que o HPS850 é muito usado?</legend>
+                        <label><input type="radio" name="q7" value="a"> Para medir a umidade do ar.</label>
+                        <label><input type="radio" name="q7" value="b"> Para alimentar o CLP.</label>
+                        <label><input type="radio" name="q7" value="c"> Para contar os ciclos da máquina de bombeio mecânico de petróleo: detecta a passagem e o CLP conta uma volta.</label>
+                        <label><input type="radio" name="q7" value="d"> Para ligar o computador ao CLP.</label>
+                        <p class="quiz-explica" hidden>O HPS850 é um sensor magnético (efeito Hall), sem partes móveis. A cada passagem, manda um sinal ao CLP, que conta uma volta.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="d">
+                        <legend>8. Um ponto de telemetria fica num local sem rede elétrica. Qual produto HI ajuda a manter o equipamento ligado?</legend>
+                        <label><input type="radio" name="q8" value="a"> Uma fonte Mean Well ligada na tomada.</label>
+                        <label><input type="radio" name="q8" value="b"> A caixa GEM100.</label>
+                        <label><input type="radio" name="q8" value="c"> O kit RTK510.</label>
+                        <label><input type="radio" name="q8" value="d"> A SBC513, controlador de carga com bateria de lítio, alimentado também por painel fotovoltaico.</label>
+                        <p class="quiz-explica" hidden>A SBC513 mantém o equipamento energizado onde a rede falha ou não existe, com bateria LiFePO4 e painel fotovoltaico. A Mean Well precisa de tomada.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="b">
+                        <legend>9. Quem decide a potência da fonte de alimentação do painel?</legend>
+                        <label><input type="radio" name="q9" value="a"> O vendedor, escolhendo sempre a de 240 W.</label>
+                        <label><input type="radio" name="q9" value="b"> O suporte, a partir da lista do que a fonte vai alimentar (CLP, módulos, IHM, sensores).</label>
+                        <label><input type="radio" name="q9" value="c"> Qualquer fonte serve.</label>
+                        <label><input type="radio" name="q9" value="d"> O cliente, sem informação nenhuma.</label>
+                        <p class="quiz-explica" hidden>A potência precisa cobrir o consumo de tudo o que é alimentado. É dimensionamento técnico: leve a lista ao suporte.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="a">
+                        <legend>10. O cliente diz que a equipe dele nunca programou CLP. O que a HI pode oferecer?</legend>
+                        <label><input type="radio" name="q10" value="a"> O kit de treinamento RTK510, o HIstudio gratuito e os cursos da HI University; ou a engenharia da HI entrega o projeto pronto.</label>
+                        <label><input type="radio" name="q10" value="b"> Nada: o cliente precisa contratar outra empresa.</label>
+                        <label><input type="radio" name="q10" value="c"> Só a caixa GEM100.</label>
+                        <label><input type="radio" name="q10" value="d"> Um sensor HPS850.</label>
+                        <p class="quiz-explica" hidden>O RTK510 é a bancada para treinar programação (IEC 61131), combinando com o HIstudio gratuito e a HI University. Se preferir, a engenharia da HI programa.</p>
+                    </fieldset>
+
+                    <div class="quiz-acoes">
+                        <button type="submit" class="btn">Corrigir</button>
+                        <button type="button" class="btn btn-secondary quiz-refazer" hidden>Refazer</button>
+                    </div>
+                    <p class="quiz-resultado" aria-live="polite"></p>
+                </form>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="caso">
+                <h3>Para o encontro com o instrutor</h3>
+                <p>Traga preparado (agora com o pedido completo: CLP, IHM, fonte e o que mais faltar):</p>
+                <ol>
+                    <li><strong>Tipos de IHM.</strong> Explique a um cliente quais IHMs a HI comercializa e a diferença
+                    entre elas (linha própria e revenda).</li>
+                    <li><strong>Setup inicial.</strong> Um cliente precisa receber 8 sinais digitais, enviar 8 sinais
+                    digitais e acompanhar as informações numa tela pela Ethernet. Não disse se o CLP deve ser AC ou DC e
+                    pede uma IHM "de baixo custo". Que perguntas você faz e que setup inicial propõe, sem falar de preço?</li>
+                    <li><strong>Temperatura.</strong> Uma cliente precisa ler 2 transmissores de temperatura 0 a 10 V,
+                    enviar 1 sinal digital quando uma temperatura for atingida e exibir a temperatura numa IHM. Ela não
+                    tem nada para alimentar o CLP e a IHM. Monte o pedido completo.</li>
+                    <li><strong>Tela grande.</strong> 32 entradas digitais, 16 saídas digitais, 8 entradas e 4 saídas 4 a
+                    20 mA, tela local de pelo menos 10 polegadas por RS232 e fonte DC. Complete a proposta da Etapa 4 com
+                    a IHM e a fonte.</li>
+                    <li><strong>Equipe nova.</strong> Uma escola técnica quer montar um laboratório de CLP. O que você
+                    apresenta?</li>
+                </ol>
+                <p class="fonte">Casos adaptados dos exercícios 6, 11, 13 e 20 do Treinamento de Produto.</p>
+            </div>
         </div>
     </section>
 
@@ -66,5 +676,6 @@
     <script src="progresso.js"></script>
     <script src="config-conta.js"></script>
     <script src="conta.js"></script>
+    <script src="quiz.js"></script>
 </body>
 </html>
