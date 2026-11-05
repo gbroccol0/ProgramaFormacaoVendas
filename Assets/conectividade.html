@@ -24,7 +24,7 @@
             <p>Na Etapa 3 você aprendeu a perceber quando falta um "tradutor". Agora conhece os produtos
             que resolvem cada caso: a linha <strong>GTON</strong> (GTON-C, GTON-P e GTON-M), o conversor
             <strong>USB721</strong> e os rádios <strong>WSC720</strong> (integrado) e <strong>R9X307</strong>.
-            E aprende o passo a passo de uma venda de rádio, que sempre passa pela Engenharia.</p>
+            E aprende o passo a passo de uma venda de rádio, que sempre passa por um estudo de viabilidade.</p>
         </div>
         <div class="hero-image">
             <svg class="diagrama" viewBox="0 0 540 440" role="img"
@@ -67,7 +67,7 @@
                 <line class="d-linha" x1="270" y1="286" x2="270" y2="334"/>
 
                 <text class="d-nota" x="270" y="372" text-anchor="middle">GTON = linha atual de gateways. A linha anterior era a ESC.</text>
-                <text class="d-nota" x="270" y="392" text-anchor="middle">Rádio: sempre com visada e estudo da Engenharia.</text>
+                <text class="d-nota" x="270" y="392" text-anchor="middle">Rádio a longa distância: sempre com estudo de visada.</text>
             </svg>
         </div>
     </section>
@@ -83,7 +83,7 @@
                 <ul>
                     <li>reconhecer quando o cliente precisa só traduzir uma rede (GTON-C), adicionar inteligência (GTON-P), chegar à internet (GTON-M) ou ligar o computador (USB721);</li>
                     <li>explicar quando o rádio integrado ao CLP basta e quando indicar o R9X307;</li>
-                    <li>conduzir a venda de rádio: visada, coordenadas em KML e estudo de altimetria pela Engenharia de Produto.</li>
+                    <li>conduzir a venda de rádio: visada, coordenadas em KML e estudo de altimetria pelo suporte técnico ou pela engenharia de aplicação.</li>
                 </ul>
                 <p class="tempo">Tempo estimado: 2h30 (leitura, quiz e preparo dos exercícios do encontro).</p>
             </div>
@@ -123,7 +123,6 @@
                             <tr><td>Interfaces</td><td>Serial (RS232 ou RS485) e Ethernet</td><td>Diversas combinações</td><td>Serial ou Ethernet, e celular 4G</td></tr>
                             <tr><td>Alimentação</td><td>DC (10 a 30 V DC)</td><td>DC (10 a 30 V DC)</td><td>DC (10 a 30 V DC)</td></tr>
                             <tr><td>SD Card</td><td>Não</td><td>Não</td><td>Não</td></tr>
-                            <tr><td>Montagem</td><td colspan="3">Trilho DIN (TS35), com proteção contra inversão de polaridade e surto na alimentação</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -200,14 +199,11 @@
                 <img class="foto" src="Files/GTON-P.jpg" alt="Gateway programável GTON-P" width="550" height="520">
 
                 <p>O GTON-P tem a <strong>mesma capacidade de programação de um CLP</strong> e é programado no
-                <strong>HIstudio</strong> (gratuito), em Ladder ou Texto Estruturado. Ele é montado com duas
-                interfaces, à escolha:</p>
-                <ul>
-                    <li><strong>Interface A:</strong> serial RS232, serial RS485 ou Ethernet;</li>
-                    <li><strong>Interface B:</strong> modem 4G, rádio, Ethernet, serial RS232, serial RS485 ou Wi-Fi.</li>
-                </ul>
-                <p>Fala <strong>ASCII, HTTP, MQTT e Modbus</strong>. Um uso típico: ser o mestre de uma rede RS485
-                com I/O remotos, inversores de frequência e medidores de energia, e repassar os dados por outra
+                <strong>HIstudio</strong> (gratuito), em Ladder ou Texto Estruturado. Ele é montado com
+                <strong>duas interfaces</strong>, escolhidas conforme a aplicação: serial, Ethernet, Wi-Fi, rádio ou
+                modem 4G.</p>
+                <p>Fala os idiomas mais usados (Modbus, MQTT e ASCII). Um uso típico: buscar os dados de I/O
+                remotos, inversores de frequência e medidores de energia numa rede RS485 e repassá-los por outra
                 interface.</p>
 
                 <div class="analogia">
@@ -238,9 +234,8 @@
                 <img class="foto" src="Files/GTON-M.png" alt="Modem celular industrial GTON-M" width="550" height="520">
 
                 <p>O GTON-M recebe informações por <strong>serial (RS232/RS485) ou Ethernet</strong> e dá acesso à
-                internet de forma transparente pela <strong>rede 4G</strong>. Usa um chip no formato
-                <strong>Nano SIM</strong>, antena com conector <strong>SMA</strong> e é certificado pela
-                <strong>Anatel</strong>.</p>
+                internet de forma transparente pela <strong>rede 4G</strong>. Usa um chip de celular e uma
+                antena, e é certificado pela <strong>Anatel</strong>.</p>
 
                 <div class="na-venda">
                     <p>É a resposta para "não quero usar a rede do meu cliente" ou "lá não tem internet". Ligado por
@@ -290,21 +285,20 @@
                 <h3>6. Rádios: WSC720 (integrado) ou R9X307</h3>
 
                 <p>Rádios são conversores de meio físico: recebem dados por serial ou Ethernet e transmitem sem
-                fio (e o caminho inverso). São <strong>transparentes ao protocolo</strong>: só repassam os dados.
+                fio (e o caminho inverso). Eles <strong>só repassam os dados</strong>, sem mexer no idioma.
                 E <strong>nunca funcionam sozinhos</strong>: é sempre um rádio enviando para outro, vários para um
                 ou vários para vários.</p>
 
                 <div class="cartoes">
                     <div class="cartao">
                         <h4>WSC720: o rádio integrado</h4>
-                        <p>Vem <strong>dentro</strong> dos CLPs e gateways que têm a opção de rádio (também chamado de
-                        rádio XBee-PRO). Indicado para <strong>distâncias menores</strong>: cerca de
+                        <p>Vem <strong>dentro</strong> dos CLPs e gateways que têm a opção de rádio. Indicado para <strong>distâncias menores</strong>: cerca de
                         <strong>3 km ao ar livre</strong> e <strong>150 m em ambiente interno</strong>.</p>
                     </div>
                     <div class="cartao">
                         <h4>R9X307: o rádio de longa distância</h4>
                         <p>Equipamento <strong>à parte</strong> (não é nativo aos CLPs), com rádio 900 MHz e serial
-                        RS232/RS485, em rede DigiMesh, que dá redundância à transmissão. Indicado para
+                        RS232/RS485. Indicado para
                         <strong>distâncias maiores</strong>: a HI <strong>recomenda até 60 km</strong> em área
                         rural e cerca de 18 km em área urbana, sempre com visada.</p>
                     </div>
@@ -320,9 +314,9 @@
 
                 <div class="atencao">
                     <p>Os alcances são de referência e dependem de <strong>visada</strong> (uma antena enxergar a
-                    outra) e da velocidade de transmissão. A tabela técnica do Treinamento mostra valores maiores
+                    outra) e da instalação. A tabela técnica do Treinamento mostra valores maiores
                     para o R9X307, mas a recomendação da HI é <strong>até 60 km</strong>. Nunca prometa alcance sem
-                    o estudo da Engenharia.</p>
+                    o estudo de viabilidade.</p>
                 </div>
 
                 <p class="fonte">Fontes: Treinamento de Produto, p. 14 e 15; Catálogo Geral, p. 22; recomendação de 60 km
@@ -338,7 +332,7 @@
                      aria-labelledby="radioTitulo radioDesc">
                     <title id="radioTitulo">Os quatro passos da venda de rádio</title>
                     <desc id="radioDesc">Passo 1: entender quantos pontos e a distância. Passo 2: o cliente marca os
-                    pontos no Google Earth e envia o arquivo KML. Passo 3: a Engenharia de Produto faz o estudo de
+                    pontos no Google Earth e envia o arquivo KML. Passo 3: o suporte técnico ou a engenharia de aplicação faz o estudo de
                     altimetria e verifica a visada. Passo 4: com a viabilidade confirmada, o vendedor monta a proposta
                     com rádios, antenas e acessórios.</desc>
                     <defs>
@@ -360,7 +354,7 @@
 
                     <rect class="d-cheio" x="10" y="170" width="400" height="58" rx="10"/>
                     <text class="d-texto-claro" x="210" y="194" text-anchor="middle">3. Estudo de altimetria e visada</text>
-                    <text class="d-texto-claro" x="210" y="216" text-anchor="middle">Engenharia de Produto da HI</text>
+                    <text class="d-texto-claro" x="210" y="216" text-anchor="middle">suporte técnico ou engenharia de aplicação</text>
                     <line class="d-seta" x1="210" y1="228" x2="210" y2="244" marker-end="url(#radioPonta)"/>
 
                     <rect class="d-caixa" x="10" y="250" width="400" height="58" rx="10"/>
@@ -368,12 +362,12 @@
                     <text class="d-itens" x="210" y="296" text-anchor="middle">só depois da viabilidade confirmada</text>
                 </svg>
 
-                <p>Por que o estudo? Morros, prédios e árvores bloqueiam o sinal. Com as coordenadas, a Engenharia
-                de Produto da HI verifica o relevo entre os pontos (altimetria) e diz se há visada, que rádio usar
+                <p>Por que o estudo? Morros, prédios e árvores bloqueiam o sinal. Com as coordenadas, o suporte técnico ou a engenharia de aplicação
+                da HI verifica o relevo entre os pontos (altimetria) e diz se há visada, que rádio usar
                 e se é preciso, por exemplo, um ponto intermediário.</p>
 
                 <div class="na-venda">
-                    <p>Transforme o estudo em argumento: "antes de vender, a nossa engenharia confirma se o seu
+                    <p>Transforme o estudo em argumento: "antes de vender, a nossa equipe técnica confirma se o seu
                     enlace funciona". Isso passa segurança e evita a pior venda possível: a que não funciona no
                     campo. O pedido do arquivo KML também mostra que o cliente está engajado.</p>
                 </div>
@@ -382,7 +376,7 @@
                     <p>Não pule o passo 3, nem com cliente apressado. Sem estudo, não há promessa de alcance.</p>
                 </div>
 
-                <p class="fonte">Fontes: Treinamento de Produto, p. 16. "Ponto intermediário" é exemplo geral de solução para falta de visada; quem decide é a Engenharia.</p>
+                <p class="fonte">Fontes: Treinamento de Produto, p. 16. "Ponto intermediário" é exemplo geral de solução para falta de visada; quem decide é quem faz o estudo. Estudo pelo suporte técnico ou pela engenharia de aplicação: orientação de Gabriel (05/11/2026), por cima do Treinamento, que cita a Engenharia de Produto.</p>
             </div>
 
 
@@ -429,7 +423,7 @@
                             <tr>
                                 <td>"Reservatórios a 25 km da estação, em área rural."</td>
                                 <td>R9X307</td>
-                                <td>KML para o estudo de altimetria da Engenharia.</td>
+                                <td>KML para o estudo de altimetria.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -479,7 +473,7 @@
                             <tr>
                                 <td>"Qual o alcance do rádio?"</td>
                                 <td>O integrado é para distâncias menores (cerca de 3 km ao ar livre); o R9X307, para
-                                maiores, com recomendação de até 60 km. Mas o alcance real só a Engenharia confirma, com
+                                maiores, com recomendação de até 60 km. Mas o alcance real só o estudo de visada confirma, com
                                 as coordenadas e o estudo de visada.</td>
                             </tr>
                             <tr>
@@ -499,7 +493,7 @@
                 <h4>Erros comuns a evitar</h4>
                 <div class="atencao">
                     <ul>
-                        <li>Prometer alcance de rádio sem o estudo da Engenharia.</li>
+                        <li>Prometer alcance de rádio sem o estudo de visada.</li>
                         <li>Vender um rádio só (rádio nunca funciona sozinho).</li>
                         <li>Indicar GTON-C para quem precisa tratar dados (é caso de GTON-P), ou GTON-P sem combinar quem programa.</li>
                         <li>Vender 4G sem confirmar sinal de celular, chip e antena.</li>
@@ -536,23 +530,17 @@
                     <dt>Modem</dt>
                     <dd>Equipamento que dá acesso à internet. O GTON-M usa a rede celular 4G.</dd>
 
-                    <dt>Nano SIM / antena SMA</dt>
-                    <dd>Formato do chip de celular e tipo de conector da antena do GTON-M.</dd>
-
                     <dt>Anatel</dt>
                     <dd>Agência Nacional de Telecomunicações, que certifica equipamentos de rádio e celular no Brasil.</dd>
 
                     <dt>HI Connect</dt>
                     <dd>Chip e plano de dados celular da HI para IoT, sem tempo mínimo de contrato.</dd>
 
-                    <dt>WSC720 (XBee-PRO)</dt>
+                    <dt>WSC720</dt>
                     <dd>Rádio 900 MHz integrado aos CLPs e gateways HI, para distâncias menores.</dd>
 
                     <dt>R9X307</dt>
                     <dd>Rádio 900 MHz da HI, equipamento à parte, para distâncias maiores (recomendação: até 60 km).</dd>
-
-                    <dt>DigiMesh</dt>
-                    <dd>Tipo de rede de rádio em malha usada pelo R9X307, que dá redundância à transmissão.</dd>
 
                     <dt>Altimetria</dt>
                     <dd>Estudo do relevo entre dois pontos, para saber se as antenas terão visada.</dd>
@@ -617,11 +605,11 @@
 
                     <fieldset class="quiz-q" data-certa="a">
                         <legend>6. Dois pontos a cerca de 25 km, em área rural, precisam trocar dados por rádio. Qual rádio é o candidato e o que vem antes da proposta?</legend>
-                        <label><input type="radio" name="q6" value="a"> R9X307 (recomendação de até 60 km), depois do estudo de altimetria da Engenharia com as coordenadas (KML) dos pontos.</label>
+                        <label><input type="radio" name="q6" value="a"> R9X307 (recomendação de até 60 km), depois do estudo de altimetria com as coordenadas (KML) dos pontos.</label>
                         <label><input type="radio" name="q6" value="b"> WSC720, que alcança qualquer distância.</label>
                         <label><input type="radio" name="q6" value="c"> R9X307, com alcance garantido sem estudo.</label>
                         <label><input type="radio" name="q6" value="d"> Um único rádio no ponto principal.</label>
-                        <p class="quiz-explica" hidden>Para distâncias maiores, o R9X307. O integrado (WSC720) é para distâncias menores, cerca de 3 km ao ar livre. E nenhum alcance é prometido sem o estudo da Engenharia.</p>
+                        <p class="quiz-explica" hidden>Para distâncias maiores, o R9X307. O integrado (WSC720) é para distâncias menores, cerca de 3 km ao ar livre. E nenhum alcance é prometido sem o estudo de visada.</p>
                     </fieldset>
 
                     <fieldset class="quiz-q" data-certa="d">
@@ -629,8 +617,8 @@
                         <label><input type="radio" name="q7" value="a"> Proposta, instalação e depois o estudo.</label>
                         <label><input type="radio" name="q7" value="b"> Proposta direto, porque rádio sempre funciona.</label>
                         <label><input type="radio" name="q7" value="c"> Instalar e testar no cliente, sem estudo.</label>
-                        <label><input type="radio" name="q7" value="d"> Entender pontos e distância; pedir as coordenadas (KML); estudo de altimetria pela Engenharia; proposta com a viabilidade confirmada.</label>
-                        <p class="quiz-explica" hidden>Rádio precisa de visada. Com o KML, a Engenharia de Produto verifica o relevo e confirma a viabilidade. Só então a proposta.</p>
+                        <label><input type="radio" name="q7" value="d"> Entender pontos e distância; pedir as coordenadas (KML); estudo de altimetria (suporte técnico ou engenharia de aplicação); proposta com a viabilidade confirmada.</label>
+                        <p class="quiz-explica" hidden>Rádio precisa de visada. Com o KML, o suporte técnico ou a engenharia de aplicação verifica o relevo e confirma a viabilidade. Só então a proposta.</p>
                     </fieldset>
 
                     <fieldset class="quiz-q" data-certa="b">
@@ -673,7 +661,7 @@
             <div class="caso">
                 <h3>Para o encontro com o instrutor</h3>
                 <p>Traga preparado (para cada caso, o produto, por quê, e o que confirmaria com o suporte ou a
-                Engenharia):</p>
+                engenharia de aplicação):</p>
                 <ol>
                     <li><strong>Explique como a um cliente</strong> o que é um gateway e cite quatro modelos de
                     conversores e gateways da HI, com a função de cada um.</li>
