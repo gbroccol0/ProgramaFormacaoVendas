@@ -108,12 +108,13 @@
 
             <!-- ===================================================== -->
             <div class="step" id="ihm-supervisorio">
-                <h3>1. IHM ou supervisório: operar no painel ou supervisionar a planta</h3>
+                <h3>1. IHM e supervisório: supervisionar na máquina ou a planta inteira</h3>
 
                 <p>A <strong>IHM</strong> (Interface Homem-Máquina) é uma <strong>tela física</strong> que dá ao
                 operador uma visão clara da máquina ou do processo: mostra informações guardadas no CLP que não
-                seriam visíveis de outro jeito e tem botões, valores e históricos para informar e comandar. O
-                <strong>supervisório</strong> faz algo parecido, mas é <strong>software</strong>: roda em
+                seriam visíveis de outro jeito e tem botões, valores, alarmes e históricos para informar e comandar.
+                Ou seja, a IHM também <strong>supervisiona</strong>, só que no local. O
+                <strong>supervisório</strong> faz algo parecido para a planta inteira, mas é <strong>software</strong>: roda em
                 computadores da rede (HIscada Pro) ou na nuvem (Portal de Telemetria), e vários computadores
                 podem acessar as mesmas telas.</p>
 
@@ -152,19 +153,19 @@
 
                 <img class="foto" src="Files/IHM_GTI5.png" alt="IHM touch screen GTI5" width="550" height="520">
 
-                <p>A série <strong>GTI5</strong> é a IHM touch screen da HI, com telas TFT de alta resolução e
+                <p>A série <strong>GTI5</strong> é a IHM touch screen da HI, com telas coloridas de alta resolução e
                 construção robusta para ambiente industrial. É a <strong>preferência na oferta de IHM</strong>.</p>
 
                 <div class="tabela">
                     <table>
                         <thead>
-                            <tr><th>Modelo</th><th>Tela</th><th>Resolução</th></tr>
+                            <tr><th>Modelo</th><th>Tela</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>GTI5 4.3"</td><td>4,3 polegadas</td><td>480 × 272</td></tr>
-                            <tr><td>GTI5 7"</td><td>7 polegadas</td><td>800 × 480</td></tr>
-                            <tr><td>GTI5 10.1"</td><td>10,1 polegadas</td><td>1280 × 800</td></tr>
-                            <tr><td>GTI5 15.6"</td><td>15,6 polegadas</td><td>1920 × 1080</td></tr>
+                            <tr><td>GTI5 4.3"</td><td>4,3 polegadas</td></tr>
+                            <tr><td>GTI5 7"</td><td>7 polegadas</td></tr>
+                            <tr><td>GTI5 10.1"</td><td>10,1 polegadas</td></tr>
+                            <tr><td>GTI5 15.6"</td><td>15,6 polegadas</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -172,9 +173,7 @@
                 <ul>
                     <li><strong>Portas:</strong> Ethernet, RS232, RS485 e USB (para conectar dispositivos).</li>
                     <li><strong>Alimentação:</strong> 24 V DC (precisa de fonte; Etapa 2).</li>
-                    <li><strong>Proteção:</strong> IP65 na frente (resiste a poeira e jatos d'água) e resistência a
-                    vibrações; certificação CE.</li>
-                    <li><strong>Toque:</strong> touch screen resistivo.</li>
+                    <li><strong>Proteção:</strong> IP65 na frente (resiste a poeira e jatos d'água).</li>
                     <li><strong>Software:</strong> <strong>SmartManagerPro</strong>, para criar telas com alarmes,
                     históricos e tendências. <span class="confirmar">[CONFIRMAR] se o SmartManagerPro é gratuito, como os softwares das IHMs de revenda</span></li>
                 </ul>
@@ -260,15 +259,14 @@
                 <div class="cartoes">
                     <div class="cartao">
                         <h4>THT863: temperatura e umidade</h4>
-                        <p>Transmissor analógico a dois fios. Mede a <strong>temperatura ambiente</strong> (-20 a
+                        <p>Transmissor analógico. Mede a <strong>temperatura ambiente</strong> (-20 a
                         80 °C) ou a <strong>umidade relativa do ar</strong> (0 a 100%) e manda o valor por uma única
-                        saída <strong>4 a 20 mA</strong>. Uma chave seleciona o que medir: só temperatura, só umidade
-                        ou as duas, alternando na saída. Alimentação de 12 a 30 V DC.</p>
+                        saída <strong>4 a 20 mA</strong>. Alimentação de 12 a 30 V DC.</p>
                         <p><span class="rotulo">No CLP</span><br>Ocupa uma entrada analógica (Etapa 2).</p>
                     </div>
                     <div class="cartao">
                         <h4>HPS850: passagem e contagem</h4>
-                        <p>Sensor magnético (efeito Hall), usado com um ímã. Detecta quando a máquina passa por uma
+                        <p>Sensor magnético, usado com um ímã. Detecta quando a máquina passa por uma
                         posição e manda um sinal para o CLP <strong>contar uma volta</strong>. Muito usado no
                         <strong>bombeio mecânico de petróleo</strong>, para contar os ciclos. Sem partes móveis: alta
                         robustez e longa vida útil. Também serve como sensor de posição, movimento e contagem de
@@ -291,23 +289,21 @@
             <div class="step" id="fontes">
                 <h3>6. Fontes de alimentação: energia para o painel</h3>
 
-                <p>As fontes convertem a energia da tomada (127 V ou 220 V AC) em corrente contínua,
+                <p>As fontes convertem a energia da rede elétrica (127 V ou 220 V AC) em corrente contínua,
                 normalmente 24 V DC, para alimentar o CLP, os módulos de I/O, a IHM e os sensores (Etapa 2).</p>
 
                 <div class="cartoes">
                     <div class="cartao">
                         <h4>Fontes Mean Well (revenda)</h4>
-                        <p>Fixação em trilho DIN, entrada full range (90 a 264 V AC), saída de 24 V DC, fusível na
-                        entrada e proteção contra curto-circuito e sobretensão na saída. Modelos por potência:</p>
-                        <p>MDR20-24 (20 W), MDR40-24 (40 W), MDR60-24 (60 W), EDR75-24 (75 W), EDR120-24 (120 W) e
-                        NDR240-24 (240 W).</p>
+                        <p>Alimentadas pela rede elétrica (90 a 264 V AC), entregam 24 V DC. Há modelos de
+                        <strong>20 W a 240 W</strong>: quanto mais equipamentos no painel, maior a potência. Quem
+                        dimensiona é o suporte.</p>
                     </div>
                     <div class="cartao">
                         <h4>SBC513 (fabricação HI)</h4>
-                        <p>Controlador inteligente de carga com bateria de lítio (LiFePO4) de 12 V incorporada.
+                        <p>Controlador inteligente de carga com bateria de lítio de 12 V incorporada.
                         Alimentado por 18 a 26 V DC ou <strong>painel fotovoltaico</strong>, mantém o equipamento
-                        ligado onde a rede elétrica falha ou não existe. Pode desligar a própria saída por tempo
-                        programado (de segundos a horas) e tem saída de status.</p>
+                        ligado onde a rede elétrica falha ou não existe.</p>
                     </div>
                 </div>
 
@@ -335,24 +331,8 @@
                 <h3>7. Caixa mecânica GEM100</h3>
 
                 <p>A linha <strong>GEM100</strong> é uma família de caixas modulares para acomodar módulos
-                eletroeletrônicos em geral. É feita de um perfil de alumínio extrudado, desenvolvido exclusivamente
-                para ela, e permite montar os módulos na vertical, na horizontal ou por um backplane (placa de
-                ligação no fundo).</p>
-
-                <div class="tabela">
-                    <table>
-                        <thead>
-                            <tr><th>Modelo</th><th>Dimensões (L × A × P)</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>GEM100-030</td><td>30 × 89 × 93 mm</td></tr>
-                            <tr><td>GEM100-050</td><td>50 × 89 × 93 mm</td></tr>
-                            <tr><td>GEM100-085</td><td>85 × 89 × 93 mm</td></tr>
-                            <tr><td>GEM100-110</td><td>110 × 89 × 93 mm</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p>Grau de proteção IP30, alumínio e poliestireno, fixação em trilho DIN TS35 ou painel.</p>
+                eletroeletrônicos em geral, em alumínio, em quatro larguras (de 30 a 110 mm). É fixada em trilho DIN
+                ou no painel, para uso dentro do painel.</p>
 
                 <div class="na-venda">
                     <p>A GEM100 interessa a quem desenvolve ou monta eletrônica e precisa de uma caixa de padrão
@@ -368,15 +348,13 @@
             <div class="step" id="rtk510">
                 <h3>8. Kit de treinamento RTK510</h3>
 
-                <p>Os kits <strong>RTK510</strong> servem para treinar programação de CLP baseada na norma
-                IEC 61131 (a mesma do HIstudio, Etapa 4). Numa bancada só, eles trazem:</p>
+                <p>Os kits <strong>RTK510</strong> servem para treinar programação de CLP (no mesmo padrão do
+                HIstudio, Etapa 4). Numa bancada só, eles trazem:</p>
                 <ul>
                     <li>fonte de alimentação;</li>
-                    <li>chaves para simular sensores e sinais digitais, e LEDs que mostram o estado das saídas;</li>
-                    <li>potenciômetros para simular sinais analógicos (0 a 10 V) e entradas e saídas 4 a 20 mA em
-                    bornes;</li>
+                    <li>chaves e botões para simular sensores e sinais analógicos, e LEDs que mostram as saídas;</li>
                     <li>bornes para ligar processos reais;</li>
-                    <li>comunicação serial RS485 e Ethernet (Modbus, ASCII e, na Ethernet, também MQTT e HTTP).</li>
+                    <li>comunicação serial RS485 e Ethernet.</li>
                 </ul>
 
                 <div class="na-venda">
@@ -488,12 +466,6 @@
                     <dt>IHM / MMI</dt>
                     <dd>Interface Homem-Máquina (em inglês, Man Machine Interface): tela física para o operador ver e comandar.</dd>
 
-                    <dt>Touch screen resistivo</dt>
-                    <dd>Tela sensível ao toque por pressão; funciona inclusive com luvas.</dd>
-
-                    <dt>TFT</dt>
-                    <dd>Tipo de tela colorida de alta resolução, como a de monitores e tablets.</dd>
-
                     <dt>IHM alfanumérica</dt>
                     <dd>Tela que mostra só letras e números, sem gráficos. Ex.: MMI700.</dd>
 
@@ -503,29 +475,15 @@
                     <dt>EasyBuilderPro / VI20Studio / OPPE</dt>
                     <dd>Softwares das IHMs Weintek, Veichi e MMI700, gratuitos.</dd>
 
-                    <dt>IP65 / IP30 / IP20</dt>
-                    <dd>Grau de proteção contra poeira e água. IP65: resiste a poeira e jatos d'água; IP20 e IP30: para dentro do painel.</dd>
-
-                    <dt>Transmissor a dois fios</dt>
-                    <dd>Transmissor em que os mesmos dois fios levam a alimentação e o sinal 4 a 20 mA.</dd>
-
-                    <dt>Efeito Hall</dt>
-                    <dd>Princípio do sensor magnético que detecta um ímã sem contato e sem partes móveis.</dd>
-
-                    <dt>Fonte full range</dt>
-                    <dd>Fonte que aceita qualquer tensão de tomada da faixa (90 a 264 V AC), sem ajuste.</dd>
-
-                    <dt>LiFePO4</dt>
-                    <dd>Tipo de bateria de lítio usada na SBC513.</dd>
+                    <dt>IP65</dt>
+                    <dd>Grau de proteção contra poeira e água: resiste a poeira e jatos d'água.</dd>
 
                     <dt>Painel fotovoltaico</dt>
                     <dd>Placa solar que gera energia elétrica a partir da luz do sol.</dd>
 
-                    <dt>Trilho DIN (TS35)</dt>
+                    <dt>Trilho DIN</dt>
                     <dd>Trilho metálico padrão dentro dos painéis, onde se encaixam CLPs, fontes e gateways.</dd>
 
-                    <dt>Backplane</dt>
-                    <dd>Placa no fundo da caixa que interliga os módulos montados nela.</dd>
                 </dl>
             </div>
 
@@ -602,11 +560,11 @@
 
                     <fieldset class="quiz-q" data-certa="d">
                         <legend>8. Um ponto de telemetria fica num local sem rede elétrica. Qual produto HI ajuda a manter o equipamento ligado?</legend>
-                        <label><input type="radio" name="q8" value="a"> Uma fonte Mean Well ligada na tomada.</label>
+                        <label><input type="radio" name="q8" value="a"> Uma fonte Mean Well ligada à rede elétrica.</label>
                         <label><input type="radio" name="q8" value="b"> A caixa GEM100.</label>
                         <label><input type="radio" name="q8" value="c"> O kit RTK510.</label>
                         <label><input type="radio" name="q8" value="d"> A SBC513, controlador de carga com bateria de lítio, alimentado também por painel fotovoltaico.</label>
-                        <p class="quiz-explica" hidden>A SBC513 mantém o equipamento energizado onde a rede falha ou não existe, com bateria LiFePO4 e painel fotovoltaico. A Mean Well precisa de tomada.</p>
+                        <p class="quiz-explica" hidden>A SBC513 mantém o equipamento energizado onde a rede falha ou não existe, com bateria de lítio e painel fotovoltaico. A Mean Well precisa da rede elétrica.</p>
                     </fieldset>
 
                     <fieldset class="quiz-q" data-certa="b">
