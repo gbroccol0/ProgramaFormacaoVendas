@@ -130,6 +130,12 @@ vendedor leigo. Gabriel gosta de entender o porquê das decisões.
 - Gabriel aprovou a Etapa 2 sem correções ("se pegarmos algum erro
   posteriormente, alteramos"). Ele faz o merge do PR; liberou a Etapa 3.
 
+**05/11/2026 — Etapa 3 aprovada**
+- Gabriel respondeu "pode continuar" (mesmo sentido da Etapa 2: aprovada; ele
+  faz o merge). Os pontos abertos no PR #2 ficaram como estavam: a tabela de
+  distâncias de referência geral fica, o rádio segue sem número de alcance e
+  o fabricante do CLP do exercício 18 fica anônimo.
+
 **Vídeos (ideia de Gabriel, ainda NÃO é pedido):** ele pensa em gravar vídeos e
 colocar em cada etapa uma escolha que expande para baixo: "Ler o conteúdo" ou
 "Assistir ao vídeo". Proposta já apresentada a ele: dois painéis expansíveis,
@@ -144,12 +150,12 @@ Oferecido também: preparar slides e roteiro de cada vídeo a partir do texto.
 |---:|---|---|
 | 1 A HI Tecnologia | `Assets/hi_tecnologia.html` | **Aprovada** por Gabriel em 04/11/2026 (reteste depois da correção da GTI5/SmartManagerPro). |
 | 2 Fundamentos da Automação | `Assets/fundamentos.html` | **Aprovada** por Gabriel em 04/11/2026 (PR #1, branch `etapa-2-fundamentos`; ele faz o merge). Erros achados depois serão corrigidos depois. |
-| 3 Comunicação Industrial | `Assets/comunicacao.html` | **Pronta, aguardando a revisão de Gabriel.** Branch `etapa-3-comunicacao` (criada a partir de `etapa-2-fundamentos`), pull request próprio. |
+| 3 Comunicação Industrial | `Assets/comunicacao.html` | **Aprovada** por Gabriel em 05/11/2026 (PR #2, branch `etapa-3-comunicacao`; ele faz o merge, depois do #1). |
 | 4 a 10 | `Assets/*.html` | Páginas "em produção": selo, objetivos, tempo, caixa "Conteúdo em produção" e fontes previstas. |
 
-**Próximo passo:** esperar a revisão da Etapa 3, aplicar as correções e, com a
-aprovação, produzir a Etapa 4 (Linha de CLPs); depois uma por vez até a 10, e
-então a Fase 4.
+**Próximo passo:** produzir a Etapa 4 (Linha de CLPs) na branch
+`etapa-4-clps`, criada a partir de `etapa-3-comunicacao`; depois uma por vez
+até a 10, e então a Fase 4.
 
 **Etapa 3, o que foi feito (para não refazer):** 8 seções (linha e idioma;
 RS232/RS485/Ethernet com tabela de distâncias **de referência geral**, marcada

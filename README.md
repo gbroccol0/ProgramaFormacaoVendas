@@ -52,7 +52,7 @@ Formacao-Vendas-HI/
 |------:|---|---|---|
 | 1 | A HI Tecnologia | `hi_tecnologia.html` | **Aprovada** por Gabriel (04/11/2026), depois de 2 revisões |
 | 2 | Fundamentos da Automação | `fundamentos.html` | **Aprovada** por Gabriel (04/11/2026) |
-| 3 | Comunicação Industrial | `comunicacao.html` | **Pronta, aguardando a revisão de Gabriel** (branch `etapa-3-comunicacao`, pull request) |
+| 3 | Comunicação Industrial | `comunicacao.html` | **Aprovada** por Gabriel (05/11/2026) |
 | 4 | Linha de CLPs | `clps.html` | Em produção |
 | 5 | Gateways, Modem e Rádios | `conectividade.html` | Em produção |
 | 6 | IHMs, Sensores e Acessórios | `ihm_sensores.html` | Em produção |
