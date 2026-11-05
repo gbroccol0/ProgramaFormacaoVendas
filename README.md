@@ -50,13 +50,13 @@ Formacao-Vendas-HI/
 
 | Etapa | Título | Arquivo | Status |
 |------:|---|---|---|
-| 1 | A HI Tecnologia | `hi_tecnologia.html` | **Pronta**, revisada 2 vezes; aguardando o reteste de Gabriel (correção da GTI5) |
-| 2 | Fundamentos da Automação | `fundamentos.html` | Em produção (página com objetivos) |
-| 3 | Comunicação Industrial | `comunicacao.html` | Em produção |
-| 4 | Linha de CLPs | `clps.html` | Em produção |
-| 5 | Gateways, Modem e Rádios | `conectividade.html` | Em produção |
-| 6 | IHMs, Sensores e Acessórios | `ihm_sensores.html` | Em produção |
-| 7 | Supervisão Local e em Nuvem | `supervisao.html` | Em produção |
+| 1 | A HI Tecnologia | `hi_tecnologia.html` | **Aprovada** por Gabriel (04/11/2026), depois de 2 revisões |
+| 2 | Fundamentos da Automação | `fundamentos.html` | **Aprovada** por Gabriel (04/11/2026) |
+| 3 | Comunicação Industrial | `comunicacao.html` | **Aprovada** por Gabriel (05/11/2026) |
+| 4 | Linha de CLPs | `clps.html` | **Aprovada** por Gabriel (05/11/2026), com revisão geral prevista para depois |
+| 5 | Gateways, Modem e Rádios | `conectividade.html` | **Pronta, aguardando revisão** (branch `etapa-5-conectividade`, PR #4) |
+| 6 | IHMs, Sensores e Acessórios | `ihm_sensores.html` | **Pronta, aguardando revisão** (branch `etapa-6-ihm-sensores`, PR #5) |
+| 7 | Supervisão Local e em Nuvem | `supervisao.html` | **Pronta, aguardando revisão** (branch `etapa-7-supervisao`, pull request) |
 | 8 | Soluções e Programas | `solucoes.html` | Em produção |
 | 9 | A Conversa de Venda | `conversa_venda.html` | Em produção |
 | 10 | Avaliação Final | `avaliacao_final.html` | Em produção |
@@ -122,7 +122,9 @@ disponíveis (estilo em `etapa.css`):
 | `.cartoes` / `.cartao` | grade de cartões (segmentos, perfis, produtos) |
 | `.linha-tempo` | lista de marcos com ano |
 | `.glossario` | `<dl>` de termos |
-| `.diagrama` | SVG inline com cores que seguem o modo escuro |
+| `.diagrama` | SVG inline com cores que seguem o modo escuro. Classes internas: `d-titulo`, `d-caixa`, `d-rotulo`, `d-itens`, `d-seta`/`d-ponta`, `d-nota`, `d-cheio` (preenchimento laranja), `d-linha` (guia tracejada), `d-texto-claro` (texto branco sobre o laranja) |
+| `.foto` | imagem de produto ou de tela dentro de uma seção (`<img class="foto" src="Files/...">`), centralizada, até 360 px |
+| `.diagrama-corpo` | junto com `.diagrama`, para um SVG no meio do texto de uma seção (centralizado, com margem) |
 | `.quiz-bloco` + `form.quiz` | quiz; marcação descrita no topo de `quiz.js` |
 | `.caso` | preparação para o encontro com o instrutor |
 | `.fonte` | página das fontes de onde saiu cada dado |
@@ -146,10 +148,11 @@ onde está.
 | Etapa 1, item 4 | Clientes de referência de Energia, Indústria 4.0, Meio ambiente, Hospitalar e Predial (Gabriel vai levantar com a equipe) |
 | Etapa 1, item 5 | Qual representante (TBC Automação, 4Sys Sistemas) cobre cada região (Gabriel vai levantar) |
 | Etapa 1, item 4 | Texto das áreas Indústria 4.0, Meio Ambiente, Hospitalar e Energia (catálogo p. 3–4, ilegível na extração; um print resolve) |
-| Etapa 5 (futura) | Alcance rural do R9X307: 60 km (catálogo) ou 105 km (Treinamento de Produto) |
-| Etapa 5 (futura) | Nome do conversor: "GTON C SET" (Treinamento) ou "GTON-C" (catálogo) |
-| Etapa 5 (futura) | ESC717/ESC713 entram na formação de vendas? (estão no site do suporte, não no catálogo) |
-| Etapa 6 (futura) | MMI700 ainda é vendida? BPU508 ainda é vendida (o catálogo traz a SBC513)? |
+| Etapa 3, item 5 | Em que situações o vendedor precisa citar o SCP-HI (entre quais equipamentos e softwares HI ele é usado); as fontes só dizem que é o protocolo proprietário da HI |
+| Etapa 5, item 1 | Qual GTON corresponde a cada ESC (ESC717 e ESC713) e se os ESC ainda são vendidos |
+| Etapa 6, itens 3 e 6 | MMI700 ainda é vendida? BPU508 ainda é vendida (o catálogo traz a SBC513)? |
+| Etapa 6, item 2 | O SmartManagerPro (software da GTI5) é gratuito, como os das IHMs de revenda? |
+| Etapa 6, item 7 | Perfil típico de cliente da caixa GEM100 e se ela é vendida avulsa |
 | Etapa 9 (futura) | Processo comercial (orçamento, prazo, garantia) e regras para acionar suporte/engenharia |
 | Etapa 9 (futura) | Cases reais (problema → solução → resultado); Gabriel ofereceu compartilhar |
 | Fase 4 | Lista dos vídeos/tutoriais do suporte reaproveitáveis (começar pelos links do site Forma-o-HI) |

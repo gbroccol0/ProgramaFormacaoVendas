@@ -21,6 +21,54 @@
             <span class="etapa-badge">Etapa 4 de 10</span>
             <h1>Linha de CLPs: RION5, NEON5 e P7C</h1>
             <p><strong>Qual controlador indicar, pelo tamanho da aplicação e pelo que o cliente precisa conectar.</strong></p>
+            <p>Nas Etapas 2 e 3 você aprendeu a sair da conversa com a <strong>lista de sinais</strong>, a
+            <strong>alimentação</strong> e o <strong>caminho de comunicação</strong>. Agora transforma essas
+            respostas em produto: qual dos três CLPs da HI indicar, quando usar o RION5 como
+            <strong>I/O remoto</strong> de um NEON5, como falar dos módulos de I/O sem ficha técnica e como
+            apresentar o <strong>HIstudio</strong>, o software de programação gratuito.</p>
+        </div>
+        <div class="hero-image">
+            <svg class="diagrama" viewBox="0 0 540 400" role="img"
+                 aria-labelledby="linhaTitulo linhaDesc">
+                <title id="linhaTitulo">Os três CLPs da HI, do menor ao maior</title>
+                <desc id="linhaDesc">Três colunas de alturas crescentes. RION5: 1 módulo de I/O, até 16 pontos,
+                só alimentação DC, sem SD Card. NEON5: 1 ou 2 módulos, até 32 pontos (até 240 com RION5 remotos),
+                AC ou DC, com SD Card. P7C 302: até 23 módulos, até 368 pontos, AC ou DC, com SD Card.</desc>
+
+                <text class="d-titulo" x="270" y="24" text-anchor="middle">Os CLPs da HI, do menor ao maior</text>
+
+                <rect class="d-caixa" x="10" y="200" width="160" height="150" rx="10"/>
+                <text class="d-rotulo" x="90" y="228" text-anchor="middle">RION5</text>
+                <text class="d-itens" x="90" y="254" text-anchor="middle">1 módulo</text>
+                <text class="d-itens" x="90" y="274" text-anchor="middle">até 16 pontos</text>
+                <text class="d-itens" x="90" y="294" text-anchor="middle">só DC</text>
+                <text class="d-itens" x="90" y="314" text-anchor="middle">sem SD Card</text>
+                <text class="d-itens" x="90" y="334" text-anchor="middle">também I/O remoto</text>
+
+                <rect class="d-caixa" x="190" y="130" width="160" height="220" rx="10"/>
+                <text class="d-rotulo" x="270" y="158" text-anchor="middle">NEON5</text>
+                <text class="d-itens" x="270" y="184" text-anchor="middle">1 ou 2 módulos</text>
+                <text class="d-itens" x="270" y="204" text-anchor="middle">até 32 pontos</text>
+                <text class="d-itens" x="270" y="224" text-anchor="middle">até 240 com RION5</text>
+                <text class="d-itens" x="270" y="244" text-anchor="middle">remotos</text>
+                <text class="d-itens" x="270" y="270" text-anchor="middle">AC ou DC</text>
+                <text class="d-itens" x="270" y="290" text-anchor="middle">com SD Card</text>
+                <text class="d-itens" x="270" y="316" text-anchor="middle">mesmo processador</text>
+                <text class="d-itens" x="270" y="334" text-anchor="middle">do P7C</text>
+
+                <rect class="d-caixa" x="370" y="50" width="160" height="300" rx="10"/>
+                <text class="d-rotulo" x="450" y="78" text-anchor="middle">P7C 302</text>
+                <text class="d-itens" x="450" y="104" text-anchor="middle">até 23 módulos</text>
+                <text class="d-itens" x="450" y="124" text-anchor="middle">até 368 pontos</text>
+                <text class="d-itens" x="450" y="150" text-anchor="middle">bastidor principal</text>
+                <text class="d-itens" x="450" y="170" text-anchor="middle">+ até 5 expansões</text>
+                <text class="d-itens" x="450" y="196" text-anchor="middle">AC ou DC</text>
+                <text class="d-itens" x="450" y="216" text-anchor="middle">com SD Card</text>
+                <text class="d-itens" x="450" y="242" text-anchor="middle">Ethernet, RS485</text>
+                <text class="d-itens" x="450" y="262" text-anchor="middle">e RS232</text>
+
+                <text class="d-nota" x="270" y="378" text-anchor="middle">Todos são programados no HIstudio, gratuito.</text>
+            </svg>
         </div>
     </section>
 
@@ -38,15 +86,645 @@
                     <li>falar dos módulos de I/O sem entrar em ficha técnica;</li>
                     <li>apresentar o HIstudio, o software de programação gratuito.</li>
                 </ul>
-                <p class="tempo">Tempo estimado: 2h30.</p>
+                <p class="tempo">Tempo estimado: 2h30 (leitura, quiz e preparo dos exercícios do encontro).</p>
             </div>
 
-            <div class="em-producao">
-                <strong>Conteúdo em produção</strong>
-                Esta etapa está sendo escrita e entra no ar depois da revisão da etapa anterior.
+            <ul class="sumario" aria-label="Nesta etapa">
+                <li><a href="#visao-geral">Visão geral</a></li>
+                <li><a href="#rion5">RION5</a></li>
+                <li><a href="#neon5">NEON5</a></li>
+                <li><a href="#p7c">P7C 302</a></li>
+                <li><a href="#io-remoto">I/O remoto</a></li>
+                <li><a href="#modulos">Módulos de I/O</a></li>
+                <li><a href="#histudio">HIstudio</a></li>
+                <li><a href="#escolher">Como escolher</a></li>
+                <li><a href="#na-venda">Na venda</a></li>
+                <li><a href="#glossario">Glossário</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="visao-geral">
+                <h3>1. A linha de CLPs em uma tabela</h3>
+
+                <p>Hoje a HI trabalha com <strong>três controladores</strong>. A principal diferença entre eles
+                é a <strong>quantidade de módulos de I/O</strong> que cada um aceita. Depois vêm três detalhes
+                que decidem a venda: <strong>alimentação</strong>, <strong>SD Card</strong> e
+                <strong>conectividade</strong>.</p>
+
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th></th><th>RION5</th><th>NEON5</th><th>P7C 302</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Módulos de I/O</td><td>1</td><td>1 ou 2</td><td>CPU + 3 no bastidor principal, + até 5 expansões de 4 (até 23)</td></tr>
+                            <tr><td>Pontos de I/O</td><td>até 16</td><td>até 32 (até 240 com RION5 remotos)</td><td>até 368</td></tr>
+                            <tr><td>Alimentação</td><td>só DC</td><td>AC ou DC</td><td>AC ou DC</td></tr>
+                            <tr><td>SD Card (log e receitas)</td><td>não</td><td>sim</td><td>sim</td></tr>
+                            <tr><td>Conectividade</td><td>múltiplas opções: serial RS232 ou RS485, Ethernet/Wi-Fi, rádio 900 MHz, 4G</td><td>múltiplas combinações, incluindo Wi-Fi, rádio 900 MHz e 4G</td><td>Ethernet, RS485 e RS232</td></tr>
+                            <tr><td>Processador</td><td>mais simples</td><td>o mesmo do P7C</td><td>o mesmo do NEON5</td></tr>
+                            <tr><td>Lançamento</td><td>2023</td><td>2024</td><td>linha P7C desde 2007</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="analogia">
+                    <p>Pense em veículos de carga. O RION5 é a moto de entrega: leve, ágil, leva pouco. O NEON5 é
+                    a van: o mesmo motor do caminhão, mas leva uma carga média, e pode puxar "carretinhas" (os RION5
+                    remotos). O P7C 302 é o caminhão com reboques: leva muito, e você acrescenta reboques
+                    (bastidores de expansão) conforme a carga cresce.</p>
+                </div>
+
+                <div class="na-venda">
+                    <p>Comece sempre pela lista de sinais da Etapa 2: o número de pontos já elimina opções. Depois
+                    confira a alimentação (o RION5 é só DC), se o cliente precisa guardar histórico ou receitas
+                    (SD Card) e por onde o CLP vai se comunicar (Etapa 3).</p>
+                </div>
+
+                <p class="fonte">Fontes: Treinamento de Produto, p. 5 a 9; apresentação de CLPs, slides 4 a 7; Catálogo
+                Geral, p. 5 a 9.</p>
             </div>
 
-            <p class="fonte">Fontes previstas: Treinamento de Produto, p. 5 a 9; Catálogo Geral, p. 6 a 10 e 32; apresentação de CLPs.</p>
+
+            <!-- ===================================================== -->
+            <div class="step" id="rion5">
+                <h3>2. RION5: o compacto, que também vira I/O remoto</h3>
+
+                <ul>
+                    <li><strong>1 módulo de I/O</strong>, até <strong>16 pontos</strong>; sete variações de módulo, com
+                    combinações diferentes de entradas, saídas e recursos.</li>
+                    <li><strong>Só alimentação DC</strong> (10 a 30 V DC). Não tem opção AC.</li>
+                    <li><strong>Sem SD Card.</strong></li>
+                    <li><strong>Memória retentiva:</strong> guarda os valores importantes do programa mesmo quando a
+                    energia cai.</li>
+                    <li><strong>Conectividade:</strong> opções com serial RS232 ou RS485, Ethernet/Wi-Fi, rádio
+                    900 MHz ou modem 4G, conforme o modelo.</li>
+                    <li>Processador mais simples, com menor capacidade de programação e de variáveis que o NEON5 e
+                    o P7C.</li>
+                </ul>
+
+                <h4>Dois usos</h4>
+                <div class="cartoes">
+                    <div class="cartao">
+                        <h4>CLP sozinho</h4>
+                        <p>Para automatizar aplicações simples, com poucos sinais. O Treinamento de Produto o
+                        apresenta como o <strong>CLP mais econômico da HI</strong>. Valores, só pelo orçamento.</p>
+                    </div>
+                    <div class="cartao">
+                        <h4>I/O remoto</h4>
+                        <p>Funciona como um "módulo de I/O extra" para um mestre como o NEON5, instalado perto dos
+                        sensores. Detalhes no item 5.</p>
+                    </div>
+                </div>
+
+                <div class="atencao">
+                    <p>Se o cliente precisa de alimentação AC, de SD Card (histórico, receitas) ou de mais de 16
+                    pontos no mesmo CLP, o RION5 sozinho não atende. Não force a indicação só porque ele é o mais
+                    econômico.</p>
+                </div>
+
+                <p class="fonte">Fontes: Treinamento de Produto, p. 6 e 9; apresentação de CLPs, slide 7; Catálogo Geral,
+                p. 6 e 7.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="neon5">
+                <h3>3. NEON5: o "cérebro" do P7C num formato compacto</h3>
+
+                <ul>
+                    <li><strong>Mesmo processador do P7C:</strong> a mesma capacidade de programação, com projetos do
+                    mesmo tamanho (linhas de programa e variáveis).</li>
+                    <li><strong>1 ou 2 módulos de I/O</strong>, até <strong>32 pontos</strong>. Pode ligar até
+                    <strong>14 RION5</strong> como I/O remoto e chegar a <strong>240 pontos</strong>.</li>
+                    <li><strong>Alimentação AC ou DC</strong>.</li>
+                    <li><strong>SD Card</strong>, essencial para registro de dados (log) e aplicações com receitas.</li>
+                    <li><strong>Conectividade em várias combinações</strong>, conforme o modelo. Exemplos:
+                    RS232/RS485 + Ethernet; RS232/RS485 + modem 4G; RS232/RS485 + rádio 900 MHz;
+                    Ethernet/Wi-Fi + modem 4G; Ethernet/Wi-Fi + rádio 900 MHz.</li>
+                </ul>
+
+                <div class="analogia">
+                    <p>"Receita" na automação é como uma receita de bolo guardada no caderno: a lista de valores
+                    (quantidades, temperaturas, tempos) de cada produto. Uma fábrica de café, por exemplo, guarda a
+                    receita de cada blend e carrega a certa no CLP quando muda a produção. O SD Card é o caderno.</p>
+                </div>
+
+                <div class="na-venda">
+                    <p>O NEON5 é muito usado como <strong>mestre de rede e de telemetria</strong>: coleta dados de
+                    vários equipamentos pela RS485 ou pela Ethernet e envia por rádio, Wi-Fi ou 4G integrado para a
+                    nuvem. Quando o cliente acha que "é pequeno demais", lembre: o processador é o mesmo do P7C; o
+                    que muda é quantos módulos cabem nele.</p>
+                </div>
+
+                <p class="fonte">Fontes: Treinamento de Produto, p. 8; apresentação de CLPs, slide 6; Catálogo Geral, p. 6 e 8.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="p7c">
+                <h3>4. P7C 302: o modular, para aplicações grandes</h3>
+
+                <p>O P7C atende tanto <strong>processos contínuos</strong> (controle de processo) quanto
+                <strong>manufatura</strong> (sequenciamento de máquinas). O <strong>P7C 302</strong> é a versão
+                expansível: o cliente começa com o <strong>bastidor principal</strong> (CPU + 3 módulos de I/O) e
+                acrescenta até <strong>5 bastidores de expansão</strong>, com mais 4 módulos cada.</p>
+
+                <svg class="diagrama diagrama-corpo" viewBox="0 0 420 200" role="img"
+                     aria-labelledby="p7cTitulo p7cDesc">
+                    <title id="p7cTitulo">P7C 302: bastidor principal e até cinco expansões</title>
+                    <desc id="p7cDesc">Uma caixa maior, o bastidor principal com CPU e 3 módulos, seguida de cinco
+                    caixas menores, as expansões 1 a 5, com 4 módulos cada. Total: até 23 módulos e 368 pontos de I/O.</desc>
+
+                    <rect class="d-cheio" x="10" y="40" width="100" height="90" rx="10"/>
+                    <text class="d-texto-claro" x="60" y="76" text-anchor="middle">Principal</text>
+                    <text class="d-texto-claro" x="60" y="96" text-anchor="middle">CPU + 3</text>
+
+                    <rect class="d-caixa" x="122" y="50" width="52" height="70" rx="8"/>
+                    <text class="d-itens" x="148" y="82" text-anchor="middle">Exp. 1</text>
+                    <text class="d-itens" x="148" y="100" text-anchor="middle">+4</text>
+                    <rect class="d-caixa" x="180" y="50" width="52" height="70" rx="8"/>
+                    <text class="d-itens" x="206" y="82" text-anchor="middle">Exp. 2</text>
+                    <text class="d-itens" x="206" y="100" text-anchor="middle">+4</text>
+                    <rect class="d-caixa" x="238" y="50" width="52" height="70" rx="8"/>
+                    <text class="d-itens" x="264" y="82" text-anchor="middle">Exp. 3</text>
+                    <text class="d-itens" x="264" y="100" text-anchor="middle">+4</text>
+                    <rect class="d-caixa" x="296" y="50" width="52" height="70" rx="8"/>
+                    <text class="d-itens" x="322" y="82" text-anchor="middle">Exp. 4</text>
+                    <text class="d-itens" x="322" y="100" text-anchor="middle">+4</text>
+                    <rect class="d-caixa" x="354" y="50" width="52" height="70" rx="8"/>
+                    <text class="d-itens" x="380" y="82" text-anchor="middle">Exp. 5</text>
+                    <text class="d-itens" x="380" y="100" text-anchor="middle">+4</text>
+
+                    <text class="d-rotulo" x="210" y="164" text-anchor="middle">3 + 5 × 4 = até 23 módulos, 368 pontos</text>
+                    <text class="d-nota" x="210" y="188" text-anchor="middle">O cliente compra as expansões conforme a planta cresce.</text>
+                </svg>
+
+                <ul>
+                    <li><strong>Alimentação AC ou DC</strong>, conforme o modelo.</li>
+                    <li><strong>Conectividade:</strong> Ethernet, RS485 e RS232.</li>
+                    <li><strong>SD Card</strong>.</li>
+                    <li>A linha tem módulos próprios (diferentes dos módulos do RION5 e do NEON5), com entradas e
+                    saídas digitais e analógicas e entradas para sinais especiais (temperatura, pesagem, pulsos
+                    rápidos).</li>
+                </ul>
+
+                <div class="atencao">
+                    <p>O P7C não traz rádio, Wi-Fi nem 4G entre as suas portas. Se o projeto precisa disso, ou se
+                    indica um NEON5/RION5 com a opção certa, ou se completa o P7C com um gateway ou modem (Etapa 5).
+                    Confirme a arquitetura com o suporte.</p>
+                </div>
+
+                <p class="fonte">Fontes: Treinamento de Produto, p. 7; apresentação de CLPs, slide 5; Catálogo Geral,
+                p. 5, 9 e 10.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="io-remoto">
+                <h3>5. RION5 como I/O remoto do NEON5</h3>
+
+                <p>Imagine sensores espalhados longe do painel principal. Em vez de puxar dezenas de cabos longos
+                até o CLP, o cliente instala um RION5 <strong>perto dos sensores</strong> e liga só um caminho de
+                comunicação até o NEON5 mestre: RS485, Ethernet, Wi-Fi ou, a longas distâncias, rádio 900 MHz.</p>
+
+                <svg class="diagrama diagrama-corpo" viewBox="0 0 420 250" role="img"
+                     aria-labelledby="remotoTitulo remotoDesc">
+                    <title id="remotoTitulo">NEON5 mestre com RION5 remotos perto dos sensores</title>
+                    <desc id="remotoDesc">Um NEON5 mestre no painel principal, ligado por um único caminho de
+                    comunicação a três RION5 remotos, cada um perto de um grupo de sensores. Até 14 RION5 e 240 pontos.</desc>
+
+                    <rect class="d-caixa" x="135" y="14" width="150" height="60" rx="10"/>
+                    <text class="d-rotulo" x="210" y="40" text-anchor="middle">NEON5 mestre</text>
+                    <text class="d-itens" x="210" y="60" text-anchor="middle">painel principal</text>
+
+                    <line class="d-seta" x1="210" y1="74" x2="210" y2="110"/>
+                    <line class="d-seta" x1="70" y1="110" x2="350" y2="110"/>
+                    <line class="d-seta" x1="70" y1="110" x2="70" y2="140"/>
+                    <line class="d-seta" x1="210" y1="110" x2="210" y2="140"/>
+                    <line class="d-seta" x1="350" y1="110" x2="350" y2="140"/>
+                    <text class="d-nota" x="300" y="100" text-anchor="middle">RS485, Ethernet, Wi-Fi ou rádio</text>
+
+                    <rect class="d-caixa" x="10" y="140" width="120" height="56" rx="10"/>
+                    <text class="d-rotulo" x="70" y="166" text-anchor="middle">RION5</text>
+                    <text class="d-itens" x="70" y="186" text-anchor="middle">nos sensores</text>
+                    <rect class="d-caixa" x="150" y="140" width="120" height="56" rx="10"/>
+                    <text class="d-rotulo" x="210" y="166" text-anchor="middle">RION5</text>
+                    <text class="d-itens" x="210" y="186" text-anchor="middle">outro setor</text>
+                    <rect class="d-caixa" x="290" y="140" width="120" height="56" rx="10"/>
+                    <text class="d-rotulo" x="350" y="166" text-anchor="middle">RION5</text>
+                    <text class="d-itens" x="350" y="186" text-anchor="middle">até 14</text>
+
+                    <text class="d-nota" x="210" y="230" text-anchor="middle">Até 14 RION5 remotos: até 240 pontos num NEON5.</text>
+                </svg>
+
+                <p>Usado como I/O remoto, o RION5 permite que o mestre acesse as entradas e saídas dele pela
+                comunicação, <strong>sem precisar programar o RION5</strong>. O programa fica no NEON5.</p>
+
+                <div class="analogia">
+                    <p>É como uma extensão de tomadas com um único fio até a parede: em vez de levar dez fios do
+                    quarto até a sala, você leva um, e a extensão distribui lá na ponta.</p>
+                </div>
+
+                <div class="na-venda">
+                    <p>O argumento é <strong>menos cabo, menos infraestrutura</strong> e um único programa para
+                    cuidar. Pergunte: "os sinais estão todos no mesmo lugar ou espalhados? A que distância do
+                    painel?" Sinais espalhados são o gancho para o I/O remoto.</p>
+                </div>
+
+                <p class="fonte">Fontes: Treinamento de Produto, p. 9; apresentação de CLPs, slide 7; Catálogo Geral, p. 7 e 8.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="modulos">
+                <h3>6. Módulos de I/O, sem ficha técnica</h3>
+
+                <p>Os módulos são onde os fios dos sensores e atuadores entram no CLP. Cada modelo de módulo traz
+                uma <strong>combinação</strong> de pontos. Você não precisa decorar códigos: precisa saber
+                <strong>que tipos existem</strong> e levar ao suporte a lista de sinais certa.</p>
+
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>O módulo pode ter…</th><th>Para quê (Etapa 2)</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Entradas e saídas digitais</td><td>Liga/desliga: botões, sensores de presença, relés, sinaleiros.</td></tr>
+                            <tr><td>Entradas e saídas analógicas</td><td>Medições e comandos de 0 a 100% (4 a 20 mA, 0 a 10 V).</td></tr>
+                            <tr><td>Entradas para sensores de temperatura (como o PT100)</td><td>Sensores de temperatura que precisam de entrada própria.</td></tr>
+                            <tr><td>Entrada para célula de carga</td><td>Pesagem.</td></tr>
+                            <tr><td>Entradas para pulsos rápidos</td><td>Medidores de vazão a pulso e sensores de posição e giro.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>Há duas famílias de módulos: a do <strong>RION5 e NEON5</strong> (sete variações) e a do
+                <strong>P7C</strong>. Elas não se misturam.</p>
+
+                <div class="atencao">
+                    <p>Uma combinação de sinais nem sempre cabe num único módulo. Por isso, quem fecha a escolha dos
+                    módulos é o suporte, a partir da sua lista de sinais. Não prometa "cabe num RION5" sem essa
+                    confirmação.</p>
+                </div>
+
+                <div class="na-venda">
+                    <p>Leve ao suporte: quantas entradas e saídas digitais, quantas entradas e saídas analógicas (e
+                    o tipo: 4 a 20 mA ou 0 a 10 V), sinais especiais (PT100, célula de carga, pulso e a frequência)
+                    e se o cliente quer pontos de reserva.</p>
+                </div>
+
+                <p class="fonte">Fontes: Catálogo Geral, p. 7, 8 e 10; Treinamento de Produto, p. 4.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="histudio">
+                <h3>7. HIstudio: o software de programação, gratuito</h3>
+
+                <img class="foto" src="Files/HIstudio.png" alt="Tela do HIstudio num monitor, com um programa em Ladder aberto" width="550" height="520">
+
+                <p>O <strong>HIstudio</strong> é o ambiente desenvolvido pela HI para configurar, programar, testar
+                (depurar) e documentar os programas dos CLPs. Pontos que importam na venda:</p>
+                <ul>
+                    <li>É <strong>gratuito</strong> e serve para <strong>todos os CLPs</strong> da HI (e também para o
+                    gateway programável GTON-P, que você vê na Etapa 5).</li>
+                    <li>Programa nas linguagens <strong>Ladder</strong> e <strong>Texto Estruturado (ST)</strong>,
+                    seguindo a norma internacional <strong>IEC 61131-3</strong>, com mais de 250 funções prontas na
+                    biblioteca da HI.</li>
+                    <li>Facilita a comunicação com equipamentos <strong>Modbus</strong> e <strong>MQTT</strong> e
+                    traz um monitor de dados Modbus que pode ser usado gratuitamente.</li>
+                    <li>Lançado em 2019.</li>
+                </ul>
+
+                <div class="analogia">
+                    <p>Ladder é a linguagem "desenhada", parecida com um diagrama elétrico, que técnicos de
+                    manutenção leem com facilidade. Texto Estruturado é escrito, parecido com programação de
+                    computador. Seguir a IEC 61131-3 é como seguir a gramática oficial: quem já programa CLP de
+                    outras marcas reconhece o jeito de trabalhar.</p>
+                </div>
+
+                <div class="na-venda">
+                    <p>"Quanto custa o software de programação?" Nada: o HIstudio é gratuito. E, se a equipe do
+                    cliente precisar aprender, há cursos online na <strong>HI University</strong> (introdução ao
+                    HIstudio e Ladder no HIstudio) e o kit de treinamento <strong>RTK510</strong> para praticar na
+                    bancada.</p>
+                </div>
+
+                <p class="fonte">Fontes: Catálogo Geral, p. 5, 6, 14, 32 e 40.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="escolher">
+                <h3>8. Como escolher: quatro perguntas, nesta ordem</h3>
+
+                <ol>
+                    <li><strong>Quantos pontos de I/O?</strong> Até 16: RION5 pode bastar. Até 32: NEON5. Mais que
+                    isso: P7C 302 (até 368) ou NEON5 com RION5 remotos (até 240), conforme os sinais estejam
+                    juntos ou espalhados.</li>
+                    <li><strong>Alimentação AC?</strong> Se sim, o RION5 sai da lista (só DC).</li>
+                    <li><strong>Precisa guardar histórico (log) ou receitas?</strong> Se sim, SD Card: NEON5 ou P7C.</li>
+                    <li><strong>Por onde vai se comunicar?</strong> Rádio, Wi-Fi ou 4G integrados: NEON5 ou RION5 na
+                    versão certa. Só Ethernet e serial: qualquer um, incluindo o P7C.</li>
+                </ol>
+
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>O cliente diz…</th><th>Indicação provável</th><th>Por quê</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>"Uma bomba, uma boia e um alarme numa estação pequena, 24 V DC no painel."</td>
+                                <td>RION5</td>
+                                <td>Poucos pontos, DC, sem histórico.</td>
+                            </tr>
+                            <tr>
+                                <td>"Preciso guardar as receitas de cada produto e ter tela de 7 polegadas."</td>
+                                <td>NEON5 (ou P7C, se forem muitos pontos)</td>
+                                <td>Receitas pedem SD Card. A tela é outro item (Etapa 6).</td>
+                            </tr>
+                            <tr>
+                                <td>"São 12 sinais, mas o CLP tem que ser alimentado direto pela rede elétrica."</td>
+                                <td>NEON5</td>
+                                <td>Poucos pontos, mas AC: o RION5 não tem opção AC.</td>
+                            </tr>
+                            <tr>
+                                <td>"Uma máquina grande, quase 300 sinais no mesmo painel."</td>
+                                <td>P7C 302</td>
+                                <td>Até 368 pontos, com bastidores de expansão.</td>
+                            </tr>
+                            <tr>
+                                <td>"Os sensores ficam espalhados em vários prédios da planta."</td>
+                                <td>NEON5 + RION5 remotos</td>
+                                <td>Menos cabo; um programa só, no NEON5.</td>
+                            </tr>
+                            <tr>
+                                <td>"Quero mandar os dados para a nuvem pelo 4G, sem outro equipamento."</td>
+                                <td>NEON5 ou RION5 com modem 4G</td>
+                                <td>O 4G vem integrado nessas versões; o P7C precisaria de um modem à parte.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="atencao">
+                    <p>As quatro perguntas dão a <strong>família</strong> do CLP. Modelo exato, módulos e versão de
+                    comunicação são confirmados com o suporte antes do orçamento.</p>
+                </div>
+
+                <p class="fonte">Fontes: Treinamento de Produto, p. 6 a 9; apresentação de CLPs, slides 4 a 7; Catálogo
+                Geral, p. 6 a 9; exercícios 3, 12 e 16 do Treinamento de Produto (situações).</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="na-venda">
+                <h3>9. Como isso aparece na venda</h3>
+
+                <h4>As perguntas que você faz (regra de bolso)</h4>
+                <ol>
+                    <li>"Quantos sinais de cada tipo o CLP vai ler e comandar?" (a lista de sinais)</li>
+                    <li>"Os sinais estão todos no mesmo painel ou espalhados? A que distância?"</li>
+                    <li>"O CLP vai ser alimentado direto pela rede elétrica ou por uma fonte de 24 V DC no painel?"</li>
+                    <li>"Precisa guardar histórico de dados ou receitas de produção?"</li>
+                    <li>"Por onde o CLP vai conversar: tela, computador, rádio, internet?"</li>
+                    <li>"A sua equipe vai programar, ou quer que a HI entregue o projeto pronto?"</li>
+                </ol>
+
+                <h4>Perguntas que o cliente costuma fazer</h4>
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>O cliente pergunta</th><th>Como responder</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>"Qual a diferença entre os três CLPs?"</td>
+                                <td>Principalmente quantos módulos de I/O cada um aceita. Depois: o RION5 é só DC e não
+                                tem SD Card; NEON5 e P7C têm AC ou DC e SD Card.</td>
+                            </tr>
+                            <tr>
+                                <td>"O NEON5 não é fraco demais para o meu projeto?"</td>
+                                <td>Ele usa o mesmo processador do P7C. O limite dele é de módulos locais (até 32 pontos),
+                                e dá para ampliar com RION5 remotos.</td>
+                            </tr>
+                            <tr>
+                                <td>"Minha planta vai crescer."</td>
+                                <td>O P7C 302 cresce com bastidores de expansão; o NEON5 cresce com RION5 remotos. Anote a
+                                previsão de crescimento para o suporte dimensionar.</td>
+                            </tr>
+                            <tr>
+                                <td>"Quanto custa o software de programação?"</td>
+                                <td>O HIstudio é gratuito, para todos os CLPs HI.</td>
+                            </tr>
+                            <tr>
+                                <td>"Quanto custa o CLP?"</td>
+                                <td>Depende do modelo, dos módulos e da comunicação. Com a lista de sinais em mãos, siga o
+                                processo de orçamento do setor de vendas.</td>
+                            </tr>
+                            <tr>
+                                <td>"Cabe tudo num RION5?"</td>
+                                <td>Se forem até 16 pontos e a combinação couber num módulo, pode ser. Quem confirma a
+                                combinação de módulo é o suporte.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4>Erros comuns a evitar</h4>
+                <div class="atencao">
+                    <ul>
+                        <li>Indicar RION5 para quem precisa de AC, de SD Card ou de mais de 16 pontos.</li>
+                        <li>Achar que o NEON5 tem menos capacidade de programação que o P7C.</li>
+                        <li>Prometer a combinação exata de módulos sem confirmar com o suporte.</li>
+                        <li>Esquecer que o P7C não tem rádio, Wi-Fi nem 4G nas portas dele.</li>
+                        <li>Misturar módulos do P7C com módulos do RION5/NEON5.</li>
+                        <li>Cobrar ou "dar desconto" no HIstudio: ele é gratuito.</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="glossario">
+                <h3>10. Glossário da etapa</h3>
+
+                <dl class="glossario">
+                    <dt>Ponto de I/O</dt>
+                    <dd>Cada sinal ligado ao CLP (uma entrada ou uma saída).</dd>
+
+                    <dt>Módulo de I/O</dt>
+                    <dd>A peça do CLP onde se ligam os sinais. Cada modelo traz uma combinação de pontos.</dd>
+
+                    <dt>Bastidor principal / bastidor de expansão</dt>
+                    <dd>No P7C 302: o principal tem a CPU e 3 módulos; cada expansão acrescenta 4 módulos (até 5 expansões).</dd>
+
+                    <dt>CPU / processador</dt>
+                    <dd>A parte do CLP que executa o programa. NEON5 e P7C usam o mesmo.</dd>
+
+                    <dt>I/O remoto</dt>
+                    <dd>Entradas e saídas instaladas longe do CLP principal e ligadas a ele por comunicação. Ex.: RION5 remoto de um NEON5.</dd>
+
+                    <dt>Mestre</dt>
+                    <dd>O equipamento que comanda a conversa na rede e busca os dados dos outros (Etapa 3).</dd>
+
+                    <dt>SD Card</dt>
+                    <dd>Cartão de memória para guardar histórico de dados (log) e receitas.</dd>
+
+                    <dt>Log</dt>
+                    <dd>Registro de dados ao longo do tempo (histórico).</dd>
+
+                    <dt>Receita</dt>
+                    <dd>Conjunto de valores (quantidades, tempos, temperaturas) de um produto, guardado para ser carregado no CLP.</dd>
+
+                    <dt>Memória retentiva</dt>
+                    <dd>Memória que guarda valores mesmo quando a energia cai.</dd>
+
+                    <dt>HIstudio</dt>
+                    <dd>Software gratuito da HI para programar, testar e documentar os CLPs (e o GTON-P).</dd>
+
+                    <dt>Ladder / Texto Estruturado (ST)</dt>
+                    <dd>Linguagens de programação de CLP: uma desenhada (como diagrama elétrico), outra escrita.</dd>
+
+                    <dt>IEC 61131-3</dt>
+                    <dd>Norma internacional que define as linguagens de programação de CLP. O HIstudio segue essa norma.</dd>
+                </dl>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="quiz-bloco" id="quiz">
+                <h3>Quiz da etapa</h3>
+                <p>Confira o que ficou. A correção é na hora, com a explicação de cada resposta.
+                Acerte pelo menos 80% antes de marcar a etapa como concluída.</p>
+
+                <form class="quiz">
+                    <fieldset class="quiz-q" data-certa="b">
+                        <legend>1. Qual é a principal diferença entre os CLPs RION5, NEON5 e P7C?</legend>
+                        <label><input type="radio" name="q1" value="a"> A cor da caixa.</label>
+                        <label><input type="radio" name="q1" value="b"> A quantidade de módulos de I/O que cada um aceita.</label>
+                        <label><input type="radio" name="q1" value="c"> O software de programação: cada um usa um diferente.</label>
+                        <label><input type="radio" name="q1" value="d"> Só o P7C se comunica com outros equipamentos.</label>
+                        <p class="quiz-explica" hidden>A diferença principal é quantos módulos de I/O cada um suporta (1 no RION5, 1 ou 2 no NEON5, até 23 no P7C 302). Os três são programados no mesmo HIstudio.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="d">
+                        <legend>2. Qual CLP da HI não tem opção de alimentação AC?</legend>
+                        <label><input type="radio" name="q2" value="a"> P7C 302.</label>
+                        <label><input type="radio" name="q2" value="b"> NEON5.</label>
+                        <label><input type="radio" name="q2" value="c"> Todos têm opção AC.</label>
+                        <label><input type="radio" name="q2" value="d"> RION5, que é alimentado só em DC.</label>
+                        <p class="quiz-explica" hidden>O RION5 é só DC (10 a 30 V DC). P7C e NEON5 podem ser comprados com alimentação AC ou DC.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="a">
+                        <legend>3. Um cliente quer guardar as receitas de cada produto e um histórico de dados no próprio CLP. Quais CLPs atendem?</legend>
+                        <label><input type="radio" name="q3" value="a"> NEON5 e P7C, que têm SD Card.</label>
+                        <label><input type="radio" name="q3" value="b"> Só o RION5.</label>
+                        <label><input type="radio" name="q3" value="c"> Nenhum CLP guarda receitas.</label>
+                        <label><input type="radio" name="q3" value="d"> Qualquer um, porque todos têm SD Card.</label>
+                        <p class="quiz-explica" hidden>O SD Card serve para registro de dados (log) e receitas, e está no NEON5 e no P7C. O RION5 não tem SD Card.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="c">
+                        <legend>4. Uma máquina grande vai ter cerca de 300 pontos de I/O, todos no mesmo painel. Qual CLP é o indicado?</legend>
+                        <label><input type="radio" name="q4" value="a"> RION5.</label>
+                        <label><input type="radio" name="q4" value="b"> NEON5 com 2 módulos.</label>
+                        <label><input type="radio" name="q4" value="c"> P7C 302, que chega a 368 pontos com bastidores de expansão.</label>
+                        <label><input type="radio" name="q4" value="d"> Nenhum CLP da HI chega a esse tamanho.</label>
+                        <p class="quiz-explica" hidden>O P7C 302 aceita o bastidor principal (CPU + 3 módulos) e até 5 expansões de 4 módulos: até 23 módulos e 368 pontos. O NEON5 chega a 32 pontos locais (240 com RION5 remotos).</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="b">
+                        <legend>5. Os sensores do cliente ficam espalhados longe do painel principal, e ele quer evitar dezenas de cabos longos. Que arquitetura você sugere?</legend>
+                        <label><input type="radio" name="q5" value="a"> Um P7C em cada sensor.</label>
+                        <label><input type="radio" name="q5" value="b"> Um NEON5 como mestre e RION5 instalados perto dos sensores, como I/O remoto.</label>
+                        <label><input type="radio" name="q5" value="c"> Puxar os cabos longos mesmo, porque não há alternativa.</label>
+                        <label><input type="radio" name="q5" value="d"> Um RION5 como mestre de vários P7C.</label>
+                        <p class="quiz-explica" hidden>O RION5 funciona como "módulo de I/O extra" de um mestre como o NEON5, ligado por comunicação (RS485, Ethernet, Wi-Fi ou rádio). O NEON5 aceita até 14 RION5, chegando a 240 pontos.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="c">
+                        <legend>6. Um cliente desenvolve projetos com CLPs HI e pergunta quanto custa o software de programação. O que você responde?</legend>
+                        <label><input type="radio" name="q6" value="a"> Que a licença depende da quantidade de CLPs.</label>
+                        <label><input type="radio" name="q6" value="b"> Que precisa pedir orçamento do software.</label>
+                        <label><input type="radio" name="q6" value="c"> Que o HIstudio é gratuito e serve para todos os CLPs da HI.</label>
+                        <label><input type="radio" name="q6" value="d"> Que cada CLP usa um software diferente, todos pagos.</label>
+                        <p class="quiz-explica" hidden>O HIstudio, o ambiente de programação dos CLPs HI, é gratuito. É um dos argumentos da linha: o cliente não paga para programar.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="a">
+                        <legend>7. O cliente diz: "o NEON5 é pequeno, deve ter menos capacidade de programação que o P7C". Qual a resposta correta?</legend>
+                        <label><input type="radio" name="q7" value="a"> O NEON5 usa o mesmo processador do P7C, com a mesma capacidade de programação; a diferença é a quantidade de módulos de I/O.</label>
+                        <label><input type="radio" name="q7" value="b"> Ele tem razão: o NEON5 é o mais fraco da linha.</label>
+                        <label><input type="radio" name="q7" value="c"> O NEON5 não pode ser programado.</label>
+                        <label><input type="radio" name="q7" value="d"> O NEON5 só funciona como I/O remoto.</label>
+                        <p class="quiz-explica" hidden>NEON5 e P7C têm o mesmo processador e suportam projetos do mesmo tamanho. O processador mais simples é o do RION5.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="d">
+                        <legend>8. A lista de sinais do cliente tem 8 entradas digitais, 8 saídas digitais, 2 entradas 4 a 20 mA e 1 saída 4 a 20 mA. O que é correto dizer?</legend>
+                        <label><input type="radio" name="q8" value="a"> Cabe num RION5, com certeza.</label>
+                        <label><input type="radio" name="q8" value="b"> Só um P7C com 5 expansões atende.</label>
+                        <label><input type="radio" name="q8" value="c"> Nenhum CLP da HI lê sinais 4 a 20 mA.</label>
+                        <label><input type="radio" name="q8" value="d"> São 19 pontos: passa do limite do RION5 (16); um NEON5 com 2 módulos é o caminho provável, e o suporte confirma a combinação de módulos.</label>
+                        <p class="quiz-explica" hidden>8 + 8 + 2 + 1 = 19 pontos. O RION5 vai até 16; o NEON5, até 32 com 2 módulos. Qual combinação de módulos atende exatamente esses sinais, o suporte confirma.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="b">
+                        <legend>9. O cliente quer que o CLP mande dados para a nuvem pela rede celular, sem outro equipamento no painel. O que atende?</legend>
+                        <label><input type="radio" name="q9" value="a"> P7C 302, que tem 4G nas portas.</label>
+                        <label><input type="radio" name="q9" value="b"> NEON5 ou RION5 na versão com modem 4G integrado.</label>
+                        <label><input type="radio" name="q9" value="c"> Qualquer CLP, porque todos têm 4G.</label>
+                        <label><input type="radio" name="q9" value="d"> Nenhum CLP manda dados para a nuvem.</label>
+                        <p class="quiz-explica" hidden>NEON5 e RION5 têm versões com modem 4G. O P7C tem Ethernet, RS485 e RS232; para 4G, precisaria de um modem à parte (Etapa 5).</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="c">
+                        <legend>10. Na hora de escolher os módulos de I/O, qual é o papel do vendedor?</legend>
+                        <label><input type="radio" name="q10" value="a"> Decorar o código de todos os módulos e escolher sozinho.</label>
+                        <label><input type="radio" name="q10" value="b"> Escolher o módulo mais barato.</label>
+                        <label><input type="radio" name="q10" value="c"> Levar ao suporte a lista de sinais (tipos, quantidades, sinais especiais e reserva); o suporte fecha a combinação de módulos.</label>
+                        <label><input type="radio" name="q10" value="d"> Deixar o cliente escolher pelo catálogo, sem conferir.</label>
+                        <p class="quiz-explica" hidden>Cada módulo tem uma combinação de pontos. O vendedor leva a necessidade bem descrita; a escolha exata é técnica.</p>
+                    </fieldset>
+
+                    <div class="quiz-acoes">
+                        <button type="submit" class="btn">Corrigir</button>
+                        <button type="button" class="btn btn-secondary quiz-refazer" hidden>Refazer</button>
+                    </div>
+                    <p class="quiz-resultado" aria-live="polite"></p>
+                </form>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="caso">
+                <h3>Para o encontro com o instrutor</h3>
+                <p>Traga preparado (para cada caso, diga a <strong>família de CLP</strong> que indicaria, por quê, e
+                o que levaria ao suporte para fechar módulos e versão):</p>
+                <ol>
+                    <li><strong>Explique como a um cliente:</strong> de que é composto um CLP do ponto de vista comercial
+                    e o que você precisa saber para seguir com a venda; o que diferencia P7C, NEON5 e RION5; quanto
+                    custa usar o software de programação.</li>
+                    <li><strong>A lista de sinais da Etapa 2, agora com produto.</strong> 8 entradas digitais, 8 saídas
+                    digitais, 2 entradas 4 a 20 mA e 1 saída 4 a 20 mA; fonte DC; IHM touch screen ligada por cabo
+                    serial; Ethernet para programação.</li>
+                    <li><strong>Um sistema maior.</strong> 32 sensores digitais, 16 saídas digitais, 8 entradas 4 a 20 mA
+                    e 4 saídas 4 a 20 mA; tela local de pelo menos 10 polegadas ligada ao CLP por RS232; fonte DC. Há
+                    mais de um caminho possível: compare-os.</li>
+                    <li><strong>Receitas.</strong> Um processo de fabricação de café precisa guardar receitas para carregar
+                    no controlador, comandos por uma IHM de 7 polegadas, comunicação Ethernet e 10 saídas digitais.</li>
+                    <li><strong>AC e pulso.</strong> CLP alimentado em tensão alternada, lendo 2 transmissores de vazão com
+                    saída a pulso (até 3 kHz), com os valores num computador da rede local. Que família, e o que precisa
+                    ser confirmado sobre a entrada de pulso?</li>
+                </ol>
+                <p class="fonte">Casos adaptados dos exercícios 2, 3, 7, 10, 12, 13 e 16 do Treinamento de Produto.</p>
+            </div>
         </div>
     </section>
 
@@ -66,5 +744,6 @@
     <script src="progresso.js"></script>
     <script src="config-conta.js"></script>
     <script src="conta.js"></script>
+    <script src="quiz.js"></script>
 </body>
 </html>
