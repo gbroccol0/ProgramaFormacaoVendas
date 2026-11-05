@@ -144,11 +144,25 @@ Oferecido também: preparar slides e roteiro de cada vídeo a partir do texto.
 |---:|---|---|
 | 1 A HI Tecnologia | `Assets/hi_tecnologia.html` | **Aprovada** por Gabriel em 04/11/2026 (reteste depois da correção da GTI5/SmartManagerPro). |
 | 2 Fundamentos da Automação | `Assets/fundamentos.html` | **Aprovada** por Gabriel em 04/11/2026 (PR #1, branch `etapa-2-fundamentos`; ele faz o merge). Erros achados depois serão corrigidos depois. |
-| 3 a 10 | `Assets/*.html` | Páginas "em produção": selo, objetivos, tempo, caixa "Conteúdo em produção" e fontes previstas. |
+| 3 Comunicação Industrial | `Assets/comunicacao.html` | **Pronta, aguardando a revisão de Gabriel.** Branch `etapa-3-comunicacao` (criada a partir de `etapa-2-fundamentos`), pull request próprio. |
+| 4 a 10 | `Assets/*.html` | Páginas "em produção": selo, objetivos, tempo, caixa "Conteúdo em produção" e fontes previstas. |
 
-**Próximo passo:** produzir a Etapa 3 (Comunicação Industrial) numa branch
-nova a partir de `etapa-2-fundamentos`; depois uma por vez até a 10, e então a
-Fase 4.
+**Próximo passo:** esperar a revisão da Etapa 3, aplicar as correções e, com a
+aprovação, produzir a Etapa 4 (Linha de CLPs); depois uma por vez até a 10, e
+então a Fase 4.
+
+**Etapa 3, o que foi feito (para não refazer):** 8 seções (linha e idioma;
+RS232/RS485/Ethernet com tabela de distâncias **de referência geral**, marcada
+como tal; Wi-Fi/rádio/4G com visada, KML e estudo de altimetria e HI Connect;
+as três perguntas com árvore de decisão e tabela "o cliente diz → caminho";
+protocolos Modbus RTU/TCP, SCP-HI, ASCII, MQTT, mais OPC e HTTP de passagem,
+mestre e escravo; os quatro sinais de que falta conversor/gateway, com os
+produtos só como prévia da Etapa 5; na venda; glossário), 4 diagramas, quiz de
+10 e caso com 4 itens. Um `[CONFIRMAR]` novo: onde o SCP-HI aparece na venda.
+Decisões de redação: alcance de rádio **sem número** (a inconsistência 60 ×
+105 km fica para a Etapa 5); conversor chamado de "GTON-C" (nome do catálogo,
+como na Etapa 1). Fontes: Treinamento p. 4, 11–16, 19–21; slide 3; Catálogo
+p. 5, 7, 8, 16–22, 30, 32 e 38.
 
 **Etapa 2, o que foi feito (para não refazer):** 8 seções (automação e
 processo; sensor, CLP e atuador com THT863/HPS850 e IHM × supervisório; os três
@@ -219,6 +233,10 @@ apenas para montar a lista de sinais, a alimentação e as perguntas (sem
 escolher produto). Esses quatro voltam na Etapa 4 para a escolha do CLP e dos
 módulos. O pedido de IHM "econômica" (11 e 20) virou pergunta do caso: como
 tratar sem falar de preço.
+Etapa 3 usou o **4** e o **8** (conceitos, no caso) e, só para diagnosticar
+meio, idioma e falta de tradutor (sem escolher produto), o **14**, o **15**, o
+**17**, o **18** e o **19**. Esses cinco voltam na Etapa 5 para a escolha do
+GTON-C, GTON-M etc.
 
 **Os 21 exercícios** de `fontes/texto/exercicios_treinamento_de_produto.txt`
 mapeiam assim (sugestão, ainda não discutida com Gabriel): 1 → Etapa 2;

@@ -52,7 +52,7 @@ Formacao-Vendas-HI/
 |------:|---|---|---|
 | 1 | A HI Tecnologia | `hi_tecnologia.html` | **Aprovada** por Gabriel (04/11/2026), depois de 2 revisões |
 | 2 | Fundamentos da Automação | `fundamentos.html` | **Aprovada** por Gabriel (04/11/2026) |
-| 3 | Comunicação Industrial | `comunicacao.html` | Em produção |
+| 3 | Comunicação Industrial | `comunicacao.html` | **Pronta, aguardando a revisão de Gabriel** (branch `etapa-3-comunicacao`, pull request) |
 | 4 | Linha de CLPs | `clps.html` | Em produção |
 | 5 | Gateways, Modem e Rádios | `conectividade.html` | Em produção |
 | 6 | IHMs, Sensores e Acessórios | `ihm_sensores.html` | Em produção |
@@ -147,6 +147,7 @@ onde está.
 | Etapa 1, item 4 | Clientes de referência de Energia, Indústria 4.0, Meio ambiente, Hospitalar e Predial (Gabriel vai levantar com a equipe) |
 | Etapa 1, item 5 | Qual representante (TBC Automação, 4Sys Sistemas) cobre cada região (Gabriel vai levantar) |
 | Etapa 1, item 4 | Texto das áreas Indústria 4.0, Meio Ambiente, Hospitalar e Energia (catálogo p. 3–4, ilegível na extração; um print resolve) |
+| Etapa 3, item 5 | Em que situações o vendedor precisa citar o SCP-HI (entre quais equipamentos e softwares HI ele é usado); as fontes só dizem que é o protocolo proprietário da HI |
 | Etapa 5 (futura) | Alcance rural do R9X307: 60 km (catálogo) ou 105 km (Treinamento de Produto) |
 | Etapa 5 (futura) | Nome do conversor: "GTON C SET" (Treinamento) ou "GTON-C" (catálogo) |
 | Etapa 5 (futura) | ESC717/ESC713 entram na formação de vendas? (estão no site do suporte, não no catálogo) |

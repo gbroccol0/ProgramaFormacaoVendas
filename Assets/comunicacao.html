@@ -21,6 +21,65 @@
             <span class="etapa-badge">Etapa 3 de 10</span>
             <h1>Comunicação industrial: meios físicos e protocolos</h1>
             <p><strong>A &quot;linha telefônica&quot; e o &quot;idioma&quot; que os equipamentos precisam ter em comum.</strong></p>
+            <p>Na Etapa 2 você viu que a comunicação é o "elevador" que leva os dados do campo até a
+            nuvem. Agora você aprende a escolher o caminho certo com <strong>três perguntas</strong>
+            (quantos equipamentos, a que distância e se há internet), a reconhecer os
+            <strong>idiomas</strong> da automação e a perceber quando o cliente precisa de um
+            <strong>"tradutor"</strong>: um conversor ou gateway.</p>
+        </div>
+        <div class="hero-image">
+            <svg class="diagrama" viewBox="0 0 540 440" role="img"
+                 aria-labelledby="meiosTitulo meiosDesc">
+                <title id="meiosTitulo">Os caminhos de comunicação de um CLP</title>
+                <desc id="meiosDesc">Um CLP no centro, ligado a seis caminhos. Com cabo: RS232 liga um
+                equipamento próximo; RS485 liga vários equipamentos numa rede com um mestre; Ethernet liga
+                computadores e supervisórios na rede local. Sem fio: Wi-Fi liga ao roteador e à internet;
+                rádio 900 MHz liga pontos distantes sem cabo; celular 4G leva os dados à internet de
+                qualquer lugar.</desc>
+
+                <text class="d-titulo" x="270" y="24" text-anchor="middle">Os caminhos de comunicação</text>
+
+                <rect class="d-caixa" x="200" y="190" width="140" height="64" rx="10"/>
+                <text class="d-rotulo" x="270" y="218" text-anchor="middle">CLP</text>
+                <text class="d-itens" x="270" y="240" text-anchor="middle">o "cérebro"</text>
+
+                <text class="d-rotulo" x="100" y="58" text-anchor="middle">Com cabo</text>
+                <text class="d-rotulo" x="440" y="58" text-anchor="middle">Sem fio</text>
+
+                <rect class="d-caixa" x="10" y="74" width="180" height="62" rx="10"/>
+                <text class="d-rotulo" x="100" y="100" text-anchor="middle">RS232</text>
+                <text class="d-itens" x="100" y="122" text-anchor="middle">1 equipamento, perto</text>
+
+                <rect class="d-caixa" x="10" y="190" width="180" height="62" rx="10"/>
+                <text class="d-rotulo" x="100" y="216" text-anchor="middle">RS485</text>
+                <text class="d-itens" x="100" y="238" text-anchor="middle">1 mestre, vários na rede</text>
+
+                <rect class="d-caixa" x="10" y="306" width="180" height="62" rx="10"/>
+                <text class="d-rotulo" x="100" y="332" text-anchor="middle">Ethernet</text>
+                <text class="d-itens" x="100" y="354" text-anchor="middle">computadores, rede local</text>
+
+                <rect class="d-caixa" x="350" y="74" width="180" height="62" rx="10"/>
+                <text class="d-rotulo" x="440" y="100" text-anchor="middle">Wi-Fi</text>
+                <text class="d-itens" x="440" y="122" text-anchor="middle">roteador e internet</text>
+
+                <rect class="d-caixa" x="350" y="190" width="180" height="62" rx="10"/>
+                <text class="d-rotulo" x="440" y="216" text-anchor="middle">Rádio 900 MHz</text>
+                <text class="d-itens" x="440" y="238" text-anchor="middle">longe, sem cabo</text>
+
+                <rect class="d-caixa" x="350" y="306" width="180" height="62" rx="10"/>
+                <text class="d-rotulo" x="440" y="332" text-anchor="middle">Celular 4G</text>
+                <text class="d-itens" x="440" y="354" text-anchor="middle">internet de qualquer lugar</text>
+
+                <line class="d-seta" x1="200" y1="210" x2="190" y2="105"/>
+                <line class="d-seta" x1="200" y1="222" x2="190" y2="222"/>
+                <line class="d-seta" x1="200" y1="234" x2="190" y2="337"/>
+                <line class="d-seta" x1="340" y1="210" x2="350" y2="105"/>
+                <line class="d-seta" x1="340" y1="222" x2="350" y2="222"/>
+                <line class="d-seta" x1="340" y1="234" x2="350" y2="337"/>
+
+                <text class="d-nota" x="270" y="400" text-anchor="middle">O caminho é a "linha telefônica".</text>
+                <text class="d-nota" x="270" y="420" text-anchor="middle">Os dois lados ainda precisam falar o mesmo "idioma" (protocolo).</text>
+            </svg>
         </div>
     </section>
 
@@ -37,15 +96,773 @@
                     <li>explicar Modbus, MQTT, ASCII e SCP-HI como &quot;idiomas&quot; da automação;</li>
                     <li>perceber, na conversa, quando o cliente precisa de um conversor ou gateway.</li>
                 </ul>
-                <p class="tempo">Tempo estimado: 2h.</p>
+                <p class="tempo">Tempo estimado: 2h (leitura, quiz e preparo dos exercícios do encontro).</p>
             </div>
 
-            <div class="em-producao">
-                <strong>Conteúdo em produção</strong>
-                Esta etapa está sendo escrita e entra no ar depois da revisão da etapa anterior.
+            <ul class="sumario" aria-label="Nesta etapa">
+                <li><a href="#linha-idioma">Linha e idioma</a></li>
+                <li><a href="#com-cabo">Com cabo</a></li>
+                <li><a href="#sem-fio">Sem fio</a></li>
+                <li><a href="#tres-perguntas">As três perguntas</a></li>
+                <li><a href="#protocolos">Protocolos</a></li>
+                <li><a href="#tradutores">Conversores e gateways</a></li>
+                <li><a href="#na-venda">Na venda</a></li>
+                <li><a href="#glossario">Glossário</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="linha-idioma">
+                <h3>1. A linha e o idioma: meio físico e protocolo</h3>
+
+                <p>Além de ler sensores e comandar atuadores, o CLP precisa <strong>trocar dados</strong>:
+                com uma tela, com outros CLPs, com computadores, com a nuvem. Para dois equipamentos se
+                entenderem, eles precisam ter duas coisas em comum:</p>
+
+                <div class="cartoes">
+                    <div class="cartao">
+                        <h4>Meio físico: a "linha telefônica"</h4>
+                        <p>O caminho por onde o dado viaja: um cabo serial (RS232 ou RS485), um cabo de rede
+                        (Ethernet) ou o ar (Wi-Fi, rádio, celular 4G). Nos equipamentos, aparece como as
+                        <strong>portas</strong> ou <strong>interfaces de comunicação</strong>.</p>
+                    </div>
+                    <div class="cartao">
+                        <h4>Protocolo: o "idioma"</h4>
+                        <p>As regras de como a mensagem é escrita, para que o outro lado entenda. Na
+                        automação, os mais comuns são <strong>Modbus</strong> (RTU e TCP),
+                        <strong>MQTT</strong>, <strong>ASCII</strong> e, nos equipamentos HI, o
+                        <strong>SCP-HI</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="analogia">
+                    <p>Pense num telefonema entre São Paulo e Tóquio. A linha pode estar perfeita, mas, se um
+                    fala só português e o outro só japonês, ninguém se entende. E não adianta os dois falarem
+                    inglês se a linha está muda. Na automação é igual: é preciso <strong>a mesma linha e o
+                    mesmo idioma</strong>. Quando um dos dois não bate, entra um "tradutor" (item 6).</p>
+                </div>
+
+                <div class="na-venda">
+                    <p>Quando o cliente diz "quero ligar o CLP no meu equipamento X", você precisa descobrir
+                    as duas coisas: <strong>por qual porta</strong> o equipamento X se comunica e
+                    <strong>que protocolo</strong> ele fala. Com isso anotado, o suporte diz se a ligação é
+                    direta ou se precisa de um conversor.</p>
+                </div>
+
+                <p class="fonte">Fontes: Treinamento de Produto, p. 4; apresentação de CLPs, slide 3; metodologia do
+                material de origem (CONTEXT, "Protocolos = Idiomas").</p>
             </div>
 
-            <p class="fonte">Fontes previstas: Treinamento de Produto, p. 4; apresentação de CLPs (slide 3).</p>
+
+            <!-- ===================================================== -->
+            <div class="step" id="com-cabo">
+                <h3>2. Os caminhos com cabo: RS232, RS485 e Ethernet</h3>
+
+                <svg class="diagrama diagrama-corpo" viewBox="0 0 420 300" role="img"
+                     aria-labelledby="serialTitulo serialDesc">
+                    <title id="serialTitulo">RS232 ponto a ponto e RS485 com mestre e vários equipamentos</title>
+                    <desc id="serialDesc">Em cima, RS232: um CLP ligado por um cabo a um único equipamento.
+                    Embaixo, RS485: um CLP mestre ligado a um cabo que passa por três equipamentos escravos
+                    (equipamento 1, 2 e N) na mesma rede.</desc>
+
+                    <text class="d-rotulo" x="10" y="24">RS232: um para um</text>
+                    <rect class="d-caixa" x="10" y="38" width="120" height="56" rx="10"/>
+                    <text class="d-rotulo" x="70" y="72" text-anchor="middle">CLP</text>
+                    <line class="d-seta" x1="130" y1="66" x2="290" y2="66"/>
+                    <rect class="d-caixa" x="290" y="38" width="120" height="56" rx="10"/>
+                    <text class="d-itens" x="350" y="62" text-anchor="middle">1 equipamento</text>
+                    <text class="d-itens" x="350" y="80" text-anchor="middle">(ex.: IHM)</text>
+
+                    <text class="d-rotulo" x="10" y="140">RS485: um mestre, vários na rede</text>
+                    <rect class="d-caixa" x="10" y="154" width="120" height="56" rx="10"/>
+                    <text class="d-rotulo" x="70" y="180" text-anchor="middle">CLP</text>
+                    <text class="d-itens" x="70" y="198" text-anchor="middle">mestre</text>
+                    <line class="d-seta" x1="130" y1="182" x2="400" y2="182"/>
+                    <line class="d-seta" x1="185" y1="182" x2="185" y2="232"/>
+                    <line class="d-seta" x1="285" y1="182" x2="285" y2="232"/>
+                    <line class="d-seta" x1="385" y1="182" x2="385" y2="232"/>
+                    <rect class="d-caixa" x="145" y="232" width="80" height="44" rx="8"/>
+                    <text class="d-itens" x="185" y="259" text-anchor="middle">equip. 1</text>
+                    <rect class="d-caixa" x="245" y="232" width="80" height="44" rx="8"/>
+                    <text class="d-itens" x="285" y="259" text-anchor="middle">equip. 2</text>
+                    <rect class="d-caixa" x="335" y="232" width="80" height="44" rx="8"/>
+                    <text class="d-itens" x="375" y="259" text-anchor="middle">equip. N</text>
+                    <text class="d-nota" x="210" y="294" text-anchor="middle">O mestre pergunta; cada escravo responde quando é chamado.</text>
+                </svg>
+
+                <div class="cartoes">
+                    <div class="cartao">
+                        <h4>RS232 (serial)</h4>
+                        <p>Liga <strong>dois equipamentos, ponto a ponto</strong> (um para um), por cabo
+                        serial. O CLP troca dados direto com um único equipamento próximo: uma IHM, uma
+                        impressora, um computador.</p>
+                    </div>
+                    <div class="cartao">
+                        <h4>RS485 (serial)</h4>
+                        <p>Um equipamento <strong>mestre</strong> (um CLP ou um gateway) controla e busca dados
+                        de <strong>vários equipamentos</strong> ligados na mesma rede: inversores de frequência,
+                        medidores de energia, I/O remotos.</p>
+                    </div>
+                    <div class="cartao">
+                        <h4>Ethernet (rede)</h4>
+                        <p>O cabo de rede, o mesmo dos computadores. Liga o CLP à <strong>rede local</strong>
+                        da empresa, com alta velocidade, para conversar com computadores, supervisórios e
+                        sistemas. Também é por onde, muitas vezes, se programa o CLP.</p>
+                    </div>
+                </div>
+
+                <h4>E a distância?</h4>
+                <p>Para ter uma ideia de ordem de grandeza, estas são as referências gerais de cada padrão
+                (valores de livro, não especificação dos produtos HI):</p>
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>Caminho</th><th>Quantos equipamentos</th><th>Distância típica (referência geral)</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>RS232</td><td>2 (ponto a ponto)</td><td>Curta: equipamentos lado a lado, no mesmo painel (por volta de 15 m).</td></tr>
+                            <tr><td>RS485</td><td>1 mestre e vários escravos na mesma rede</td><td>Maior: centenas de metros, até cerca de 1.200 m de cabo.</td></tr>
+                            <tr><td>Ethernet</td><td>Muitos, pela rede da empresa (switches)</td><td>Cerca de 100 m de cabo entre o equipamento e o switch; a rede da empresa leva mais longe.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="atencao">
+                    <p>Esses números são <strong>referências gerais</strong>, para você entender por que o
+                    cliente escolhe um ou outro. A distância real depende do cabo, da instalação e da
+                    velocidade. Se o cliente perguntar "chega a tantos metros?", anote e confirme com o
+                    suporte; não prometa.</p>
+                </div>
+
+                <p>Os CLPs RION5 e NEON5 podem vir com portas serial RS232, RS485, Ethernet, Wi-Fi, rádio
+                900 MHz ou modem 4G, conforme o modelo escolhido. Que combinação cada CLP aceita você vê na
+                Etapa 4.</p>
+
+                <p class="fonte">Fontes: apresentação de CLPs, slide 3; Treinamento de Produto, p. 4; Catálogo Geral,
+                p. 7, 8 e 17. As distâncias da tabela são referências gerais dos padrões RS232, RS485 e Ethernet.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="sem-fio">
+                <h3>3. Os caminhos sem fio: Wi-Fi, rádio e celular 4G</h3>
+
+                <div class="cartoes">
+                    <div class="cartao">
+                        <h4>Wi-Fi 2.4 GHz</h4>
+                        <p>Os equipamentos trocam dados entre si sem fio ou mandam dados para a internet
+                        <strong>por meio de um roteador</strong>, como o Wi-Fi de casa. Precisa de um roteador
+                        por perto.</p>
+                    </div>
+                    <div class="cartao">
+                        <h4>Rádio 900 MHz</h4>
+                        <p>Comunica dados sem fio a <strong>longas distâncias</strong>, em campo aberto, entre
+                        CLPs e outros equipamentos. Elimina o cabo e <strong>não tem mensalidade</strong>.
+                        Rádios <strong>nunca funcionam sozinhos</strong>: é sempre um rádio falando com outro,
+                        vários com um ou vários com vários.</p>
+                    </div>
+                    <div class="cartao">
+                        <h4>Celular 4G</h4>
+                        <p>O equipamento acessa a <strong>internet pela rede celular</strong>, com um chip de
+                        operadora, de qualquer lugar com sinal, e envia os dados direto para plataformas na
+                        nuvem. A HI oferece o chip e o plano de dados com o <strong>HI Connect</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="analogia">
+                    <p>O rádio é como um walkie-talkie: dois aparelhos conversam direto entre si, sem conta de
+                    telefone, mas precisam "se enxergar" e não levam ninguém à internet. O 4G é como o
+                    celular: chega à internet de quase qualquer lugar, mas precisa de um chip e de um plano de
+                    dados.</p>
+                </div>
+
+                <h4>Rádio exige estudo antes da venda</h4>
+                <p>As antenas dos rádios precisam de <strong>visada</strong>: uma precisa "enxergar" a outra,
+                sem morros ou prédios no caminho. Por isso o cliente informa as <strong>coordenadas
+                geográficas</strong> dos pontos (pode marcá-los no Google Earth e exportar um arquivo
+                <strong>KML</strong>), e a <strong>Engenharia de Produto da HI</strong> faz o estudo de
+                altimetria para ver se a ligação é viável. A HI trabalha com dois rádios: o integrado aos
+                CLPs e gateways (WSC720), para distâncias menores, e o R9X307, para distâncias maiores.
+                Você vê os detalhes e o alcance de cada um na Etapa 5.</p>
+
+                <div class="atencao">
+                    <p>Nunca prometa alcance de rádio sem o estudo da Engenharia. E não ofereça rádio para
+                    "levar à internet": ele liga pontos entre si. Para chegar à nuvem, o dado precisa, em algum
+                    ponto, de uma conexão com a internet (Ethernet, Wi-Fi ou 4G).</p>
+                </div>
+
+                <div class="na-venda">
+                    <p>Em locais isolados (um poço, uma estação elevatória, uma fazenda), a pergunta-chave é
+                    "esses pontos precisam conversar entre si ou com a internet?". Entre si e longe, sem
+                    mensalidade: rádio. Com a internet, onde não há rede: 4G. O plano de dados é cobrado por
+                    mensalidade; o valor sai do orçamento do setor de vendas.</p>
+                </div>
+
+                <p class="fonte">Fontes: apresentação de CLPs, slide 3; Treinamento de Produto, p. 4, 14, 15 e 16;
+                Catálogo Geral, p. 7, 8, 20, 22 e 38.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="tres-perguntas">
+                <h3>4. As três perguntas que escolhem o caminho</h3>
+
+                <p>Esta é a regra de bolso da etapa. Com três perguntas você chega ao meio físico provável
+                e leva ao suporte uma necessidade bem descrita.</p>
+
+                <svg class="diagrama diagrama-corpo" viewBox="0 0 420 360" role="img"
+                     aria-labelledby="perguntasTitulo perguntasDesc">
+                    <title id="perguntasTitulo">Três perguntas para escolher o meio de comunicação</title>
+                    <desc id="perguntasDesc">Pergunta 1: precisa chegar à internet ou à nuvem? Se sim e há rede
+                    no local, Ethernet ou Wi-Fi até o roteador; se não há rede, celular 4G. Se não precisa de
+                    internet, pergunta 2: quantos equipamentos? Um só e perto, RS232; vários na mesma rede,
+                    RS485; computadores e supervisórios, Ethernet. Pergunta 3: a que distância? Longe e sem
+                    cabo, rádio 900 MHz, com estudo de visada.</desc>
+
+                    <rect class="d-caixa" x="10" y="10" width="400" height="44" rx="10"/>
+                    <text class="d-rotulo" x="210" y="38" text-anchor="middle">1. Precisa chegar à internet / nuvem?</text>
+
+                    <text class="d-nota" x="105" y="76" text-anchor="middle">sim, e há rede no local</text>
+                    <text class="d-nota" x="315" y="76" text-anchor="middle">sim, e não há rede</text>
+                    <rect class="d-caixa" x="10" y="84" width="190" height="40" rx="8"/>
+                    <text class="d-itens" x="105" y="109" text-anchor="middle">Ethernet ou Wi-Fi (roteador)</text>
+                    <rect class="d-caixa" x="220" y="84" width="190" height="40" rx="8"/>
+                    <text class="d-itens" x="315" y="109" text-anchor="middle">Celular 4G (chip)</text>
+
+                    <rect class="d-caixa" x="10" y="150" width="400" height="44" rx="10"/>
+                    <text class="d-rotulo" x="210" y="178" text-anchor="middle">2. Quantos equipamentos conversam?</text>
+
+                    <rect class="d-caixa" x="10" y="208" width="126" height="56" rx="8"/>
+                    <text class="d-itens" x="73" y="232" text-anchor="middle">1, perto:</text>
+                    <text class="d-rotulo" x="73" y="252" text-anchor="middle">RS232</text>
+                    <rect class="d-caixa" x="147" y="208" width="126" height="56" rx="8"/>
+                    <text class="d-itens" x="210" y="232" text-anchor="middle">vários, 1 mestre:</text>
+                    <text class="d-rotulo" x="210" y="252" text-anchor="middle">RS485</text>
+                    <rect class="d-caixa" x="284" y="208" width="126" height="56" rx="8"/>
+                    <text class="d-itens" x="347" y="232" text-anchor="middle">computadores:</text>
+                    <text class="d-rotulo" x="347" y="252" text-anchor="middle">Ethernet</text>
+
+                    <rect class="d-caixa" x="10" y="290" width="400" height="44" rx="10"/>
+                    <text class="d-rotulo" x="210" y="318" text-anchor="middle">3. Longe e sem cabo? → Rádio 900 MHz</text>
+                    <text class="d-nota" x="210" y="354" text-anchor="middle">Rádio sempre com estudo de visada pela Engenharia.</text>
+                </svg>
+
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>O cliente diz…</th><th>Caminho provável</th><th>O que anotar</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>"Quero ligar uma tela ao lado do CLP."</td>
+                                <td>RS232 (ou Ethernet, se a tela tiver)</td>
+                                <td>Modelo da tela e a porta que ela tem.</td>
+                            </tr>
+                            <tr>
+                                <td>"Tenho 20 medidores de energia e quero ler todos."</td>
+                                <td>RS485, com o CLP ou um gateway como mestre</td>
+                                <td>Quantos são, modelo, protocolo (normalmente Modbus RTU).</td>
+                            </tr>
+                            <tr>
+                                <td>"Quero ver tudo no computador da sala de controle."</td>
+                                <td>Ethernet (rede local)</td>
+                                <td>Se já existe rede no local e que software vai ler os dados.</td>
+                            </tr>
+                            <tr>
+                                <td>"Os reservatórios ficam a quilômetros da estação, sem cabo."</td>
+                                <td>Rádio 900 MHz</td>
+                                <td>Coordenadas dos pontos (KML) para o estudo de visada da Engenharia.</td>
+                            </tr>
+                            <tr>
+                                <td>"Quero acompanhar pelo celular, e no local não tem internet."</td>
+                                <td>Celular 4G</td>
+                                <td>Se há sinal de celular no local; se o cliente quer chip e plano (HI Connect).</td>
+                            </tr>
+                            <tr>
+                                <td>"Não quero usar a rede da empresa do meu cliente."</td>
+                                <td>Celular 4G, com conexão própria</td>
+                                <td>Para onde os dados vão (Portal de Telemetria, outra plataforma).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="atencao">
+                    <p>As três perguntas apontam o caminho <strong>provável</strong>, não fecham o projeto.
+                    A combinação final (que porta em qual equipamento, se precisa de conversor) é confirmada
+                    com o suporte antes do orçamento.</p>
+                </div>
+
+                <p class="fonte">Fontes: apresentação de CLPs, slide 3; Treinamento de Produto, p. 4 e 16; Catálogo
+                Geral, p. 38; exercícios 14, 15 e 19 do Treinamento de Produto (situações).</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="protocolos">
+                <h3>5. Os protocolos: os idiomas da automação</h3>
+
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>Protocolo</th><th>O que é, em uma frase</th><th>Onde aparece</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Modbus RTU</strong> e <strong>Modbus TCP</strong></td>
+                                <td>O idioma mais usado no mercado: o "inglês" da automação. RTU é a versão que
+                                viaja no cabo serial (RS232/RS485); TCP, a que viaja na Ethernet.</td>
+                                <td>Inversores, CLPs, IHMs, medidores de outros fabricantes; CLPs e gateways HI; Portal de Telemetria; MPL Server.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>SCP-HI</strong></td>
+                                <td>O idioma próprio (proprietário) da HI Tecnologia.
+                                <span class="confirmar">[CONFIRMAR] em que situações o vendedor precisa citar o SCP-HI (entre quais equipamentos e softwares HI ele é usado)</span></td>
+                                <td>Equipamentos HI.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>ASCII</strong></td>
+                                <td>Um idioma em texto, muito usado por equipamentos que mandam ou recebem
+                                mensagens simples.</td>
+                                <td>Leitores de código (scanners), impressoras e balanças.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>MQTT</strong></td>
+                                <td>O idioma da Internet Industrial das Coisas (IIoT): feito para mandar dados a
+                                plataformas na nuvem.</td>
+                                <td>Portal de Telemetria; CLPs e gateways HI (a HI levou o MQTT à linha de hardware em 2021).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>Dois outros nomes que você vai ouvir mais adiante: <strong>OPC</strong>, o padrão que o
+                supervisório HIscada Pro usa para receber dados (quem traduz o Modbus dos equipamentos para OPC
+                é o software <strong>MPL Server</strong>, na Etapa 7), e <strong>HTTP</strong>, o protocolo da
+                web, que o gateway programável GTON-P também fala.</p>
+
+                <h4>Mestre e escravo</h4>
+                <p>No Modbus, um equipamento é o <strong>mestre</strong>: ele pergunta. Os outros são
+                <strong>escravos</strong>: respondem quando são chamados, cada um com um endereço na rede.
+                Quando o cliente fala em "ler os escravos Modbus", ele está dizendo que precisa de um mestre
+                (um CLP, um gateway ou um software) para buscar os dados.</p>
+
+                <div class="analogia">
+                    <p>Pense numa chamada na sala de aula. O professor (mestre) diz um nome e só aquele aluno
+                    (escravo) responde. Ninguém fala fora da vez, por isso todos podem estar na mesma sala, ou
+                    no mesmo cabo RS485.</p>
+                </div>
+
+                <div class="atencao">
+                    <p>Meio físico e protocolo andam juntos, mas são coisas diferentes. "Esse equipamento tem
+                    RS485" não diz que idioma ele fala; "fala Modbus" não diz se é RTU (serial) ou TCP
+                    (Ethernet). Anote os dois. E não prometa que um equipamento de outro fabricante conversa com
+                    o CLP só porque "tem Modbus": confirme com o suporte.</p>
+                </div>
+
+                <div class="na-venda">
+                    <p>"Fala Modbus?" é uma das perguntas mais úteis da venda. Como é o idioma mais usado no
+                    mercado, ele abre caminho para ligar equipamentos de outros fabricantes aos CLPs, gateways e
+                    softwares da HI.</p>
+                </div>
+
+                <p class="fonte">Fontes: Treinamento de Produto, p. 4, 11, 19 a 21; apresentação de CLPs, slide 3;
+                Catálogo Geral, p. 5, 16, 17, 30 e 32. Mestre e escravo: conceito geral do Modbus (o Catálogo,
+                p. 17, usa esses termos).</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="tradutores">
+                <h3>6. Quando o cliente precisa de um "tradutor": conversores e gateways</h3>
+
+                <p>Um <strong>gateway</strong> é um equipamento que recebe informações por uma interface de
+                comunicação e as transmite por outra. Quando só troca o caminho, costuma ser chamado de
+                <strong>conversor</strong>. Alguns também traduzem o idioma, e há gateways
+                <strong>programáveis</strong>, que tratam os dados antes de repassar.</p>
+
+                <svg class="diagrama diagrama-corpo" viewBox="0 0 420 250" role="img"
+                     aria-labelledby="tradutorTitulo tradutorDesc">
+                    <title id="tradutorTitulo">O que um conversor ou gateway resolve</title>
+                    <desc id="tradutorDesc">Duas linhas. Na primeira, o meio é diferente: um equipamento serial
+                    e um computador que só tem Ethernet; o conversor troca o caminho e mantém o idioma. Na
+                    segunda, o idioma é diferente: uma rede com Modbus RTU e um software que só fala Modbus TCP;
+                    o gateway traduz.</desc>
+                    <defs>
+                        <marker id="tradPonta" viewBox="0 0 10 10" refX="5" refY="5"
+                                markerWidth="5" markerHeight="5" orient="auto">
+                            <path class="d-ponta" d="M0,0 L10,5 L0,10 z"/>
+                        </marker>
+                    </defs>
+
+                    <text class="d-rotulo" x="10" y="24">Caminho diferente</text>
+                    <rect class="d-caixa" x="10" y="38" width="110" height="60" rx="10"/>
+                    <text class="d-itens" x="65" y="64" text-anchor="middle">equipamento</text>
+                    <text class="d-itens" x="65" y="82" text-anchor="middle">serial</text>
+                    <line class="d-seta" x1="120" y1="68" x2="147" y2="68" marker-end="url(#tradPonta)"/>
+                    <rect class="d-cheio" x="155" y="38" width="110" height="60" rx="10"/>
+                    <text class="d-texto-claro" x="210" y="73" text-anchor="middle">conversor</text>
+                    <line class="d-seta" x1="265" y1="68" x2="292" y2="68" marker-end="url(#tradPonta)"/>
+                    <rect class="d-caixa" x="300" y="38" width="110" height="60" rx="10"/>
+                    <text class="d-itens" x="355" y="64" text-anchor="middle">computador</text>
+                    <text class="d-itens" x="355" y="82" text-anchor="middle">só Ethernet</text>
+
+                    <text class="d-rotulo" x="10" y="140">Idioma diferente</text>
+                    <rect class="d-caixa" x="10" y="154" width="110" height="60" rx="10"/>
+                    <text class="d-itens" x="65" y="180" text-anchor="middle">rede RS485</text>
+                    <text class="d-itens" x="65" y="198" text-anchor="middle">Modbus RTU</text>
+                    <line class="d-seta" x1="120" y1="184" x2="147" y2="184" marker-end="url(#tradPonta)"/>
+                    <rect class="d-cheio" x="155" y="154" width="110" height="60" rx="10"/>
+                    <text class="d-texto-claro" x="210" y="189" text-anchor="middle">gateway</text>
+                    <line class="d-seta" x1="265" y1="184" x2="292" y2="184" marker-end="url(#tradPonta)"/>
+                    <rect class="d-caixa" x="300" y="154" width="110" height="60" rx="10"/>
+                    <text class="d-itens" x="355" y="180" text-anchor="middle">software</text>
+                    <text class="d-itens" x="355" y="198" text-anchor="middle">Modbus TCP</text>
+
+                    <text class="d-nota" x="210" y="242" text-anchor="middle">Qual produto HI resolve cada caso você vê na Etapa 5.</text>
+                </svg>
+
+                <h4>Os quatro sinais de que o cliente precisa de um tradutor</h4>
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>Situação na conversa</th><th>O que falta</th><th>Exemplo na linha HI (Etapa 5)</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Os dois lados falam o mesmo idioma, mas por <strong>portas diferentes</strong>
+                                (um computador só com USB e um CLP serial; uma impressora RS232 que deve receber
+                                dados pela Ethernet).</td>
+                                <td>Trocar o caminho, sem mexer no idioma.</td>
+                                <td>USB721 (USB ↔ serial); GTON-C no modo transparente (serial ↔ Ethernet); rádios, que também só trocam o caminho.</td>
+                            </tr>
+                            <tr>
+                                <td>Os dois lados falam <strong>versões diferentes do idioma</strong>
+                                (equipamentos Modbus RTU numa rede RS485 e um software que só fala Modbus TCP pela Ethernet).</td>
+                                <td>Traduzir o idioma, além do caminho.</td>
+                                <td>GTON-C no modo bridge (Modbus RTU ↔ Modbus TCP).</td>
+                            </tr>
+                            <tr>
+                                <td>O cliente quer mandar dados para a <strong>internet</strong> sem usar a rede local
+                                (ou onde ela não existe).</td>
+                                <td>Uma conexão própria com a internet.</td>
+                                <td>GTON-M, modem celular 4G.</td>
+                            </tr>
+                            <tr>
+                                <td>O cliente quer <strong>tratar os dados</strong> (fazer contas, guardar, decidir)
+                                antes de repassar.</td>
+                                <td>Inteligência no meio do caminho.</td>
+                                <td>GTON-P, gateway programável como um CLP.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="analogia">
+                    <p>O conversor é como um adaptador de tomada de viagem: muda o formato do plugue, mas a
+                    energia é a mesma. O gateway que traduz protocolo é o intérprete: recebe a frase num idioma
+                    e repete em outro.</p>
+                </div>
+
+                <div class="na-venda">
+                    <p>Um conversor ou gateway costuma resolver o problema <strong>sem trocar o que o cliente já
+                    tem</strong>: o CLP de outra marca, o software que ele já usa, a rede que já existe. Para
+                    quem acha que "vai ter que trocar tudo", esse é um argumento forte.</p>
+                </div>
+
+                <div class="atencao">
+                    <p>Nem todo conversor traduz idioma: rádios e conversores de meio são
+                    <strong>transparentes ao protocolo</strong>, só repassam os dados. Antes de indicar um
+                    tradutor, anote o meio e o protocolo dos <strong>dois lados</strong> e confirme com o
+                    suporte.</p>
+                </div>
+
+                <p class="fonte">Fontes: Treinamento de Produto, p. 11 a 14; Catálogo Geral, p. 16 a 20.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="na-venda">
+                <h3>7. Como isso aparece na venda</h3>
+
+                <h4>As perguntas que você faz (regra de bolso)</h4>
+                <ol>
+                    <li><strong>Quantos equipamentos</strong> precisam conversar? Um só, vários numa rede, computadores?</li>
+                    <li><strong>A que distância</strong> eles estão? No mesmo painel, no mesmo prédio, a quilômetros?</li>
+                    <li><strong>Precisa chegar à internet?</strong> Tem rede ou internet no local? Tem sinal de celular?</li>
+                    <li><strong>Que idioma fala</strong> o equipamento ou software do outro lado? Qual o modelo e a porta?</li>
+                    <li><strong>Para onde vão os dados?</strong> Uma tela, um supervisório na rede local, o Portal de Telemetria ou outra plataforma na nuvem?</li>
+                </ol>
+
+                <h4>Perguntas que o cliente costuma fazer</h4>
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>O cliente pergunta</th><th>Como responder</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>"O CLP de vocês conversa com o meu inversor (ou medidor) da marca X?"</td>
+                                <td>Pergunte a porta e o protocolo do equipamento e anote o modelo. Se ele fala
+                                Modbus, é um bom sinal, mas a confirmação é do suporte.</td>
+                            </tr>
+                            <tr>
+                                <td>"Qual a diferença entre RS232 e RS485?"</td>
+                                <td>RS232 liga dois equipamentos, ponto a ponto. RS485 liga um mestre a vários
+                                equipamentos na mesma rede.</td>
+                            </tr>
+                            <tr>
+                                <td>"Dá para ligar sem cabo? São 10 km."</td>
+                                <td>Pode ser por rádio, sem mensalidade, desde que as antenas tenham visada. Peça as
+                                coordenadas (KML) para o estudo da Engenharia antes de confirmar.</td>
+                            </tr>
+                            <tr>
+                                <td>"Lá não tem internet. Como os dados chegam à nuvem?"</td>
+                                <td>Pela rede celular 4G, com chip. A HI oferece chip e plano de dados com o HI
+                                Connect. Confirme se há sinal de celular no local.</td>
+                            </tr>
+                            <tr>
+                                <td>"Meu supervisório só fala Modbus TCP e meus equipamentos são Modbus RTU."</td>
+                                <td>É o caso clássico de gateway que traduz Modbus RTU para TCP. Anote quantos
+                                equipamentos são e o software; o produto você indica com o suporte (Etapa 5).</td>
+                            </tr>
+                            <tr>
+                                <td>"Vocês mandam os dados para a minha plataforma na nuvem?"</td>
+                                <td>O MQTT é o idioma usado para isso, e os CLPs HI e o gateway GTON-P falam MQTT. Anote qual é
+                                a plataforma e confirme com o suporte como fazer a integração.</td>
+                            </tr>
+                            <tr>
+                                <td>"Quanto custa o plano de dados?"</td>
+                                <td>O HI Connect é cobrado por mensalidade, conforme o plano; o valor sai do orçamento
+                                do setor de vendas.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4>Erros comuns a evitar</h4>
+                <div class="atencao">
+                    <ul>
+                        <li>Confundir meio físico com protocolo ("tem RS485, então fala Modbus").</li>
+                        <li>Prometer que dois equipamentos conversam sem saber o meio e o protocolo dos dois lados.</li>
+                        <li>Oferecer rádio para quem precisa de internet, ou prometer alcance sem o estudo de visada.</li>
+                        <li>Esquecer que o 4G precisa de chip, plano de dados e sinal de celular no local.</li>
+                        <li>Dar como certa uma distância de cabo sem confirmar com o suporte.</li>
+                        <li>Achar que o cliente precisa trocar o equipamento antigo, quando um conversor ou gateway resolve.</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="glossario">
+                <h3>8. Glossário da etapa</h3>
+
+                <dl class="glossario">
+                    <dt>Meio físico / interface de comunicação</dt>
+                    <dd>O caminho por onde o dado viaja: cabo serial, cabo de rede ou sem fio. A "linha telefônica".</dd>
+
+                    <dt>Protocolo</dt>
+                    <dd>As regras de como a mensagem é escrita. O "idioma" que os dois lados precisam falar.</dd>
+
+                    <dt>Serial</dt>
+                    <dd>Tipo de comunicação por cabo em que os dados vão um após o outro. RS232 e RS485 são seriais.</dd>
+
+                    <dt>RS232</dt>
+                    <dd>Comunicação serial ponto a ponto: liga dois equipamentos, próximos.</dd>
+
+                    <dt>RS485</dt>
+                    <dd>Comunicação serial em rede: um mestre conversa com vários equipamentos no mesmo cabo.</dd>
+
+                    <dt>Ethernet</dt>
+                    <dd>O cabo de rede dos computadores. Liga o equipamento à rede local da empresa.</dd>
+
+                    <dt>Wi-Fi 2.4 GHz</dt>
+                    <dd>Rede sem fio local, que chega à internet por um roteador.</dd>
+
+                    <dt>Rádio 900 MHz</dt>
+                    <dd>Comunicação sem fio de longa distância entre pontos, sem mensalidade. Precisa de visada.</dd>
+
+                    <dt>Visada</dt>
+                    <dd>Quando uma antena "enxerga" a outra, sem obstáculos no caminho.</dd>
+
+                    <dt>KML</dt>
+                    <dd>Arquivo com pontos marcados no mapa (por exemplo, no Google Earth). É o que a Engenharia usa no estudo de altimetria.</dd>
+
+                    <dt>Celular 4G / modem</dt>
+                    <dd>Acesso à internet pela rede de celular, com chip de operadora. O modem é o equipamento que faz isso.</dd>
+
+                    <dt>HI Connect</dt>
+                    <dd>Serviço da HI de chip e plano de dados celular para aplicações IoT.</dd>
+
+                    <dt>Modbus RTU / Modbus TCP</dt>
+                    <dd>O protocolo mais usado na automação. RTU viaja no cabo serial; TCP, na Ethernet.</dd>
+
+                    <dt>Mestre e escravo</dt>
+                    <dd>No Modbus, o mestre pergunta e os escravos respondem quando são chamados.</dd>
+
+                    <dt>SCP-HI</dt>
+                    <dd>Protocolo próprio (proprietário) da HI Tecnologia.</dd>
+
+                    <dt>ASCII</dt>
+                    <dd>Protocolo em texto, usado por scanners, impressoras e balanças.</dd>
+
+                    <dt>MQTT</dt>
+                    <dd>Protocolo da IIoT, feito para enviar dados a plataformas na nuvem.</dd>
+
+                    <dt>OPC</dt>
+                    <dd>Padrão de comunicação usado pelo supervisório HIscada Pro. O MPL Server traduz Modbus para OPC.</dd>
+
+                    <dt>Conversor</dt>
+                    <dd>Equipamento que troca o caminho (por exemplo, serial para Ethernet) sem mudar o idioma.</dd>
+
+                    <dt>Gateway</dt>
+                    <dd>Equipamento que recebe dados por uma interface e repassa por outra; alguns traduzem protocolo ou são programáveis.</dd>
+
+                    <dt>Transparente ao protocolo</dt>
+                    <dd>Diz-se do equipamento que só repassa os dados, sem ler nem traduzir (rádios, conversores de meio).</dd>
+                </dl>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="quiz-bloco" id="quiz">
+                <h3>Quiz da etapa</h3>
+                <p>Confira o que ficou. A correção é na hora, com a explicação de cada resposta.
+                Acerte pelo menos 80% antes de marcar a etapa como concluída.</p>
+
+                <form class="quiz">
+                    <fieldset class="quiz-q" data-certa="c">
+                        <legend>1. Qual a diferença entre meio físico e protocolo?</legend>
+                        <label><input type="radio" name="q1" value="a"> Não há diferença: são dois nomes para a mesma coisa.</label>
+                        <label><input type="radio" name="q1" value="b"> O meio físico é o idioma; o protocolo é o cabo.</label>
+                        <label><input type="radio" name="q1" value="c"> O meio físico é o caminho por onde o dado viaja (a "linha"); o protocolo é o idioma que os dois lados precisam falar.</label>
+                        <label><input type="radio" name="q1" value="d"> O protocolo só existe em comunicação sem fio.</label>
+                        <p class="quiz-explica" hidden>Para se entenderem, os equipamentos precisam da mesma linha (RS232, RS485, Ethernet, Wi-Fi, rádio, 4G) e do mesmo idioma (Modbus, MQTT, ASCII, SCP-HI).</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="a">
+                        <legend>2. O cliente quer ligar o CLP a uma única IHM, no mesmo painel, por cabo serial. Que meio atende?</legend>
+                        <label><input type="radio" name="q2" value="a"> RS232, que liga dois equipamentos ponto a ponto.</label>
+                        <label><input type="radio" name="q2" value="b"> Rádio 900 MHz.</label>
+                        <label><input type="radio" name="q2" value="c"> Celular 4G.</label>
+                        <label><input type="radio" name="q2" value="d"> Nenhum: CLP e IHM não se comunicam.</label>
+                        <p class="quiz-explica" hidden>RS232 é a ligação serial um para um, para equipamentos próximos. Rádio e 4G servem para distância e internet.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="d">
+                        <legend>3. O CLP precisa buscar dados de 15 medidores de energia ligados no mesmo cabo serial. Que meio é esse?</legend>
+                        <label><input type="radio" name="q3" value="a"> RS232.</label>
+                        <label><input type="radio" name="q3" value="b"> Wi-Fi.</label>
+                        <label><input type="radio" name="q3" value="c"> USB.</label>
+                        <label><input type="radio" name="q3" value="d"> RS485, em que um mestre conversa com vários equipamentos na mesma rede.</label>
+                        <p class="quiz-explica" hidden>Vários equipamentos no mesmo cabo, com um mestre buscando os dados, é a rede RS485. O RS232 liga só dois.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="b">
+                        <legend>4. Dois pontos de uma fazenda, a 12 km um do outro, precisam trocar dados sem cabo e sem mensalidade. O que você faz?</legend>
+                        <label><input type="radio" name="q4" value="a"> Garante que o rádio funciona a qualquer distância e fecha a venda.</label>
+                        <label><input type="radio" name="q4" value="b"> Indica rádio 900 MHz como caminho provável e pede as coordenadas dos pontos (KML) para a Engenharia fazer o estudo de visada antes de confirmar.</label>
+                        <label><input type="radio" name="q4" value="c"> Oferece um único rádio, instalado num dos pontos.</label>
+                        <label><input type="radio" name="q4" value="d"> Indica RS232, que não tem mensalidade.</label>
+                        <p class="quiz-explica" hidden>Rádio é o caminho para longa distância sem cabo e sem mensalidade, mas precisa de visada, e quem confirma a viabilidade é a Engenharia. E rádio nunca funciona sozinho: são pelo menos dois.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="c">
+                        <legend>5. Uma estação isolada, sem internet, precisa mandar dados para a nuvem. Qual o caminho mais provável?</legend>
+                        <label><input type="radio" name="q5" value="a"> Rádio 900 MHz sozinho, porque o rádio leva à internet.</label>
+                        <label><input type="radio" name="q5" value="b"> RS485.</label>
+                        <label><input type="radio" name="q5" value="c"> Celular 4G, com chip e plano de dados (a HI oferece o HI Connect), se houver sinal no local.</label>
+                        <label><input type="radio" name="q5" value="d"> Ethernet, mesmo sem rede no local.</label>
+                        <p class="quiz-explica" hidden>O 4G leva o equipamento à internet pela rede celular. O rádio liga pontos entre si, mas não dá acesso à internet. Confirme o sinal de celular no local.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="a">
+                        <legend>6. Qual frase sobre Modbus RTU e Modbus TCP está correta?</legend>
+                        <label><input type="radio" name="q6" value="a"> O RTU viaja no cabo serial (RS232/RS485) e o TCP viaja na Ethernet.</label>
+                        <label><input type="radio" name="q6" value="b"> O RTU é sem fio e o TCP é por cabo serial.</label>
+                        <label><input type="radio" name="q6" value="c"> São protocolos exclusivos da HI.</label>
+                        <label><input type="radio" name="q6" value="d"> O Modbus é usado só em balanças.</label>
+                        <p class="quiz-explica" hidden>Modbus é o protocolo mais usado no mercado (não é exclusivo da HI). A versão RTU é a serial; a TCP é a de rede Ethernet. O protocolo próprio da HI é o SCP-HI.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="d">
+                        <legend>7. O cliente quer mandar dados dos equipamentos para uma plataforma na nuvem. Que protocolo é o típico para isso?</legend>
+                        <label><input type="radio" name="q7" value="a"> ASCII.</label>
+                        <label><input type="radio" name="q7" value="b"> RS232.</label>
+                        <label><input type="radio" name="q7" value="c"> SCP-HI.</label>
+                        <label><input type="radio" name="q7" value="d"> MQTT.</label>
+                        <p class="quiz-explica" hidden>MQTT é o protocolo da IIoT, usado para enviar dados a plataformas na nuvem. RS232 nem é protocolo: é meio físico.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="b">
+                        <legend>8. Uma balança e uma impressora de etiquetas precisam trocar mensagens simples com o CLP. Que protocolo costuma aparecer nesses equipamentos?</legend>
+                        <label><input type="radio" name="q8" value="a"> MQTT.</label>
+                        <label><input type="radio" name="q8" value="b"> ASCII.</label>
+                        <label><input type="radio" name="q8" value="c"> Modbus TCP, sempre.</label>
+                        <label><input type="radio" name="q8" value="d"> Nenhum: balanças não se comunicam.</label>
+                        <p class="quiz-explica" hidden>ASCII é o protocolo em texto muito usado em scanners, impressoras e balanças. Mesmo assim, confirme o protocolo pelo modelo do equipamento.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="c">
+                        <legend>9. O cliente tem 25 equipamentos Modbus RTU numa rede RS485 e quer ler os dados num software que só fala Modbus TCP, pela Ethernet. O que ele precisa?</legend>
+                        <label><input type="radio" name="q9" value="a"> Trocar os 25 equipamentos.</label>
+                        <label><input type="radio" name="q9" value="b"> Só de um cabo de rede mais longo.</label>
+                        <label><input type="radio" name="q9" value="c"> De um gateway que traduza Modbus RTU (serial) para Modbus TCP (Ethernet), como o GTON-C no modo bridge.</label>
+                        <label><input type="radio" name="q9" value="d"> De um rádio, que traduz o protocolo.</label>
+                        <p class="quiz-explica" hidden>Caminho e versão do idioma são diferentes nos dois lados: é o caso clássico do gateway que traduz Modbus RTU para TCP. Rádios são transparentes ao protocolo, não traduzem.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="a">
+                        <legend>10. O cliente pergunta: "o CLP de vocês conversa com o meu inversor da marca X?". O que fazer?</legend>
+                        <label><input type="radio" name="q10" value="a"> Anotar o modelo do inversor, a porta e o protocolo que ele usa, e confirmar com o suporte antes de responder.</label>
+                        <label><input type="radio" name="q10" value="b"> Dizer que sim, porque todo equipamento conversa com todo equipamento.</label>
+                        <label><input type="radio" name="q10" value="c"> Dizer que não, porque é de outra marca.</label>
+                        <label><input type="radio" name="q10" value="d"> Dizer que sim se o inversor tiver RS485, sem perguntar mais nada.</label>
+                        <p class="quiz-explica" hidden>Meio e protocolo dos dois lados decidem se a ligação é direta. Ter RS485 não diz o idioma. Na dúvida técnica, o suporte confirma antes de prometer.</p>
+                    </fieldset>
+
+                    <div class="quiz-acoes">
+                        <button type="submit" class="btn">Corrigir</button>
+                        <button type="button" class="btn btn-secondary quiz-refazer" hidden>Refazer</button>
+                    </div>
+                    <p class="quiz-resultado" aria-live="polite"></p>
+                </form>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="caso">
+                <h3>Para o encontro com o instrutor</h3>
+                <p>Traga preparado (os produtos você escolhe na Etapa 5; aqui o objetivo é
+                <strong>identificar o caminho, o idioma e se falta um tradutor</strong>):</p>
+                <ol>
+                    <li><strong>Explique com as suas palavras</strong>, como explicaria a um cliente: o que é um
+                    protocolo de comunicação, quais protocolos os equipamentos da HI falam e qual a diferença
+                    entre RS232 e RS485.</li>
+                    <li><strong>Diagnóstico de quatro situações.</strong> Para cada uma, diga o meio físico de cada
+                    lado, o idioma de cada lado e se falta trocar o caminho, traduzir o idioma, dar acesso à
+                    internet ou tratar os dados:
+                        <ol type="a">
+                            <li>Uma rede RS485 com 25 equipamentos Modbus RTU, cujos dados o cliente quer buscar pela
+                            Ethernet num supervisório de mercado que fala Modbus TCP.</li>
+                            <li>Uma impressora antiga com porta RS232 que deve receber informações pela Ethernet, de
+                            forma transparente ao protocolo.</li>
+                            <li>Uma rede RS485 com 20 equipamentos Modbus RTU e um CLP de outra marca que só tem RS232
+                            e precisa buscar os dados desses escravos.</li>
+                            <li>Seis transmissores de nível 4 a 20 mA cujos dados devem ir para a plataforma na nuvem do
+                            cliente, pela rede celular 4G, em MQTT.</li>
+                        </ol>
+                    </li>
+                    <li><strong>Sem usar a rede do cliente.</strong> Um cliente já usa o Portal de Telemetria com um
+                    CLP ligado pela Ethernet da empresa onde está instalado, mas não quer depender dessa rede. Que
+                    caminho você propõe e o que precisa perguntar (sinal de celular, chip, plano)?</li>
+                    <li><strong>A pergunta difícil.</strong> O cliente diz: "meus pontos ficam a 20 km, quero rádio e
+                    preciso da resposta hoje se funciona". Como você responde sem prometer e sem perder o cliente?</li>
+                </ol>
+                <p class="fonte">Itens 1 a 3 adaptados dos exercícios 4, 8, 14, 15, 17, 18 e 19 do Treinamento de Produto.</p>
+            </div>
         </div>
     </section>
 
@@ -65,5 +882,6 @@
     <script src="progresso.js"></script>
     <script src="config-conta.js"></script>
     <script src="conta.js"></script>
+    <script src="quiz.js"></script>
 </body>
 </html>
