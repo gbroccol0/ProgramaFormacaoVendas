@@ -117,6 +117,40 @@ vendedor leigo. Gabriel gosta de entender o porquê das decisões.
   vendedor **pergunta ao cliente** quais recursos ele usa e **confirma com o
   suporte interno** se a GTI5 atende. Não prometer compatibilidade antes.
 
+**04/11/2026 — Etapa 1 aprovada; trabalho passa para a nuvem**
+- Gabriel retestou a Etapa 1 depois da correção da GTI5 e **aprovou**.
+- As duas pendências cobradas (clientes de referência de Energia, Indústria
+  4.0, Meio Ambiente, Hospitalar e Predial; região de cada representante)
+  **ainda não chegaram**: seguem como `[CONFIRMAR]`. Continuar cobrando.
+- Fluxo de publicação: cada etapa numa **branch** com **pull request**;
+  Gabriel revisa, aprova e faz o merge; depois do merge, conferir a Action
+  "Publicar site" e mandar o link da etapa publicada.
+
+**04/11/2026 — Etapa 2 aprovada**
+- Gabriel aprovou a Etapa 2 sem correções ("se pegarmos algum erro
+  posteriormente, alteramos"). Ele faz o merge do PR; liberou a Etapa 3.
+
+**05/11/2026 — Etapa 3 aprovada**
+- Gabriel respondeu "pode continuar" (mesmo sentido da Etapa 2: aprovada; ele
+  faz o merge). Os pontos abertos no PR #2 ficaram como estavam: a tabela de
+  distâncias de referência geral fica, o rádio segue sem número de alcance e
+  o fabricante do CLP do exercício 18 fica anônimo.
+
+**05/11/2026 — Etapa 4 aprovada; produção em sequência**
+- Gabriel aprovou a Etapa 4 ("pode continuar") e pediu para **seguir
+  produzindo as próximas etapas em sequência, sem esperar aprovação entre
+  elas**, usando os créditos disponíveis; correções virão depois, numa revisão
+  geral. Continua valendo uma branch e um PR por etapa.
+- Respostas sobre a Etapa 5:
+  - **R9X307: a HI recomenda até 60 km** (o 105 km da tabela do Treinamento é
+    valor técnico de referência; ensinar 60 km).
+  - **ESC717/ESC713 não são o "Plug Telemetria"** (o `CONTEXT.txt` estava
+    errado). Entram na formação só para explicar que **os ESC são os
+    antecessores dos GTON**.
+  - **"GTON C SET" e "GTON-C" são o mesmo equipamento**; SET = Serial
+    Ethernet. Outros equipamentos seguem o mesmo padrão, por exemplo
+    **S4E = Serial 485 Ethernet**.
+
 **Vídeos (ideia de Gabriel, ainda NÃO é pedido):** ele pensa em gravar vídeos e
 colocar em cada etapa uma escolha que expande para baixo: "Ler o conteúdo" ou
 "Assistir ao vídeo". Proposta já apresentada a ele: dois painéis expansíveis,
@@ -129,12 +163,74 @@ Oferecido também: preparar slides e roteiro de cada vídeo a partir do texto.
 
 | Etapa | Arquivo | Estado |
 |---:|---|---|
-| 1 A HI Tecnologia | `Assets/hi_tecnologia.html` | **Pronta.** Corrigida duas vezes. Gabriel ia **testar de novo** depois da correção da GTI5 (SmartManagerPro) e então liberar a Etapa 2. **Ainda não aprovou.** |
-| 2 a 10 | `Assets/*.html` | Páginas "em produção": selo, objetivos, tempo, caixa "Conteúdo em produção" e fontes previstas. |
+| 1 A HI Tecnologia | `Assets/hi_tecnologia.html` | **Aprovada** por Gabriel em 04/11/2026 (reteste depois da correção da GTI5/SmartManagerPro). |
+| 2 Fundamentos da Automação | `Assets/fundamentos.html` | **Aprovada** por Gabriel em 04/11/2026 (PR #1, branch `etapa-2-fundamentos`; ele faz o merge). Erros achados depois serão corrigidos depois. |
+| 3 Comunicação Industrial | `Assets/comunicacao.html` | **Aprovada** por Gabriel em 05/11/2026 (PR #2, branch `etapa-3-comunicacao`; ele faz o merge, depois do #1). |
+| 4 Linha de CLPs | `Assets/clps.html` | **Aprovada** ("pode continuar", 05/11/2026). PR #3, branch `etapa-4-clps`. |
+| 5 Gateways, Modem e Rádios | `Assets/conectividade.html` | **Pronta, aguardando revisão.** Branch `etapa-5-conectividade` (a partir de `etapa-4-clps`), PR próprio. |
+| 6 a 10 | `Assets/*.html` | Páginas "em produção": selo, objetivos, tempo, caixa "Conteúdo em produção" e fontes previstas. |
 
-**Próximo passo:** confirmar com Gabriel que a Etapa 1 está aprovada e
-**produzir a Etapa 2 (Fundamentos da Automação)**, depois uma por vez até a 10,
-e então a Fase 4.
+**Próximo passo:** seguir em sequência (decisão de 05/11/2026, seção 3): Etapa 6
+(IHMs, Sensores e Acessórios), depois 7, 8, 9 e 10, cada uma numa branch criada
+a partir da anterior e com PR próprio. Antes da Etapa 6, as inconsistências
+dela (MMI700 e BPU508 ainda são vendidas?) viram `[CONFIRMAR]` se Gabriel não
+tiver respondido.
+
+**Etapa 5, o que foi feito (para não refazer):** 10 seções (linha GTON com
+tabela do Treinamento p. 12, nomenclatura SET/S4E e os ESC como antecessores;
+GTON-C nos modos transparente e bridge; GTON-P com interfaces A/B, HIstudio e
+protocolos; GTON-M com Nano SIM, SMA, Anatel e HI Connect; USB721; rádios
+WSC720 × R9X307; venda de rádio em 4 passos com diagrama; tabela "o cliente diz
+→ produto"; na venda; glossário), 2 diagramas, fotos `Files/GTON-C.png`,
+`GTON-P.jpg`, `GTON-M.png`, `radio.png`, quiz de 10 e caso com 5 itens. Um
+`[CONFIRMAR]` novo: equivalência ESC → GTON e se os ESC ainda são vendidos.
+Dados lidos da **imagem** da p. 15 do Treinamento (renderizada com
+`pdftoppm`): WSC720 = XBee-PRO 900HP, 3 km ao ar livre / 150 m interno; R9X307
+18 km urbano, 105 km rural na tabela, mas a recomendação é 60 km. Aviso
+reforçado: gateway não lê sensor.
+
+**Etapa 4, o que foi feito (para não refazer):** 10 seções (tabela
+comparativa; RION5; NEON5 com as combinações de conectividade do slide 6; P7C
+302 com diagrama dos bastidores; RION5 como I/O remoto do NEON5, até 14 e 240
+pontos, sem programar o RION5; módulos de I/O por tipo, sem códigos, com o
+aviso de canais excludentes e famílias separadas; HIstudio com a foto
+`Files/HIstudio.png`; as quatro perguntas de escolha com tabela "o cliente diz
+→ CLP"; na venda; glossário), 4 diagramas, quiz de 10 e caso com 5 itens.
+Nenhum `[CONFIRMAR]` novo. Decisões de redação: "CLP mais econômico da HI"
+para o RION5 aparece **uma vez**, atribuído ao Treinamento (p. 9), sem valor e
+com "valores, só pelo orçamento"; "baixo custo" da narração do slide 7 não foi
+usado; "o P7C não tem rádio, Wi-Fi nem 4G" vem da lista de conectividade do
+Treinamento p. 7. Fontes: Treinamento p. 4–9; slides 4–7; Catálogo p. 5–10,
+14, 32 e 40. CSS novo: `.step .foto`.
+
+**Etapa 3, o que foi feito (para não refazer):** 8 seções (linha e idioma;
+RS232/RS485/Ethernet com tabela de distâncias **de referência geral**, marcada
+como tal; Wi-Fi/rádio/4G com visada, KML e estudo de altimetria e HI Connect;
+as três perguntas com árvore de decisão e tabela "o cliente diz → caminho";
+protocolos Modbus RTU/TCP, SCP-HI, ASCII, MQTT, mais OPC e HTTP de passagem,
+mestre e escravo; os quatro sinais de que falta conversor/gateway, com os
+produtos só como prévia da Etapa 5; na venda; glossário), 4 diagramas, quiz de
+10 e caso com 4 itens. Um `[CONFIRMAR]` novo: onde o SCP-HI aparece na venda.
+Decisões de redação: alcance de rádio **sem número** (a inconsistência 60 ×
+105 km fica para a Etapa 5); conversor chamado de "GTON-C" (nome do catálogo,
+como na Etapa 1). Fontes: Treinamento p. 4, 11–16, 19–21; slide 3; Catálogo
+p. 5, 7, 8, 16–22, 30, 32 e 38.
+
+**Etapa 2, o que foi feito (para não refazer):** 8 seções (automação e
+processo; sensor, CLP e atuador com THT863/HPS850 e IHM × supervisório; os três
+pilares do CLP; AC × DC com a tabela de alimentação dos produtos; digital ×
+analógico com a régua 0–100 %, os quatro tipos de ponto e os sinais especiais
+PT100/célula de carga/contador rápido; pirâmide em 4 níveis com a comunicação
+como "elevador"; na venda; glossário), 4 diagramas SVG, quiz de 10 e caso com 4
+itens. **Nenhum `[CONFIRMAR]` novo**: tudo saiu do Treinamento p. 2–5, 10,
+17–19, 21–23, dos slides 1–2 e do Catálogo p. 7–10, 24, 26, 30–33, 38; o que é
+conceito geral (pirâmide, "zero vivo" de 4 mA, analogias) está dito no `.fonte`.
+Decisões de redação: não usar "economia" para AC (a narração do slide 2 usa;
+regra 4); não citar a BPU508 (inconsistência da Etapa 6), só Mean Well e
+SBC513; a pirâmide tem 4 níveis (campo, controle, supervisão local, nuvem),
+como na grade, e o texto explica a diferença para o mapa de 5 camadas da
+Etapa 1. CSS novo em `etapa.css`: `.diagrama-corpo`, `d-cheio`, `d-linha`,
+`d-texto-claro` (com variante escura onde precisa).
 
 **Antes de começar cada nova etapa, cobrar de Gabriel** (ele pediu: "me cobre
 mais para a frente"):
@@ -182,6 +278,25 @@ as que essas páginas anunciam, mas foram levantadas no diagnóstico: **conferir
 no `fontes/texto/catalogo_hi.txt` antes de citar** e corrigir a página "em
 produção" se mudar.
 
+**Exercícios já usados:** Etapa 2 usou o **1** (quatro tipos de ponto), o
+**2** só na parte conceitual (os três pilares; a escolha de modelo fica para a
+Etapa 4) e, no caso para o instrutor, o **10**, o **11**, o **12** e o **20**
+apenas para montar a lista de sinais, a alimentação e as perguntas (sem
+escolher produto). Esses quatro voltam na Etapa 4 para a escolha do CLP e dos
+módulos. O pedido de IHM "econômica" (11 e 20) virou pergunta do caso: como
+tratar sem falar de preço.
+Etapa 3 usou o **4** e o **8** (conceitos, no caso) e, só para diagnosticar
+meio, idioma e falta de tradutor (sem escolher produto), o **14**, o **15**, o
+**17**, o **18** e o **19**. Esses cinco voltam na Etapa 5 para a escolha do
+GTON-C, GTON-M etc.
+Etapa 4 usou o **2**, o **3** e o **7** (conceitos, no caso) e, para escolher a
+família de CLP, o **10**, o **12**, o **13** e o **16**. Ainda não usados: **5**,
+**6**, **9** e **21**; o **11** e o **20** só apareceram na Etapa 2 (lista de
+sinais) e voltam com a IHM na Etapa 6 e na oferta completa (Encontro 2,
+Avaliação Final).
+Etapa 5 usou o **5** e retomou, agora com produto, o **14**, o **15**, o
+**17**, o **18**, o **19** e o **21**.
+
 **Os 21 exercícios** de `fontes/texto/exercicios_treinamento_de_produto.txt`
 mapeiam assim (sugestão, ainda não discutida com Gabriel): 1 → Etapa 2;
 4, 8 → Etapa 3; 2, 3, 7 → Etapa 4; 5, 14, 15, 17, 18, 19 → Etapa 5; 6 →
@@ -201,9 +316,7 @@ econômica" — tratar sem citar preço (regra 4).
 ### Inconsistências entre fontes (perguntar a Gabriel quando chegar a etapa)
 | Etapa | Ponto |
 |---|---|
-| 5 | Alcance rural do R9X307: 60 km (catálogo e recomendação) × 105 km (tabela do Treinamento) |
-| 5 | ESC717/ESC713 ("Plug Telemetria"): estão no `CONTEXT.txt`, no dicionário e no site do suporte, não no catálogo nem no Treinamento. Entram na formação de vendas? |
-| 5 | Nome do conversor: "GTON C SET" (Treinamento) × "GTON-C" (catálogo) |
+| 5 | ~~R9X307 60 × 105 km; ESC717/ESC713; GTON C SET × GTON-C~~ **resolvidas em 05/11/2026** (ver seção 3) |
 | 6 | MMI700 (IHM alfanumérica, no Treinamento e no site do suporte) ainda é vendida? |
 | 6 | Fonte própria: BPU508 (Treinamento, no-break 13,8 V) × SBC513 (catálogo, LiFePO4). A BPU508 ainda é vendida? |
 | 7 | Preços do Portal no Treinamento (print com R$): **não usar** (regra 4); ensinar só a lógica dos planos (Free/Basic/Plus/Enterprise, por quantidade de dados) |
