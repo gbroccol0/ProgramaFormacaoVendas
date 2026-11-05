@@ -55,8 +55,8 @@ Formacao-Vendas-HI/
 | 3 | Comunicação Industrial | `comunicacao.html` | **Aprovada** por Gabriel (05/11/2026) |
 | 4 | Linha de CLPs | `clps.html` | **Aprovada** por Gabriel (05/11/2026), com revisão geral prevista para depois |
 | 5 | Gateways, Modem e Rádios | `conectividade.html` | **Pronta, aguardando revisão** (branch `etapa-5-conectividade`, PR #4) |
-| 6 | IHMs, Sensores e Acessórios | `ihm_sensores.html` | **Pronta, aguardando revisão** (branch `etapa-6-ihm-sensores`, pull request) |
-| 7 | Supervisão Local e em Nuvem | `supervisao.html` | Em produção |
+| 6 | IHMs, Sensores e Acessórios | `ihm_sensores.html` | **Pronta, aguardando revisão** (branch `etapa-6-ihm-sensores`, PR #5) |
+| 7 | Supervisão Local e em Nuvem | `supervisao.html` | **Pronta, aguardando revisão** (branch `etapa-7-supervisao`, pull request) |
 | 8 | Soluções e Programas | `solucoes.html` | Em produção |
 | 9 | A Conversa de Venda | `conversa_venda.html` | Em produção |
 | 10 | Avaliação Final | `avaliacao_final.html` | Em produção |

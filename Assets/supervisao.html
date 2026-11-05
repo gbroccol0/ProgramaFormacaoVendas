@@ -19,8 +19,67 @@
     <section class="hero">
         <div class="hero-content">
             <span class="etapa-badge">Etapa 7 de 10</span>
-            <h1>Supervisão: HIscada Pro × Portal de Telemetria</h1>
-            <p><strong>Enxergar o processo na planta ou de qualquer lugar: como escolher e como se cobra cada um.</strong></p>
+            <h1>Supervisão local e em nuvem: HIscada Pro e Portal de Telemetria</h1>
+            <p><strong>Na sala de controle ou de qualquer lugar: dois caminhos para ver, registrar e comandar o processo.</strong></p>
+            <p>Esta é a parte de software da linha HI. Você aprende a escolher entre o supervisório
+            <strong>HIscada Pro</strong> com o servidor <strong>MPL Server</strong>, que rodam nos computadores
+            da rede local, e o <strong>Portal de Telemetria</strong>, que roda na nuvem e abre no navegador. E,
+            principalmente, entende <strong>como cada um é cobrado</strong>, para levar ao orçamento as
+            informações certas.</p>
+        </div>
+        <div class="hero-image">
+            <svg class="diagrama" viewBox="0 0 540 430" role="img"
+                 aria-labelledby="supTitulo supDesc">
+                <title id="supTitulo">Dois caminhos de supervisão</title>
+                <desc id="supDesc">À esquerda, supervisão local: CLPs e equipamentos Modbus enviam dados ao MPL Server,
+                que traduz para OPC; o HIscada Pro roda nos computadores da rede local da empresa. À direita,
+                supervisão em nuvem: CLP ou gateway envia os dados pela internet (Modbus ou MQTT) ao Portal de
+                Telemetria, que é acessado pelo navegador em computador, tablet ou celular, de qualquer lugar.</desc>
+                <defs>
+                    <marker id="supPonta" viewBox="0 0 10 10" refX="5" refY="5"
+                            markerWidth="5" markerHeight="5" orient="auto">
+                        <path class="d-ponta" d="M0,0 L10,5 L0,10 z"/>
+                    </marker>
+                </defs>
+
+                <text class="d-titulo" x="270" y="24" text-anchor="middle">Dois caminhos de supervisão</text>
+                <text class="d-rotulo" x="135" y="54" text-anchor="middle">Local (rede da empresa)</text>
+                <text class="d-rotulo" x="405" y="54" text-anchor="middle">Nuvem (internet)</text>
+
+                <rect class="d-caixa" x="20" y="300" width="230" height="64" rx="10"/>
+                <text class="d-rotulo" x="135" y="326" text-anchor="middle">CLPs e equipamentos</text>
+                <text class="d-itens" x="135" y="348" text-anchor="middle">Modbus RTU ou TCP</text>
+                <line class="d-seta" x1="135" y1="300" x2="135" y2="262" marker-end="url(#supPonta)"/>
+
+                <rect class="d-caixa" x="20" y="190" width="230" height="64" rx="10"/>
+                <text class="d-rotulo" x="135" y="216" text-anchor="middle">MPL Server</text>
+                <text class="d-itens" x="135" y="238" text-anchor="middle">traduz Modbus para OPC</text>
+                <line class="d-seta" x1="135" y1="190" x2="135" y2="152" marker-end="url(#supPonta)"/>
+
+                <rect class="d-caixa" x="20" y="72" width="230" height="74" rx="10"/>
+                <text class="d-rotulo" x="135" y="98" text-anchor="middle">HIscada Pro</text>
+                <text class="d-itens" x="135" y="120" text-anchor="middle">computadores da rede local</text>
+                <text class="d-itens" x="135" y="138" text-anchor="middle">licença: tags e viewers</text>
+
+                <line class="d-linha" x1="270" y1="62" x2="270" y2="372"/>
+
+                <rect class="d-caixa" x="290" y="300" width="230" height="64" rx="10"/>
+                <text class="d-rotulo" x="405" y="326" text-anchor="middle">CLP ou gateway</text>
+                <text class="d-itens" x="405" y="348" text-anchor="middle">Modbus ou MQTT</text>
+                <line class="d-seta" x1="405" y1="300" x2="405" y2="262" marker-end="url(#supPonta)"/>
+
+                <rect class="d-cheio" x="290" y="190" width="230" height="64" rx="10"/>
+                <text class="d-texto-claro" x="405" y="216" text-anchor="middle">Portal de Telemetria</text>
+                <text class="d-texto-claro" x="405" y="238" text-anchor="middle">na nuvem (AWS)</text>
+                <line class="d-seta" x1="405" y1="190" x2="405" y2="152" marker-end="url(#supPonta)"/>
+
+                <rect class="d-caixa" x="290" y="72" width="230" height="74" rx="10"/>
+                <text class="d-rotulo" x="405" y="98" text-anchor="middle">Navegador</text>
+                <text class="d-itens" x="405" y="120" text-anchor="middle">PC, tablet ou celular</text>
+                <text class="d-itens" x="405" y="138" text-anchor="middle">plano: recursos e dados</text>
+
+                <text class="d-nota" x="270" y="400" text-anchor="middle">Local: só na rede da empresa. Nuvem: de qualquer lugar com internet.</text>
+            </svg>
         </div>
     </section>
 
@@ -38,15 +97,596 @@
                     <li>saber que equipamento Modbus de outro fabricante exige licença do MPL Server;</li>
                     <li>oferecer o HI Connect para fechar a solução IoT completa.</li>
                 </ul>
-                <p class="tempo">Tempo estimado: 2h30.</p>
+                <p class="tempo">Tempo estimado: 2h30 (leitura, quiz e preparo dos exercícios do encontro).</p>
             </div>
 
-            <div class="em-producao">
-                <strong>Conteúdo em produção</strong>
-                Esta etapa está sendo escrita e entra no ar depois da revisão da etapa anterior.
+            <ul class="sumario" aria-label="Nesta etapa">
+                <li><a href="#por-que">Por que supervisionar</a></li>
+                <li><a href="#hiscada">HIscada Pro</a></li>
+                <li><a href="#licenca">Licença do HIscada</a></li>
+                <li><a href="#mpl">MPL Server</a></li>
+                <li><a href="#portal">Portal de Telemetria</a></li>
+                <li><a href="#planos">Planos do Portal</a></li>
+                <li><a href="#escolher">Local ou nuvem?</a></li>
+                <li><a href="#solucao-iot">Solução IoT completa</a></li>
+                <li><a href="#na-venda">Na venda</a></li>
+                <li><a href="#glossario">Glossário</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="por-que">
+                <h3>1. Por que a indústria usa um supervisório</h3>
+
+                <p>O CLP controla, mas guarda os dados "dentro dele". O <strong>supervisório</strong>
+                (SCADA, do inglês <em>Supervisory Control And Data Acquisition</em>: supervisão, controle e aquisição
+                de dados) transforma esses dados em informação para decidir:</p>
+                <ul>
+                    <li><strong>telas sinóticas:</strong> desenhos do processo (tanques, bombas, válvulas) com os
+                    valores em tempo real;</li>
+                    <li><strong>alarmes:</strong> aviso quando algo sai do normal;</li>
+                    <li><strong>histórico e gráficos:</strong> o que aconteceu ontem, na semana, no mês;</li>
+                    <li><strong>relatórios:</strong> para a gestão, para a manutenção, para órgãos reguladores;</li>
+                    <li><strong>comandos:</strong> ligar, desligar e ajustar à distância.</li>
+                </ul>
+
+                <div class="analogia">
+                    <p>O CLP é o motorista; o supervisório é o rastreador da frota com painel de controle: mostra
+                    onde cada veículo está, avisa quando algo dá errado e guarda o histórico de cada viagem.</p>
+                </div>
+
+                <p>A HI tem dois supervisórios: o <strong>HIscada Pro</strong>, que roda em computadores da rede
+                local, e o <strong>Portal de Telemetria</strong>, que roda na nuvem. A IHM (Etapa 6) mostra uma
+                máquina, no painel; o supervisório mostra a planta inteira, para várias pessoas.</p>
+
+                <p class="fonte">Fontes: Treinamento de Produto, p. 19 e 23; Catálogo Geral, p. 30 e 33.</p>
             </div>
 
-            <p class="fonte">Fontes previstas: Treinamento de Produto, p. 19 a 23; Catálogo Geral, p. 29 a 33 e 38.</p>
+
+            <!-- ===================================================== -->
+            <div class="step" id="hiscada">
+                <h3>2. HIscada Pro: o supervisório da rede local</h3>
+
+                <img class="foto" src="Files/HIscadaPRO.png" alt="Tela do supervisório HIscada Pro" width="550" height="500">
+
+                <p>O HIscada Pro é um pacote de software para <strong>desenvolver, testar e rodar</strong> aplicações
+                de supervisão e controle de plantas, processos e máquinas. Roda em <strong>computadores da rede local
+                da empresa</strong>, com vários computadores acessando as telas. É um dos produtos mais usados pelos
+                clientes da HI. Lançado em 2012.</p>
+
+                <h4>Principais recursos</h4>
+                <ul>
+                    <li>telas sinóticas, com modelos e instâncias de telas (desenha uma vez, repete para cada equipamento igual);</li>
+                    <li>gerência de alarmes e envio de e-mails;</li>
+                    <li>relatórios personalizados, históricos e banco de dados;</li>
+                    <li>gerência de usuários;</li>
+                    <li>scripts na linguagem LUA e modelos de processo;</li>
+                    <li>recursos para a norma <strong>CFR 21 Part 11</strong> (exigência de rastreabilidade de
+                    registros eletrônicos, comum em indústrias reguladas, como a farmacêutica).</li>
+                </ul>
+
+                <p>O HIscada Pro se comunica com <strong>servidores de dados OPC</strong>, um padrão de
+                comunicação. Isso dá acesso a equipamentos de <strong>qualquer fabricante</strong>, desde que haja um
+                servidor OPC "no meio de campo", traduzindo o protocolo do equipamento para OPC. Na HI, esse servidor
+                é o <strong>MPL Server</strong> (item 4).</p>
+
+                <div class="na-venda">
+                    <p>O HIscada Pro é a resposta para "quero ver toda a planta num computador da sala de controle",
+                    principalmente quando o cliente <strong>não quer ou não pode depender da internet</strong>. O
+                    argumento de "qualquer fabricante" vale para quem tem equipamentos de várias marcas.</p>
+                </div>
+
+                <p class="fonte">Fontes: Treinamento de Produto, p. 19 e 20; Catálogo Geral, p. 5 e 33. CFR 21 Part 11:
+                explicação geral da norma.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="licenca">
+                <h3>3. Como a licença do HIscada Pro é formada</h3>
+
+                <p>O HIscada Pro é vendido como <strong>licença para rodar o projeto</strong>. Ela depende de duas
+                coisas:</p>
+                <ul>
+                    <li><strong>quantos dados</strong> o sistema supervisiona: são as <strong>tags</strong> (cada
+                    variável: um nível, uma temperatura, o estado de uma bomba);</li>
+                    <li><strong>quantos computadores</strong> diferentes precisam acessar as telas: são os
+                    <strong>viewers</strong>.</li>
+                </ul>
+
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>Licença</th><th>Servidor OPC</th><th>Tags OPC (máx.)</th><th>Tags locais (máx.)</th><th>Viewers (máx.)</th><th>Sessão (máx.)</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Teste</td><td>qualquer</td><td>16</td><td>32</td><td>1</td><td>2 h</td></tr>
+                            <tr><td>L1</td><td>MPL Server</td><td>32</td><td>64</td><td>2</td><td>sem limite</td></tr>
+                            <tr><td>L2</td><td>MPL Server</td><td>160</td><td>sem limite</td><td>5</td><td>sem limite</td></tr>
+                            <tr><td>L3</td><td>qualquer</td><td>160</td><td>sem limite</td><td>5</td><td>sem limite</td></tr>
+                            <tr><td>L4</td><td>MPL Server</td><td>600</td><td>sem limite</td><td>sem limite</td><td>sem limite</td></tr>
+                            <tr><td>L5</td><td>qualquer</td><td>600</td><td>sem limite</td><td>sem limite</td><td>sem limite</td></tr>
+                            <tr><td>L6</td><td>MPL Server</td><td>sem limite</td><td>sem limite</td><td>sem limite</td><td>sem limite</td></tr>
+                            <tr><td>L7</td><td>qualquer</td><td>sem limite</td><td>sem limite</td><td>sem limite</td><td>sem limite</td></tr>
+                            <tr><td>LDev (desenvolvimento)</td><td>qualquer</td><td>sem limite</td><td>sem limite</td><td>sem limite</td><td>2 h</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>Repare na coluna "Servidor OPC": algumas licenças funcionam só com o <strong>MPL Server</strong>;
+                outras, com <strong>qualquer</strong> servidor OPC do mercado. A licença Teste e a LDev têm sessões
+                de até 2 horas: servem para avaliar e para desenvolver o projeto, não para operar a planta.</p>
+
+                <div class="analogia">
+                    <p>Pense num plano de streaming: o preço muda com a quantidade de telas assistindo ao mesmo tempo
+                    (viewers) e com o tamanho do catálogo (tags). Quem assiste sozinho num celular não precisa do
+                    plano família.</p>
+                </div>
+
+                <div class="na-venda">
+                    <p>Para o orçamento, leve: <strong>quantas tags</strong> (aproximadamente, a partir da lista de
+                    sinais e dos equipamentos que serão lidos), <strong>quantos computadores</strong> vão abrir as
+                    telas, e <strong>qual servidor OPC</strong> será usado (MPL Server ou outro). Com isso, o setor de
+                    vendas indica a licença e o valor.</p>
+                </div>
+
+                <div class="atencao">
+                    <p>A tabela mostra como as licenças se diferenciam; ela não traz valores. Não estime preço nem
+                    escolha a licença sozinho se tiver dúvida sobre a contagem de tags: o suporte ajuda a contar.</p>
+                </div>
+
+                <p class="fonte">Fonte: Treinamento de Produto, p. 19 (texto e tabela "Licenças HIscada Pro", lida da imagem).</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="mpl">
+                <h3>4. MPL Server: o tradutor entre os equipamentos e o HIscada</h3>
+
+                <p>Servidores OPC são softwares que abrem conexão (serial ou Ethernet) com os equipamentos (CLPs,
+                IHMs, inversores), leem os dados no protocolo de cada um e os convertem para o padrão
+                <strong>OPC</strong>, para que supervisórios como o HIscada Pro tenham acesso.</p>
+
+                <p>O <strong>MPL Server</strong> é o servidor OPC da HI. Ele converte <strong>Modbus RTU ou TCP</strong>
+                para OPC: conversa com qualquer equipamento que fale Modbus, inclusive os CLPs da HI, e entrega os
+                dados para qualquer supervisório OPC, inclusive o HIscada Pro. Na prática, ele é usado junto com o
+                HIscada Pro em quase todos os projetos (o Treinamento fala em 99% das vezes).</p>
+
+                <div class="atencao">
+                    <p><strong>Regra comercial:</strong> se o cliente vai usar o MPL Server com um equipamento Modbus
+                    que <strong>não é da HI</strong>, ele precisa comprar uma <strong>licença do MPL Server</strong>
+                    para esse equipamento, <strong>independente da licença do HIscada Pro</strong>. Não esqueça esse
+                    item no orçamento.</p>
+                </div>
+
+                <div class="analogia">
+                    <p>O MPL Server é o intérprete de uma reunião: cada equipamento fala o seu Modbus, e ele repete
+                    tudo em "OPC" para o HIscada entender. Para os CLPs da casa, não há licença extra do MPL Server;
+                    para convidados de outras marcas, há uma licença à parte.</p>
+                </div>
+
+                <div class="na-venda">
+                    <p>Pergunte sempre: "além dos equipamentos HI, o supervisório vai ler equipamentos de outros
+                    fabricantes? Quais e quantos? Eles falam Modbus?" A resposta muda o orçamento.</p>
+                </div>
+
+                <p class="fonte">Fontes: Treinamento de Produto, p. 20 e 21.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="portal">
+                <h3>5. Portal de Telemetria: a nuvem da HI</h3>
+
+                <img class="foto" src="Files/portal.png" alt="Portal de Telemetria aberto em diferentes telas" width="550" height="520">
+
+                <p>O Portal de Telemetria é a plataforma de supervisão <strong>100% em nuvem</strong> da HI. Foi criado
+                para dar acesso remoto, pela web, às informações de equipamentos da HI <strong>ou de
+                terceiros</strong>, <strong>sem precisar de um computador dedicado</strong> nem comprar a licença de um
+                supervisório tradicional. Qualquer equipamento com internet (computador, tablet, celular) entra na
+                conta do cliente e vê as informações: não há a restrição à rede local do HIscada Pro. Lançado em 2015.</p>
+
+                <h4>Recursos</h4>
+                <ul>
+                    <li>telas e dashboards personalizados, relatórios e gráficos;</li>
+                    <li>alarmes ilimitados, com notificações por e-mail e Telegram;</li>
+                    <li>histórico de dados (acesso por 1 ano);</li>
+                    <li>integração com o Google Maps, para ver os equipamentos pela localização;</li>
+                    <li>gerência de usuários e eventos de sistema (conexões, alterações, erros);</li>
+                    <li><strong>API REST</strong>, para integrar com outras plataformas web (sistemas de gestão, BI);</li>
+                    <li>conexão com os equipamentos por <strong>Modbus (TCP ou RTU)</strong> e <strong>MQTT</strong>;</li>
+                    <li><strong>White label:</strong> o cliente usa a plataforma completa com o nome e a identidade
+                    visual da empresa dele, num endereço próprio.</li>
+                </ul>
+
+                <h4>Segurança e suporte</h4>
+                <p>O Portal fica nos servidores da Amazon (AWS), com tráfego criptografado, uma única conexão de saída
+                com a rede, isolamento de rede e autenticação dos equipamentos. A HI oferece implementação e
+                acompanhamento técnico sob demanda.</p>
+
+                <div class="na-venda">
+                    <p>O Portal é a resposta para "quero ver pelo celular, de qualquer lugar" e para quem tem
+                    <strong>muitos pontos espalhados</strong> (estações, poços, fazendas). O white label é argumento
+                    forte para integradores e fabricantes que querem oferecer a plataforma com a própria marca.</p>
+                </div>
+
+                <p class="fonte">Fontes: Treinamento de Produto, p. 22 e 23; Catálogo Geral, p. 5, 30 e 31.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="planos">
+                <h3>6. Como o Portal é cobrado: plano × quantidade de dados</h3>
+
+                <p>O Portal é cobrado por <strong>mensalidade ou anuidade</strong>, conforme o <strong>tipo de
+                plano</strong> e a <strong>quantidade de dados</strong> contratada. Cada plano libera um conjunto de
+                recursos. Há também a opção <strong>Standard</strong> ou <strong>White Label</strong>.</p>
+
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>Recurso</th><th>Free</th><th>Basic</th><th>Plus</th><th>Enterprise</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Dados, atualização de horário, gerência de conexão, usuários ilimitados</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td></tr>
+                            <tr><td>Histórico, alarmes, registro local, planilhas, relatório gráfico</td><td></td><td>✓</td><td>✓</td><td>✓</td></tr>
+                            <tr><td>Acesso remoto, Telegram, lista de texto, Google Maps, telas sinóticas</td><td></td><td></td><td>✓</td><td>✓</td></tr>
+                            <tr><td>API REST, modelos</td><td></td><td></td><td></td><td>✓</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <ul>
+                    <li><strong>Free:</strong> funcionalidades essenciais, para validar o conceito.</li>
+                    <li><strong>Basic:</strong> mais controle, com relatórios, histórico e alarmes.</li>
+                    <li><strong>Plus:</strong> acompanhar o processo por telas sinóticas.</li>
+                    <li><strong>Enterprise:</strong> os recursos mais completos, incluindo integração por API REST.</li>
+                </ul>
+
+                <div class="atencao">
+                    <p>O Treinamento mostra um print com valores dos planos. <strong>Não use esses valores</strong>:
+                    eles mudam e saem do orçamento do setor de vendas. Ensine ao cliente a lógica (recursos do plano
+                    × quantidade de dados × mensal ou anual) e mande para o orçamento.</p>
+                </div>
+
+                <div class="na-venda">
+                    <p>Para o orçamento, leve: <strong>quantos dados</strong> o cliente quer acompanhar, <strong>que
+                    recursos</strong> ele precisa (alarmes? telas sinóticas? integração com outro sistema?),
+                    <strong>mensal ou anual</strong> e se quer <strong>white label</strong>. Os recursos apontam o
+                    plano.</p>
+                </div>
+
+                <p class="fonte">Fonte: Treinamento de Produto, p. 22 (texto e quadro de planos, lido da imagem, sem os valores).</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="escolher">
+                <h3>7. Local ou nuvem? As perguntas que decidem</h3>
+
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th></th><th>HIscada Pro + MPL Server</th><th>Portal de Telemetria</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Onde roda</td><td>Computadores da rede local da empresa</td><td>Nuvem (AWS), aberto no navegador</td></tr>
+                            <tr><td>Quem acessa</td><td>Computadores da rede local (viewers)</td><td>Qualquer dispositivo com internet</td></tr>
+                            <tr><td>Precisa de internet?</td><td>Não</td><td>Sim, nos equipamentos e em quem acessa</td></tr>
+                            <tr><td>Precisa de computador dedicado?</td><td>Sim</td><td>Não</td></tr>
+                            <tr><td>Como é cobrado</td><td>Licença por tags e viewers (+ MPL Server para equipamento Modbus de terceiros)</td><td>Plano (recursos) × quantidade de dados, mensal ou anual</td></tr>
+                            <tr><td>Combina com</td><td>Sala de controle, planta concentrada</td><td>Pontos espalhados, gestão à distância, celular</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <ol>
+                    <li>"Quem vai ver os dados e de onde: da sala de controle ou de qualquer lugar?"</li>
+                    <li>"Os equipamentos e quem acessa têm internet? Pode depender dela?"</li>
+                    <li>"Quantos dados (tags) e quantas pessoas ou computadores vão acessar?"</li>
+                    <li>"Há equipamentos de outros fabricantes? Falam Modbus?"</li>
+                    <li>"Precisa de integração com outro sistema (API REST) ou de marca própria (white label)?"</li>
+                </ol>
+
+                <div class="na-venda">
+                    <p>Não é "um ou outro" para sempre: há clientes que usam o HIscada Pro na sala de controle e o
+                    Portal para a gestão acompanhar de longe. Descubra quem precisa de quê.</p>
+                </div>
+
+                <p class="fonte">Fontes: Treinamento de Produto, p. 19 a 23; Catálogo Geral, p. 30 a 33.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="solucao-iot">
+                <h3>8. A solução IoT completa: equipamento, conexão, plano e Portal</h3>
+
+                <p>Com o HI Connect (Etapa 5), a HI concentra toda a solução IoT do cliente: <strong>CLP</strong>,
+                <strong>modem 4G</strong>, <strong>plataforma em nuvem</strong> e <strong>plano de dados</strong>.</p>
+
+                <svg class="diagrama diagrama-corpo" viewBox="0 0 420 150" role="img"
+                     aria-labelledby="iotTitulo iotDesc">
+                    <title id="iotTitulo">A solução IoT completa da HI</title>
+                    <desc id="iotDesc">Quatro caixas em sequência: CLP (NEON5 ou RION5, ou outro equipamento com
+                    gateway), conexão 4G (integrada ou GTON-M), plano de dados HI Connect e Portal de Telemetria.</desc>
+                    <defs>
+                        <marker id="iotPonta" viewBox="0 0 10 10" refX="5" refY="5"
+                                markerWidth="5" markerHeight="5" orient="auto">
+                            <path class="d-ponta" d="M0,0 L10,5 L0,10 z"/>
+                        </marker>
+                    </defs>
+                    <rect class="d-caixa" x="5" y="30" width="90" height="70" rx="10"/>
+                    <text class="d-rotulo" x="50" y="56" text-anchor="middle">CLP</text>
+                    <text class="d-itens" x="50" y="76" text-anchor="middle">NEON5 ou</text>
+                    <text class="d-itens" x="50" y="92" text-anchor="middle">RION5</text>
+                    <line class="d-seta" x1="95" y1="65" x2="107" y2="65" marker-end="url(#iotPonta)"/>
+                    <rect class="d-caixa" x="113" y="30" width="90" height="70" rx="10"/>
+                    <text class="d-rotulo" x="158" y="60" text-anchor="middle">4G</text>
+                    <text class="d-itens" x="158" y="82" text-anchor="middle">ou GTON-M</text>
+                    <line class="d-seta" x1="203" y1="65" x2="215" y2="65" marker-end="url(#iotPonta)"/>
+                    <rect class="d-caixa" x="221" y="30" width="90" height="70" rx="10"/>
+                    <text class="d-rotulo" x="266" y="60" text-anchor="middle">HI Connect</text>
+                    <text class="d-itens" x="266" y="82" text-anchor="middle">chip e plano</text>
+                    <line class="d-seta" x1="311" y1="65" x2="323" y2="65" marker-end="url(#iotPonta)"/>
+                    <rect class="d-cheio" x="329" y="30" width="86" height="70" rx="10"/>
+                    <text class="d-texto-claro" x="372" y="60" text-anchor="middle">Portal</text>
+                    <text class="d-texto-claro" x="372" y="82" text-anchor="middle">nuvem</text>
+                    <text class="d-nota" x="210" y="130" text-anchor="middle">Um fornecedor só, do sensor à nuvem.</text>
+                </svg>
+
+                <div class="na-venda">
+                    <p>"Um fornecedor só para tudo" simplifica a vida do cliente: um contato para o equipamento, a
+                    conexão e a plataforma. Sempre que vender Portal com equipamento em campo sem internet, pergunte
+                    pelo plano de dados e ofereça o HI Connect.</p>
+                </div>
+
+                <p class="fonte">Fontes: Catálogo Geral, p. 20 e 38; Etapas 4 e 5.</p>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="na-venda">
+                <h3>9. Como isso aparece na venda</h3>
+
+                <h4>Perguntas que o cliente costuma fazer</h4>
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr><th>O cliente pergunta</th><th>Como responder</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>"Quanto custa o HIscada?"</td>
+                                <td>A licença depende de quantas tags e quantos computadores (viewers) vão acessar, e do
+                                servidor OPC. Com esses números, o orçamento indica a licença e o valor.</td>
+                            </tr>
+                            <tr>
+                                <td>"Tenho CLPs de outra marca. O HIscada lê?"</td>
+                                <td>O HIscada se comunica via OPC com equipamentos de qualquer fabricante. Se eles falam
+                                Modbus, o MPL Server faz a ponte, com uma licença do MPL Server para os equipamentos de
+                                terceiros. Anote marcas e quantidades.</td>
+                            </tr>
+                            <tr>
+                                <td>"Preciso instalar servidor para usar o Portal?"</td>
+                                <td>Não: o Portal fica na nuvem e abre no navegador, sem computador dedicado.</td>
+                            </tr>
+                            <tr>
+                                <td>"É seguro colocar meus dados na nuvem?"</td>
+                                <td>O Portal fica na AWS, com tráfego criptografado, uma única conexão de saída,
+                                isolamento de rede e autenticação dos equipamentos. Para detalhes técnicos de TI, o
+                                suporte complementa.</td>
+                            </tr>
+                            <tr>
+                                <td>"Quero vender o Portal com a minha marca."</td>
+                                <td>Existe a opção White Label: plataforma completa com a identidade visual e o endereço
+                                da sua empresa.</td>
+                            </tr>
+                            <tr>
+                                <td>"O Portal integra com o meu sistema de gestão?"</td>
+                                <td>Pela API REST, disponível no plano Enterprise. Anote o sistema e confirme o escopo
+                                com o suporte.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4>Erros comuns a evitar</h4>
+                <div class="atencao">
+                    <ul>
+                        <li>Passar valores de licença ou de plano de memória (ou do print do Treinamento).</li>
+                        <li>Esquecer a licença do MPL Server para equipamentos Modbus de terceiros.</li>
+                        <li>Oferecer HIscada a quem quer acessar pelo celular de qualquer lugar (é caso de Portal), ou
+                        Portal a quem não pode depender de internet.</li>
+                        <li>Vender a licença Teste ou LDev para operar a planta (são sessões de até 2 horas).</li>
+                        <li>Vender Portal para equipamentos em campo sem resolver a conexão (chip, plano, sinal).</li>
+                        <li>Prometer integração por API sem confirmar o escopo.</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="step" id="glossario">
+                <h3>10. Glossário da etapa</h3>
+
+                <dl class="glossario">
+                    <dt>SCADA / supervisório</dt>
+                    <dd>Software de supervisão, controle e aquisição de dados: telas, alarmes, histórico, relatórios.</dd>
+
+                    <dt>Tela sinótica</dt>
+                    <dd>Desenho do processo com os valores em tempo real.</dd>
+
+                    <dt>Tag</dt>
+                    <dd>Cada variável supervisionada (um nível, uma temperatura, o estado de uma bomba).</dd>
+
+                    <dt>Viewer</dt>
+                    <dd>Cada computador que abre as telas do HIscada Pro.</dd>
+
+                    <dt>OPC</dt>
+                    <dd>Padrão de comunicação que o HIscada Pro usa para receber os dados dos equipamentos.</dd>
+
+                    <dt>Servidor OPC</dt>
+                    <dd>Software que lê os equipamentos no protocolo deles e entrega os dados em OPC. O da HI é o MPL Server.</dd>
+
+                    <dt>LDev / licença Teste</dt>
+                    <dd>Licenças do HIscada para desenvolver ou avaliar, com sessões de até 2 horas.</dd>
+
+                    <dt>Nuvem</dt>
+                    <dd>Servidores na internet; o cliente usa o sistema pelo navegador, sem instalar servidor próprio.</dd>
+
+                    <dt>AWS</dt>
+                    <dd>Amazon Web Services, a nuvem onde o Portal de Telemetria está hospedado.</dd>
+
+                    <dt>Dashboard</dt>
+                    <dd>Painel com gráficos e indicadores.</dd>
+
+                    <dt>API REST</dt>
+                    <dd>Forma padronizada de um sistema conversar com outro pela web (por exemplo, o Portal com um ERP ou um BI).</dd>
+
+                    <dt>White label</dt>
+                    <dd>Produto oferecido com a marca de quem revende. No Portal: identidade visual e endereço próprios.</dd>
+
+                    <dt>CFR 21 Part 11</dt>
+                    <dd>Norma americana sobre registros e assinaturas eletrônicas, exigida em setores regulados como o farmacêutico.</dd>
+
+                    <dt>LUA</dt>
+                    <dd>Linguagem de programação usada para scripts no HIscada Pro.</dd>
+                </dl>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="quiz-bloco" id="quiz">
+                <h3>Quiz da etapa</h3>
+                <p>Confira o que ficou. A correção é na hora, com a explicação de cada resposta.
+                Acerte pelo menos 80% antes de marcar a etapa como concluída.</p>
+
+                <form class="quiz">
+                    <fieldset class="quiz-q" data-certa="c">
+                        <legend>1. Qual a principal diferença entre o HIscada Pro e o Portal de Telemetria?</legend>
+                        <label><input type="radio" name="q1" value="a"> O HIscada é uma IHM e o Portal é um CLP.</label>
+                        <label><input type="radio" name="q1" value="b"> Não há diferença.</label>
+                        <label><input type="radio" name="q1" value="c"> O HIscada roda em computadores da rede local; o Portal roda na nuvem e é acessado pelo navegador, de qualquer lugar com internet.</label>
+                        <label><input type="radio" name="q1" value="d"> O Portal só funciona sem internet.</label>
+                        <p class="quiz-explica" hidden>Os dois são supervisórios. O HIscada Pro fica restrito à rede local da empresa; o Portal é 100% em nuvem e abre em computador, tablet ou celular.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="a">
+                        <legend>2. De que depende a licença do HIscada Pro?</legend>
+                        <label><input type="radio" name="q2" value="a"> Da quantidade de dados (tags) e de quantos computadores vão acessar as telas (viewers), além do servidor OPC usado.</label>
+                        <label><input type="radio" name="q2" value="b"> Só da cor das telas.</label>
+                        <label><input type="radio" name="q2" value="c"> Da quantidade de dados no celular do cliente.</label>
+                        <label><input type="radio" name="q2" value="d"> É gratuita para qualquer uso.</label>
+                        <p class="quiz-explica" hidden>A licença para rodar o projeto depende das tags e dos viewers. Algumas licenças funcionam só com o MPL Server; outras, com qualquer servidor OPC.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="d">
+                        <legend>3. O cliente vai usar o HIscada Pro com 10 medidores Modbus de outro fabricante, lidos pelo MPL Server. O que não pode faltar no orçamento?</legend>
+                        <label><input type="radio" name="q3" value="a"> Nada além da licença do HIscada.</label>
+                        <label><input type="radio" name="q3" value="b"> Um plano do Portal.</label>
+                        <label><input type="radio" name="q3" value="c"> Uma IHM GTI5.</label>
+                        <label><input type="radio" name="q3" value="d"> A licença do MPL Server para os equipamentos Modbus de terceiros, independente da licença do HIscada.</label>
+                        <p class="quiz-explica" hidden>Regra comercial do Treinamento: equipamento Modbus que não é da HI exige licença do MPL Server, à parte da licença do HIscada Pro.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="b">
+                        <legend>4. Para que serve o MPL Server?</legend>
+                        <label><input type="radio" name="q4" value="a"> Para alimentar os CLPs.</label>
+                        <label><input type="radio" name="q4" value="b"> Para ler os equipamentos em Modbus (RTU ou TCP) e entregar os dados em OPC para supervisórios como o HIscada Pro.</label>
+                        <label><input type="radio" name="q4" value="c"> Para hospedar o Portal na nuvem.</label>
+                        <label><input type="radio" name="q4" value="d"> Para programar CLPs em Ladder.</label>
+                        <p class="quiz-explica" hidden>O MPL Server é o servidor OPC da HI: traduz Modbus para OPC. É usado junto com o HIscada Pro em quase todos os projetos.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="c">
+                        <legend>5. O diretor de uma empresa de saneamento quer acompanhar 40 estações pelo celular, de onde estiver. Qual supervisório é o indicado?</legend>
+                        <label><input type="radio" name="q5" value="a"> HIscada Pro, que fica só na rede local.</label>
+                        <label><input type="radio" name="q5" value="b"> Uma IHM em cada estação, sem supervisório.</label>
+                        <label><input type="radio" name="q5" value="c"> Portal de Telemetria, acessado pelo navegador de qualquer lugar.</label>
+                        <label><input type="radio" name="q5" value="d"> O MPL Server sozinho.</label>
+                        <p class="quiz-explica" hidden>Muitos pontos espalhados e acesso pelo celular de qualquer lugar é o caso típico do Portal. As estações precisam chegar à internet (Etapa 5).</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="a">
+                        <legend>6. Como o Portal de Telemetria é cobrado?</legend>
+                        <label><input type="radio" name="q6" value="a"> Por mensalidade ou anuidade, conforme o plano (recursos) e a quantidade de dados.</label>
+                        <label><input type="radio" name="q6" value="b"> Por licença de computador, como o HIscada.</label>
+                        <label><input type="radio" name="q6" value="c"> Por quantidade de CLPs vendidos.</label>
+                        <label><input type="radio" name="q6" value="d"> Pelo valor do print do Treinamento.</label>
+                        <p class="quiz-explica" hidden>Plano × quantidade de dados, mensal ou anual. Os valores saem do orçamento do setor de vendas, nunca do print.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="d">
+                        <legend>7. O cliente quer integrar os dados do Portal ao sistema de gestão da empresa. Que recurso e que plano isso envolve?</legend>
+                        <label><input type="radio" name="q7" value="a"> Telegram, no plano Free.</label>
+                        <label><input type="radio" name="q7" value="b"> Planilhas, no plano Basic.</label>
+                        <label><input type="radio" name="q7" value="c"> Nenhum: o Portal não integra com nada.</label>
+                        <label><input type="radio" name="q7" value="d"> API REST, disponível no plano Enterprise; o escopo da integração se confirma com o suporte.</label>
+                        <p class="quiz-explica" hidden>A API REST permite integrar o Portal a outras plataformas web e aparece no plano Enterprise.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="b">
+                        <legend>8. Um integrador quer oferecer o Portal aos clientes dele com a marca da própria empresa. O que você apresenta?</legend>
+                        <label><input type="radio" name="q8" value="a"> Que isso não é possível.</label>
+                        <label><input type="radio" name="q8" value="b"> A opção White Label do Portal: plataforma completa com identidade visual e endereço próprios.</label>
+                        <label><input type="radio" name="q8" value="c"> Uma licença LDev do HIscada.</label>
+                        <label><input type="radio" name="q8" value="d"> O plano Free.</label>
+                        <p class="quiz-explica" hidden>O white label permite que o cliente use o Portal no nome da empresa dele. Combina com o perfil de integrador (HI Partner) e de fabricante.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="c">
+                        <legend>9. Para que servem as licenças Teste e LDev do HIscada Pro?</legend>
+                        <label><input type="radio" name="q9" value="a"> Para operar a planta 24 horas por dia.</label>
+                        <label><input type="radio" name="q9" value="b"> Para clientes com muitos computadores.</label>
+                        <label><input type="radio" name="q9" value="c"> Para avaliar e desenvolver o projeto: as sessões são de até 2 horas.</label>
+                        <label><input type="radio" name="q9" value="d"> Para usar o Portal sem internet.</label>
+                        <p class="quiz-explica" hidden>Teste (16 tags, 1 viewer) e LDev (desenvolvimento) têm sessão máxima de 2 horas. Para operar, o cliente precisa de uma licença L1 a L7.</p>
+                    </fieldset>
+
+                    <fieldset class="quiz-q" data-certa="a">
+                        <legend>10. Uma fazenda sem internet quer ver as bombas de irrigação no Portal. Que solução completa a HI pode oferecer?</legend>
+                        <label><input type="radio" name="q10" value="a"> CLP com 4G (ou GTON-M), chip e plano de dados HI Connect e o Portal de Telemetria, confirmando o sinal de celular no local.</label>
+                        <label><input type="radio" name="q10" value="b"> Só o Portal: ele funciona sem internet.</label>
+                        <label><input type="radio" name="q10" value="c"> Só um rádio, que leva à nuvem.</label>
+                        <label><input type="radio" name="q10" value="d"> HIscada Pro com licença Teste.</label>
+                        <p class="quiz-explica" hidden>O Portal precisa que os dados cheguem à internet. Com o HI Connect, a HI entrega a solução IoT completa: CLP, modem 4G, plano de dados e plataforma.</p>
+                    </fieldset>
+
+                    <div class="quiz-acoes">
+                        <button type="submit" class="btn">Corrigir</button>
+                        <button type="button" class="btn btn-secondary quiz-refazer" hidden>Refazer</button>
+                    </div>
+                    <p class="quiz-resultado" aria-live="polite"></p>
+                </form>
+            </div>
+
+
+            <!-- ===================================================== -->
+            <div class="caso">
+                <h3>Para o encontro com o instrutor</h3>
+                <p>Traga preparado:</p>
+                <ol>
+                    <li><strong>Local ou nuvem?</strong> Para cada cliente, diga o supervisório e o que leva ao orçamento:
+                        <ol type="a">
+                            <li>uma indústria de alimentos quer ver, na sala de controle, 3 CLPs HI e 2 CLPs de outra marca
+                            que falam Modbus, em 3 computadores, sem depender de internet;</li>
+                            <li>uma empresa de saneamento quer que gestores e plantonistas vejam 25 estações pelo celular;</li>
+                            <li>um cliente com um CLP alimentado em AC lendo 2 transmissores de vazão a pulso quer ver os
+                            valores num computador dedicado da rede local.</li>
+                        </ol>
+                    </li>
+                    <li><strong>Contando para o orçamento.</strong> No caso 1a, liste as informações que você levaria ao setor
+                    de vendas para indicar a licença do HIscada e a do MPL Server (sem valores).</li>
+                    <li><strong>Plano do Portal.</strong> Um cliente quer alarmes no Telegram, telas sinóticas e ver os
+                    equipamentos no mapa. Que plano atende? E se ele quiser integrar com o ERP?</li>
+                    <li><strong>A solução completa.</strong> Monte a oferta para enviar os dados de transmissores de nível de
+                    poços isolados para o Portal, do sensor ao celular do cliente.</li>
+                    <li><strong>A pergunta difícil.</strong> "Por que eu usaria o Portal, que tem mensalidade, em vez do
+                    HIscada Pro?" Como você responde sem falar de valores, a partir da necessidade do cliente?</li>
+                </ol>
+                <p class="fonte">Casos com base no Treinamento de Produto (p. 19 a 23) e no exercício 12.</p>
+            </div>
         </div>
     </section>
 
@@ -66,5 +706,6 @@
     <script src="progresso.js"></script>
     <script src="config-conta.js"></script>
     <script src="conta.js"></script>
+    <script src="quiz.js"></script>
 </body>
 </html>

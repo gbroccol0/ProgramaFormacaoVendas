@@ -168,13 +168,29 @@ Oferecido também: preparar slides e roteiro de cada vídeo a partir do texto.
 | 3 Comunicação Industrial | `Assets/comunicacao.html` | **Aprovada** por Gabriel em 05/11/2026 (PR #2, branch `etapa-3-comunicacao`; ele faz o merge, depois do #1). |
 | 4 Linha de CLPs | `Assets/clps.html` | **Aprovada** ("pode continuar", 05/11/2026). PR #3, branch `etapa-4-clps`. |
 | 5 Gateways, Modem e Rádios | `Assets/conectividade.html` | **Pronta, aguardando revisão.** Branch `etapa-5-conectividade` (a partir de `etapa-4-clps`), PR #4. |
-| 6 IHMs, Sensores e Acessórios | `Assets/ihm_sensores.html` | **Pronta, aguardando revisão.** Branch `etapa-6-ihm-sensores` (a partir da 5), PR próprio. |
-| 7 a 10 | `Assets/*.html` | Páginas "em produção": selo, objetivos, tempo, caixa "Conteúdo em produção" e fontes previstas. |
+| 6 IHMs, Sensores e Acessórios | `Assets/ihm_sensores.html` | **Pronta, aguardando revisão.** Branch `etapa-6-ihm-sensores` (a partir da 5), PR #5. |
+| 7 Supervisão Local e em Nuvem | `Assets/supervisao.html` | **Pronta, aguardando revisão.** Branch `etapa-7-supervisao` (a partir da 6), PR próprio. |
+| 8 a 10 | `Assets/*.html` | Páginas "em produção": selo, objetivos, tempo, caixa "Conteúdo em produção" e fontes previstas. |
 
-**Próximo passo:** seguir em sequência (decisão de 05/11/2026, seção 3): Etapa 7
-(Supervisão Local e em Nuvem), depois 8, 9 e 10, cada uma numa branch criada a
-partir da anterior e com PR próprio. Na Etapa 7, **não usar os preços do
-Portal** que aparecem no Treinamento (só a lógica dos planos).
+**Próximo passo:** seguir em sequência (decisão de 05/11/2026, seção 3): Etapa 8
+(Soluções e Programas), depois 9 e 10, cada uma numa branch criada a partir da
+anterior e com PR próprio.
+
+**Etapa 7, o que foi feito (para não refazer):** 10 seções (por que
+supervisionar; HIscada Pro com recursos do catálogo p. 33 e OPC; licença do
+HIscada com a **tabela Teste/L1–L7/LDev lida da imagem do Treinamento p. 19**
+— tags OPC, tags locais, viewers, sessão, servidor OPC "MPL Server" ou
+"qualquer", sem valores; MPL Server e a regra da licença para Modbus de
+terceiros; Portal com recursos, segurança AWS e white label; planos
+Free/Basic/Plus/Enterprise com a **tabela de recursos lida da imagem da p. 22,
+sem os valores**; HIscada × Portal; solução IoT completa com HI Connect; na
+venda; glossário), 2 diagramas, fotos `Files/HIscadaPRO.png` e
+`Files/portal.png`, quiz de 10 e caso com 5 itens. Nenhum `[CONFIRMAR]` novo.
+Decisões de redação: a frase do Treinamento p. 20 sobre "baixo custo das
+licenças comparado aos concorrentes" **não foi usada** (comparação de preço
+com concorrente); "Free" aparece só como nome de plano, sem dizer que é
+gratuito nem limites de dados; o conceito Conector/Dispositivo do
+`CONTEXT.txt` não foi usado (o arquivo já teve erro sobre os ESC).
 
 **Etapa 6, o que foi feito (para não refazer):** 11 seções (IHM × supervisório
 em tabela; GTI5 com modelos, portas, IP65, SmartManagerPro e a regra da
