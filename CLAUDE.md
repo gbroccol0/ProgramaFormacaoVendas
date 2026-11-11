@@ -209,6 +209,13 @@ Oferecido também: preparar slides e roteiro de cada vídeo a partir do texto.
 | 10 Avaliação Final | `Assets/avaliacao_final.html` | Página "em produção": selo, objetivos, tempo, caixa "Conteúdo em produção" e fontes previstas. |
 
 ### ONDE PAREI (05/11/2026, de volta ao VS Code)
+- **11/11/2026: Etapas 1 a 9 PUBLICADAS** a pedido de Gabriel (um colega dele vai
+  conferir o conteúdo no site). O `main` foi avançado até `etapa-9-conversa`
+  (fast-forward, sem merge novo) e a Action "Publicar site" passou. Com isso o
+  PR #1 fica como mergeado; os PRs #2 a #7 (base = branch da etapa anterior)
+  continuam abertos e podem ser fechados, pois o conteúdo já está no `main`. A
+  Etapa 9 nunca teve PR. Daqui em diante: trabalho novo em branch a partir do
+  `main`, e só vai ao `main` com o ok de Gabriel.
 - Os créditos da nuvem acabaram em 05/11/2026 e o trabalho voltou ao VS Code de
   Gabriel. As Etapas 2 a 8 estão em branches encadeadas com PR aberto:
   #1 (Etapa 2) → #2 (3) → #3 (4) → #4 (5) → #5 (6) → #6 (7) → #7 (8).
